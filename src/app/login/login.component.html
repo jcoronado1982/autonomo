@@ -1,0 +1,37 @@
+<app-loading-screen></app-loading-screen>
+<app-menu></app-menu>
+<form class="logsize-b log-mob-b" [formGroup]="loginForm">
+  <div class="basicrow m-top">
+    <label class="label-f">Correo Electrónico o Número de Teléfono</label>
+    <div class="basicrow">
+      <input placeholder="" class="inp-f" required formControlName="username" id="username">
+      <div [hidden]="loginForm.controls.username.valid || loginForm.controls.username.untouched"
+        class="alert alert-danger">
+        Usuario Requerido
+      </div>
+    </div>
+  </div>
+  <div class="basicrow m-top-i">
+    <label class="label-f">Contrase&ntilde;a</label>
+    <div class="basicrow">
+      <input class="inp-f" required formControlName="password" id="password" type="password">
+      <div [hidden]="loginForm.controls.password.valid || loginForm.controls.password.untouched"
+        class="alert alert-danger">
+        Contraseña Requerida
+      </div>
+    </div>
+  </div>
+  <div class="basicrow roboto-r f-reg m-top">
+    <input type="checkbox"> Recordar Usuario
+  </div>
+  <div class="basicrow m-top-u-ii buttons">
+    <div class="login-user">
+      <a (click)="login()" class="btns red vcenter" [ngClass]="{'red': !loginForm.invalid, 'gray': loginForm.invalid}">
+        <span class="tabcell">
+          Ingresar&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+</form>
+<app-footer></app-footer>

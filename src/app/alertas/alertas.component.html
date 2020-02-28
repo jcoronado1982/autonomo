@@ -1,0 +1,45 @@
+<div>
+    <h2 mat-dialog-title class="md-title" [hidden]="!this.title||this.labelTitleHtml">{{this.labelTitle}}</h2>
+    <div [hidden]="!this.labelTitleHtml">
+        <div class="basicrow f-black f-mildt roboto-m" style="font-size: 24px;">
+            <img style="width: 40px; height: 40px;" src="../../assets/images/miclaro-icon.png"> {{data.labelTitleHtml}}
+        </div>
+        <div class="basicrow" style="margin-top:10px;">
+            <div class="logline full"></div>
+        </div>
+    </div>
+    <mat-dialog-content>
+        <div [hidden]="!this.menssageError">
+            <div class="basicrow m-top-ii text-justify">
+                <b>Incidencia: </b> {{data.menssageError}}
+            </div>
+            <div class="basicrow m-top">
+                <div class="logline full"></div>
+            </div>
+            <div class="basicrow m-top-ii text-justify" style="padding-top: 5px;padding-bottom: 5px;">
+                ¿Desea que unos de nuestros agentes de servicio al cliente te asista en línea a través de nuestro Chat?
+            </div>
+        </div>
+        <div [hidden]="this.messageHtml||this.menssageError">
+            {{data.message}}
+        </div>
+        <div [hidden]="!this.messageHtml" [innerHTML]="this.labelHtml">
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <div class="centradoMaterial1" [hidden]="!this.btmConfirm">
+            <div [hidden]="this.inverse">
+                <button class="btmMaterial1 btmAlert {{this.colorNo}}" (click)="this.cancel()">{{this.labelNo}} &nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                <button class="btmMaterial2 btmAlert {{this.colorSi}}" (click)="this.continue()">{{this.labelSi}} &nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+            </div>
+            <div [hidden]="!this.inverse">
+                <button class="btmMaterial1 btmAlert {{this.colorNo}}" (click)="this.cancel()">{{this.labelNo}} &nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                <button class="btmMaterial2 btmAlert {{this.colorSi}}" (click)="this.continue()">{{this.labelSi}} &nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="centradoMaterial1" [hidden]="!this.btmOk">
+            <button [hidden]="this.session" class="btmMaterial3 btmAlert" (click)="this.ok()">{{this.labelOk}} &nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+            <button [hidden]="!this.session" class="btmMaterial3 btmAlert on" (click)="this.okSession()">{{this.labelOk}} &nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+        </div>
+    </mat-dialog-actions>
+</div>

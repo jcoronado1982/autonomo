@@ -1,0 +1,95 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css'
+@font-face
+    font-family: 'autonomo'
+    src: url('assets/fonts/gilroy-extrabold.otf')format('opentype')
+    font-weight: normal
+    font-style: normal
+@font-face
+    font-family: 'mons'
+    src: url('assets/fonts/Montserrat-Regular.ttf')format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@CHARSET "UTF-8"
+html,body
+    font-family: sans-serif
+    background-color: #3E3E4A !important
+    width: 100%
+    height: 100%
+    overflow-x: hidden
+    border: 0
+body
+    font-size: 14px
+    color: #222222
+    margin: 0
+    padding: 0
+
+.carousel-control
+    width: 0px !important
+.carousel-control.right
+    right: 0px !important
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left
+    margin-left: 0 !important
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right
+    margin-right: 0 !important
+.carousel-control
+    background: transparent !important
+    text-shadow: none !important
+    color: #7c7c7c !important
+.carousel-control
+    background: transparent !important
+    text-shadow: none !important
+    color: #7c7c7c !important
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next
+    width: 30px !important
+    height: 30px !important
+
+.carousel-control-prev-icon
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231f97ae' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important
+
+.carousel-control-next-icon
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231f97ae' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important
+.carousel-control
+    width: 35px !important
+    text-align: center
+    text-shadow: none
+    background-color: transparent
+
+.carousel-control.left
+    left: 0px !important
+    cursor: pointer
+
+.carousel-control.right
+    right: 0px !important
+    cursor: pointer
+
+.carousel-indicators li
+  width: 18px !important
+  height: 18px !important
+  background-color: #0dc4ba !important
+  border: 0
+  margin: 0 3px
+  border-radius: 200px !important
+  border-top: 0px solid transparent !important
+  border-bottom: 0px solid transparent !important
+
+.carousel-indicators
+  position: absolute
+  left: 50%
+  z-index: 15
+  width: 100%
+  bottom: -90px !important
+  padding-left: 0
+  text-align: center
+  list-style: none
+  margin-right: 0% !important
+  margin-left: 0% !important
+
+.carousel-indicators .active
+  background-color: #837a7a !important
+  margin: 0 3px
+
+@media only screen and (max-width: 768px)
+    .carousel-indicators
+        bottom: -50px !important

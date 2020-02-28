@@ -1,0 +1,30 @@
+<div class="basicrow m-top m-font">
+    <div *ngFor="let content of this.content.content; let i = index" class="basicrow m-top">
+        <div data-toggle="collapse" [attr.data-target]="'#tabC_'+i" class="digs-box-f vcenter mob-txt"
+            (click)="updateExpand(i)" [ngClass]="{'mon': content.expand == true,'': content.expand == false}">
+            {{content.title}}
+            <i class="fa fa-plus f-right-m" aria-hidden="true"></i>
+            <i class="fa fa-minus f-right-m" aria-hidden="true"></i>
+        </div>
+        <div id="tabC_{{i}}" class="collapse" [ngClass]="{'show': i == 0,'': i > 0}">
+            <ng-container *ngIf="content.link1==null || content.link1==undefined">
+                <div class="basicrow allpads bordsdef text-justify mob-txt-a"
+                    *ngIf="content.link != undefined && content.link != null">
+                    <a href="{{content.link}}" target="_blank">
+                        {{content.description}}
+                    </a>
+                </div>
+                <div class="basicrow allpads bordsdef text-justify mob-txt-a" *ngIf="content.link == undefined || content.link == null" [innerHTML]="content.description"></div>
+            </ng-container>
+            <ng-container *ngIf="content.link1!=null && content.link1!=undefined">
+                <div class="basicrow allpads bordsdef text-justify mob-txt-a">
+                    {{content.description}}
+                    <a href="{{content.link1}}" target="_blank">
+                        {{content.link1text}}
+                    </a>
+                    {{content.description2}}
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

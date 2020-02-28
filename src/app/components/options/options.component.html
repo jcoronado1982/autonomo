@@ -1,0 +1,9 @@
+<div class="t-acc">
+    <div class="tph-opts" [ngClass]="{'on': this.statusOn == 1}" (click)="this.changeType(1)">
+        <img class="tph-icon" width="100%" src="../../assets/images/tlf-m.png"> <input type="radio" [checked]="this.statusRadio[0] == true" name="option" (click)="changeType(1)" > M&oacute;vil
+    </div>
+
+    <div class="tph-opts" [ngClass]="{'on': this.statusOn == 2}" (click)="this.changeType(2)">
+        <img class="tph-icon" width="100%" src="../../assets/images/tlf-f.png"> <input type="radio" [checked]="this.statusRadio[1] == true" name="option" (click)="changeType(2)" > Telefon&iacute;a Fija
+    </div>
+</div>
