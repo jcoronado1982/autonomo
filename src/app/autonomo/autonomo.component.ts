@@ -56,6 +56,6 @@ export class AutonomoComponent implements OnInit {
         this.cont=9;
         this.blur=2;
       }
-    }, 750);
+    }, 500);
   }
 }
