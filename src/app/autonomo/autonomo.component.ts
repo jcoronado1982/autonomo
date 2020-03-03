@@ -10,7 +10,6 @@ export class AutonomoComponent implements OnInit {
   public selTab: number;
   public cont : number = 0;
   public blur = 0;
-  public imgOk = true;
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -47,6 +46,7 @@ export class AutonomoComponent implements OnInit {
   }
   loadEffect(){
     setTimeout(() => {
+      this.blur=0;
       if (this.cont<9){
         this.cont++;
         this.blur=2;
@@ -54,6 +54,7 @@ export class AutonomoComponent implements OnInit {
       }
       else{
         this.cont=9;
+        this.blur=2;
       }
     }, 1500);
   }
