@@ -47,15 +47,15 @@ export class AutonomoComponent implements OnInit {
   }
   loadEffect(){
     setTimeout(() => {
-      if (this.cont<=7){
+      if (this.cont<9){
+        alert(this.cont);
         this.cont;
-        this.blur=2;
         this.cont++;
+        alert(this.cont);
         this.loadEffect();
       }
       else{
-        this.cont=7;
-        this.blur=2;
+        this.cont=9;
       }
     }, 2500);
   }
