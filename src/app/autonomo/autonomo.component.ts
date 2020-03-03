@@ -30,8 +30,8 @@ export class AutonomoComponent implements OnInit {
         this.blur=0;
         setTimeout(() => {
           this.blur=2;
-        },500);
-      },500);
+        },250);
+      },250);
     }
     else if(sw==2){
       this.blur=0;
@@ -39,8 +39,8 @@ export class AutonomoComponent implements OnInit {
         this.blur=0;
         setTimeout(() => {
           this.blur=2;
-        },500);
-      },500);
+        },250);
+      },250);
     }
     else if(sw==3){
       this.blur=0;
@@ -48,8 +48,8 @@ export class AutonomoComponent implements OnInit {
         this.blur=0;
         setTimeout(() => {
           this.blur=2;
-        },500);
-      },500);
+        },250);
+      },250);
     }
   }
 
