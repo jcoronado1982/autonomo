@@ -16,10 +16,7 @@ export class AutonomoComponent implements OnInit {
   ngOnInit() {
     this.selTab = 1;
     this.getId();
-    setTimeout(() => {
-      this.loadEffect();
-      this.blur=1;
-    }, 2500);
+    this.loadEffect();
   }
   dataLoading(sw) {
     this.selTab = 1;
@@ -51,9 +48,13 @@ export class AutonomoComponent implements OnInit {
   loadEffect(){
     setTimeout(() => {
       if (this.cont<7){
+        this.blur=1;
         this.cont++;
-        this.blur=2;
+        this.loadEffect();
       }
+      setTimeout(() => {
+        this.blur=2;
+      },2500)
     }, 2500);
   }
 }
