@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AutonomoComponent implements OnInit {
   public myInterval = 30000;
   public selTab: number;
-  public cont = 0;
+  public cont : number = 0;
   public blur = 0;
   public imgOk = true;
   constructor(private router: Router, private route: ActivatedRoute) { }
@@ -47,14 +47,16 @@ export class AutonomoComponent implements OnInit {
   }
   loadEffect(){
     setTimeout(() => {
-      if (this.cont<7){
-        this.blur=1;
+      if (this.cont<=7){
+        this.cont;
+        this.blur=2;
         this.cont++;
         this.loadEffect();
       }
-      setTimeout(() => {
+      else{
+        this.cont=7;
         this.blur=2;
-      },2500)
+      }
     }, 2500);
   }
 }
