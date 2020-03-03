@@ -125,7 +125,7 @@
                         </div>
                     </div>
             </div>
-            <div id="image1" [ngClass]="{'computer-img': this.selTab == 1}" [ngStyle]="{'display':this.selTab === 1 ? 'block' : 'none' }"></div>
+            <div id="image1" [ngClass]="{'computer-imgHov': this.blur==0,'computer-img': this.blur==2}" [ngStyle]="{'display':this.selTab === 1 ? 'block' : 'none' }"></div>
             <div id="image2" class="computer-img2" [ngStyle]="{'display':this.selTab === 2 ? 'block' : 'none' }"></div>
             <div id="image3" class="computer-img3" [ngStyle]="{'display':this.selTab === 3 ? 'block' : 'none' }"></div>
         </div>
