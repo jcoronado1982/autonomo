@@ -25,6 +25,7 @@ export class AutonomoComponent implements OnInit {
 
   statusChange(sw) {
     this.selTab = sw;
+    this.blur1 = 2;
     if (sw == 1) {
       setTimeout(() => {
         this.blur1 = 2;
@@ -35,11 +36,13 @@ export class AutonomoComponent implements OnInit {
       setTimeout(() => {
         this.blur1 = 2;
       }, 500);
+      this.blur1 = 1;
     }
     if (sw == 3) {
       setTimeout(() => {
-        this.blur = 2;
+        this.blur1 = 2;
       }, 500);
+      this.blur1 = 1;
     }
   }
 
