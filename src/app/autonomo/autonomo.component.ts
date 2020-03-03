@@ -10,7 +10,7 @@ export class AutonomoComponent implements OnInit {
   public selTab: number;
   public cont: number = 0;
   public blur = 0;
-  public blur1 = 0;
+  public blur1 :number ;
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -27,26 +27,18 @@ export class AutonomoComponent implements OnInit {
     this.selTab = sw;
     if (sw == 1) {
       setTimeout(() => {
-        this.blur1 = 1;
-        setTimeout(() => {
-          this.blur1 = 2;
-        }, 1000);
+        this.blur1 = 2;
+      }, 500);
+      this.blur1 = 1;
+    }
+    if (sw == 2) {
+      setTimeout(() => {
+        this.blur1 = 2;
       }, 500);
     }
-    else if (sw == 2) {
+    if (sw == 3) {
       setTimeout(() => {
-        this.blur1 = 1;
-        setTimeout(() => {
-          this.blur1 = 2;
-        }, 1000);
-      }, 500);
-    }
-    else if (sw == 3) {
-      setTimeout(() => {
-        this.blur = 1;
-        setTimeout(() => {
-          this.blur1 = 2;
-        }, 1000);
+        this.blur = 2;
       }, 500);
     }
   }
