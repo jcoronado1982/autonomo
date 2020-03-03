@@ -29,15 +29,15 @@
         </div>
     </div>
     <div class="technologies" >
-        <div class="technologies-1">
-            <div [ngClass]="{ 'icon-1Hov': this.cont== 1, 'icon-1': this.blur== 2}" [ngStyle]="{'display':this.cont === 0 ? 'none' : 'block' }"><img width="100%" class="py-icon" src="../../assets/images/pyLogo.png"></div>
-            <div [ngClass]="{ 'icon-2None': this.cont == 1, 'icon-2Hov': this.cont== 2, 'icon-2': this.blur== 2}" [ngStyle]="{'display':this.cont == 0 ? 'none' : 'block' }"><img width="100%" class="php-icon" src="../../assets/images/phpLogo.png"></div>
-            <div [ngClass]="{  'icon-3Hov': this.cont== 3, 'icon-3': this.blur== 2}" [ngStyle]="{'display':this.cont == 0 ? 'none' : 'block' }"><img width="100%" class="react-icon" src="../../assets/images/reactLogo.png"></div>
-            <div [ngClass]="{  'icon-4Hov': this.cont== 4, 'icon-4': this.blur== 2}" [ngStyle]="{'display':this.cont == 0 ? 'none' : 'block' }"><img width="100%" class="ionic-icon" src="../../assets/images/ionicLogo.png"></div>
-            <div [ngClass]="{ 'icon-5Hov': this.cont== 5, 'icon-5': this.blur== 2}" [ngStyle]="{'display':this.cont == 0 ? 'none' : 'block' }"><img width="100%" class="chcar-icon" src="../../assets/images/csharpLogo.png"></div>
-            <div [ngClass]="{ 'icon-6Hov': this.cont== 6, 'icon-6': this.blur== 2}" [ngStyle]="{'display':this.cont == 0 ? 'none' : 'block' }"><img width="100%" class="aws-icon" src="../../assets/images/awsLogo.png"></div>
-            <div [ngClass]="{ 'icon-7Hov': this.cont== 7, 'icon-7': this.blur== 2}" [ngStyle]="{'display':this.cont == 0 ? 'none' : 'block' }"><img width="100%" class="ang-icon" src="../../assets/images/angularLogo.png"></div>
-            <div [ngClass]="{ 'icon-8Hov': this.cont== 8, 'icon-8': this.cont== 9}" [ngStyle]="{'display':this.cont == 0 ? 'none' : 'block' }"><img width="100%" class="php-icon" src="../../assets/images/phpLogo.png"></div>
+        <div class="technologies-1" *ngIf="this.cont>0">
+            <div *ngIf="this.cont>0" [ngClass]="{ 'icon-1Hov': this.cont==1, 'icon-1': this.blur== 2}" [ngStyle]="{'display':this.cont === 0 ? 'block' : 'block' }"><img width="100%" class="py-icon" src="../../assets/images/pyLogo.png" ></div>
+            <div *ngIf="this.cont>1" [ngClass]="{ 'icon-2None': this.cont==1, 'icon-2Hov': this.cont== 2, 'icon-2': this.blur== 2}" [ngStyle]="{'display':this.cont == 1 ? 'block' : 'block'}"><img width="100%" class="php-icon" src="../../assets/images/phpLogo.png"></div>
+            <div *ngIf="this.cont>2" [ngClass]="{ 'icon-3None': this.cont==2,'icon-3Hov': this.cont== 3, 'icon-3': this.blur== 2}" [ngStyle]="{'display':this.cont == 2 ? 'block' : 'block' }"><img width="100%" class="react-icon" src="../../assets/images/reactLogo.png"></div>
+            <div *ngIf="this.cont>3" [ngClass]="{ 'icon-4None': this.cont==3, 'icon-4Hov': this.cont== 4, 'icon-4': this.blur== 2}" [ngStyle]="{'display':this.cont == 3 ? 'block' : 'block' }"><img width="100%" class="ionic-icon" src="../../assets/images/ionicLogo.png"></div>
+            <div *ngIf="this.cont>4" [ngClass]="{ 'icon-5None': this.cont==4,'icon-5Hov': this.cont== 5, 'icon-5': this.blur== 2}" [ngStyle]="{'display':this.cont == 4 ? 'block' : 'block' }"><img width="100%" class="chcar-icon" src="../../assets/images/csharpLogo.png"></div>
+            <div *ngIf="this.cont>5" [ngClass]="{  'icon-6None': this.cont==5,'icon-6Hov': this.cont== 6, 'icon-6': this.blur== 2}" [ngStyle]="{'display':this.cont == 5 ? 'block' : 'block' }"><img width="100%" class="aws-icon" src="../../assets/images/awsLogo.png"></div>
+            <div *ngIf="this.cont>6" [ngClass]="{  'icon-7None': this.cont==6,'icon-7Hov': this.cont== 7, 'icon-7': this.blur== 2}" [ngStyle]="{'display':this.cont == 6 ? 'block' : 'block' }"><img width="100%" class="ang-icon" src="../../assets/images/angularLogo.png"></div>
+            <div *ngIf="this.cont>7" [ngClass]="{  'icon-8None': this.cont==7,'icon-8Hov': this.cont== 8, 'icon-8': this.cont== 9}" [ngStyle]="{'display':this.cont == 7 ? 'block' : 'block' }"><img width="100%" class="php-icon" src="../../assets/images/phpLogo.png"></div>
         </div>
     </div>
     <div class="text-autonomo-is">
