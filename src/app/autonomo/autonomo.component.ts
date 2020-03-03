@@ -24,6 +24,33 @@ export class AutonomoComponent implements OnInit {
 
   statusChange(sw) {
     this.selTab = sw;
+    if(sw==1){
+      this.blur=0;
+      setTimeout(() => {
+        this.blur=0;
+        setTimeout(() => {
+          this.blur=2;
+        },500);
+      },500);
+    }
+    else if(sw==2){
+      this.blur=0;
+      setTimeout(() => {
+        this.blur=0;
+        setTimeout(() => {
+          this.blur=2;
+        },500);
+      },500);
+    }
+    else if(sw==3){
+      this.blur=0;
+      setTimeout(() => {
+        this.blur=0;
+        setTimeout(() => {
+          this.blur=2;
+        },500);
+      },500);
+    }
   }
 
   getId() {
@@ -56,6 +83,6 @@ export class AutonomoComponent implements OnInit {
         this.cont=9;
         this.blur=2;
       }
-    }, 750);
+    }, 500);
   }
 }
