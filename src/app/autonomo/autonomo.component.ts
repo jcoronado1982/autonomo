@@ -10,7 +10,7 @@ export class AutonomoComponent implements OnInit {
   public selTab: number;
   public cont: number = 0;
   public blur = 0;
-  public blur1 :number ;
+  public blur1 :number =2;
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -25,7 +25,6 @@ export class AutonomoComponent implements OnInit {
 
   statusChange(sw) {
     this.selTab = sw;
-    this.blur1 = 2;
     if (sw == 1) {
       setTimeout(() => {
         this.blur1 = 2;
