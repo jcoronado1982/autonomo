@@ -14,7 +14,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatInputModule} from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule,MatNativeDateModule,MatDialogModule, MatButtonModule ,MatTooltipModule} from '@angular/material';
+import { MatDialogModule} from '@angular/material/dialog';
+import { MatTooltipModule} from '@angular/material/tooltip';
+import { MatButtonModule} from '@angular/material/button';
+import { MatFormFieldModule} from '@angular/material/form-field';
 import { HttpClientModule} from '@angular/common/http';
 import { Service } from './services';
 import { Bridge } from './bridge';
@@ -51,7 +54,6 @@ import { AutonomoComponent } from './autonomo/autonomo.component';
     BrowserModule,
     HttpClientModule,
     MatDatepickerModule,
-    MatNativeDateModule,
     MatFormFieldModule,
     MatButtonModule,
     MatTooltipModule,

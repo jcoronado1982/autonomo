@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component'
-import { MatDialog, MatDialogConfig } from '@angular/material'
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog'
 import { AlertasComponent } from '../alertas/alertas.component';
 import { GlobalService } from '../global.service';
 import { Subscription } from "rxjs";

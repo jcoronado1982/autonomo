@@ -4,7 +4,7 @@ import { AppComponent } from '../app.component';
 import { Service } from '../services';
 import { LoadingScreenService } from '../services/loading-screen/loading-screen.service';
 import { GlobalService } from '../global.service';
-import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA  } from '@angular/material';
+import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA  } from '@angular/material/dialog';
 import { Subscription } from "rxjs";
 
 @Component({

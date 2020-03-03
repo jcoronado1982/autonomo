@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Service} from './services';
-import {MatDialog, MatDialogConfig} from '@angular/material';
+import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {AlertasComponent} from './alertas/alertas.component';
 import {LoadingScreenService} from './services/loading-screen/loading-screen.service';
 import {Router} from '@angular/router';
