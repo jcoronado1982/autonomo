@@ -30,7 +30,7 @@
     </div>
     <div class="technologies">
         <div class="technologies-1">
-            <div class="icon-1"><img width="100%" class="py-icon" src="../../assets/images/pyLogo.png"></div>
+            <div [ngClass]="{'icon-1None': this.cont== 0, 'icon-1Hov': this.blur== 1, 'icon-1': this.blur== 2}"><img width="100%" class="py-icon" src="../../assets/images/pyLogo.png"></div>
             <div class="icon-2"><img width="100%" class="php-icon" src="../../assets/images/phpLogo.png"></div>
             <div class="icon-3"><img width="100%" class="react-icon" src="../../assets/images/reactLogo.png"></div>
             <div class="icon-4"><img width="100%" class="ionic-icon" src="../../assets/images/ionicLogo.png"></div>

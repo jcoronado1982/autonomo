@@ -8,15 +8,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AutonomoComponent implements OnInit {
   public myInterval = 30000;
   public selTab: number;
+  public cont = 0;
+  public blur = 0;
+  public imgOk = true;
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.selTab = 1;
     this.getId();
+    setTimeout(() => {
+      this.loadEffect();
+      this.blur=1;
+    }, 2500);
   }
   dataLoading(sw) {
     this.selTab = 1;
-    this.getId();   
+    this.getId();
   }
 
   statusChange(sw) {
@@ -40,5 +47,13 @@ export class AutonomoComponent implements OnInit {
         this.router.navigate(['autonomo']);
       }
     }
-  } 
+  }
+  loadEffect(){
+    setTimeout(() => {
+      if (this.cont<7){
+        this.cont++;
+        this.blur=2;
+      }
+    }, 2500);
+  }
 }
