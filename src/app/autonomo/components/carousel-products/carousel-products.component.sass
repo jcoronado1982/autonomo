@@ -47,6 +47,9 @@
 .column1
     width: 50%
     float: left  
+    margin: 10px 0
+.carousel-item
+    margin: 40px 0
 .column2
     width: 50%
     float: right
@@ -59,9 +62,9 @@
 .carousel-indicators .active
     background-color: transparent !important
     margin: 0 3px
+.item
+    margin-bottom: 20px
 @media screen and (max-width:992px)
-    .column1, .column2
-        width: 100%
     .carousel-indicators
         direction: inherit
         height: auto
@@ -118,7 +121,13 @@
     .content
         position: static
   
-
+@media only screen and (max-width: 768px)
+    .column1, .column2
+        width: 100%
+    .column1
+        height: 360px
+    .carousel-item
+        margin: 0
 @media only screen and (min-width: 1440px) 
     .carousel-inner
         margin-left: -60px
