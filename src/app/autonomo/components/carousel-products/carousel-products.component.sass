@@ -87,7 +87,7 @@
 .item img
     border: 1px solid transparent
     opacity: 0.5
-    transition: 0.5s
+    transition: 10s
 
 .content 
     position: absolute
@@ -135,11 +135,17 @@
 .vert .carousel-item-next.carousel-item-left, .vert .carousel-item-prev.carousel-item-right
     -webkit-transform: translate3d(0, 0, 0)
     transform: translate3d(0, 0, 0)
+    display: table
+    margin: 0 auto
 
 .vert .carousel-item-next,.vert .active.carousel-item-right 
     -webkit-transform: translate3d(0, 100%, 0)
     transform: translate3d(0, 100% 0)
+    display: table
+    margin: 0 auto
 
 .vert .carousel-item-prev, .vert .active.carousel-item-left
     -webkit-transform: translate3d(0,-100%, 0)
     transform: translate3d(0,-100%, 0)
+    display: table
+    margin: 0 auto
