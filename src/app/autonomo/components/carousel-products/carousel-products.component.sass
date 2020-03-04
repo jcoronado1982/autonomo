@@ -41,6 +41,12 @@
     margin-top: 30px
 .img-pr2
     float: left
+.item.active img
+    border-left: 3px solid #ff9209
+    opacity: 1
+.item:hover img
+    border-left: 3px solid #ff9209
+    opacity: 1
 @media screen and (max-width:992px)
 .carousel-indicators
     direction: inherit
@@ -76,9 +82,6 @@
     margin-left: 10px
     cursor: pointer
 
-.item.active img
-    border: 1px solid red
-    opacity: 1
 
 .item img
     border: 1px solid transparent
@@ -101,22 +104,22 @@
     font-size: 15px
 
 
-@media screen and (max-width: 992px) 
+@media only screen and (max-width: 992px) 
     .content
         position: static
   
 
-@media screen and (min-width: 1440px) 
+@media only screen and (min-width: 1440px) 
     .carousel-inner
         margin-left: -60px
   
 
-@media screen and (min-width: 1200px) and (max-width: 1439px) 
+@media only screen and (min-width: 1200px) and (max-width: 1439px) 
     .carousel-inner
         margin-left: -20px
     
 
-@media screen and (min-width: 880px) and (max-width: 1199px) 
+@media only screen and (min-width: 880px) and (max-width: 1199px) 
     .carousel-inner
         margin-left: 20px
     
@@ -124,7 +127,7 @@
         position: static
   
 
-@media screen and (min-width: 576px) and (max-width: 879px)
+@media only screen and (min-width: 576px) and (max-width: 879px)
     .carousel-inner
         margin-left: 50px
     .content
