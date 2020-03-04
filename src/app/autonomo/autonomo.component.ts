@@ -8,8 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AutonomoComponent implements OnInit {
   public myInterval = 30000;
   public selTab: number;
-  public cont : number = 0;
+  public cont: number = 0;
   public blur = 0;
+  public blur1 :number =2;
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -24,32 +25,23 @@ export class AutonomoComponent implements OnInit {
 
   statusChange(sw) {
     this.selTab = sw;
-    if(sw==1){
-      this.blur=0;
+    if (sw == 1) {
       setTimeout(() => {
-        this.blur=0;
-        setTimeout(() => {
-          this.blur=2;
-        },250);
-      },250);
+        this.blur1 = 2;
+      }, 500);
+      this.blur1 = 1;
     }
-    else if(sw==2){
-      this.blur=0;
+    if (sw == 2) {
       setTimeout(() => {
-        this.blur=0;
-        setTimeout(() => {
-          this.blur=2;
-        },250);
-      },250);
+        this.blur1 = 2;
+      }, 500);
+      this.blur1 = 1;
     }
-    else if(sw==3){
-      this.blur=0;
+    if (sw == 3) {
       setTimeout(() => {
-        this.blur=0;
-        setTimeout(() => {
-          this.blur=2;
-        },250);
-      },250);
+        this.blur1 = 2;
+      }, 500);
+      this.blur1 = 1;
     }
   }
 
@@ -71,17 +63,17 @@ export class AutonomoComponent implements OnInit {
       }
     }
   }
-  loadEffect(){
+  loadEffect() {
     setTimeout(() => {
-      this.blur=0;
-      if (this.cont<9){
+      this.blur = 0;
+      if (this.cont < 9) {
         this.cont++;
-        this.blur=2;
+        this.blur = 2;
         this.loadEffect();
       }
-      else{
-        this.cont=9;
-        this.blur=2;
+      else {
+        this.cont = 9;
+        this.blur = 2;
       }
     }, 500);
   }
