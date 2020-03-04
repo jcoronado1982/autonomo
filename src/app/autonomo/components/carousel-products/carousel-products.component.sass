@@ -1,0 +1,118 @@
+.carousel
+    margin-top: 40px
+
+.carousel-inner img 
+    width: 100%
+    height: 100%
+
+.carousel-indicators
+    display: inline-block
+    height: 300px
+    overflow-y: scroll
+    overflow-x: hidden
+    position: static
+    direction: rtl
+
+@media screen and (max-width:992px)
+.carousel-indicators
+    display: inline-flex
+    direction: inherit
+    height: auto
+    width: 100%
+    max-width: 800px
+    overflow-x: auto
+    position: relative
+    margin-left: 0
+    margin-right: 0
+    overflow-y: hidden
+    justify-content: normal
+    margin-bottom: 20px
+  
+.carousel-inner
+    margin-left: 0!important
+  
+::-webkit-scrollbar 
+    width: 5px
+    height: 5px
+
+::-webkit-scrollbar-track 
+    background: #f1f1f1
+
+::-webkit-scrollbar-thumb 
+    background: #888
+
+::-webkit-scrollbar-thumb:hover 
+    background: #555
+
+.item
+    margin-bottom: 10px
+    margin-left: 10px
+    cursor: pointer
+
+.item.active img
+    border: 1px solid red
+    opacity: 1
+
+.item img
+    border: 1px solid transparent
+    opacity: 0.5
+    transition: 0.5s
+
+.item:hover img
+    border: 1px solid red
+    opacity: 1
+
+.content 
+    position: absolute
+    bottom: 0
+    background: rgba(0, 0, 0, 0.5)
+    color: #f1f1f1
+    width: 100%
+    padding: 10px
+
+.content p
+    font-size: 15px
+
+
+@media screen and (max-width: 992px) 
+    .content
+        position: static
+  
+
+@media screen and (min-width: 1440px) 
+    .carousel-inner
+        margin-left: -60px
+  
+
+@media screen and (min-width: 1200px) and (max-width: 1439px) 
+    .carousel-inner
+        margin-left: -20px
+    
+
+@media screen and (min-width: 880px) and (max-width: 1199px) 
+    .carousel-inner
+        margin-left: 20px
+    
+    .content
+        position: static
+  
+
+@media screen and (min-width: 576px) and (max-width: 879px)
+    .carousel-inner
+        margin-left: 50px
+    .content
+        position: static
+
+
+
+.vert .carousel-item-next.carousel-item-left, .vert .carousel-item-prev.carousel-item-right
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+.vert .carousel-item-next,.vert .active.carousel-item-right 
+    -webkit-transform: translate3d(0, 100%, 0)
+    transform: translate3d(0, 100% 0)
+
+.vert .carousel-item-prev, .vert .active.carousel-item-left
+    -webkit-transform: translate3d(0,-100%, 0)
+    transform: translate3d(0,-100%, 0)

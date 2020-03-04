@@ -29,6 +29,7 @@ import { CollapseComponent } from './components/collapse/collapse.component';
 import { SkeletonComponent } from './skeleton/skeleton.component';
 import { AutonomoPagComponent } from './autonomo-pag/autonomo-pag.component';
 import { AutonomoComponent } from './autonomo/autonomo.component';
+import { CarouselProductsComponent } from './autonomo/components/carousel-products/carousel-products.component';
 
 @NgModule({ 
   declarations: [
@@ -45,6 +46,7 @@ import { AutonomoComponent } from './autonomo/autonomo.component';
     SkeletonComponent,
     AutonomoPagComponent,
     AutonomoComponent,
+    CarouselProductsComponent,
   ],
   imports: [
     MatRadioModule,
