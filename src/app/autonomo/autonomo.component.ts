@@ -47,7 +47,7 @@ export class AutonomoComponent implements OnInit {
   
   missChart(){
     setTimeout(() => {
-      this.cont = 0;
+      this.cont = 1;
       this.loadEffect();
     },60000);
   }
