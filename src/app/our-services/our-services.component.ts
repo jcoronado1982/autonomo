@@ -11,7 +11,6 @@ export class OurServicesComponent implements OnInit {
 
   ngOnInit() {
     this.idService=parseInt(sessionStorage.getItem("itemProductID"));
-    console.log(this.idService);
   }
 
 }

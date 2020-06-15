@@ -3,7 +3,21 @@
         <app-header></app-header>
     </div>
     <div class="content">
-        ******
+        <div *ngIf="this.idService==1">
+            <div class="titleContent">Mobile and Web Applications</div>
+        </div>
+        <div *ngIf="this.idService==2">
+            <div class="titleContent">Cloud Storage</div>
+        </div>
+        <div *ngIf="this.idService==3">
+            <div class="titleContent">Digital Marketing</div>
+        </div>
+        <div *ngIf="this.idService==4">
+            <div class="titleContent">Create a Store</div>
+        </div>
+        <div *ngIf="this.idService==5">
+            <div class="titleContent">Manage your projects</div>
+        </div>
     </div>
     <div class="foot">
         <app-footer></app-footer>
