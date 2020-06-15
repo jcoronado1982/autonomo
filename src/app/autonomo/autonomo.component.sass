@@ -472,6 +472,11 @@
 .ai-title
     grid-column: 1 / span 1
     grid-row: 1
+    display: block
+.ai-title2
+    grid-column: 1 / span 1
+    grid-row: 1
+    display: none
 .text-ai-title
     font-size: 50px
     color: #FF9209
@@ -887,6 +892,15 @@
     .desc-title-as
         font-size: 20px
 @media only screen and (max-width: 768px)
+    .text-ai-desc-1, .text-ai-desc-2
+        line-height: 1.5
+    .ai-title
+        display: none
+    .ai-title2
+        display: block
+    .py-icon, .php-icon, .ang-icon, .react-icon, .ionic-icon, .chcar-icon, .aws-icon
+        width: 40px
+        height: 40px
     .icon-8Hov
         display: none
     .items-location
@@ -912,7 +926,7 @@
     .item-text-title
         font-size: 20px
     .comunication-text-1
-        font-size: 40px
+        font-size: 32px
     .comunication-text-2
         font-size: 20px
     .padding-text-carrusel-int
@@ -922,9 +936,14 @@
     .text-ai-title, .text-ai-title-1, .text-ai-description
         padding-left: 20px
         padding-right: 20px
+    .ai-button
+        margin-top: 20px
     .ai-button-txt
-        margin-left: 20px
+        display: table
+        margin: 0 auto
         width: 95%
+        padding: 20px 0px
+        height: 50px
     .container-ai-general
         grid-template-rows: auto auto auto
     .carousel-as
@@ -934,7 +953,7 @@
         padding-top: 20px
         padding-bottom: 0px
     .autonomo-is-title
-        font-size: 35px
+        font-size: 32px
     .products-1, .products-2
         margin-top: 30px
     .products-2, .products-4, .products-6
@@ -1038,7 +1057,7 @@
     .container-ai-general
         grid-template-columns: 1fr
     .comunication-text-2
-        font-size: 28px
+        font-size: 24px
     .item-text-title, .item-text-title-1
         font-size: 32px
     .curva-general-2
@@ -1055,6 +1074,10 @@
         padding-right: 40% 
     .curva-general
         left: -6%
+    li
+        line-height: 1.5
+    .text-ai-title
+        font-size: 32px
 @media only screen and (max-width: 414px)
     .item-text-title, .item-text-title-1
         font-size: 20px
