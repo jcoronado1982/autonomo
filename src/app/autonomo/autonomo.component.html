@@ -83,12 +83,11 @@
                 <carousel interval="30000">
                     <slide style="height: 410px; padding: 0px 5%;">
                         <div class="products">
-                            <div (click)="this.statusChange(1);"
-                                [className]="this.selTab===1 ? 'products-1 border-yellow' : 'products-1'">
+                            <div (click)="this.goToOurServices(1);" class="products-1">
                                 <div class="img-pr2"><img class="pr2" src="../../assets/images/movil_web.png"></div>
                             </div>
-                            <div (click)="this.statusChange(1);" [className]="this.selTab===1 ? 'products-2' : 'products-2'">
-                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 1 ? '#3E3E4A' : '#B6B6BB' }">
+                            <div (click)="this.goToOurServices(1);" class="products-2">
+                                <div class="text-products4">
                                     <div class="ffItem">
                                         <div class="text-products-title">
                                             MOBILES AND WEB APPLICATIONS
@@ -100,12 +99,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div (click)="this.statusChange(2);"
-                                [className]="this.selTab===2 ? 'products-3 border-yellow' : 'products-3'">
+                            <div (click)="this.goToOurServices(2);" class="products-3">
                                 <div class="img-pr2"><img class="pr3" src="../../assets/images/inactive.png"></div>
                             </div>
-                            <div (click)="this.statusChange(2);" [className]="this.selTab===2 ? 'products-4' : 'products-4'">
-                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 2 ? '#3E3E4A' : '#B6B6BB' }">
+                            <div (click)="this.goToOurServices(2);" class="products-4">
+                                <div class="text-products4">
                                     <div class="ffItem">
                                         <div class="text-products-title">
                                             CLOUD STORAGE
@@ -126,12 +124,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div (click)="this.statusChange(3);"
-                                [className]="this.selTab===3 ? 'products-5 border-yellow' : 'products-5'">
+                            <div (click)="this.goToOurServices(3);" class="products-5">
                                 <div class="img-pr2"><img class="pr4" src="../../assets/images/inactive2.png"></div>
                             </div>
-                            <div (click)="this.statusChange(3);" [className]="this.selTab===3 ? 'products-6' : 'products-6'">
-                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 3 ? '#3E3E4A' : '#B6B6BB' }">
+                            <div (click)="this.goToOurServices(3);" class="products-6">
+                                <div class="text-products4">
                                     <div class="ffItem">
                                         <div class="text-products-title">
                                             DIGITAL MARKETING
@@ -156,11 +153,10 @@
                     </slide>
                     <slide style="height: 410px; padding: 0px 5%;">
                         <div class="products">
-                            <div (click)="this.statusChange(4);"
-                                [className]="this.selTab===4 ? 'products-7 border-yellow' : 'products-7'">
+                            <div (click)="this.goToOurServices(4);" class="products-7">
                                 <div class="img-pr2"><img class="pr4" src="../../assets/images/logoShop.png"></div>
                             </div>
-                            <div (click)="this.statusChange(4);" [className]="this.selTab===4 ? 'products-8' : 'products-8'">
+                            <div (click)="this.goToOurServices(4);" class="products-8">
                                 <div class="text-products4" [ngStyle]="{'color':this.selTab === 4 ? '#3E3E4A' : '#B6B6BB' }">
                                     <div class="ffItem">
                                         <div class="text-products-title">
@@ -179,11 +175,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div (click)="this.statusChange(5);"
-                                [className]="this.selTab===5 ? 'products-9 border-yellow' : 'products-9'">
+                            <div (click)="this.goToOurServices(5);" class="products-9">
                                 <div class="img-pr2"><img class="pr4" src="../../assets/images/logoMngr.png"></div>
                             </div>
-                            <div (click)="this.statusChange(5);" [className]="this.selTab===5 ? 'products-10' : 'products-10'">
+                            <div (click)="this.goToOurServices(5);" class="products-10">
                                 <div class="text-products4" [ngStyle]="{'color':this.selTab === 5 ? '#3E3E4A' : '#B6B6BB' }">
                                     <div class="ffItem">
                                         <div class="text-products-title">
