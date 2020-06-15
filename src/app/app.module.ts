@@ -30,6 +30,7 @@ import { SkeletonComponent } from './skeleton/skeleton.component';
 import { AutonomoComponent } from './autonomo/autonomo.component';
 import { CarouselProductsComponent } from './autonomo/components/carousel-products/carousel-products.component';
 import { OurServicesComponent } from './our-services/our-services.component';
+import { OurProjectsComponent } from './our-projects/our-projects.component';
 
 @NgModule({ 
   declarations: [
@@ -47,6 +48,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
     AutonomoComponent,
     CarouselProductsComponent,
     OurServicesComponent,
+    OurProjectsComponent,
   ],
   imports: [
     MatRadioModule,
@@ -78,6 +80,10 @@ import { OurServicesComponent } from './our-services/our-services.component';
       {
         path:'autonomo',
          component:AutonomoComponent
+      },
+      {
+        path:'our-services',
+         component:OurServicesComponent
       },
       {
         path:'',

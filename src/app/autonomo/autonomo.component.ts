@@ -24,6 +24,10 @@ export class AutonomoComponent implements OnInit {
   statusChange(sw) {
     this.selTab = sw;
   }
+  
+  goToOurServcies(){
+    this.router.navigate(['our-services']);
+  }
 
   loadEffect() {
       setTimeout(() => {
