@@ -25,7 +25,8 @@ export class AutonomoComponent implements OnInit {
     this.selTab = sw;
   }
   
-  goToOurServcies(){
+  goToOurServices(id){
+    sessionStorage.setItem("itemProductID",id);
     this.router.navigate(['our-services']);
   }
   goToOurProjects(){
