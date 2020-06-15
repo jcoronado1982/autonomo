@@ -79,125 +79,135 @@
     </div>
     <div class="autonomo-products">
         <div class="autonomo-products-general">
-            <div class="products">
-                <div (click)="this.statusChange(1);"
-                    [className]="this.selTab===1 ? 'products-1 border-yellow' : 'products-1'">
-                    <div class="img-pr2"><img class="pr2" src="../../assets/images/movil_web.png"></div>
-                </div>
-                <div (click)="this.statusChange(1);" [className]="this.selTab===1 ? 'products-2' : 'products-2'">
-                    <div class="text-products4" [ngStyle]="{'color':this.selTab === 1 ? '#3E3E4A' : '#B6B6BB' }">
-                        <div class="ffItem">
-                            <div class="text-products-title">
-                                MOBILES AND WEB APPLICATIONS
+            <div id="slides_control" class="slides_web">
+                <carousel interval="30000">
+                    <slide style="height: 330px; padding: 0px 5%;">
+                        <div class="products">
+                            <div (click)="this.statusChange(1);"
+                                [className]="this.selTab===1 ? 'products-1 border-yellow' : 'products-1'">
+                                <div class="img-pr2"><img class="pr2" src="../../assets/images/movil_web.png"></div>
                             </div>
-                            <div class="text-products-description">
-                                The past few years have seen a dramatic change in the public perception of cosmetic
-                                surgery.
+                            <div (click)="this.statusChange(1);" [className]="this.selTab===1 ? 'products-2' : 'products-2'">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 1 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            MOBILES AND WEB APPLICATIONS
+                                        </div>
+                                        <div class="text-products-description">
+                                            The past few years have seen a dramatic change in the public perception of cosmetic
+                                            surgery.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div (click)="this.statusChange(2);"
-                    [className]="this.selTab===2 ? 'products-3 border-yellow' : 'products-3'">
-                    <div class="img-pr2"><img class="pr3" src="../../assets/images/inactive.png"></div>
-                </div>
-                <div (click)="this.statusChange(2);" [className]="this.selTab===2 ? 'products-4' : 'products-4'">
-                    <div class="text-products4" [ngStyle]="{'color':this.selTab === 2 ? '#3E3E4A' : '#B6B6BB' }">
-                        <div class="ffItem">
-                            <div class="text-products-title">
-                                CLOUD STORAGE
+                            <div (click)="this.statusChange(2);"
+                                [className]="this.selTab===2 ? 'products-3 border-yellow' : 'products-3'">
+                                <div class="img-pr2"><img class="pr3" src="../../assets/images/inactive.png"></div>
                             </div>
-                            <div class="text-products-description">
-                                <ul style="padding-left: 15px;">
-                                    <li>
-                                        Microsoft Azure
-                                    </li>
-                                    <li>
-                                        Google Cloud
-                                    </li>
-                                    <li>
-                                        Amazon web Services
-                                    </li>
-                                </ul>
+                            <div (click)="this.statusChange(2);" [className]="this.selTab===2 ? 'products-4' : 'products-4'">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 2 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            CLOUD STORAGE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Microsoft Azure
+                                                </li>
+                                                <li>
+                                                    Google Cloud
+                                                </li>
+                                                <li>
+                                                    Amazon web Services
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div (click)="this.statusChange(3);"
-                    [className]="this.selTab===3 ? 'products-5 border-yellow' : 'products-5'">
-                    <div class="img-pr2"><img class="pr4" src="../../assets/images/inactive2.png"></div>
-                </div>
-                <div (click)="this.statusChange(3);" [className]="this.selTab===3 ? 'products-6' : 'products-6'">
-                    <div class="text-products4" [ngStyle]="{'color':this.selTab === 3 ? '#3E3E4A' : '#B6B6BB' }">
-                        <div class="ffItem">
-                            <div class="text-products-title">
-                                DIGITAL MARKETING
+                            <div (click)="this.statusChange(3);"
+                                [className]="this.selTab===3 ? 'products-5 border-yellow' : 'products-5'">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/inactive2.png"></div>
                             </div>
-                            <div class="text-products-description">
-                                <ul style="padding-left: 15px;">
-                                    <li>
-                                        Digital campaigns manager.
-                                    </li>
-                                    <li>
-                                        Massive email and SMS sending.
-                                    </li>
-                                    <li>
-                                        Referall programs
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div (click)="this.statusChange(4);"
-                    [className]="this.selTab===4 ? 'products-7 border-yellow' : 'products-7'">
-                    <div class="img-pr2"><img class="pr4" src="../../assets/images/logoShop.png"></div>
-                </div>
-                <div (click)="this.statusChange(4);" [className]="this.selTab===4 ? 'products-8' : 'products-8'">
-                    <div class="text-products4" [ngStyle]="{'color':this.selTab === 4 ? '#3E3E4A' : '#B6B6BB' }">
-                        <div class="ffItem">
-                            <div class="text-products-title">
-                                CREATE A STORE
-                            </div>
-                            <div class="text-products-description">
-                                <ul style="padding-left: 15px;">
-                                    <li>
-                                        Online store.
-                                    </li>
-                                    <li>
-                                        Secure payment methods.
-                                    </li>
-                                </ul>
+                            <div (click)="this.statusChange(3);" [className]="this.selTab===3 ? 'products-6' : 'products-6'">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 3 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            DIGITAL MARKETING
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Digital campaigns manager.
+                                                </li>
+                                                <li>
+                                                    Massive email and SMS sending.
+                                                </li>
+                                                <li>
+                                                    Referall programs
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div (click)="this.statusChange(5);"
-                    [className]="this.selTab===5 ? 'products-9 border-yellow' : 'products-9'">
-                    <div class="img-pr2"><img class="pr4" src="../../assets/images/logoMngr.png"></div>
-                </div>
-                <div (click)="this.statusChange(5);" [className]="this.selTab===5 ? 'products-10' : 'products-10'">
-                    <div class="text-products4" [ngStyle]="{'color':this.selTab === 5 ? '#3E3E4A' : '#B6B6BB' }">
-                        <div class="ffItem">
-                            <div class="text-products-title">
-                                MANAGE YOUR PROJECTS
+                    </slide>
+                    <slide style="height: 330px; padding: 0px 5%;">
+                        <div class="products">
+                            <div (click)="this.statusChange(4);"
+                                [className]="this.selTab===4 ? 'products-7 border-yellow' : 'products-7'">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/logoShop.png"></div>
                             </div>
-                            <div class="text-products-description">
-                                <ul style="padding-left: 15px;">
-                                    <li>
-                                        Control the time.
-                                    </li>
-                                    <li>
-                                        Create functionalities.
-                                    </li>
-                                    <li>
-                                        Manage users
-                                    </li>
-                                </ul>
+                            <div (click)="this.statusChange(4);" [className]="this.selTab===4 ? 'products-8' : 'products-8'">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 4 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            CREATE A STORE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Online store.
+                                                </li>
+                                                <li>
+                                                    Secure payment methods.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.statusChange(5);"
+                                [className]="this.selTab===5 ? 'products-9 border-yellow' : 'products-9'">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/logoMngr.png"></div>
+                            </div>
+                            <div (click)="this.statusChange(5);" [className]="this.selTab===5 ? 'products-10' : 'products-10'">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 5 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            MANAGE YOUR PROJECTS
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Control the time.
+                                                </li>
+                                                <li>
+                                                    Create functionalities.
+                                                </li>
+                                                <li>
+                                                    Manage users
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </slide>
+                </carousel>
             </div>
         </div>
         <div class="carouselAutonomoProducts">
