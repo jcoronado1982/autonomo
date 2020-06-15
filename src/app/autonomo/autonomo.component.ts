@@ -28,7 +28,9 @@ export class AutonomoComponent implements OnInit {
   goToOurServcies(){
     this.router.navigate(['our-services']);
   }
-
+  goToOurProjects(){
+    this.router.navigate(['our-projects']);
+  }
   loadEffect() {
       setTimeout(() => {
         this.blur = 0;

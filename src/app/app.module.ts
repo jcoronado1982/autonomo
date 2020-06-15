@@ -86,6 +86,10 @@ import { OurProjectsComponent } from './our-projects/our-projects.component';
          component:OurServicesComponent
       },
       {
+        path:'our-projects',
+         component:OurProjectsComponent
+      },
+      {
         path:'',
         component:AutonomoComponent
       },
