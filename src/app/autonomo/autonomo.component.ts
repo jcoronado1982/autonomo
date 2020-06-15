@@ -15,66 +15,36 @@ export class AutonomoComponent implements OnInit {
 
   ngOnInit() {
     this.selTab = 1;
-    this.getId();
     this.loadEffect();
   }
   dataLoading(sw) {
     this.selTab = 1;
-    this.getId();
   }
 
   statusChange(sw) {
     this.selTab = sw;
-    if (sw == 1) {
-      setTimeout(() => {
-        this.blur1 = 2;
-      }, 500);
-      this.blur1 = 1;
-    }
-    if (sw == 2) {
-      setTimeout(() => {
-        this.blur1 = 2;
-      }, 500);
-      this.blur1 = 1;
-    }
-    if (sw == 3) {
-      setTimeout(() => {
-        this.blur1 = 2;
-      }, 500);
-      this.blur1 = 1;
-    }
   }
 
-  getId() {
-    if (this.route.firstChild) {
-      var id = this.route.firstChild.snapshot.params.id;
-      if (id == '1') {
-        this.selTab = 1;
-      }
-      else if (id == '2') {
-        this.selTab = 2;
-      }
-      else if (id == '3') {
-        this.selTab = 3;
-      }
-      else {
-        this.selTab = 1;
-        this.router.navigate(['autonomo']);
-      }
-    }
-  }
   loadEffect() {
+      setTimeout(() => {
+        this.blur = 0;
+        if (this.cont < 9) {
+          this.cont++;
+          this.blur = 2;
+          this.loadEffect();
+        }
+        else {
+          this.cont = 9;
+          this.blur = 2;
+        }
+        this.missChart();
+      }, 500);
+  }
+  
+  missChart(){
     setTimeout(() => {
-      this.blur = 0;
-      if (this.cont < 9) {
-        this.cont++;
-        this.blur = 2;
-        this.loadEffect();
-      }
-      else {
-        this.cont = 9;
-        this.blur = 2;
-      }
-    }, 500);
+      this.cont = 0;
+      this.loadEffect();
+    },60000);
   }
 }
