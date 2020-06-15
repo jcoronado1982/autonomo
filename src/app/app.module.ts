@@ -30,6 +30,7 @@ import { SkeletonComponent } from './skeleton/skeleton.component';
 import { AutonomoComponent } from './autonomo/autonomo.component';
 import { CarouselProductsComponent } from './autonomo/components/carousel-products/carousel-products.component';
 import { ServicesComponent } from './services/services.component';
+import { OurServicesComponent } from './our-services/our-services.component';
 
 @NgModule({ 
   declarations: [
@@ -47,6 +48,7 @@ import { ServicesComponent } from './services/services.component';
     AutonomoComponent,
     CarouselProductsComponent,
     ServicesComponent,
+    OurServicesComponent,
   ],
   imports: [
     MatRadioModule,
