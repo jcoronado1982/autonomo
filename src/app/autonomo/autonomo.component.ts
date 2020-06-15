@@ -10,7 +10,7 @@ export class AutonomoComponent implements OnInit {
   public selTab: number;
   public cont: number = 0;
   public blur = 0;
-  public blur1 :number =2;
+  public blur1: number = 2;
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {

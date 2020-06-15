@@ -27,7 +27,6 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { OptionsComponent } from './components/options/options.component';
 import { CollapseComponent } from './components/collapse/collapse.component';
 import { SkeletonComponent } from './skeleton/skeleton.component';
-import { AutonomoPagComponent } from './autonomo-pag/autonomo-pag.component';
 import { AutonomoComponent } from './autonomo/autonomo.component';
 import { CarouselProductsComponent } from './autonomo/components/carousel-products/carousel-products.component';
 
@@ -44,7 +43,6 @@ import { CarouselProductsComponent } from './autonomo/components/carousel-produc
     OptionsComponent,
     CollapseComponent,
     SkeletonComponent,
-    AutonomoPagComponent,
     AutonomoComponent,
     CarouselProductsComponent,
   ],
@@ -70,10 +68,6 @@ import { CarouselProductsComponent } from './autonomo/components/carousel-produc
       {
         path:'home',
          component:HomeComponent
-      },
-      {
-        path:'autonomo_pag',
-         component:AutonomoPagComponent
       },
       {
         path:'skeleton',

@@ -6,10 +6,10 @@
             </div>
             <div class="menu-as">
                 <div class="menu-as-items">
-                    <div class="menu-solutions">Solutions</div>
-                    <div class="menu-tech">Technologies</div>
-                    <div class="menu-services">Services</div>
-                    <div class="menu-contact-us">Contact Us</div>
+                    <a class="menu-solutions" href="#solutions">Solutions</a>
+                    <a class="menu-tech" href="#technologies">Technologies</a>
+                    <a class="menu-services" href="#services">Services</a>
+                    <a class="menu-contact-us" href="#contactUs">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="technologies">
+    <div class="technologies" id="technologies">
         <div class="technologies-1" *ngIf="this.cont>0">
             <div *ngIf="this.cont>0"
                 [ngClass]="{ 'icon-1None': this.cont==0, 'icon-1Hov': this.cont==1, 'icon-1': this.blur== 2 || this.cont== 9}">
@@ -285,7 +285,7 @@
             </carousel>
         </div>
     </div>
-    <div class="ai-general">
+    <div class="ai-general" id="services">
         <div class="container-ai-general">
             <div class="ai-title">
                 <div class="text-ai-title">
@@ -312,14 +312,14 @@
             </div>
             <div class="ai-button">
                 <div class="ai-button-txt">
-                    Prueba nuestro demo
+                    Our projects 
                 </div>
             </div>
             <div class="ai-logo">
             </div>
         </div>
     </div>
-    <div class="message-title">
+    <div class="message-title"  id="contactUs">
         <div class="txt-msg-title">
             <b>Envíenos un Mensaje</b>
         </div>
