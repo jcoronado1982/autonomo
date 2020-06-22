@@ -80,7 +80,7 @@
     <div class="autonomo-products">
         <div class="autonomo-products-general">
             <div id="slides_control" class="slides_web">
-                <carousel interval="30000">
+                <carousel interval="30000" [showIndicators]="false">
                     <slide style="height: 410px; padding: 0px 5%;">
                         <div class="products">
                             <div (click)="this.goToOurServices(1);" class="products-1">
@@ -152,7 +152,7 @@
                         </div>
                     </slide>
                     <slide style="height: 410px; padding: 0px 5%;">
-                        <div class="products">
+                        <div class="products" style="grid-template-rows: 110px 110px 110px;">
                             <div (click)="this.goToOurServices(4);" class="products-7" style="margin-top: 25px;">
                                 <div class="img-pr2"><img class="pr4" src="../../assets/images/logoShop.png"></div>
                             </div>
@@ -228,7 +228,7 @@
                         </div>
                     </slide>
                     <slide style="height: 410px; padding: 0px 5%;">
-                        <div class="products">
+                        <div class="products" style="grid-template-rows: 110px 110px 110px;">
                             <div (click)="this.goToOurServices(7);" class="products-13" style="margin-top: 25px;">
                                 <div class="img-pr2"><img class="pr4"   src="../../assets/images/dashbrdlogo.png"></div>
                             </div>
@@ -251,25 +251,41 @@
                                     </div>
                                 </div>
                             </div>
-                            <div (click)="this.goToOurServices(5);" class="products-9" style="margin-top: 25px;">
-                                <div class="img-pr2"><img class="pr4" src="../../assets/images/logoMngr.png"></div>
+                            <div (click)="this.goToOurServices(1);" class="products-15" style="margin-top: 25px;">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/movil_web.png"></div>
                             </div>
-                            <div (click)="this.goToOurServices(5);" class="products-10" style="margin-top: 25px;">
+                            <div (click)="this.goToOurServices(1);" class="products-16" style="margin-top: 25px;">
                                 <div class="text-products4" [ngStyle]="{'color':this.selTab === 5 ? '#3E3E4A' : '#B6B6BB' }">
                                     <div class="ffItem">
                                         <div class="text-products-title">
-                                            MANAGE YOUR PROJECTS
+                                            MOBILES AND WEB APPLICATIONS
+                                        </div>
+                                        <div class="text-products-description">
+                                            The past few years have seen a dramatic change in the public perception of cosmetic
+                                            surgery.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(2);" class="products-17" style="margin-top: 25px;">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/inactive.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(2);" class="products-18" style="margin-top: 25px;">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 4 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            CLOUD STORAGE
                                         </div>
                                         <div class="text-products-description">
                                             <ul style="padding-left: 15px;">
                                                 <li>
-                                                    Control the time.
+                                                    Microsoft Azure
                                                 </li>
                                                 <li>
-                                                    Create functionalities.
+                                                    Google Cloud
                                                 </li>
                                                 <li>
-                                                    Manage users
+                                                    Amazon web Services
                                                 </li>
                                             </ul>
                                         </div>
