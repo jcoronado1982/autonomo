@@ -4,7 +4,7 @@
     padding: 0
     grid-gap: 0px
     grid-template-columns: 1fr
-    grid-template-rows: auto 768px auto auto 325px auto auto auto auto auto auto auto auto auto auto 80px
+    grid-template-rows: auto 768px auto auto 465px auto auto auto auto auto auto 90px auto auto auto 80px
 .header-items 
     display: grid
     grid-template-columns: 1fr 1fr
@@ -34,6 +34,9 @@
     cursor: pointer
     text-align: center
     font-family: mons
+    text-decoration: none
+.menu-solutions:hover, .menu-tech:hover, .menu-services:hover, .menu-contact-us:hover
+    border-bottom: 2px solid #EEC52F
 .big-text-as
     padding-top: 245px
 .big-title-as
@@ -188,7 +191,6 @@
     grid-template-columns: 1fr
     grid-template-rows: auto auto
     padding-top: 30px
-    padding-bottom: 40px
 .autonomo-is-title
     font-family: autonomo
     text-align: center
@@ -256,6 +258,26 @@
 .products-6
     grid-column: 2 / span 1
     grid-row: 3 / span 1
+    padding-left: 20px
+    cursor: pointer
+.products-7
+    grid-column: 1 / span 1
+    grid-row: 1 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-8
+    grid-column: 2 / span 1
+    grid-row: 1 / span 1
+    padding-left: 20px
+    cursor: pointer
+.products-9
+    grid-column: 1 / span 1
+    grid-row: 2 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-10
+    grid-column: 2 / span 1
+    grid-row: 2 / span 1
     padding-left: 20px
     cursor: pointer
 .text-products-title
@@ -390,14 +412,14 @@
     height: 130px 
     background-blend-mode: multiply
     background-image: linear-gradient(to bottom, #868585, #868585)
-    opacity:0.5                
+    opacity: 0.5                
 .items-communication
     position: relative 
     top: 79%
     height: 130px 
     background-blend-mode: multiply
     background-image: linear-gradient(to bottom, #868585, #868585)
-    opacity:0.5
+    opacity: 0.5
 .item-text
     float: left
     width: 50%
@@ -469,6 +491,11 @@
 .ai-title
     grid-column: 1 / span 1
     grid-row: 1
+    display: block
+.ai-title2
+    grid-column: 1 / span 1
+    grid-row: 1
+    display: none
 .text-ai-title
     font-size: 50px
     color: #FF9209
@@ -518,7 +545,7 @@
     font-size: 26px
     padding: 25px 0px
     margin-left: 60px
-    margin-top: 25px
+    margin-top: 55px
     width: 326px
     height: 80px
     font-family: autonomo
@@ -795,7 +822,7 @@
     border-radius: 100%
     background: #fff
     width: 112%
-    margin-top:20px
+    margin-top: 20px
 .borde-sep
     border-left: 2px solid #ffffff
     margin-top: 3px
@@ -861,7 +888,7 @@
         padding: 0
         grid-gap: 0px
         grid-template-columns: 100%
-        grid-template-rows: auto 384px auto auto 700px auto auto auto auto auto auto auto auto auto auto 80px
+        grid-template-rows: auto 384px auto auto 495px auto auto auto auto auto auto auto auto auto auto 80px
     .header-items 
         display: grid
         grid-template-columns: 100%
@@ -884,11 +911,22 @@
     .desc-title-as
         font-size: 20px
 @media only screen and (max-width: 768px)
+    .text-products-title
+        font-size: 12px
+    .text-ai-desc-1, .text-ai-desc-2
+        line-height: 1.5
+    .ai-title
+        display: none
+    .ai-title2
+        display: block
+    .py-icon, .php-icon, .ang-icon, .react-icon, .ionic-icon, .chcar-icon, .aws-icon
+        width: 40px
+        height: 40px
     .icon-8Hov
         display: none
     .items-location
         height: 110px
-    .products-1.border-yellow, .products-3.border-yellow, .products-5.border-yellow
+    .products-1.border-yellow, .products-3.border-yellow, .products-5.border-yellow, .products-7.border-yellow, .products-9.border-yellow
         padding-left: 6px
     .border-yellow
         margin-left: 48%
@@ -909,7 +947,7 @@
     .item-text-title
         font-size: 20px
     .comunication-text-1
-        font-size: 40px
+        font-size: 32px
     .comunication-text-2
         font-size: 20px
     .padding-text-carrusel-int
@@ -919,9 +957,15 @@
     .text-ai-title, .text-ai-title-1, .text-ai-description
         padding-left: 20px
         padding-right: 20px
+    .ai-button
+        margin-top: 20px
     .ai-button-txt
-        margin-left: 20px
+        display: table
+        margin: 0 auto
         width: 95%
+        padding: 20px 0px
+        height: 50px
+        font-size: 20px
     .container-ai-general
         grid-template-rows: auto auto auto
     .carousel-as
@@ -931,12 +975,12 @@
         padding-top: 20px
         padding-bottom: 0px
     .autonomo-is-title
-        font-size: 35px
+        font-size: 32px
     .products-1, .products-2
         margin-top: 30px
-    .products-2, .products-4, .products-6
+    .products-2, .products-4, .products-6, .products-8, .products-10 
         margin-bottom: -50px
-    .products-1, .products-3, .products-5
+    .products-1, .products-3, .products-5, .products-7, .products-9
         padding-left: 50%
     .header
         background-image: url("../../assets/images/hero-images-Tab.png")
@@ -971,10 +1015,13 @@
     .descripion-as-char
         width: 100%
     .autonomo-products-general
+        display: grid
         grid-template-columns: 1fr
         grid-template-rows: 1fr 1fr
-        height: 1000px
         padding-bottom: 80px
+        height: 1px
+    .img-pr2:hover
+        border-left: 2px solid #ff9209
     .computer-img
         grid-column: 1/span 1
         grid-row: 1 / span 1
@@ -988,7 +1035,7 @@
         width: 100%
     .products
         grid-template-columns: 30% 1fr
-        grid-template-rows: auto auto auto
+        grid-template-rows: 155px 110px 110px
         grid-column: 1/span 1
         grid-row: 2 
         margin-bottom: 200px
@@ -1003,7 +1050,7 @@
         grid-row: 1
     .line-style
         padding: 0px
-        margin-top: 38px
+        margin-top: 0px
     .line-style-container
         grid-template-columns: 1fr auto 1fr
     .button-contactenos
@@ -1022,8 +1069,14 @@
         grid-column: 1 / span 1
         grid-row: 2/span 2
         margin-top: 10px
-    .redondeadonorelieve
+    .redondeadonorelieve, .redondeadonorelieve-1
         width: 100%
+        font-size: 20px
+        height: 50px
+    .redondeadonorelieve-2
+        width: 100%
+        font-size: 20px
+        height: 100px
     .txt-msg-title
         font-size: 35px
         padding: 45px 20px
@@ -1032,7 +1085,7 @@
     .container-ai-general
         grid-template-columns: 1fr
     .comunication-text-2
-        font-size: 28px
+        font-size: 24px
     .item-text-title, .item-text-title-1
         font-size: 32px
     .curva-general-2
@@ -1046,9 +1099,15 @@
     .item-text, .item-text-1
         padding: 10px 0px
     .text-products-description
-        padding-right: 40% 
+        padding-right: 15% 
+        font-size: 12px
+        line-height: 1.5
     .curva-general
         left: -6%
+    li
+        line-height: 1.5
+    .text-ai-title
+        font-size: 32px
 @media only screen and (max-width: 414px)
     .item-text-title, .item-text-title-1
         font-size: 20px
@@ -1058,8 +1117,6 @@
         font-size: 14pt
     .curva-general-2
         margin-top: 45px
-    .line-style
-        margin-top: 35px
     .padding-text-carrusel
         height: 330px
     .products-location
@@ -1080,14 +1137,14 @@
         font-size: 24px
     .curva-general
         left: -6%
-    .products-1, .products-3, .products-5
+    .products-1, .products-3, .products-5, .products-7,  .products-9
         padding-left: 40%
     .border-yellow
         margin-left: 30%
     .img-bnhouse
         padding-right: 275px
 @media only screen and (max-width: 375px)
-    .products-1, .products-3, .products-5
+    .products-1, .products-3, .products-5,  .products-7,  .products-9
         padding-left: 25%
     .border-yellow
         margin-left: 15%
@@ -1122,7 +1179,7 @@
         font-size: 14px
     .padding-text-carrusel-int
         padding: 10px 45px 20px 45px
-    .products-2, .products-4, .products-6
+    .products-2, .products-4, .products-6,  .products-8,  .products-10
         padding-left: 10px
         padding-right: 10px
     .computer-img

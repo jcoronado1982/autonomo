@@ -2,10 +2,9 @@
 .carousel-inner img 
     width: 100%
     height: 100%
-
 .carousel-indicators
     display: inline-block
-    height: 300px
+    height: 100%
     overflow-y: hidden
     overflow-x: hidden
     position: static
@@ -40,8 +39,29 @@
     height: 240px
     display: table
     margin: 0 auto
+.computer-img4
+    grid-column: 2 / span 1
+    grid-row: 1 
+    background-image: url("../../../../assets/images/test3.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    width: 400px
+    height: 240px
+    display: table
+    margin: 0 auto
+.computer-img5
+    grid-column: 2 / span 1
+    grid-row: 1 
+    background-image: url("../../../../assets/images/test3.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    width: 400px
+    height: 240px
+    display: table
+    margin: 0 auto
 .img-pr2
     float: left
+    height: 80px
 .productItems
     width: 100%
 .column1
@@ -53,20 +73,39 @@
 .column2
     width: 50%
     float: right
-.item.active img
-    border-left: 6px solid #ff9209
-    opacity: 1
-.item:hover img
-    border-left: 6px solid #ff9209
+.item
+    margin: 20px 0
+    cursor: pointer
+    height: 95px
+.item:hover
+    border-left: 2px solid #ff9209
     opacity: 1
 .carousel-indicators .active
     background-color: transparent !important
     margin: 0 3px
+    border-left: 2px solid #ff9209
+.item.carousel-item:hover
+    border-left: 0px solid #ff9209
 .item
     margin-bottom: 20px
     cursor: pointer
 .text-products4
     text-align: left
+.container-fluid
+    display: block
+.text-products4
+    padding-left: 13%
+.buttonViewMore
+    width: 20px
+    border: 1px solid #cccccc
+    border-radius: 5px
+    display: table
+    margin: 0 auto
+    width: 100px
+    text-align: center
+    cursor: pointer
+.buttonViewMore:hover
+    background-color: #d8d8d8
 @media screen and (max-width:992px)
     .carousel-indicators
         direction: inherit
@@ -131,6 +170,8 @@
         height: 360px
     .carousel-item
         margin: 0
+    .container-fluid
+        display: none
 @media only screen and (min-width: 1440px) 
     .carousel-inner
         margin-left: -60px

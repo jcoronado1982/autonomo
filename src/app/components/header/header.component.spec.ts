@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AutonomoPagComponent } from './autonomo-pag.component';
+import { HeaderComponent } from './header.component';
 
-describe('AutonomoPagComponent', () => {
-  let component: AutonomoPagComponent;
-  let fixture: ComponentFixture<AutonomoPagComponent>;
+describe('HeaderComponent', () => {
+  let component: HeaderComponent;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AutonomoPagComponent ]
+      declarations: [ HeaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AutonomoPagComponent);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

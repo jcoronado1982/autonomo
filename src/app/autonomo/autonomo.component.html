@@ -6,10 +6,10 @@
             </div>
             <div class="menu-as">
                 <div class="menu-as-items">
-                    <div class="menu-solutions">Solutions</div>
-                    <div class="menu-tech">Technologies</div>
-                    <div class="menu-services">Services</div>
-                    <div class="menu-contact-us">Contact Us</div>
+                    <a class="menu-solutions" href="#solutions">Solutions</a>
+                    <a class="menu-tech" href="#technologies">Technologies</a>
+                    <a class="menu-services" href="#services">Services</a>
+                    <a class="menu-contact-us" href="#contactUs">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="technologies">
+    <div class="technologies" id="technologies">
         <div class="technologies-1" *ngIf="this.cont>0">
             <div *ngIf="this.cont>0"
                 [ngClass]="{ 'icon-1None': this.cont==0, 'icon-1Hov': this.cont==1, 'icon-1': this.blur== 2 || this.cont== 9}">
@@ -79,83 +79,131 @@
     </div>
     <div class="autonomo-products">
         <div class="autonomo-products-general">
-            <div class="products">
-                <div (click)="this.statusChange(1);"
-                    [className]="this.selTab===1 ? 'products-1 border-yellow' : 'products-1'">
-                    <div class="img-pr2"><img class="pr2" src="../../assets/images/movil_web.png"></div>
-                </div>
-                <div (click)="this.statusChange(1);" [className]="this.selTab===1 ? 'products-2' : 'products-2'">
-                    <div class="text-products4" [ngStyle]="{'color':this.selTab === 1 ? '#3E3E4A' : '#B6B6BB' }">
-                        <div class="ffItem">
-                            <div class="text-products-title">
-                                MOBILES AND WEB APPLICATIONS
+            <div id="slides_control" class="slides_web">
+                <carousel interval="30000">
+                    <slide style="height: 410px; padding: 0px 5%;">
+                        <div class="products">
+                            <div (click)="this.goToOurServices(1);" class="products-1">
+                                <div class="img-pr2"><img class="pr2" src="../../assets/images/movil_web.png"></div>
                             </div>
-                            <div class="text-products-description">
-                                The past few years have seen a dramatic change in the public perception of cosmetic
-                                surgery.
+                            <div (click)="this.goToOurServices(1);" class="products-2">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            MOBILES AND WEB APPLICATIONS
+                                        </div>
+                                        <div class="text-products-description">
+                                            The past few years have seen a dramatic change in the public perception of cosmetic
+                                            surgery.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(2);" class="products-3">
+                                <div class="img-pr2"><img class="pr3" src="../../assets/images/inactive.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(2);" class="products-4">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            CLOUD STORAGE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Microsoft Azure
+                                                </li>
+                                                <li>
+                                                    Google Cloud
+                                                </li>
+                                                <li>
+                                                    Amazon web Services
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(3);" class="products-5">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/inactive2.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(3);" class="products-6">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            DIGITAL MARKETING
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Digital campaigns manager.
+                                                </li>
+                                                <li>
+                                                    Massive email and SMS sending.
+                                                </li>
+                                                <li>
+                                                    Referall programs
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div (click)="this.statusChange(2);"
-                    [className]="this.selTab===2 ? 'products-3 border-yellow' : 'products-3'">
-                    <div class="img-pr2"><img class="pr3" src="../../assets/images/inactive.png"></div>
-                </div>
-                <div (click)="this.statusChange(2);" [className]="this.selTab===2 ? 'products-4' : 'products-4'">
-                    <div class="text-products4" [ngStyle]="{'color':this.selTab === 2 ? '#3E3E4A' : '#B6B6BB' }">
-                        <div class="ffItem">
-                            <div class="text-products-title">
-                                CLOUD STORAGE
+                    </slide>
+                    <slide style="height: 280px; padding: 0px 5%;">
+                        <div class="products" style="grid-template-rows: 102px 90px;">
+                            <div (click)="this.goToOurServices(4);" class="products-7" style="margin-top: 25px;">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/logoShop.png"></div>
                             </div>
-                            <div class="text-products-description">
-                                <ul style="padding-left: 15px;">
-                                    <li>
-                                        Microsoft Azure
-                                    </li>
-                                    <li>
-                                        Google Cloud
-                                    </li>
-                                    <li>
-                                        Amazon web Services
-                                    </li>
-                                </ul>
+                            <div (click)="this.goToOurServices(4);" class="products-8" style="margin-top: 25px;">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 4 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            CREATE A STORE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Online store.
+                                                </li>
+                                                <li>
+                                                    Secure payment methods.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(5);" class="products-9" style="margin-top: 25px;">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/logoMngr.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(5);" class="products-10" style="margin-top: 25px;">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 5 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            MANAGE YOUR PROJECTS
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Control the time.
+                                                </li>
+                                                <li>
+                                                    Create functionalities.
+                                                </li>
+                                                <li>
+                                                    Manage users
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div (click)="this.statusChange(3);"
-                    [className]="this.selTab===3 ? 'products-5 border-yellow' : 'products-5'">
-                    <div class="img-pr2"><img class="pr4" src="../../assets/images/inactive2.png"></div>
-                </div>
-                <div (click)="this.statusChange(3);" [className]="this.selTab===3 ? 'products-6' : 'products-6'">
-                    <div class="text-products4" [ngStyle]="{'color':this.selTab === 3 ? '#3E3E4A' : '#B6B6BB' }">
-                        <div class="ffItem">
-                            <div class="text-products-title">
-                                DIGITAL MARKETING
-                            </div>
-                            <div class="text-products-description">
-                                <ul style="padding-left: 15px;">
-                                    <li>
-                                        Digital campaigns manager.
-                                    </li>
-                                    <li>
-                                        Massive email and SMS sending.
-                                    </li>
-                                    <li>
-                                        Referall programs
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </slide>
+                </carousel>
             </div>
-            <div id="image1" [ngClass]="{'computer-imgHov': this.blur1==1,'computer-img': this.blur1==2}"
-                [ngStyle]="{'display':this.selTab === 1 ? 'block' : 'none' }"></div>
-            <div id="image2" [ngClass]="{'computer-img2Hov': this.blur1==1,'computer-img2': this.blur1==2}"
-                [ngStyle]="{'display':this.selTab === 2 ? 'block' : 'none' }"></div>
-            <div id="image3" [ngClass]="{'computer-img3Hov': this.blur1==1,'computer-img3': this.blur1==2}"
-                [ngStyle]="{'display':this.selTab === 3 ? 'block' : 'none' }"></div>
         </div>
         <div class="carouselAutonomoProducts">
             <app-carousel-products></app-carousel-products>
@@ -174,15 +222,15 @@
                                             Bogotá
                                         </div>
                                         <div class="item-text-description">
-                                            CRA 7#127-38
+                                            Cra. 58 #117-50
                                         </div>
                                     </div>
                                     <div class="item-text borde-sep">
                                         <div class="item-text-title">
-                                            EEUU
+                                            México
                                         </div>
                                         <div class="item-text-description">
-                                            ****
+                                            Calle 1
                                         </div>
                                     </div>
                                 </div>
@@ -258,15 +306,15 @@
                                             Bogotá
                                         </div>
                                         <div class="item-text-description">
-                                            CRA 7#127-38
+                                            Cra. 58 #117-50
                                         </div>
                                     </div>
                                     <div class="item-text borde-sep">
                                         <div class="item-text-title">
-                                            EEUU
+                                            México
                                         </div>
                                         <div class="item-text-description">
-                                            ****
+                                            Calle 1
                                         </div>
                                     </div>
                                 </div>
@@ -285,7 +333,7 @@
             </carousel>
         </div>
     </div>
-    <div class="ai-general">
+    <div class="ai-general" id="services">
         <div class="container-ai-general">
             <div class="ai-title">
                 <div class="text-ai-title">
@@ -293,6 +341,11 @@
                 </div>
                 <div class="text-ai-title-1">
                     Development
+                </div>
+            </div>
+            <div class="ai-title2">
+                <div class="text-ai-title">
+                    Inteligencia Artificial
                 </div>
             </div>
             <div class="ai-description">
@@ -310,16 +363,16 @@
                     </div>
                 </div>
             </div>
-            <div class="ai-button">
+            <div class="ai-button" (click)="this.goToOurProjects();">
                 <div class="ai-button-txt">
-                    Our Projects
+                    Our projects
                 </div>
             </div>
             <div class="ai-logo">
             </div>
         </div>
     </div>
-    <div class="message-title">
+    <div class="message-title" id="contactUs">
         <div class="txt-msg-title">
             <b>Envíenos un Mensaje</b>
         </div>
@@ -354,11 +407,10 @@
             </div>
         </div>
     </div>
+    <div class="line-style" style="padding: 0px;">
+        <img width="100%" style="position: relative;" src="../../assets/images/footer_1.png">
+    </div>
     <div class="line-style">
-        <div class="curva-general">
-            <div class="curva-general-2">
-            </div>
-        </div>
         <div class="line-style-container">
             <div class="line-1">
                 <img width="100%" class="separation-line" src="../../assets/images/lineLimit.png">

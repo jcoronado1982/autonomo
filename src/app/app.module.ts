@@ -27,9 +27,11 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { OptionsComponent } from './components/options/options.component';
 import { CollapseComponent } from './components/collapse/collapse.component';
 import { SkeletonComponent } from './skeleton/skeleton.component';
-import { AutonomoPagComponent } from './autonomo-pag/autonomo-pag.component';
 import { AutonomoComponent } from './autonomo/autonomo.component';
 import { CarouselProductsComponent } from './autonomo/components/carousel-products/carousel-products.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { OurProjectsComponent } from './our-projects/our-projects.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({ 
   declarations: [
@@ -44,9 +46,11 @@ import { CarouselProductsComponent } from './autonomo/components/carousel-produc
     OptionsComponent,
     CollapseComponent,
     SkeletonComponent,
-    AutonomoPagComponent,
     AutonomoComponent,
     CarouselProductsComponent,
+    OurServicesComponent,
+    OurProjectsComponent,
+    HeaderComponent,
   ],
   imports: [
     MatRadioModule,
@@ -72,16 +76,20 @@ import { CarouselProductsComponent } from './autonomo/components/carousel-produc
          component:HomeComponent
       },
       {
-        path:'autonomo_pag',
-         component:AutonomoPagComponent
-      },
-      {
         path:'skeleton',
          component:SkeletonComponent
       },
       {
         path:'autonomo',
          component:AutonomoComponent
+      },
+      {
+        path:'our-services',
+         component:OurServicesComponent
+      },
+      {
+        path:'our-projects',
+         component:OurProjectsComponent
       },
       {
         path:'',

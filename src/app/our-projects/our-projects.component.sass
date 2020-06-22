@@ -1,0 +1,30 @@
+.gridBox
+    display: grid
+    grid-template-columns: 100%
+    grid-template-rows: auto auto auto
+.header
+    grid-column: 1
+    grid-row: 1
+.content
+    grid-column: 1
+    grid-row: 2
+    background-color: #ffffff
+    padding: 0px 100px
+.foot  
+    grid-column: 1
+    grid-row: 3  
+
+.titleContent
+    font-family: autonomo
+    text-align: left
+    color: #3E3E4A
+    font-size: 56px
+    font-weight: 800
+.description
+    margin-top: 20px
+
+@media only screen and (max-width: 768px)
+    .titleContent
+        font-size: 32px
+    .content
+        padding: 0px 5%
