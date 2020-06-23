@@ -1,3 +1,5 @@
+*:focus
+    outline: none
 .container
     min-width: 100%
     display: grid
@@ -36,7 +38,7 @@
     font-family: mons
     text-decoration: none
 .menu-solutions:hover, .menu-tech:hover, .menu-services:hover, .menu-contact-us:hover
-    border-bottom: 2px solid #EEC52F
+    border-bottom: 2px solid #ffffff
 .big-text-as
     padding-top: 245px
 .big-title-as
@@ -280,6 +282,46 @@
     grid-row: 2 / span 1
     padding-left: 20px
     cursor: pointer
+.products-11
+    grid-column: 1 / span 1
+    grid-row: 3 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-12
+    grid-column: 2 / span 1
+    grid-row: 3 / span 1
+    padding-left: 20px
+    cursor: pointer
+.products-13
+    grid-column: 1 / span 1
+    grid-row: 1 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-14
+    grid-column: 2 / span 1
+    grid-row: 1 / span 1
+    padding-left: 20px
+    cursor: pointer
+.products-15
+    grid-column: 1 / span 1
+    grid-row: 2 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-16
+    grid-column: 2 / span 1
+    grid-row: 2 / span 1
+    padding-left: 20px
+    cursor: pointer
+.products-17
+    grid-column: 1 / span 1
+    grid-row: 3 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-18
+    grid-column: 2 / span 1
+    grid-row: 3 / span 1
+    padding-left: 20px
+    cursor: pointer
 .text-products-title
     font-size: 16px
     font-weight: bold
@@ -361,7 +403,7 @@
 .carousel-as
     grid-column: 1 / span 1
     grid-row: 6
-    padding-bottom: 140px
+    padding-bottom: 90px
     background-color: #ffffff
 .slides_web
     display: table
@@ -381,7 +423,7 @@
     padding: 0px
     height: 600px
 .padding-text-carrusel-int
-    padding: 20px 100px 20px 100px
+    padding: 20px 56px 20px 56px
     text-align: justify
 .centrado
     text-align: center
@@ -831,15 +873,18 @@
         min-width: 70%
     .descripion-as-char
         width: 60%
+    .ffItem
+        padding-left: 10px
 @media only screen and (max-width: 1368px)
     .descripion-as-char
         width: 70%
 @media only screen and (max-width: 1280px)
     .descripion-as-char
         width: 66%
-@media only screen and (max-width: 1024px)
+@media only screen and (max-width: 1115px)
     .menu-as-items
         font-size: 16px
+@media only screen and (max-width: 1024px)
     .descripion-as-char
         width: 80%
     .computer-img, .computer-img2, .computer-img3
@@ -854,8 +899,12 @@
     .item-text-title-1, .item-text-title
         font-size: 25px
         padding-left: 20px
+        position: relative
+        bottom: 20px
     .item-text-description
         padding-left: 20px
+        position: relative
+        bottom: 20px
     .padding-text-carrusel-int
         padding: 20px 50px 20px 50px
     .curva-general-2
@@ -869,6 +918,13 @@
     .banner-housing-container
         margin-bottom: 23px
 @media only screen and (max-width: 991px)
+    .comunication-text-1, .comunication-text-2
+        position: relative
+        bottom: 150px
+    .comunication-text-1
+        font-size: 32px
+    .comunication-text-2
+        font-size: 20px
     .autonomo-products-general
         padding-bottom: 10px
     .computer-img, .computer-img2, .computer-img3
@@ -911,6 +967,8 @@
     .desc-title-as
         font-size: 20px
 @media only screen and (max-width: 768px)
+    li.mobSpac
+        padding-bottom: 20px
     .text-products-title
         font-size: 12px
     .text-ai-desc-1, .text-ai-desc-2
@@ -948,12 +1006,18 @@
         font-size: 20px
     .comunication-text-1
         font-size: 32px
+        position: relative
+        bottom: 50px
     .comunication-text-2
         font-size: 20px
+        position: relative
+        bottom: 50px
     .padding-text-carrusel-int
         padding: 20px 20% 20px 20%
     .as-logo-princ
         width: 200px
+        float: left
+        margin-left: 4%
     .text-ai-title, .text-ai-title-1, .text-ai-description
         padding-left: 20px
         padding-right: 20px
@@ -978,9 +1042,9 @@
         font-size: 32px
     .products-1, .products-2
         margin-top: 30px
-    .products-2, .products-4, .products-6, .products-8, .products-10 
+    .products-2, .products-4, .products-6, .products-8, .products-10, .products-12, .products-14, .products-16, .products-18
         margin-bottom: -50px
-    .products-1, .products-3, .products-5, .products-7, .products-9
+    .products-1, .products-3, .products-5, .products-7, .products-9, .products-11, .products-13, .products-15, .products-17
         padding-left: 50%
     .header
         background-image: url("../../assets/images/hero-images-Tab.png")

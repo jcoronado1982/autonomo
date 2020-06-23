@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div id="slides_control" class="slides_web">
-        <carousel interval="30000">
+        <carousel interval="30000" [showIndicators]="false">
             <slide style="height: 330px; padding: 0px 5%;">
                 <div id="demo" class="carousel slide vert" data-ride="carousel" data-interval="10000">
                     <div class="productItems">
@@ -18,9 +18,7 @@
                                                 </div>
                                                 <div class="text-products-description">
                                                     The past few years have seen a dramatic change in the public
-                                                    perception of
-                                                    cosmetic
-                                                    surgery
+                                                    perception
                                                 </div>
                                             </div>
                                         </div>
@@ -81,7 +79,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div id="image2" class="computer-img2"></div>
-                                <div style="margin-top: 10px"  (click)="this.goToOurServices(2);">
+                                <div style="margin-top: 10px" (click)="this.goToOurServices(2);">
                                     <div class="buttonViewMore">
                                         Ver mas
                                     </div>
@@ -89,7 +87,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div id="image3" class="computer-img3"></div>
-                                <div style="margin-top: 10px"  (click)="this.goToOurServices(3);">
+                                <div style="margin-top: 10px" (click)="this.goToOurServices(3);">
                                     <div class="buttonViewMore">
                                         Ver mas
                                     </div>
@@ -99,14 +97,15 @@
                     </div>
                 </div>
             </slide>
-            <slide  style="height: 330px; padding: 0px 5%;">
+            <slide style="height: 330px; padding: 0px 5%;">
                 <div id="demo1" class="carousel slide vert" data-ride="carousel" data-interval="10000">
                     <div class="productItems">
                         <div class="column1">
                             <div class="carousel-indicators">
                                 <div data-target="#demo1" data-slide-to="0" class="item active">
                                     <div class="img-pr2">
-                                        <img class="pr4" width="81px" height="68px" src="../../assets/images/logoShop.png">
+                                        <img class="pr4" width="81px" height="68px"
+                                            src="../../assets/images/logoShop.png">
                                     </div>
                                     <div>
                                         <div class="text-products4">
@@ -125,7 +124,8 @@
                                 </div>
                                 <div data-target="#demo1" data-slide-to="1" class="item">
                                     <div class="img-pr2">
-                                        <img class="pr4" width="81px" height="68px" src="../../assets/images/logoMngr.png">
+                                        <img class="pr4" width="81px" height="68px"
+                                            src="../../assets/images/logoMngr.png">
                                     </div>
                                     <div>
                                         <div class="text-products4">
@@ -144,13 +144,35 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div data-target="#demo1" data-slide-to="2" class="item">
+                                    <div class="img-pr2">
+                                        <img class="pr4" width="81px" height="68px"
+                                            src="../../assets/images/infraLogo.png">
+                                    </div>
+                                    <div>
+                                        <div class="text-products4">
+                                            <div class="ffItem">
+                                                <div class="text-products-title">
+                                                    INFRASTRUCTURE
+                                                </div>
+                                                <div class="text-products-description">
+                                                    Build this Structure
+                                                    <br>
+                                                    Manage your servers
+                                                    <br>
+                                                    Manage any networks
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="column2">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div id="image4" class="computer-img4"></div>
-                                    <div style="margin-top: 10px"  (click)="this.goToOurServices(4);">
+                                    <div style="margin-top: 10px" (click)="this.goToOurServices(4);">
                                         <div class="buttonViewMore">
                                             Ver mas
                                         </div>
@@ -158,7 +180,112 @@
                                 </div>
                                 <div class="carousel-item">
                                     <div id="image5" class="computer-img5"></div>
-                                    <div style="margin-top: 10px"  (click)="this.goToOurServices(5);">
+                                    <div style="margin-top: 10px" (click)="this.goToOurServices(5);">
+                                        <div class="buttonViewMore">
+                                            Ver mas
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="image6" class="computer-img6"></div>
+                                    <div style="margin-top: 10px" (click)="this.goToOurServices(6);">
+                                        <div class="buttonViewMore">
+                                            Ver mas
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </slide>
+            <slide style="height: 330px; padding: 0px 5%;">
+                <div id="demo2" class="carousel slide vert" data-ride="carousel" data-interval="10000">
+                    <div class="productItems">
+                        <div class="column1">
+                            <div class="carousel-indicators">
+                                <div data-target="#demo2" data-slide-to="0" class="item active">
+                                    <div class="img-pr2">
+                                        <img class="pr4" width="81px" height="68px"
+                                            src="../../assets/images/dashbrdlogo.png">
+                                    </div>
+                                    <div>
+                                        <div class="text-products4">
+                                            <div class="ffItem">
+                                                <div class="text-products-title">
+                                                    BUSINESS INTELLIGENCE
+                                                </div>
+                                                <div class="text-products-description">
+                                                    Apply a Big Data
+                                                    <br>
+                                                    Analyze your information
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-target="#demo2" data-slide-to="1" class="item">
+                                    <div class="img-pr2">
+                                        <img class="pr2" src="../../assets/images/movil_web.png">
+                                    </div>
+                                    <div>
+                                        <div class="text-products4">
+                                            <div class="ffItem">
+                                                <div class="text-products-title">
+                                                    MOBILES AND WEB APPLICATIONS
+                                                </div>
+                                                <div class="text-products-description">
+                                                    The past few years have seen a dramatic change in the public
+                                                    perception
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-target="#demo2" data-slide-to="2" class="item">
+                                    <div class="img-pr2">
+                                        <img class="pr3" src="../../assets/images/inactive.png">
+                                    </div>
+                                    <div>
+                                        <div class="text-products4">
+                                            <div class="ffItem">
+                                                <div class="text-products-title">
+                                                    CLOUD STORAGE
+                                                </div>
+                                                <div class="text-products-description">
+                                                    Microsoft Azure
+                                                    <br>
+                                                    Google Cloud
+                                                    <br>
+                                                    Amazon web Services
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column2">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div id="image7" class="computer-img7"></div>
+                                    <div style="margin-top: 10px" (click)="this.goToOurServices(7);">
+                                        <div class="buttonViewMore">
+                                            Ver mas
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="image8" class="computer-img8"></div>
+                                    <div style="margin-top: 10px" (click)="this.goToOurServices(1);">
+                                        <div class="buttonViewMore">
+                                            Ver mas
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div id="image9" class="computer-img9"></div>
+                                    <div style="margin-top: 10px" (click)="this.goToOurServices(2);">
                                         <div class="buttonViewMore">
                                             Ver mas
                                         </div>
@@ -171,157 +298,4 @@
             </slide>
         </carousel>
     </div>
-    <!--<div id="demo" class="carousel slide vert" data-ride="carousel" data-interval="10000">
-        <div class="productItems">
-            <div class="column1">
-                <div class="carousel-indicators">
-                    <div data-target="#demo" data-slide-to="0" class="item active">
-                        <div class="img-pr2">
-                            <img class="pr2" src="../../assets/images/movil_web.png">
-                        </div>
-                        <div>
-                            <div class="text-products4">
-                                <div class="ffItem">
-                                    <div class="text-products-title">
-                                        MOBILES AND WEB APPLICATIONS
-                                    </div>
-                                    <div class="text-products-description">
-                                        The past few years have seen a dramatic change in the public perception of
-                                        cosmetic
-                                        surgery
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-target="#demo" data-slide-to="1" class="item">
-                        <div class="img-pr2">
-                            <img class="pr3" src="../../assets/images/inactive.png">
-                        </div>
-                        <div>
-                            <div class="text-products4">
-                                <div class="ffItem">
-                                    <div class="text-products-title">
-                                        CLOUD STORAGE
-                                    </div>
-                                    <div class="text-products-description">
-                                        Microsoft Azure
-                                        <br>
-                                        Google Cloud
-                                        <br>
-                                        Amazon web Services
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-target="#demo" data-slide-to="2" class="item">
-                        <div class="img-pr2">
-                            <img class="pr4" src="../../assets/images/inactive2.png">
-                        </div>
-                        <div>
-                            <div class="text-products4">
-                                <div class="ffItem">
-                                    <div class="text-products-title">
-                                        DIGITAL MARKETING
-                                    </div>
-                                    <div class="text-products-description">
-                                        Digital campaigns manager
-                                        <br>
-                                        Massive email and SMS sending
-                                        <br>
-                                        Referall programs
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-target="#demo" data-slide-to="3" class="item">
-                        <div class="img-pr2">
-                            <img class="pr4" width="81px" height="68px" src="../../assets/images/logoShop.png">
-                        </div>
-                        <div>
-                            <div class="text-products4">
-                                <div class="ffItem">
-                                    <div class="text-products-title">
-                                        CREATE A STORE
-                                    </div>
-                                    <div class="text-products-description">
-                                        Online store
-                                        <br>
-                                        Secure payment methods
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-target="#demo" data-slide-to="4" class="item">
-                        <div class="img-pr2">
-                            <img class="pr4" width="81px" height="68px" src="../../assets/images/logoMngr.png">
-                        </div>
-                        <div>
-                            <div class="text-products4">
-                                <div class="ffItem">
-                                    <div class="text-products-title">
-                                        MANAGE YOUR PROJECTS
-                                    </div>
-                                    <div class="text-products-description">
-                                        Control the time
-                                        <br>
-                                        Create functionalities
-                                        <br>
-                                        Manage users
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column2">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div id="image1" class="computer-img"></div>
-                        <div style="margin-top: 10px">
-                            <div class="buttonViewMore">
-                                Ver mas
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div id="image2" class="computer-img2"></div>
-                        <div style="margin-top: 10px">
-                            <div class="buttonViewMore">
-                                Ver mas
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div id="image3" class="computer-img3"></div>
-                        <div style="margin-top: 10px">
-                            <div class="buttonViewMore">
-                                Ver mas
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div id="image4" class="computer-img4"></div>
-                        <div style="margin-top: 10px">
-                            <div class="buttonViewMore">
-                                Ver mas
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div id="image5" class="computer-img5"></div>
-                        <div style="margin-top: 10px">
-                            <div class="buttonViewMore">
-                                Ver mas
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
 </div>

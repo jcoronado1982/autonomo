@@ -64,13 +64,13 @@
             <div class="characteristics-autonomo">
                 <div class="descripion-as-char">
                     <ul>
-                        <li style="padding-right: 20px;">A company with over 15 years of experience
+                        <li style="padding-right: 20px;" class="mobSpac">A company with over 15 years of experience
                             in the software development industry.</li>
-                        <li style="padding-right: 20px;">WEB and mobile develop based applications
+                        <li style="padding-right: 20px;" class="mobSpac">WEB and mobile develop based applications
                             with custom integration to fit clients needs.</li>
-                        <li style="padding-right: 20px;">The best service by creating technological
+                        <li style="padding-right: 20px;" class="mobSpac">The best service by creating technological
                             solutions to enhance the growth to your business.</li>
-                        <li style="padding-right: 20px;">You can count on us to assist your
+                        <li style="padding-right: 20px;" class="mobSpac">You can count on us to assist your
                             bussiness in the automatization of your processes.</li>
                     </ul>
                 </div>
@@ -80,7 +80,7 @@
     <div class="autonomo-products">
         <div class="autonomo-products-general">
             <div id="slides_control" class="slides_web">
-                <carousel interval="30000">
+                <carousel interval="30000" [showIndicators]="false">
                     <slide style="height: 410px; padding: 0px 5%;">
                         <div class="products">
                             <div (click)="this.goToOurServices(1);" class="products-1">
@@ -151,8 +151,8 @@
                             </div>
                         </div>
                     </slide>
-                    <slide style="height: 280px; padding: 0px 5%;">
-                        <div class="products" style="grid-template-rows: 102px 90px;">
+                    <slide style="height: 410px; padding: 0px 5%;">
+                        <div class="products" style="grid-template-rows: 110px 110px 110px;">
                             <div (click)="this.goToOurServices(4);" class="products-7" style="margin-top: 25px;">
                                 <div class="img-pr2"><img class="pr4" src="../../assets/images/logoShop.png"></div>
                             </div>
@@ -194,6 +194,98 @@
                                                 </li>
                                                 <li>
                                                     Manage users
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(6);" class="products-11" style="margin-top: 25px;">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/infraLogo.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(6);" class="products-12" style="margin-top: 25px;">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 5 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            INFRASTRUCTURE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Build this Structure
+                                                </li>
+                                                <li>
+                                                    Manage your servers
+                                                </li>
+                                                <li>
+                                                    Manage any networks
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </slide>
+                    <slide style="height: 410px; padding: 0px 5%;">
+                        <div class="products" style="grid-template-rows: 110px 110px 110px;">
+                            <div (click)="this.goToOurServices(7);" class="products-13" style="margin-top: 25px;">
+                                <div class="img-pr2"><img class="pr4"   src="../../assets/images/dashbrdlogo.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(7);" class="products-14" style="margin-top: 25px;">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 4 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            BUSINESS INTELLIGENCE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Apply a Big Data.
+                                                </li>
+                                                <li>
+                                                    Analyze your information.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(1);" class="products-15" style="margin-top: 25px;">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/movil_web.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(1);" class="products-16" style="margin-top: 25px;">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 5 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            MOBILES AND WEB APPLICATIONS
+                                        </div>
+                                        <div class="text-products-description">
+                                            The past few years have seen a dramatic change in the public perception of cosmetic
+                                            surgery.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(2);" class="products-17" style="margin-top: 25px;">
+                                <div class="img-pr2"><img class="pr4" src="../../assets/images/inactive.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(2);" class="products-18" style="margin-top: 25px;">
+                                <div class="text-products4" [ngStyle]="{'color':this.selTab === 4 ? '#3E3E4A' : '#B6B6BB' }">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            CLOUD STORAGE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Microsoft Azure
+                                                </li>
+                                                <li>
+                                                    Google Cloud
+                                                </li>
+                                                <li>
+                                                    Amazon web Services
                                                 </li>
                                             </ul>
                                         </div>
@@ -333,7 +425,7 @@
             </carousel>
         </div>
     </div>
-    <div class="ai-general" id="services">
+    <div class="ai-general">
         <div class="container-ai-general">
             <div class="ai-title">
                 <div class="text-ai-title">
