@@ -339,6 +339,9 @@
     letter-spacing: normal
 .autonomo-products-general
     display: none
+.foot1
+    width: 100%
+    position: relative
 .ffItem:hover
     color: rgb(62, 62, 74)
 .border-yellow
@@ -869,6 +872,10 @@
     border-left: 2px solid #ffffff
     margin-top: 3px
 @media only screen and (min-width: 1920px)
+    .foot1
+        position: absolute
+        right: 0%
+        height: 188px
     .container
         min-width: 74.5%
     .descripion-as-char
@@ -889,7 +896,7 @@
         grid-template-rows: 233px auto 233px
     .descripion-as-char
         width: 80%
-    .computer-img, .computer-img2, .computer-img3
+    .computer-img, .computer-img2, .computer-img3, .computer-img4, .computer-img5, .computer-img6, .computer-img7, .computer-img8, .computer-img9
         background-position: 50% 50%
         width: 95%
     .ai-logo
@@ -969,6 +976,8 @@
     .desc-title-as
         font-size: 20px
 @media only screen and (max-width: 768px)
+    .line-style-container
+        margin-top: 20px
     .items-communication
         height: 111px
     li.mobSpac
@@ -988,7 +997,7 @@
         display: none
     .items-location
         height: 110px
-    .products-1.border-yellow, .products-3.border-yellow, .products-5.border-yellow, .products-7.border-yellow, .products-9.border-yellow
+    .products-1.border-yellow, .products-3.border-yellow, .products-5.border-yellow, .products-7.border-yellow, .products-9.border-yellow, .products-11.border-yellow, .products-13.border-yellow, .products-15.border-yellow, .products-17.border-yellow
         padding-left: 6px
     .border-yellow
         margin-left: 48%
@@ -1105,7 +1114,7 @@
         width: 100%
     .products
         grid-template-columns: 20% 1fr
-        grid-template-rows: 155px 110px 110px
+        grid-template-rows: 110px 110px 110px
         grid-column: 1/span 1
         grid-row: 2 
     .products-left, .products-right
@@ -1165,7 +1174,9 @@
         height: 530px
     .padding-text-carrusel-int
         padding: 20px 10% 20px 10%
-    .item-text, .item-text-1
+    .item-text
+        padding: 14px 0px
+    .item-text-1
         padding: 22px 0px
     .text-products-description
         padding-right: 15% 
@@ -1178,6 +1189,10 @@
     .text-ai-title
         font-size: 32px
 @media only screen and (max-width: 414px)
+    .item-text-title-1, .item-text-title
+        padding-top: 15px
+    .text-products-description
+        padding-right: 0%
     .item-text-title, .item-text-title-1
         font-size: 20px
     .comunication-text-2
@@ -1197,7 +1212,7 @@
         width: 86%
         font-size: 20px
     .item-text, .item-text-1
-        padding: 10px 0px
+        padding: 0px 0px
     .comunication-text-2
         font-size: 16px
     .padding-text-carrusel-int
@@ -1206,14 +1221,12 @@
         font-size: 24px
     .curva-general
         left: -6%
-    .products-1, .products-3, .products-5, .products-7,  .products-9
-        padding-left: 40%
     .border-yellow
         margin-left: 30%
     .img-bnhouse
         padding-right: 275px
 @media only screen and (max-width: 375px)
-    .products-1, .products-3, .products-5,  .products-7,  .products-9
+    .products-1, .products-3, .products-5,  .products-7,  .products-9, .products-11, .products-13, .products-15,  .products-17
         padding-left: 25%
     .border-yellow
         margin-left: 15%
@@ -1248,7 +1261,7 @@
         font-size: 14px
     .padding-text-carrusel-int
         padding: 10px 45px 20px 45px
-    .products-2, .products-4, .products-6,  .products-8,  .products-10
+    .products-2, .products-4, .products-6,  .products-8,  .products-10, .products-12, .products-14, .products-16,  .products-18
         padding-left: 10px
         padding-right: 10px
     .computer-img
@@ -1271,7 +1284,7 @@
         padding: 10px 20px 6px 20px
     .item-text-title-1
         font-size: 16px
-    .products-1, .products-3, .products-5
+    .products-1, .products-3, .products-5,  .products-7,  .products-9
         padding-left: 25%
     .border-yellow
         margin-left: 14%
