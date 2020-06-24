@@ -6,17 +6,21 @@
             </div>
             <div class="menu-as">
                 <div class="menu-as-items">
-                    <div class="menu-solutions">
-                        <a class="witeTxt" href="#solutions">Solutions</a>
+                    <div class="menu-solutions" (click)="this.goToId1();">
+                        Solutions
+                        <div class="witeTxt"></div>
                     </div>
-                    <div class="menu-tech">
-                        <a class="witeTxt" href="#technologies">Technologies</a>
+                    <div class="menu-tech" (click)="this.goToId2();">
+                        Technologies
+                        <div class="witeTxt"></div>
                     </div>
-                    <div class="menu-services">
-                        <a class="witeTxt" href="#services">Services</a>
+                    <div class="menu-services" (click)="this.goToId3();">
+                        Services
+                        <div class="witeTxt"></div>   
                     </div>
-                    <div class="menu-contact-us">
-                        <a class="witeTxt" href="#contactUs">Contact Us</a>
+                    <div class="menu-contact-us" (click)="this.goToId4();">
+                        Contact Us
+                        <div class="witeTxt"></div>
                     </div>
                 </div>
             </div>
@@ -64,7 +68,7 @@
                     width="100%" class="php-icon" src="../../assets/images/phpLogo.png"></div>
         </div>
     </div>
-    <div class="text-autonomo-is">
+    <div class="text-autonomo-is"  id="solutions">
         <div class="as-box">
             <div class="autonomo-is-title">
                 Autonomo Is
@@ -431,7 +435,7 @@
             </carousel>
         </div>
     </div>
-    <div class="ai-general">
+    <div class="ai-general" id="services">
         <div class="container-ai-general">
             <div class="ai-title">
                 <div class="text-ai-title">

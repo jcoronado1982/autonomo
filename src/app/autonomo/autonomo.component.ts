@@ -24,7 +24,22 @@ export class AutonomoComponent implements OnInit {
   statusChange(sw) {
     this.selTab = sw;
   }
-  
+  goToId1(){
+    var el = document.getElementById('solutions');
+    el.scrollIntoView();
+  }
+  goToId2(){
+    var el = document.getElementById('technologies');
+    el.scrollIntoView();
+  }
+  goToId3(){
+    var el = document.getElementById('services');
+    el.scrollIntoView();
+  }
+  goToId4(){
+    var el = document.getElementById('contactUs');
+    el.scrollIntoView();
+  }
   goToOurServices(id){
     sessionStorage.setItem("itemProductID",id);
     this.router.navigate(['our-services']);
