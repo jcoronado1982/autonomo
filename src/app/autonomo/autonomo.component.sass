@@ -6,7 +6,7 @@
     padding: 0
     grid-gap: 0px
     grid-template-columns: 1fr
-    grid-template-rows: auto 768px auto auto 465px auto auto auto auto auto auto 90px auto auto auto 80px
+    grid-template-rows: auto 768px auto auto 400px auto auto auto auto auto auto 90px auto auto auto 80px
 .header-items 
     display: grid
     grid-template-columns: 1fr 1fr
@@ -192,13 +192,13 @@ a
 .text-autonomo-is
     grid-column: 1 / span 1
     grid-row: 4
-    background-color: transparent
+    background-color: white
 .as-box
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: auto auto
     padding: 30px 0px
-    background-color: transparent
+    background-color: #f2f2f2
 .autonomo-is-title
     font-family: autonomo
     text-align: center
@@ -878,6 +878,8 @@ a
     border-left: 2px solid #ffffff
     margin-top: 3px
 @media only screen and (min-width: 1920px)
+    .text-autonomo-is
+        background-color: transparent
     .foot1
         position: absolute
         right: 0%
