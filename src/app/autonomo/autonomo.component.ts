@@ -59,14 +59,14 @@ export class AutonomoComponent implements OnInit {
           this.cont = 9;
           this.blur = 2;
         }
-        this.missChart();
+        //this.missChart();
       }, 500);
   }
   
-  missChart(){
+  /*missChart(){
     setTimeout(() => {
       this.cont = 1;
       this.loadEffect();
     },60000);
-  }
+  }*/
 }
