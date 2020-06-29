@@ -9,6 +9,8 @@
     grid-template-columns: 1fr 1fr 1fr
     grid-template-rows: 1fr
     background-color: #3E3E4A
+.busi-logo2
+    display: none
 .button-contactenos
     background-color: #3E3E4A
     padding: 0px 300px
@@ -110,11 +112,19 @@
     .button-contactenos
         padding: 0px
 @media only screen and (max-width: 768px)
+    .banner-housing-container
+        grid-template-rows: 70px
+    .busi-logo2
+        display: block
+        width: 64px
+        height: auto
+        float: left
+        position: relative
+        top: -17px
     .img-bnhouse
-        padding-right: 10%
-        text-align: left
+        display: none
     .bnhouse-txt2
-        padding-left: 28px
+        padding-right: 15%
         font-size: 14px
         text-align: right
     .line-1, .line-2
