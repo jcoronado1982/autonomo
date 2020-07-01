@@ -34,8 +34,7 @@ export class AutonomoComponent implements OnInit {
   }
   goToId3(){
     var el = document.getElementById('services');
-    el.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-    el.scrollTop -= 10;
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "start"});
   }
   goToId4(){
     var el = document.getElementById('contactUs');
