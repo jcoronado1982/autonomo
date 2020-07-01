@@ -26,19 +26,19 @@ export class AutonomoComponent implements OnInit {
   }
   goToId1(){
     var el = document.getElementById('solutions');
-    el.scrollIntoView();
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   }
   goToId2(){
     var el = document.getElementById('technologies');
-    el.scrollIntoView();
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   }
   goToId3(){
     var el = document.getElementById('services');
-    el.scrollIntoView();
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "start"});
   }
   goToId4(){
     var el = document.getElementById('contactUs');
-    el.scrollIntoView();
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
   }
   goToOurServices(id){
     sessionStorage.setItem("itemProductID",id);

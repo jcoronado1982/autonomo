@@ -20,7 +20,7 @@ export class GlobalService {
 
   loadObserver= new Subject();
   loadObserver2= new Subject();
-
+  goHomeSection = new Subject();
   chatStatus= new Subject(); // suscripcion para abrir el chat
   uptypeAccount= new Subject(); //suscripcion al tipo de cuenta
 

@@ -215,7 +215,8 @@ a
     grid-row: 2 / span 1
 .descripion-as-char
     font-family: mons
-    width: 41%
+    width: 55%
+    max-width: 996px
     margin: 0 auto
     line-height: 2.2
     font-weight: 600
@@ -361,6 +362,8 @@ a
     margin-left: 120px
 .pr2, .pr3, .pr4
     width: 64px
+    display: table
+    margin: 0 auto
 .computer-img
     grid-column: 2 / span 1
     grid-row: 1 
@@ -538,6 +541,12 @@ a
     grid-row: 7
     background-color: #3F3F4B
     padding-bottom: 30px
+.ai-generalAux 
+    grid-column: 1 / span 1
+    grid-row: 7
+    position: relative
+    top: 5px        
+    bottom: 80px
 .container-ai-general
     display: grid
     grid-template-columns: 1fr 1fr
@@ -889,6 +898,9 @@ a
         width: 60%
     .ffItem
         padding-left: 10px
+    .ai-generalAux 
+        top: 90px
+        bottom: 90px
 @media only screen and (max-width: 1368px)
     .descripion-as-char
         width: 70%
@@ -988,7 +1000,7 @@ a
     .container
         grid-template-rows: auto 384px auto auto 380px auto auto auto auto auto auto auto auto auto auto auto
     .prd2
-        grid-template-rows: 101px 96px 110px !important
+        grid-template-rows: 100px 110px 110px !important
     .autonomo-is
         background-color: #f2f2f2
     .as-box
@@ -1000,7 +1012,7 @@ a
     li.mobSpac
         padding-bottom: 20px
     .text-products-title
-        font-size: 12px
+        font-size: 16px
     .text-ai-desc-1, .text-ai-desc-2
         line-height: 1.5
     .ai-title
@@ -1076,6 +1088,7 @@ a
         margin-bottom: -50px
     .products-1, .products-3, .products-5, .products-7, .products-9, .products-11, .products-13, .products-15, .products-17
         padding-left: 0%
+        border-left: 2px solid #ffffff
     .header
         background-image: url("../../assets/images/hero-images-Tab.png")
     .products-location
@@ -1134,6 +1147,8 @@ a
         grid-template-rows: 110px 110px 110px
         grid-column: 1/span 1
         grid-row: 2 
+    .prd320
+        grid-template-rows: 120px 115px 110px
     .products-left, .products-right
         width: 100%
         padding-right: 0px
@@ -1197,7 +1212,7 @@ a
         padding: 22px 0px
     .text-products-description
         padding-right: 15% 
-        font-size: 16px
+        font-size: 14px
         line-height: 1.5
     .curva-general
         left: -6%
@@ -1243,13 +1258,17 @@ a
     .img-bnhouse
         padding-right: 275px
 @media only screen and (max-width: 375px)
+    .text-products-title
+        font-size: 14px
+    .text-products-description
+        font-size: 12px
     .container
         grid-template-rows: auto 384px auto auto 425px auto auto auto auto auto auto auto auto auto auto auto
     .borde-sep
         margin-top: 0px
     .products
         grid-template-columns: 25% 1fr
-        grid-template-rows: 147px 98px 110px
+        grid-template-rows: 147px 110px 110px
     .prd2
         grid-template-rows: 110px 120px 110px !important
     .products-1, .products-3, .products-5,  .products-7,  .products-9, .products-11, .products-13, .products-15,  .products-17
