@@ -2,7 +2,7 @@
     outline: none
 .gridHelper
     display: grid
-    grid-template-columns: auto 1fr
+    grid-template-columns: 80px 1fr
     grid-template-rows: auto
 .img-pr2
     grid-column: 1
@@ -149,7 +149,7 @@
 .item
     margin: 20px 2px
     cursor: pointer
-    height: 95px
+    height: auto
     border-left: 2px solid #ffffff
 .item:hover
     border-left: 2px solid #ff9209
@@ -198,6 +198,8 @@
 @media only screen and (min-width: 1920px)
     .ffItem
         padding-left: 15px
+    .prodCont
+        padding-left: 10px
 @media screen and (min-width: 768px) and (max-width:992px)
     .computer-img
         background-size: 80% 231px
@@ -238,7 +240,7 @@
 @media screen and (max-width:992px)
     .carousel-indicators
         direction: inherit
-        height: 365px
+        height: auto
         width: 100%
         max-width: 800px
         overflow-x: auto
