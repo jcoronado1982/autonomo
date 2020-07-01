@@ -18,6 +18,7 @@ export class GlobalService {
   public referredAccount;
 
 
+  
   loadObserver= new Subject();
   loadObserver2= new Subject();
   goHomeSection = new Subject();
