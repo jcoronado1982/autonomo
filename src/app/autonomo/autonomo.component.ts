@@ -26,11 +26,11 @@ export class AutonomoComponent implements OnInit {
   }
   goToId1(){
     var el = document.getElementById('solutions');
-    el.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
   }
   goToId2(){
     var el = document.getElementById('technologies');
-    el.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
   }
   goToId3(){
     var el = document.getElementById('services');
