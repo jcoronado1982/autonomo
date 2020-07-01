@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GlobalService } from '../global.service';
+import { Subscription } from "rxjs";
 @Component({
   selector: 'app-autonomo',
   templateUrl: './autonomo.component.html',
@@ -11,7 +13,8 @@ export class AutonomoComponent implements OnInit {
   public cont: number = 0;
   public blur = 0;
   public blur1: number = 2;
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  goHomeSection: Subscription;
+  constructor(private global:GlobalService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.selTab = 1;

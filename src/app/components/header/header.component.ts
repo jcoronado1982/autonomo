@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GlobalService } from '../../global.service';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  public goSolutions;
+  constructor(private global:GlobalService,private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
