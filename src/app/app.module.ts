@@ -32,6 +32,13 @@ import { CarouselProductsComponent } from './autonomo/components/carousel-produc
 import { OurServicesComponent } from './our-services/our-services.component';
 import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { HeaderComponent } from './components/header/header.component';
+import { WebDevelopComponent } from './our-services/components/web-develop/web-develop.component';
+import { CloudStorageComponent } from './our-services/components/cloud-storage/cloud-storage.component';
+import { DigitalMarketingComponent } from './our-services/components/digital-marketing/digital-marketing.component';
+import { ShopOnlineComponent } from './our-services/components/shop-online/shop-online.component';
+import { ProjectsManagerComponent } from './our-services/components/projects-manager/projects-manager.component';
+import { InfrastructureComponent } from './our-services/components/infrastructure/infrastructure.component';
+import { BusinessIntelligenceComponent } from './our-services/components/business-intelligence/business-intelligence.component';
 
 @NgModule({ 
   declarations: [
@@ -51,6 +58,13 @@ import { HeaderComponent } from './components/header/header.component';
     OurServicesComponent,
     OurProjectsComponent,
     HeaderComponent,
+    WebDevelopComponent,
+    CloudStorageComponent,
+    DigitalMarketingComponent,
+    ShopOnlineComponent,
+    ProjectsManagerComponent,
+    InfrastructureComponent,
+    BusinessIntelligenceComponent,
   ],
   imports: [
     MatRadioModule,
