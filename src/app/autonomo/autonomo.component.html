@@ -42,12 +42,18 @@
     </div>
     <div class="technologies" id="technologies">
         <div class="technologies-1" *ngIf="this.slideIcons==false">
+            <!--
+            <div *ngFor="let imge of this.cardList ; let i = index">
+                <div [@fadeInOut] class="icon-{{i+1}}">
+                    <img width="100%" class="py-icon" src="{{imge.imgAdj}}"></div>
+            </div>
+            -->
             <div [@fadeInOut] class="icon-1">
                 <img width="100%" class="py-icon" src="../../assets/images/java.svg"></div>
             <div [@fadeInOut] class="icon-2">
                 <img width="100%" class="php-icon" src="../../assets/images/pyLogo.png"></div>
             <div [@fadeInOut] class="icon-3">
-                <img width="100%" class="react-icon" src="../../assets/images/reactLogo.png"></div>
+                <img width="100%" class="react-icon" src="../../assets/images/csharpLogo.png"></div>
             <div [@fadeInOut] class="icon-4">
                 <img width="100%" class="ionic-icon" src="../../assets/images/angularLogo.png"></div>
             <div [@fadeInOut] class="icon-5">
@@ -57,7 +63,7 @@
             <div [@fadeInOut] class="icon-7">
                 <img width="100%" class="ang-icon" src="../../assets/images/reactLogo.png"></div>
             <div [@fadeInOut] class="icon-8"><img
-                    width="100%" class="php-icon" src="../../assets/images/gcpLogo.png"></div>
+                    width="100%" class="php-icon" src="../../assets/images/csharpLogo.png"></div>
         </div>
         <div class="technologies-1" *ngIf="this.slideIcons==true">
             <div [@fadeInOut] class="icon-1">

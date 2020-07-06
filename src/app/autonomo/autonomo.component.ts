@@ -29,6 +29,41 @@ export class AutonomoComponent implements OnInit {
 
   ngOnInit() {
     this.selTab = 1;
+    let imgBan = [
+      {
+        name: "PYTHON",
+        imgAdj: "../../../../assets/images/pyLogo.png"
+      },
+      {
+        name: "PHP",
+        imgAdj: "../../../../assets/images/phpLogo.png"
+      },
+      {
+        name: "IONIC",
+        imgAdj: "../../../../assets/images/ionicLogo.png"
+      },
+      {
+        name: "REACT",
+        imgAdj: "../../../../assets/images/reactLogo.png"
+      },
+      {
+        name: "CSHARP",
+        imgAdj: "../../../../assets/images/csharpLogo.png"
+      },
+      {
+        name: "AWS",
+        imgAdj: "../../../../assets/images/awsLogo.png"
+      },
+      {
+        name: "ANGULAR",
+        imgAdj: "../../../../assets/images/angularLogo.png"
+      },
+      {
+        name: "GCP",
+        imgAdj: "../../../../assets/images/gcpLogo.png"
+      }
+    ];
+    this.cardList = imgBan;
     setInterval(() => {this.changeIcon();}, 10000);
   }
   dataLoading(sw) {
