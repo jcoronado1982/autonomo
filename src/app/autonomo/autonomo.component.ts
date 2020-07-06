@@ -56,7 +56,6 @@ export class AutonomoComponent implements OnInit {
     ];
     this.cardList = imgBan;
     setInterval(() => {this.changeIcon();}, 10000);
-    this.loadEffect();
   }
   dataLoading(sw) {
     this.selTab = 1;
@@ -90,8 +89,8 @@ export class AutonomoComponent implements OnInit {
   }
   
   changeIcon(){
-    this.slideIcons = !this.slideIcons;
-
+    this.slideIcons = !this.slideIcons; 
+    this.loadEffect();
   }
   loadEffect() {
     setTimeout(() => {
@@ -101,7 +100,10 @@ export class AutonomoComponent implements OnInit {
         this.blur = 2;
         this.loadEffect();
       }
+      this.missChart();
     }, 500);
+  }
+  missChart(){
 
-    }
+  }
 }

@@ -68,7 +68,9 @@
                     width="100%" class="php-icon" src="../../assets/images/gcpLogo.png"></div>
         </div>
         <div class="technologies-1" *ngIf="this.cont>0 && this.slideIcons==true">
-            hola
+            <div *ngIf="this.cont>0"
+                [ngClass]="{ 'icon-1None': this.cont==0, 'icon-1Hov': this.cont==1, 'icon-1': this.blur== 2 || this.cont== 9}">
+            <img width="100%" class="py-icon" src="../../assets/images/pyLogo.png"></div>
         </div>
     </div>
     <div class="text-autonomo-is">
