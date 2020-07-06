@@ -22,7 +22,8 @@ export class AutonomoComponent implements OnInit {
   public cont: number = 0;
   public blur = 0;
   public blur1: number = 2;
-  public cardList = [];
+  public prodList = [];
+  public prodList2 = [];
   public slideIcons:boolean = false;
   goHomeSection: Subscription;
   constructor(private global:GlobalService, private router: Router, private route: ActivatedRoute) { }
@@ -30,6 +31,41 @@ export class AutonomoComponent implements OnInit {
   ngOnInit() {
     this.selTab = 1;
     let imgBan = [
+      {
+        name: "JAVA",
+        imgAdj: "../../../../assets/images/java.svg"
+      },
+      {
+        name: "PYTHON",
+        imgAdj: "../../../../assets/images/pyLogo.png"
+      },
+      {
+        name: "GCP",
+        imgAdj: "../../../../assets/images/gcpLogo.png"
+      },
+      {
+        name: "ANGULAR",
+        imgAdj: "../../../../assets/images/angularLogo.png"
+      },
+      {
+        name: "SQL",
+        imgAdj: "../../../../assets/images/sqlSLogo.png"
+      },
+      {
+        name: "AWS",
+        imgAdj: "../../../../assets/images/awsLogo.png"
+      },
+      {
+        name: "REACT",
+        imgAdj: "../../../../assets/images/reactLogo.png"
+      },
+      {
+        name: "CSHARP",
+        imgAdj: "../../../../assets/images/csharpLogo.png"
+      }
+    ];
+    this.prodList = imgBan;
+    let imgBan2 = [
       {
         name: "PYTHON",
         imgAdj: "../../../../assets/images/pyLogo.png"
@@ -63,7 +99,7 @@ export class AutonomoComponent implements OnInit {
         imgAdj: "../../../../assets/images/gcpLogo.png"
       }
     ];
-    this.cardList = imgBan;
+    this.prodList2 = imgBan2;
     setInterval(() => {this.changeIcon();}, 10000);
   }
   dataLoading(sw) {

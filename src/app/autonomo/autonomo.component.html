@@ -36,52 +36,22 @@
             <div class="desc-title-as">
                 We do software development in cloud,
                 <br>
-                data analysis - {{this.slideIcons}}
+                data analysis
             </div>
         </div>
     </div>
     <div class="technologies" id="technologies">
         <div class="technologies-1" *ngIf="this.slideIcons==false">
-            <!--
-            <div *ngFor="let imge of this.cardList ; let i = index">
+            <div *ngFor="let imge of this.prodList ; let i = index">
                 <div [@fadeInOut] class="icon-{{i+1}}">
                     <img width="100%" class="py-icon" src="{{imge.imgAdj}}"></div>
             </div>
-            -->
-            <div [@fadeInOut] class="icon-1">
-                <img width="100%" class="py-icon" src="../../assets/images/java.svg"></div>
-            <div [@fadeInOut] class="icon-2">
-                <img width="100%" class="php-icon" src="../../assets/images/pyLogo.png"></div>
-            <div [@fadeInOut] class="icon-3">
-                <img width="100%" class="react-icon" src="../../assets/images/csharpLogo.png"></div>
-            <div [@fadeInOut] class="icon-4">
-                <img width="100%" class="ionic-icon" src="../../assets/images/angularLogo.png"></div>
-            <div [@fadeInOut] class="icon-5">
-                <img width="100%" class="char-icon" src="../../assets/images/sqlSLogo.png"></div>
-            <div [@fadeInOut] class="icon-6">
-                <img width="100%" class="aws-icon" src="../../assets/images/awsLogo.png"></div>
-            <div [@fadeInOut] class="icon-7">
-                <img width="100%" class="ang-icon" src="../../assets/images/reactLogo.png"></div>
-            <div [@fadeInOut] class="icon-8"><img
-                    width="100%" class="php-icon" src="../../assets/images/csharpLogo.png"></div>
         </div>
         <div class="technologies-1" *ngIf="this.slideIcons==true">
-            <div [@fadeInOut] class="icon-1">
-                <img width="100%" class="py-icon" src="../../assets/images/pyLogo.png"></div>
-            <div [@fadeInOut] class="icon-2">
-                <img width="100%" class="php-icon" src="../../assets/images/phpLogo.png"></div>
-            <div [@fadeInOut] class="icon-3">
-                <img width="100%" class="react-icon" src="../../assets/images/reactLogo.png"></div>
-            <div [@fadeInOut] class="icon-4">
-                <img width="100%" class="ionic-icon" src="../../assets/images/ionicLogo.png"></div>
-            <div [@fadeInOut] class="icon-5">
-                <img width="100%" class="char-icon" src="../../assets/images/csharpLogo.png"></div>
-            <div [@fadeInOut] class="icon-6">
-                <img width="100%" class="aws-icon" src="../../assets/images/awsLogo.png"></div>
-            <div [@fadeInOut] class="icon-7">
-                <img width="100%" class="ang-icon" src="../../assets/images/angularLogo.png"></div>
-            <div [@fadeInOut] class="icon-8"><img
-                    width="100%" class="php-icon" src="../../assets/images/gcpLogo.png"></div>
+            <div *ngFor="let imge2 of this.prodList2 ; let i = index">
+                <div [@fadeInOut] class="icon-{{i+1}}">
+                    <img width="100%" class="py-icon" src="{{imge.imgAdj2}}"></div>
+            </div>
         </div>
     </div>
     <div class="text-autonomo-is">
