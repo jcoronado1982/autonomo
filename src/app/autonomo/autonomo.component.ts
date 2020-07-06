@@ -13,11 +13,49 @@ export class AutonomoComponent implements OnInit {
   public cont: number = 0;
   public blur = 0;
   public blur1: number = 2;
+  public cardList = [];
+  public slideIcons:boolean = false;
   goHomeSection: Subscription;
   constructor(private global:GlobalService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.selTab = 1;
+    let imgBan = [
+      {
+        name: "PYTHON",
+        imgAdj: "../../../../assets/images/pyLogo.png"
+      },
+      {
+        name: "PHP",
+        imgAdj: "../../../../assets/images/phpLogo.png"
+      },
+      {
+        name: "IONIC",
+        imgAdj: "../../../../assets/images/ionicLogo.png"
+      },
+      {
+        name: "REACT",
+        imgAdj: "../../../../assets/images/reactLogo.png"
+      },
+      {
+        name: "CSHARP",
+        imgAdj: "../../../../assets/images/csharpLogo.png"
+      },
+      {
+        name: "AWS",
+        imgAdj: "../../../../assets/images/awsLogo.png"
+      },
+      {
+        name: "ANGULAR",
+        imgAdj: "../../../../assets/images/angularLogo.png"
+      },
+      {
+        name: "GCP",
+        imgAdj: "../../../../assets/images/gcpLogo.png"
+      }
+    ];
+    this.cardList = imgBan;
+    setInterval(() => {this.changeIcon();}, 10000);
     this.loadEffect();
   }
   dataLoading(sw) {
@@ -50,22 +88,20 @@ export class AutonomoComponent implements OnInit {
   goToOurProjects(){
     this.router.navigate(['our-projects']);
   }
-  loadEffect() {
-      setTimeout(() => {
-        this.blur = 0;
-        if (this.cont < 9) {
-          this.cont++;
-          this.blur = 2;
-          this.loadEffect();
-        }
-        //this.missChart();
-      }, 500);
-  }
   
-  /*missChart(){
+  changeIcon(){
+    this.slideIcons = !this.slideIcons;
+
+  }
+  loadEffect() {
     setTimeout(() => {
-      this.cont = 1;
-      this.loadEffect();
-    },60000);
-  }*/
+      this.blur = 0;
+      if (this.cont < 9) {
+        this.cont++;
+        this.blur = 2;
+        this.loadEffect();
+      }
+    }, 500);
+
+    }
 }

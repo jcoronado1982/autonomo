@@ -36,12 +36,12 @@
             <div class="desc-title-as">
                 We do software development in cloud,
                 <br>
-                data analysis
+                data analysis - {{this.slideIcons}}
             </div>
         </div>
     </div>
     <div class="technologies" id="technologies">
-        <div class="technologies-1" *ngIf="this.cont>0">
+        <div class="technologies-1" *ngIf="this.cont>0 && this.slideIcons==false">
             <div *ngIf="this.cont>0"
                 [ngClass]="{ 'icon-1None': this.cont==0, 'icon-1Hov': this.cont==1, 'icon-1': this.blur== 2 || this.cont== 9}">
                 <img width="100%" class="py-icon" src="../../assets/images/pyLogo.png"></div>
@@ -65,7 +65,10 @@
                 <img width="100%" class="ang-icon" src="../../assets/images/angularLogo.png"></div>
             <div *ngIf="this.cont>7"
                 [ngClass]="{  'icon-8None': this.cont==7,'icon-8Hov': this.cont== 8, 'icon-8': this.cont== 9}"><img
-                    width="100%" class="php-icon" src="../../assets/images/phpLogo.png"></div>
+                    width="100%" class="php-icon" src="../../assets/images/gcpLogo.png"></div>
+        </div>
+        <div class="technologies-1" *ngIf="this.cont>0 && this.slideIcons==true">
+            hola
         </div>
     </div>
     <div class="text-autonomo-is">
