@@ -13,7 +13,7 @@ export class AutonomoComponent implements OnInit {
   public cont: number = 0;
   public blur = 0;
   public blur1: number = 2;
-  public lag2: boolean = false;
+  public lag2:boolean = false;
   goHomeSection: Subscription;
   constructor(private global:GlobalService, private router: Router, private route: ActivatedRoute) { }
 
@@ -68,11 +68,9 @@ export class AutonomoComponent implements OnInit {
   }
   
   missChart(){
+    this.lag2 = !this.lag2;
     setTimeout(() => {
-      this.lag2 = !this.lag2;
-      this.cont = 0;
-      this.blur = 0;
       this.loadEffect();
-    },10000);
+    },7500);
   }
 }
