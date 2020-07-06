@@ -2,10 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalService } from '../global.service';
 import { Subscription } from "rxjs";
+import { trigger, state, style, transition, animate } from '@angular/animations';
 @Component({
   selector: 'app-autonomo',
   templateUrl: './autonomo.component.html',
-  styleUrls: ['./autonomo.component.sass']
+  styleUrls: ['./autonomo.component.sass'],
+  animations: [
+    trigger('fadeInOut', [
+      state('void', style({
+        opacity: 0
+      })),
+      transition('void <=> *', animate(1000)),
+    ]),
+  ]
 })
 export class AutonomoComponent implements OnInit {
   public myInterval = 30000;
@@ -20,41 +29,6 @@ export class AutonomoComponent implements OnInit {
 
   ngOnInit() {
     this.selTab = 1;
-    let imgBan = [
-      {
-        name: "PYTHON",
-        imgAdj: "../../../../assets/images/pyLogo.png"
-      },
-      {
-        name: "PHP",
-        imgAdj: "../../../../assets/images/phpLogo.png"
-      },
-      {
-        name: "IONIC",
-        imgAdj: "../../../../assets/images/ionicLogo.png"
-      },
-      {
-        name: "REACT",
-        imgAdj: "../../../../assets/images/reactLogo.png"
-      },
-      {
-        name: "CSHARP",
-        imgAdj: "../../../../assets/images/csharpLogo.png"
-      },
-      {
-        name: "AWS",
-        imgAdj: "../../../../assets/images/awsLogo.png"
-      },
-      {
-        name: "ANGULAR",
-        imgAdj: "../../../../assets/images/angularLogo.png"
-      },
-      {
-        name: "GCP",
-        imgAdj: "../../../../assets/images/gcpLogo.png"
-      }
-    ];
-    this.cardList = imgBan;
     setInterval(() => {this.changeIcon();}, 10000);
   }
   dataLoading(sw) {
@@ -90,20 +64,6 @@ export class AutonomoComponent implements OnInit {
   
   changeIcon(){
     this.slideIcons = !this.slideIcons; 
-    this.loadEffect();
   }
-  loadEffect() {
-    setTimeout(() => {
-      this.blur = 0;
-      if (this.cont < 9) {
-        this.cont++;
-        this.blur = 2;
-        this.loadEffect();
-      }
-      this.missChart();
-    }, 500);
-  }
-  missChart(){
 
-  }
 }
