@@ -100,7 +100,7 @@ export class AutonomoComponent implements OnInit {
       }
     ];
     this.prodList2 = imgBan2;
-    setInterval(() => {this.changeIcon();}, 10000);
+    setInterval(() => {this.changeIcon();}, 40000);
   }
   dataLoading(sw) {
     this.selTab = 1;
