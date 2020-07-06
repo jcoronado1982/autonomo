@@ -39,7 +39,6 @@ import { ShopOnlineComponent } from './our-services/components/shop-online/shop-
 import { ProjectsManagerComponent } from './our-services/components/projects-manager/projects-manager.component';
 import { InfrastructureComponent } from './our-services/components/infrastructure/infrastructure.component';
 import { BusinessIntelligenceComponent } from './our-services/components/business-intelligence/business-intelligence.component';
-import { CarouselIconsComponent } from './autonomo/components/carousel-icons/carousel-icons.component';
 
 @NgModule({ 
   declarations: [
@@ -66,7 +65,6 @@ import { CarouselIconsComponent } from './autonomo/components/carousel-icons/car
     ProjectsManagerComponent,
     InfrastructureComponent,
     BusinessIntelligenceComponent,
-    CarouselIconsComponent,
   ],
   imports: [
     MatRadioModule,

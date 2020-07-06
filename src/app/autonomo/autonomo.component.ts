@@ -13,6 +13,7 @@ export class AutonomoComponent implements OnInit {
   public cont: number = 0;
   public blur = 0;
   public blur1: number = 2;
+  public aux:number = 0;
   goHomeSection: Subscription;
   constructor(private global:GlobalService, private router: Router, private route: ActivatedRoute) { }
 
@@ -68,8 +69,6 @@ export class AutonomoComponent implements OnInit {
   
   missChart(){
     setTimeout(() => {
-      this.cont = 0;
-      this.blur = 0;
       this.loadEffect();
     },10000);
   }
