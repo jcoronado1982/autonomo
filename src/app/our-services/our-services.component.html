@@ -2,8 +2,14 @@
     <div class="header">
         <app-header></app-header>
     </div>
+    <div class="longTitle">
+        <div *ngIf="this.idService==1">
+            <div class="titleContent">Mobile and Web Applications</div>
+        </div>
+    </div>
     <div class="content">
         <div *ngIf="this.idService==1">
+
             <app-web-develop></app-web-develop>
         </div>
         <div *ngIf="this.idService==2">
