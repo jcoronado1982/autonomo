@@ -33,70 +33,102 @@ export class AutonomoComponent implements OnInit {
     let imgBan = [
       {
         name: "JAVA",
-        imgAdj: "../../../../assets/images/java.svg"
+        imgAdj: "../../../../assets/images/java.svg",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "PYTHON",
-        imgAdj: "../../../../assets/images/pyLogo.png"
+        imgAdj: "../../../../assets/images/pyLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "GCP",
-        imgAdj: "../../../../assets/images/gcpLogo.png"
+        imgAdj: "../../../../assets/images/gcpLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "ANGULAR",
-        imgAdj: "../../../../assets/images/angularLogo.png"
+        imgAdj: "../../../../assets/images/angularLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "SQL",
-        imgAdj: "../../../../assets/images/sqlSLogo.png"
+        imgAdj: "../../../../assets/images/sqlSLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "AWS",
-        imgAdj: "../../../../assets/images/awsLogo.png"
+        imgAdj: "../../../../assets/images/awsLogo.png",
+        imgWidth: "60px",
+        imgHeight: "35px"
       },
       {
         name: "REACT",
-        imgAdj: "../../../../assets/images/reactLogo.png"
+        imgAdj: "../../../../assets/images/reactLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "CSHARP",
-        imgAdj: "../../../../assets/images/csharpLogo.png"
+        imgAdj: "../../../../assets/images/csharpLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       }
     ];
     this.prodList = imgBan;
     let imgBan2 = [
       {
         name: "PYTHON",
-        imgAdj: "../../../../assets/images/pyLogo.png"
+        imgAdj: "../../../../assets/images/pyLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "PHP",
-        imgAdj: "../../../../assets/images/phpLogo.png"
+        imgAdj: "../../../../assets/images/phpLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "IONIC",
-        imgAdj: "../../../../assets/images/ionicLogo.png"
+        imgAdj: "../../../../assets/images/ionicLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "REACT",
-        imgAdj: "../../../../assets/images/reactLogo.png"
+        imgAdj: "../../../../assets/images/reactLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "CSHARP",
-        imgAdj: "../../../../assets/images/csharpLogo.png"
+        imgAdj: "../../../../assets/images/csharpLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "AWS",
-        imgAdj: "../../../../assets/images/awsLogo.png"
+        imgAdj: "../../../../assets/images/awsLogo.png",
+        imgWidth: "60px",
+        imgHeight: "35px"
       },
       {
         name: "ANGULAR",
-        imgAdj: "../../../../assets/images/angularLogo.png"
+        imgAdj: "../../../../assets/images/angularLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       },
       {
         name: "GCP",
-        imgAdj: "../../../../assets/images/gcpLogo.png"
+        imgAdj: "../../../../assets/images/gcpLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
       }
     ];
     this.prodList2 = imgBan2;
