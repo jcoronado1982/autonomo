@@ -50,8 +50,8 @@ export class AutonomoComponent implements OnInit {
         imgHeight: "64px"
       },
       {
-        name: "GCP",
-        imgAdj: "../../../../assets/images/gcpLogo.png",
+        name: "CSHARP",
+        imgAdj: "../../../../assets/images/csharpLogo.png",
         imgWidth: "64px",
         imgHeight: "64px"
       },
@@ -62,71 +62,14 @@ export class AutonomoComponent implements OnInit {
         imgHeight: "64px"
       },
       {
+        name: "REACT",
+        imgAdj: "../../../../assets/images/reactLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
+      },
+      {
         name: "SQL",
         imgAdj: "../../../../assets/images/sqlSLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
-      },
-      {
-        name: "AWS",
-        imgAdj: "../../../../assets/images/awsLogo.png",
-        imgWidth: "60px",
-        imgHeight: "35px"
-      },
-      {
-        name: "REACT",
-        imgAdj: "../../../../assets/images/reactLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
-      },
-      {
-        name: "CSHARP",
-        imgAdj: "../../../../assets/images/csharpLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
-      }
-    ];
-    this.prodList = imgBan;
-    let imgBan2 = [
-      {
-        name: "PYTHON",
-        imgAdj: "../../../../assets/images/pyLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
-      },
-      {
-        name: "PHP",
-        imgAdj: "../../../../assets/images/phpLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
-      },
-      {
-        name: "IONIC",
-        imgAdj: "../../../../assets/images/ionicLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
-      },
-      {
-        name: "REACT",
-        imgAdj: "../../../../assets/images/reactLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
-      },
-      {
-        name: "CSHARP",
-        imgAdj: "../../../../assets/images/csharpLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
-      },
-      {
-        name: "AWS",
-        imgAdj: "../../../../assets/images/awsLogo.png",
-        imgWidth: "60px",
-        imgHeight: "35px"
-      },
-      {
-        name: "AZURE",
-        imgAdj: "../../../../assets/images/angularLogo.png",
         imgWidth: "64px",
         imgHeight: "64px"
       },
@@ -135,11 +78,68 @@ export class AutonomoComponent implements OnInit {
         imgAdj: "../../../../assets/images/gcpLogo.png",
         imgWidth: "64px",
         imgHeight: "64px"
-      }
+      },      
+      {
+        name: "AWS",
+        imgAdj: "../../../../assets/images/awsLogo.png",
+        imgWidth: "60px",
+        imgHeight: "35px"
+      }      
+      
+    ];
+    this.prodList = imgBan;
+    let imgBan2 = [      
+      {
+        name: "PHP",
+        imgAdj: "../../../../assets/images/phpLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
+      },{
+        name: "PYTHON",
+        imgAdj: "../../../../assets/images/pyLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
+      },
+      {
+        name: "CSHARP",
+        imgAdj: "../../../../assets/images/csharpLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
+      },
+      {
+        name: "ANGULAR",
+        imgAdj: "../../../../assets/images/angularLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
+      },
+      {
+        name: "REACT",
+        imgAdj: "../../../../assets/images/reactLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
+      },  
+      {
+        name: "IONIC",
+        imgAdj: "../../../../assets/images/ionicLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
+      },
+      {
+        name: "GCP",
+        imgAdj: "../../../../assets/images/gcpLogo.png",
+        imgWidth: "64px",
+        imgHeight: "64px"
+      },
+      {
+        name: "AWS",
+        imgAdj: "../../../../assets/images/awsLogo.png",
+        imgWidth: "60px",
+        imgHeight: "35px"
+      }     
+      
     ];
     this.prodList2 = imgBan2;
-
-    setInterval(() => {this.changeIcon();}, 30000);
+    setInterval(() => {this.changeIcon();}, 20000);
   }
   private createForm() {
     this.orderForm = this.formBuilder.group({
@@ -206,3 +206,4 @@ export class AutonomoComponent implements OnInit {
     (<HTMLFormElement>document.getElementById("formAutonomo")).reset();
   }
 }
+ 
