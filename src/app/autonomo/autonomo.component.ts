@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalService } from '../global.service';
 import { Subscription } from "rxjs";
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 @Component({
   selector: 'app-autonomo',
   templateUrl: './autonomo.component.html',
@@ -26,7 +27,10 @@ export class AutonomoComponent implements OnInit {
   public prodList2 = [];
   public slideIcons:boolean = false;
   goHomeSection: Subscription;
-  constructor(private global:GlobalService, private router: Router, private route: ActivatedRoute) { }
+  orderForm: FormGroup;
+  constructor(private formBuilder: FormBuilder,private global:GlobalService, private router: Router, private route: ActivatedRoute) { 
+    this.createForm();
+  }
 
   ngOnInit() {
     this.selTab = 1;
@@ -134,6 +138,14 @@ export class AutonomoComponent implements OnInit {
     this.prodList2 = imgBan2;
     setInterval(() => {this.changeIcon();}, 30000);
   }
+  private createForm() {
+    this.orderForm = this.formBuilder.group({
+      nameClient: ['', Validators.required],
+      emailClient: ['', Validators.required],
+      projectType: ['', Validators.required],
+      projectDescription: ['', Validators.required]
+    });
+  }
   dataLoading(sw) {
     this.selTab = 1;
   }
@@ -164,9 +176,30 @@ export class AutonomoComponent implements OnInit {
   goToOurProjects(){
     this.router.navigate(['our-projects']);
   }
-  
   changeIcon(){
     this.slideIcons = !this.slideIcons; 
   }
+  sentForm(){
+    if(this.orderForm.value.nameClient == ''){
+      this.global.notif("Please write the client name.");
+    }
+    else if(this.orderForm.value.emailClient == ''){
+      this.global.notif("Please write the client email.");
+    }
+    else if (this.global.validarEmail(this.orderForm.value.emailClient) == false) {
+      this.global.notif("The e-mail has an invalid format.");
+    }
+    else if(this.orderForm.value.projectType == ''){
+      this.global.notif("Please select the project type.");
+    }
+    else if(this.orderForm.value.projectDescription == ''){
+      this.global.notif("Please write the project description.");
+    }
+    else{
+      this.global.notif("Thanks for your sending.");
+    }
+  }
+  resetForm(){
 
+  }
 }
