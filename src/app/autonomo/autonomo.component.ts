@@ -200,6 +200,6 @@ export class AutonomoComponent implements OnInit {
     }
   }
   resetForm(){
-
+    (<HTMLFormElement>document.getElementById("formAutonomo")).reset();
   }
 }
