@@ -25,8 +25,6 @@ export class AutonomoComponent implements OnInit {
   public blur1: number = 2;
   public prodList = [];
   public prodList2 = [];
-  public prodListMob = [];
-  public prodListMob2 = [];
   public slideIcons:boolean = false;
   goHomeSection: Subscription;
   orderForm: FormGroup;
@@ -38,52 +36,44 @@ export class AutonomoComponent implements OnInit {
     this.selTab = 1;
     let imgBan = [
       {
-        name: "JAVA",
-        imgAdj: "../../../../assets/images/java.svg",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        name: "KOTLIN",
+        imgAdj: "../../../../assets/images/kotlin.png",
+        nameofclass:"py-icon"
       },
       {
         name: "PYTHON",
         imgAdj: "../../../../assets/images/pyLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        nameofclass:"py-icon"
       },
       {
         name: "CSHARP",
         imgAdj: "../../../../assets/images/csharpLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        nameofclass:"py-icon"
       },
       {
         name: "ANGULAR",
         imgAdj: "../../../../assets/images/angularLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        nameofclass:"py-icon"
       },
       {
         name: "REACT",
         imgAdj: "../../../../assets/images/reactLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        nameofclass:"py-icon"
       },
       {
         name: "SQL",
         imgAdj: "../../../../assets/images/sqlSLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        nameofclass:"py-icon"
       },
       {
         name: "GCP",
         imgAdj: "../../../../assets/images/gcpLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        nameofclass:"py-icon"
       },      
       {
         name: "AWS",
         imgAdj: "../../../../assets/images/awsLogo.png",
-        imgWidth: "60px",
-        imgHeight: "35px"
+        nameofclass:"aws-icon"
       }      
       
     ];
@@ -92,54 +82,46 @@ export class AutonomoComponent implements OnInit {
       {
         name: "PHP",
         imgAdj: "../../../../assets/images/phpLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        nameofclass:"py-icon"
       },{
-        name: "PYTHON",
-        imgAdj: "../../../../assets/images/pyLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        name: "CLOUD COMPUTING",
+        imgAdj: "../../../../assets/images/cloudComputing.png",
+        nameofclass:"py-icon"
       },
       {
-        name: "CSHARP",
-        imgAdj: "../../../../assets/images/csharpLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        name: "MYSQL",
+        imgAdj: "../../../../assets/images/mysql.png",
+        nameofclass:"aws-icon"
       },
       {
-        name: "ANGULAR",
-        imgAdj: "../../../../assets/images/angularLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        name: "JAVA",
+        imgAdj: "../../../../assets/images/java.svg",
+        nameofclass:"py-icon"
       },
       {
-        name: "REACT",
-        imgAdj: "../../../../assets/images/reactLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
+        name: "ORACLE",
+        imgAdj: "../../../../assets/images/oracle.svg",
+        nameofclass:"py-icon"
       },  
+      {
+        name: "POSTGRESQL",
+        imgAdj: "../../../../assets/images/postgresql.svg",
+        nameofclass:"py-icon"
+      },
+      {
+        name: "AZURE",
+        imgAdj: "../../../../assets/images/azure.png",
+        nameofclass:"py-icon"
+      },
       {
         name: "IONIC",
         imgAdj: "../../../../assets/images/ionicLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
-      },
-      {
-        name: "GCP",
-        imgAdj: "../../../../assets/images/gcpLogo.png",
-        imgWidth: "64px",
-        imgHeight: "64px"
-      },
-      {
-        name: "AWS",
-        imgAdj: "../../../../assets/images/awsLogo.png",
-        imgWidth: "60px",
-        imgHeight: "35px"
+        nameofclass:"py-icon"
       }     
       
     ];
     this.prodList2 = imgBan2;
-    setInterval(() => {this.changeIcon();}, 20000);
+    setInterval(() => {this.changeIcon();}, 30000);
   }
   private createForm() {
     this.orderForm = this.formBuilder.group({
