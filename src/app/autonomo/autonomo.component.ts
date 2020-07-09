@@ -25,6 +25,8 @@ export class AutonomoComponent implements OnInit {
   public blur1: number = 2;
   public prodList = [];
   public prodList2 = [];
+  public prodListMob = [];
+  public prodListMob2 = [];
   public slideIcons:boolean = false;
   goHomeSection: Subscription;
   orderForm: FormGroup;
@@ -123,7 +125,7 @@ export class AutonomoComponent implements OnInit {
         imgHeight: "35px"
       },
       {
-        name: "ANGULAR",
+        name: "AZURE",
         imgAdj: "../../../../assets/images/angularLogo.png",
         imgWidth: "64px",
         imgHeight: "64px"
@@ -136,6 +138,7 @@ export class AutonomoComponent implements OnInit {
       }
     ];
     this.prodList2 = imgBan2;
+
     setInterval(() => {this.changeIcon();}, 30000);
   }
   private createForm() {
