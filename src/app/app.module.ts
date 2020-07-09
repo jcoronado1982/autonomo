@@ -39,6 +39,8 @@ import { ShopOnlineComponent } from './our-services/components/shop-online/shop-
 import { ProjectsManagerComponent } from './our-services/components/projects-manager/projects-manager.component';
 import { InfrastructureComponent } from './our-services/components/infrastructure/infrastructure.component';
 import { BusinessIntelligenceComponent } from './our-services/components/business-intelligence/business-intelligence.component';
+import { ProjectsCarouselComponent } from './our-projects/components/projects-carousel/projects-carousel.component';
+import { OwlModule } from 'ngx-owl-carousel';
 
 @NgModule({ 
   declarations: [
@@ -65,6 +67,7 @@ import { BusinessIntelligenceComponent } from './our-services/components/busines
     ProjectsManagerComponent,
     InfrastructureComponent,
     BusinessIntelligenceComponent,
+    ProjectsCarouselComponent,
   ],
   imports: [
     MatRadioModule,
@@ -80,6 +83,7 @@ import { BusinessIntelligenceComponent } from './our-services/components/busines
     BrowserAnimationsModule,
     MatInputModule,
     MatDialogModule,
+    OwlModule,
     RouterModule.forRoot([
       {
         path:'login',
