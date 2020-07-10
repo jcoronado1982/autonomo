@@ -38,42 +38,50 @@ export class AutonomoComponent implements OnInit {
       {
         name: "KOTLIN",
         imgAdj: "../../../../assets/images/kotlin.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "PYTHON",
         imgAdj: "../../../../assets/images/pyLogo.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "CSHARP",
         imgAdj: "../../../../assets/images/csharpLogo.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "ANGULAR",
         imgAdj: "../../../../assets/images/angularLogo.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "REACT",
         imgAdj: "../../../../assets/images/reactLogo.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "SQL",
         imgAdj: "../../../../assets/images/sqlSLogo.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "GCP",
         imgAdj: "../../../../assets/images/gcpLogo.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },      
       {
         name: "AWS",
         imgAdj: "../../../../assets/images/awsLogo.png",
-        nameofclass:"aws-icon"
+        nameofclass:"aws-icon",
+        paddingIcon:"30px 0px"
       }      
       
     ];
@@ -82,46 +90,54 @@ export class AutonomoComponent implements OnInit {
       {
         name: "PHP",
         imgAdj: "../../../../assets/images/phpLogo.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },{
         name: "CLOUD COMPUTING",
         imgAdj: "../../../../assets/images/cloudComputing.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "MYSQL",
         imgAdj: "../../../../assets/images/mysql.png",
-        nameofclass:"aws-icon"
+        nameofclass:"aws-icon",
+        paddingIcon:"30px 0px"
       },
       {
         name: "JAVA",
         imgAdj: "../../../../assets/images/java.svg",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "ORACLE",
         imgAdj: "../../../../assets/images/oracle.svg",
-        nameofclass:"py-icon"
+        nameofclass:"aws-icon",
+        paddingIcon:"30px 0px"
       },  
       {
         name: "POSTGRESQL",
         imgAdj: "../../../../assets/images/postgresql.svg",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "AZURE",
         imgAdj: "../../../../assets/images/azure.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "IONIC",
         imgAdj: "../../../../assets/images/ionicLogo.png",
-        nameofclass:"py-icon"
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       }     
       
     ];
     this.prodList2 = imgBan2;
-    setInterval(() => {this.changeIcon();}, 30000);
+    setInterval(() => {this.changeIcon();}, 40000);
   }
   private createForm() {
     this.orderForm = this.formBuilder.group({
