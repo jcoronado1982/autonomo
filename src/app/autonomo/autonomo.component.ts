@@ -79,9 +79,9 @@ export class AutonomoComponent implements OnInit {
       },      
       {
         name: "AWS",
-        imgAdj: "../../../../assets/images/awsLogo.png",
-        nameofclass:"aws-icon",
-        paddingIcon:"30px 0px"
+        imgAdj: "../../../../assets/images/awsNewLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       }      
       
     ];
@@ -100,9 +100,9 @@ export class AutonomoComponent implements OnInit {
       },
       {
         name: "MYSQL",
-        imgAdj: "../../../../assets/images/mysql.png",
-        nameofclass:"aws-icon",
-        paddingIcon:"30px 0px"
+        imgAdj: "../../../../assets/images/mysqlNewLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },
       {
         name: "JAVA",
@@ -112,9 +112,9 @@ export class AutonomoComponent implements OnInit {
       },
       {
         name: "ORACLE",
-        imgAdj: "../../../../assets/images/oracle.svg",
-        nameofclass:"aws-icon",
-        paddingIcon:"30px 0px"
+        imgAdj: "../../../../assets/images/oracleNewLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
       },  
       {
         name: "POSTGRESQL",
@@ -137,7 +137,7 @@ export class AutonomoComponent implements OnInit {
       
     ];
     this.prodList2 = imgBan2;
-    setInterval(() => {this.changeIcon();}, 40000);
+    setInterval(() => {this.changeIcon();}, 30000);
   }
   private createForm() {
     this.orderForm = this.formBuilder.group({
