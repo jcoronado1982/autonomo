@@ -43,14 +43,14 @@
     <div class="technologies" id="technologies">
         <div class="technologies-1" *ngIf="this.slideIcons==false">
             <div *ngFor="let imge of this.prodList ; let i = index">
-                <div [@fadeInOut] class="icon-{{i+1}}">
-                    <img class="{{imge.nameofclass}}"  src="{{imge.imgAdj}}"></div>
+                <div [@fadeInOut] class="icon-{{i+1}}" [style.padding]=imge.paddingIcon>
+                    <img class="{{imge.nameofclass}}" src="{{imge.imgAdj}}"></div>
             </div>
         </div>
         <div class="technologies-1" *ngIf="this.slideIcons==true">
             <div *ngFor="let imge2 of this.prodList2 ; let i = index">
-                <div [@fadeInOut] class="icon-{{i+1}}">
-                    <img class="{{imge2.nameofclass}}"  src="{{imge2.imgAdj}}"></div>
+                <div [@fadeInOut] class="icon-{{i+1}}" [style.padding]=imge2.paddingIcon>
+                    <img class="{{imge2.nameofclass}}" src="{{imge2.imgAdj}}"></div>
             </div>
         </div>
     </div>
@@ -365,7 +365,9 @@
                                     Comunication
                                 </div>
                                 <div class="comunication-text-2 justificado padding-text-carrusel-int">
-                                    We use the scrum methodology to manage software development, you will be able to visualize the growth of your project step by step and align your company's commercial objectives.
+                                    We use the scrum methodology to manage software development, you will be able to
+                                    visualize the growth of your project step by step and align your company's
+                                    commercial objectives.
                                 </div>
                             </div>
                         </div>
@@ -391,7 +393,9 @@
                                     Comunication
                                 </div>
                                 <div class="comunication-text-2 justificado padding-text-carrusel-int">
-                                    We use the scrum methodology to manage software development, you will be able to visualize the growth of your project step by step and align your company's commercial objectives.
+                                    We use the scrum methodology to manage software development, you will be able to
+                                    visualize the growth of your project step by step and align your company's
+                                    commercial objectives.
                                 </div>
                             </div>
                         </div>
@@ -500,7 +504,8 @@
             </select>
         </div>
         <div class="message-description">
-            <textarea class="redondeadonorelieve-2" placeholder="Write a brief description of your project." required formControlName="projectDescription" id="projectDescription"></textarea>
+            <textarea class="redondeadonorelieve-2" placeholder="Write a brief description of your project." required
+                formControlName="projectDescription" id="projectDescription"></textarea>
         </div>
     </form>
     <div class="message-buttons">
