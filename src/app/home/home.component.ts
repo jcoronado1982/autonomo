@@ -43,34 +43,6 @@ export class HomeComponent implements OnInit {
   constructor(private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){}
   
   ngOnInit() {
-    
-    this.loadObserver = this.global.loadObserver.subscribe((value:number) => {
-      this.dataLoading(value)
-    });
-    this.selectBan=atob(sessionStorage.getItem("selectBan"));
-    this.nameSend = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.firstNameField + ' ' + JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.lastNameField;
-    this.lastPaymentAmountField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.lastPaymentAmountField;
-    
-    this.billBalanceField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.billBalanceField;
-    if(this.billBalanceField.search('CR')>-1){
-      this.cr='CR';
-      this.billBalanceField=parseFloat(this.billBalanceField);
-    }
-    else{
-      this.cr='';
-    }
-    this.billDueDateField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.billDueDateField;
-    this.billDateField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.billDateField;
-    this.paperless = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).qualification.RefererResponse.paperless;
-    this.accountType= JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.accountTypeField;
-    this.accountSubtype= JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.accountSubtypeField;
-    //if(this.prepago==true){
-      this.subscribers=JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).SubscriberInfo;
-      this.subscriber=this.subscribers[0].subscriberNumberField;
-    //}
-   
-    
-    this.popPreguntasSeguridad=JSON.parse(atob(sessionStorage.getItem("popPreguntasSeguridad")));
   }
 
   ngAfterViewInit(){
