@@ -111,7 +111,7 @@ import { OwlModule } from 'ngx-owl-carousel';
       },
       {
         path:'',
-        component:AutonomoComponent
+        component:HomeComponent
       },
   ]),
     CarouselModule.forRoot()],

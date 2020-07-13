@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
   constructor(private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){}
   
   ngOnInit() {
-    this.global.validateSession();
+    
     this.loadObserver = this.global.loadObserver.subscribe((value:number) => {
       this.dataLoading(value)
     });

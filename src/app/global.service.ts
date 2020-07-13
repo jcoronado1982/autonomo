@@ -94,24 +94,6 @@ export class GlobalService {
     }
   }
 
-  validateSession() {
-    if (sessionStorage.getItem("session") == "false" || sessionStorage.getItem("session") == null) {
-      this.router.navigate(['login']);
-      return false;
-    }
-    else {
-      this.session();
-      return true;
-    }
-  }
-  sessionReview() {
-    if (sessionStorage.getItem("session") == "false" || sessionStorage.getItem("session") == null || sessionStorage.getItem("session") == undefined) {
-      return false;
-    }
-    else {
-      return true;
-    }
-  }
 
   public signOff() {
     this.sessionCounter = 1;

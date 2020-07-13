@@ -13,7 +13,7 @@ export class OptionsComponent implements OnInit {
   ngOnInit() {
   }
   changeType(type:number){
-    this.global.validateSession();
+    
     this.statusOn=type;
     if(type==1){
       this.statusRadio[0]=true;
