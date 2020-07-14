@@ -5,6 +5,10 @@
     display: grid
     grid-template: auto/ 1fr minmax(540px, 1fr)
     background: linear-gradient(0deg, #0E8ECE, #0E8ECE)
+.webMenu
+    display: block
+.mobileMenu
+    display: none
 .as-logo-princ
     width: 195px
 .imgTablet, .descTablet, .curva, .iconsCarousel, .item, .provdesTitle
@@ -60,6 +64,10 @@
     display: grid
     grid-template: 110px 55px 120px/ 1fr
 @media only screen and (max-width: 768px)
+    .mobileMenu
+        display: block
+    .webMenu
+        display: none
     .containerAutonomoHome
         grid-template: 65px 555px 30px 105px 1100px 2860px 375px 675px 950px 200px/ 1fr
     .headerAutonomohome
