@@ -12,7 +12,9 @@
         <div class="contactBoxMenu">Contact</div>
       </div>
       <div class="mobileMenu">
-        <div>M</div>
+        <div>
+          <img class="auxBtn" src="../../assets/images/autonomoNewPage/bar-icon2.png">
+        </div>
       </div>
     </div>
   </div>
@@ -37,7 +39,7 @@
   <div class="iconsCarousel">
     <div class="technologies-1">
       <div *ngFor="let imge of this.prodList ; let i = index">
-        <div class="icon-{{i+1}}" [style.padding]=imge.paddingIcon>
+        <div class="icon-{{i+1}}">
           <img class="{{imge.nameofclass}}" src="{{imge.imgAdj}}"></div>
       </div>
     </div>
@@ -244,6 +246,11 @@
         </div>
       </div>
     </div>
+    <div class="buttonWorkMob">
+      <div class="startProjectsTxtButton">
+        See all our projects
+      </div>
+    </div>
   </div>
   <div class="contactBox">
     <div class="contectAdress">
@@ -270,6 +277,11 @@
         </select>
       </div>
       <textarea class="descriptionForWrite" placeholder="Write a brief description of your project." ></textarea>
+      <div class="buttonWorkMob">
+        <div class="startProjectsTxtButton">
+          See all our projects
+        </div>
+      </div>
     </div>
   </div>
   <div class="footerFinal">
