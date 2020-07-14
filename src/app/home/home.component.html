@@ -18,17 +18,29 @@
   </div>
   <div class="automateBusiness">
     <div class="imgTablet">
-      Imagen de la Tablet
+      <img class="tabImgSettings" src="../../assets/images/autonomoNewPage/autonomomock.png">
     </div>
     <div class="descTablet">
-      Texto donde va automate your business
+      <div class="weAnswer">WE ARE THE ANSWER</div>
+      <div class="titleAutoBusi">Automate your business</div>
+      <div class="weDoBusi">We do software development in cloud, data analysis.</div>
+      <div class="buttonStart">
+        <div class="txtButtonStart">
+          Get details
+        </div>
+      </div>
+    </div>
+    <div class="curva">
+      <img class="curvImgSettings" src="../../assets/images/autonomoNewPage/techwhitecurve.png">
     </div>
   </div>
-  <div class="curva">
-    aca va la curva
-  </div>
   <div class="iconsCarousel">
-    Carrusel de iconos
+    <div class="technologies-1">
+      <div *ngFor="let imge of this.prodList ; let i = index">
+        <div class="icon-{{i+1}}" [style.padding]=imge.paddingIcon>
+          <img class="{{imge.nameofclass}}" src="{{imge.imgAdj}}"></div>
+      </div>
+    </div>
   </div>
   <div class="autonomoIsBox">
     <div class="autonomoIsDescription">
