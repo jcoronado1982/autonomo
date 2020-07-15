@@ -1,6 +1,6 @@
 .containerAutonomoHome
     display: grid
-    grid-template: 100px 565px 170px 655px 1165px 440px 515px 610px 285px/ 100%
+    grid-template: 100px 565px 170px 655px auto 440px 515px 610px 285px/ 100%
 .boldTxt
     font-weight: bold
 .headerAutonomohome
@@ -190,7 +190,7 @@
     color: #363636
 .providesBox
     display: grid
-    grid-template: 230px 360px 450px / 100%
+    grid-template: auto auto auto / 100%
     padding: 0px 50px
 .ourServtitle
     padding-top: 85px
@@ -214,10 +214,14 @@
 .providesBox1
     display: grid
     grid-template: 330px/repeat(4, 25%)
+    grid-gap: 0px 1.2%
+    padding-top: 70px
 .providesBox2
     display: grid
-    grid-template: 330px / repeat(3, 33.33%)
+    grid-template: 330px / repeat(3, 25%)
     margin-top: 85px
+    justify-content: center
+    padding-bottom: 155px
 .itempb
     width: 100%
     max-width: 300px
@@ -529,19 +533,45 @@
     text-align: center
     color: #FFFFFF
     margin-top: 45px
-.buttonWorkMob
+.buttonWorkMob, .min5It, .only6
     display: none
+.noExt
+    display: grid
 @media only screen and (min-width: 1920px)
     .providesBox1
         grid-template: 330px/repeat(5, 20%)
-        grid-gap: 0px
+        grid-gap: 0px 15px
     .providesBox2
-        grid-template: 330px / repeat(5, 20%)
-        grid-gap: 0px
+        grid-template: 330px/repeat(2, 20%)
+        grid-gap: 0px 15px
+    .min5It
+        display: grid
+    .noExt
+        display: none
 @media only screen and (max-width: 1280px)
     .ourWork
         grid-template: auto/45% 55%
+    .providesBox1
+        grid-template: 330px/repeat(3, 33.33%)
+        grid-gap: 45px 1.2%
+    .providesBox2
+        grid-template: 330px/repeat(1, 33.33%)
+        grid-gap: 45px 1.2%
+    .min5It
+        display: grid
+    .noExt
+        display: none
+    .only6
+        display: grid
+    .no6Ext
+        display: none
 @media only screen and (max-width: 991px)
+    .min5It
+        display: none
+    .noExt
+        display: none
+    .itempb
+        max-width: 500px
     .ourWork
         grid-template: auto auto / 100%
     .ourWorkDesc
@@ -571,16 +601,17 @@
         margin-top: 20px
     .providesBox1, .providesBox2
         grid-template: 330px/repeat(2, 50%)
-        grid-gap: 45px
+        grid-gap: 45px 2%
         justify-content: start
 @media only screen and (max-width: 768px)
     .providesBox
-        grid-template: auto auto auto/100%
+        grid-template: 125px auto auto/100%
+        padding: 0px 25px
     .providesBox1
         margin-top: 20px
     .providesBox1, .providesBox2
         grid-template: 330px/100%
-        grid-gap: 0px
+        grid-gap: 45px
         justify-content: start
     .buttonWorkMob
         display: block
@@ -635,15 +666,12 @@
         height: 30px
     .aboutUsAutoIsText
         padding-top: 35px
-        padding-left: 25px
         text-align: left
     .autoistext2
-        padding-left: 25px
         text-align: left
     .autonomoisProducts
         grid-template: repeat(4, 200px)/100%
         grid-gap: 30px
-        padding: 0px 25px
     .itemPr
         max-width: 768px
         padding: 20px
@@ -657,14 +685,12 @@
         margin-top: 20px
     .autonomoIsBox
         grid-template: 145px auto/100%
-
+        padding: 0 25px
     .ourServtitle
         padding-top: 45px
-        padding-left: 25px
         text-align: left
     .servProvidesDesc
         max-width: 330px
-        padding-left: 25px
         text-align: left
     .imgBaseProd
         padding: 30px 0px 15px 0px
