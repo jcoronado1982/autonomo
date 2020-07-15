@@ -166,7 +166,6 @@
     margin-top: 5px
 .itemPr
     width: 100%
-    max-width: 640px
     display: grid
     grid-template-columns: 195px 1fr
     background: #FFFFFF
@@ -174,9 +173,8 @@
     border-radius: 5px
 .autonomoisProducts
     display: grid
-    justify-content: center
     grid-template: repeat(2, 130px) / auto auto 
-    grid-gap: 55px 50px
+    grid-gap: 55px
 .imgItemPr
     width: 195px
     height: 130px
@@ -215,13 +213,10 @@
     color: #0E8ECE
 .providesBox1
     display: grid
-    grid-template: 330px/repeat(4, 22%)
-    grid-gap: 5%
-    padding: 0px 11%
+    grid-template: 330px/repeat(4, 25%)
 .providesBox2
     display: grid
-    grid-template: 330px / repeat(3, 360px)
-    justify-content: center
+    grid-template: 330px / repeat(3, 33.33%)
     margin-top: 85px
 .itempb
     width: 100%
@@ -232,7 +227,6 @@
     border-radius: 5px
     display: grid
     grid-template: 155px 150px / 100%
-    margin-right: 15px
 .imgBaseProd
     display: table
     margin: 30px auto 15px auto
@@ -353,6 +347,7 @@
     height: 50px
     background: #33CFC6
     border-radius: 5px
+    padding-top: 45px
 .startProjectsTxtButton
     font-family: Roboto
     font-style: normal
@@ -536,18 +531,57 @@
     margin-top: 45px
 .buttonWorkMob
     display: none
-@media only screen and (max-width: 1400px)
-    .itempb
-        max-width: 210px
+@media only screen and (min-width: 1920px)
     .providesBox1
-        grid-template: 330px/repeat(4, 240px)
-        justify-content: start
+        grid-template: 330px/repeat(5, 20%)
+        grid-gap: 0px
     .providesBox2
-        grid-template: 330px/repeat(3, 240px)
+        grid-template: 330px / repeat(5, 20%)
+        grid-gap: 0px
 @media only screen and (max-width: 1280px)
     .ourWork
         grid-template: auto/45% 55%
+@media only screen and (max-width: 991px)
+    .ourWork
+        grid-template: auto auto / 100%
+    .ourWorkDesc
+        padding-left: 25px
+    .projectsOurW
+        padding-top: 50px
+        max-width: 245px
+    .ourWorkTitle
+        max-width: 330px
+    .ourWorkDescription
+        margin-top: 25px
+        margin-right: 25px
+        max-width: 768px
+    .buttonWork
+        display: none
+    .projectBox
+        padding: 40px 25px 0px 25px
+        grid-template: repeat(2, 80px)/repeat(3, 100px)
+    .buttonWorkMob
+        height: 50px
+        margin: 50px 25px 0px 25px
+        background: #33CFC6
+        border-radius: 5px
+    .providesBox
+        grid-template: auto auto auto/100%
+    .providesBox1
+        margin-top: 20px
+    .providesBox1, .providesBox2
+        grid-template: 330px/repeat(2, 50%)
+        grid-gap: 45px
+        justify-content: start
 @media only screen and (max-width: 768px)
+    .providesBox
+        grid-template: auto auto auto/100%
+    .providesBox1
+        margin-top: 20px
+    .providesBox1, .providesBox2
+        grid-template: 330px/100%
+        grid-gap: 0px
+        justify-content: start
     .buttonWorkMob
         display: block
     .as-logo-princ
@@ -661,29 +695,6 @@
         padding: 0px 25px
         max-width: 768px
         margin-bottom: 40px
-    .ourWork
-        grid-template: auto auto / 100%
-    .ourWorkDesc
-        padding-left: 25px
-    .projectsOurW
-        padding-top: 50px
-        max-width: 245px
-    .ourWorkTitle
-        max-width: 330px
-    .ourWorkDescription
-        margin-top: 25px
-        margin-right: 25px
-        max-width: 768px
-    .buttonWork
-        display: none
-    .projectBox
-        padding: 40px 25px 0px 25px
-        grid-template: repeat(2, 80px)/repeat(3, 100px)
-    .buttonWorkMob
-        height: 50px
-        margin: 50px 25px 0px 25px
-        background: #33CFC6
-        border-radius: 5px
     .contactBox
         grid-template: 660px auto /100%
     .contectAdress

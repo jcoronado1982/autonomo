@@ -69,7 +69,7 @@ import { OurServicesNewComponent } from './our-services-new/our-services-new.com
     InfrastructureComponent,
     BusinessIntelligenceComponent,
     ProjectsCarouselComponent,
-    OurServicesNewComponent,
+    OurServicesNewComponent
   ],
   imports: [
     MatRadioModule,
