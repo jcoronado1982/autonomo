@@ -11,6 +11,7 @@ export class OurServicesNewComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+    window.scroll(0, 0);
     this.idService=localStorage.getItem("idItem");
   }
   backHome(){

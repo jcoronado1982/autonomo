@@ -80,15 +80,15 @@ export class HomeComponent implements OnInit {
   }
   goToId2(){
     var el = document.getElementById('services');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+    el.scrollIntoView({behavior: "smooth", block: "start", inline: "end"});
   }
   goToId3(){
     var el = document.getElementById('howWeWork');
-    el.scrollIntoView({behavior: "smooth", block: "end", inline: "start"});
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
   }
   goToId4(){
     var el = document.getElementById('projects');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+    el.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
   }
   goToId5(){
     var el = document.getElementById('contactUs');
