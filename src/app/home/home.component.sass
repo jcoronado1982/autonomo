@@ -215,15 +215,14 @@
     color: #0E8ECE
 .providesBox1
     display: grid
-    grid-template: 330px / repeat(4, 25%)
-    grid-gap: 0px 30px
-    justify-content: center
+    grid-template: 330px/repeat(4, 22%)
+    grid-gap: 55px
+    padding: 0px 11%
 .providesBox2
     display: grid
-    grid-template: 330px / repeat(3, 25%)
+    grid-template: 330px / repeat(3, 360px)
     justify-content: center
     margin-top: 85px
-    grid-gap: 0px 45px
 .itempb
     width: 100%
     max-width: 300px
@@ -233,8 +232,10 @@
     border-radius: 5px
     display: grid
     grid-template: 155px auto / 100%
+    margin-right: 15px
 .imgBaseProd
-    padding: 30px 95px 15px 95px
+    display: table
+    margin: 30px auto 15px auto
 .imgBasePr
     width: 110px
     height: 110px
@@ -535,6 +536,17 @@
     margin-top: 45px
 .buttonWorkMob
     display: none
+@media only screen and (max-width: 1400px)
+    .itempb
+        max-width: 210px
+    .providesBox1
+        grid-template: 330px/repeat(4, 240px)
+        justify-content: start
+    .providesBox2
+        grid-template: 330px/repeat(3, 240px)
+@media only screen and (max-width: 1280px)
+    .ourWork
+        grid-template: auto/45% 55%
 @media only screen and (max-width: 768px)
     .buttonWorkMob
         display: block
@@ -611,16 +623,7 @@
         margin-top: 20px
     .autonomoIsBox
         grid-template: 145px auto/100%
-    .providesBox
-        grid-template: 210px auto auto/100%
-    .providesBox1
-        grid-template: repeat(4, 330px)/100%
-        grid-row-gap: 70px
-        padding: 0px 25px
-    .providesBox2
-        grid-template: repeat(3, 330px)/100%
-        grid-row-gap: 70px
-        padding: 0px 25px
+
     .ourServtitle
         padding-top: 45px
         padding-left: 25px
