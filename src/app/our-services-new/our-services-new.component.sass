@@ -1,6 +1,6 @@
 .ourservicesContainer
     display: grid
-    grid-template: 115px 520px 610px 285px/ 1fr
+    grid-template: 115px auto 610px 285px/ 1fr
 .headerAutonomohome
     display: grid
     grid-template: auto/ 40% 60%
@@ -13,6 +13,7 @@
     width: 195px
 .logoAuto
     padding-left: 50px
+    cursor: pointer
 .webMenu
     display: grid
     grid-template: auto/ repeat(5, 1fr)
@@ -27,9 +28,45 @@
     line-height: 20px
     color: #FFFFFF
 .serviceComp
-    border: 1px solid
     display: grid
-    grid-template: auto/ 395px 1fr
+    grid-template: auto/ 375px 1fr
+    padding-bottom: 85px
+.imgSer
+    padding: 90px 95px 190px 50px
+.adjustIcon
+    width: 245px
+    height: 245px
+.titleService
+    padding-top: 90px
+    width: 100%
+    max-width: 550px
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 16px
+    letter-spacing: 0.175em
+    color: #A5A5A5
+.serviceTitleBlue
+    margin-top: 5px
+    width: 100%
+    max-width: 656px
+    font-family: Continuum Medium
+    font-style: normal
+    font-weight: normal
+    font-size: 40px
+    line-height: 50px
+    color: #0E8ECE
+.descriptionOfService
+    margin-top: 30px
+    width: 100%
+    max-width: 904px
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 21px
+    color: #363636
 .contactBox
     background: #0E8ECE
     display: grid
@@ -200,22 +237,28 @@
 .buttonWorkMob, .min5It, .only6
     display: none
 @media only screen and (max-width: 768px)
+    .webMenu
+        display: none
+    .mobileMenu
+        display: block
     .containerAutonomoHome
-        grid-template: 65px 825px 950px 200px/ 1fr
+        grid-template: 65px auto 950px 200px/ 100%
     .headerAutonomohome
         grid-template: auto/80% 20%
+    .as-logo-princ
+        width: 135px
     .auxBtn
         width: 20px
         height: 20px
         display: table
         margin: 15px auto
     .serviceComp
-        grid-template: 195px auto/ 1fr
+        grid-template: 195px auto/ 100%
     .contactBox
-        grid-template: 675px auto /1fr
+        grid-template: 675px auto /100%
     .contectAdress
         grid-row: 2
     .sendus
         grid-row: 1
     .footerFinal
-        grid-template: auto auto auto/1fr
+        grid-template: auto auto auto/100%

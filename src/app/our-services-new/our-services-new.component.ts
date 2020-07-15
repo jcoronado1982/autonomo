@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-our-services-new',
@@ -7,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurServicesNewComponent implements OnInit {
   public idService;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     this.idService=localStorage.getItem("idItem");
   }
-
+  backHome(){
+    this.router.navigate(['home']);
+  }
 }
