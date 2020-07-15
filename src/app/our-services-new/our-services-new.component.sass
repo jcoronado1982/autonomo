@@ -2,28 +2,213 @@
     display: grid
     grid-template: 115px 520px 610px 285px/ 1fr
 .headerAutonomohome
-    border: 1px solid
     display: grid
-    grid-template: auto/ 1fr minmax(540px, 1fr)
-.logoAuto, .menuAuto, .imgSer, .descSer, .contectAdress, .sendus, .logoF, .opcF, .copyF
-    border: 1px solid
+    grid-template: auto/ 40% 60%
+    background: linear-gradient(0deg, #0E8ECE, #0E8ECE)
+.webMenu
+    display: block
+.mobileMenu
+    display: none
+.as-logo-princ
+    width: 195px
+.logoAuto
+    padding-left: 50px
+.webMenu
+    display: grid
+    grid-template: auto/ repeat(5, 1fr)
+    align-items: center
+    justify-items: center
+    cursor: pointer
+    padding: 45px 0px
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 20px
+    color: #FFFFFF
 .serviceComp
     border: 1px solid
     display: grid
     grid-template: auto/ 395px 1fr
 .contactBox
-    border: 1px solid
+    background: #0E8ECE
     display: grid
     grid-template: auto / 375px  1fr
-.footerFinal
-    border: 1px solid
+.contectAdress
+    padding-left: 50px
+.locationTitle, .contTitle
+    padding-top: 95px
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 16px
+    letter-spacing: 0.175em
+    color: #FFFFFF
+.adressesTitle, .sendUsTitleContact
+    margin-top: 5px
+    max-width: 215px
+    width: 100%
+    font-family: Continuum Medium
+    font-style: normal
+    font-weight: normal
+    font-size: 40px
+    line-height: 50px
+    color: #FFFFFF
+.city1
+    margin-top: 25px
+    max-width: 215px
+    width: 100%
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 21px
+    color: #FFFFFF
+.address1
+    margin-top: 10px
+    max-width: 215px
+    width: 100%
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 16px
+    color: #FFFFFF
+.lineSep
+    margin-top: 20px
+    width: 25px
+    height: 0px
+    border: 1px solid #FFFFFF
+.city2
+    margin-top: 20px
+    max-width: 215px
+    width: 100%
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 21px
+    color: #FFFFFF
+.address2
+    margin-top: 10px
+    max-width: 215px
+    width: 100%
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 16px
+    color: #FFFFFF
+.sendus
+    padding-right: 50px
+    background-image: url("../../assets/images/autonomoNewPage/contactmapbg.png")
+    background-size: 100% 410px
+    background-repeat: no-repeat
+    background-position: 70px 145px
+.sendUsTitleContact
+    max-width: 761px !important
+.formBox
     display: grid
-    grid-template: 115px 55px 120px/ 1fr
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 50px
+    grid-gap: 35px 40px
+    padding-top: 40px
+.nameBox
+    grid-row: 1
+    grid-column: 1
+    width: 100%
+    background: #FFFFFF
+    border: 1px solid #ffffff
+    border-radius: 5px
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    padding: 15px
+.emailBox
+    grid-row: 1
+    grid-column: 2
+    width: 100%
+    background: #FFFFFF
+    border: 1px solid #ffffff
+    border-radius: 5px
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    padding: 15px
+.selectBox
+    grid-row: 1
+    grid-column: 3
+    width: 100%
+    background: #FFFFFF
+    border: 1px solid #ffffff
+    border-radius: 5px
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    padding: 15px
+.descriptionForWrite
+    margin-top: 35px
+    width: 100%
+    height: 135px
+    background: #FFFFFF
+    border: 1px solid #ffffff
+    border-radius: 5px
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 16px
+    padding: 15px
+.footerFinal
+    background: #363636
+    display: grid
+    grid-template: 110px 55px 120px/ 1fr
+.centeringF
+    padding-top: 35px
+    display: table
+    margin: 0 auto
+.opcF
+    display: grid
+    grid-template: auto/ repeat(5, 1fr)
+    align-items: center
+    justify-items: center
+    cursor: pointer
+    margin-top: 30px
+    padding: 0px 20%
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 20px
+    color: #FFFFFF
+.copyF
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 14px
+    text-align: center
+    color: #FFFFFF
+    margin-top: 45px
+.buttonWorkMob, .min5It, .only6
+    display: none
 @media only screen and (max-width: 768px)
     .containerAutonomoHome
         grid-template: 65px 825px 950px 200px/ 1fr
     .headerAutonomohome
         grid-template: auto/80% 20%
+    .auxBtn
+        width: 20px
+        height: 20px
+        display: table
+        margin: 15px auto
     .serviceComp
         grid-template: 195px auto/ 1fr
     .contactBox

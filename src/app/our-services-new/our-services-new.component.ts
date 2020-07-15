@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./our-services-new.component.sass']
 })
 export class OurServicesNewComponent implements OnInit {
-
+  public idService;
   constructor() { }
 
   ngOnInit(): void {
+    this.idService=localStorage.getItem("idItem");
   }
 
 }
