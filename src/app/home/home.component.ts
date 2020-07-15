@@ -74,7 +74,26 @@ export class HomeComponent implements OnInit {
     localStorage.setItem("idItem",value);
     this.router.navigate(['our-services']);
   }
-
+  goToId1(){
+    var el = document.getElementById('aboutUs');
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
+  }
+  goToId2(){
+    var el = document.getElementById('services');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId3(){
+    var el = document.getElementById('howWeWork');
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "start"});
+  }
+  goToId4(){
+    var el = document.getElementById('projects');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId5(){
+    var el = document.getElementById('contactUs');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
   
 }
 

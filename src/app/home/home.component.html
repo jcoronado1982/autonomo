@@ -5,11 +5,11 @@
     </div>
     <div class="menuAuto">
       <div class="webMenu">
-        <div class="aboutUsBoxMenu">About Us</div>
-        <div class="servicesBoxMenu">Services</div>
-        <div class="howWeWorkBoxMenu">How we work</div>
-        <div class="projectsBoxMenu">Projects</div>
-        <div class="contactBoxMenu">Contact</div>
+        <div class="aboutUsBoxMenu" (click)="this.goToId1()">About Us</div>
+        <div class="servicesBoxMenu" (click)="this.goToId2()">Services</div>
+        <div class="howWeWorkBoxMenu" (click)="this.goToId3()">How we work</div>
+        <div class="projectsBoxMenu" (click)="this.goToId4()">Projects</div>
+        <div class="contactBoxMenu" (click)="this.goToId5()">Contact</div>
       </div>
       <div class="mobileMenu">
         <div>
@@ -44,7 +44,7 @@
       </div>
     </div>
   </div>
-  <div class="autonomoIsBox">
+  <div class="autonomoIsBox" id="aboutUs">
     <div class="autonomoIsDescription">
       <div class="aboutUsAutoIsText">ABOUT US</div>
       <div class="autoistext2">Autonomo is</div>
@@ -70,7 +70,7 @@
       </div>
     </div>
   </div>
-  <div class="providesBox">
+  <div class="providesBox" id="services">
     <div class="provdesTitle">
       <div class="ourServtitle">SERVICES</div>
       <div class="servProvidesDesc">Our company provides</div>
@@ -225,7 +225,7 @@
       </div>
     </div>
   </div>
-  <div class="our-method">
+  <div class="our-method" id="howWeWork"> 
     <div class="imageMeth">
       <img class="imgbaseMethod" src="../../assets/images/autonomoNewPage/scrumimg.png">
     </div>
@@ -240,7 +240,7 @@
         Time Zone to communicate with our clients in North America, Canada, Europe and Latin America.</div>
     </div>
   </div>
-  <div class="ourWork">
+  <div class="ourWork" id="projects">
     <div class="ourWorkDesc">
       <div class="projectsOurW">PROJECTS</div>
       <div class="ourWorkTitle">Our work</div>
@@ -284,7 +284,7 @@
       </div>
     </div>
   </div>
-  <div class="contactBox">
+  <div class="contactBox" id="contactUs">
     <div class="contectAdress">
       <div class="locationTitle">LOCATION</div>
       <div class="adressesTitle">Addresses</div>
@@ -321,11 +321,11 @@
       <img width="100%" class="as-logo-princ centeringF" src="../../assets/images/white.png">
     </div>
     <div class="opcF">
-      <div class="itemFC">About us</div>
-      <div class="itemFC">Services</div>
-      <div class="itemFC">How we work</div>
-      <div class="itemFC">Projects</div>
-      <div class="itemFC">Contact</div>
+      <div class="itemFC" (click)="this.goToId1()">About us</div>
+      <div class="itemFC" (click)="this.goToId2()">Services</div>
+      <div class="itemFC" (click)="this.goToId3()">How we work</div>
+      <div class="itemFC" (click)="this.goToId4()">Projects</div>
+      <div class="itemFC" (click)="this.goToId5()">Contact</div>
     </div>
     <div class="copyF">© 2020 Autonomo System - All rights reserved.</div>
   </div>
