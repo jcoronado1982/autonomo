@@ -1,6 +1,6 @@
 .ourservicesContainer
     display: grid
-    grid-template: 115px auto 610px 285px/ 1fr
+    grid-template: 115px auto 610px 285px/ 100%
 .headerAutonomohome
     display: grid
     grid-template: auto/ 40% 60%
@@ -67,6 +67,7 @@
     font-size: 14px
     line-height: 21px
     color: #363636
+    padding-right: 50px
 .contactBox
     background: #0E8ECE
     display: grid
@@ -203,6 +204,15 @@
     font-size: 14px
     line-height: 16px
     padding: 15px
+.startProjectsTxtButton
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 16px
+    text-align: center
+    color: #FFFFFF
+    padding: 15px
 .footerFinal
     background: #363636
     display: grid
@@ -239,9 +249,9 @@
 @media only screen and (max-width: 768px)
     .webMenu
         display: none
-    .mobileMenu
+    .mobileMenu, .buttonWorkMob
         display: block
-    .containerAutonomoHome
+    .ourservicesContainer
         grid-template: 65px auto 950px 200px/ 100%
     .headerAutonomohome
         grid-template: auto/80% 20%
@@ -253,12 +263,59 @@
         display: table
         margin: 15px auto
     .serviceComp
-        grid-template: 195px auto/ 100%
+        grid-template: 170px auto/ 100%
+        padding: 0px 25px
+    .imgSer
+        padding: 30px 0px 30px 0px
+    .adjustIcon
+        width: 110px
+        height: 110px
+    .titleService
+        padding-top: 0px
+        max-width: 245px
+    .descriptionOfService
+        margin-top: 10px
     .contactBox
-        grid-template: 675px auto /100%
+        grid-template: 660px auto /100%
     .contectAdress
         grid-row: 2
+        padding-left: 25px
+    .buttonWorkMob
+        height: 50px
+        margin: 50px 0px 0px 0px
+        background: #33CFC6
+        border-radius: 5px
     .sendus
         grid-row: 1
+        padding: 0px 25px
+        background-position: 50%
+    .formBox
+        grid-template-columns: 1fr
+        grid-template-rows: 50px 50px 50px
+        padding-right: 0px
+    .emailBox
+        grid-row: 2
+        grid-column: 1
+    .selectBox
+        grid-row: 3
+        grid-column: 1
+    .contTitle
+        padding-top: 50px
+    .locationTitle
+        padding-top: 30px
     .footerFinal
-        grid-template: auto auto auto/100%
+        grid-template: 80px auto auto/100%
+    .centeringF
+        margin: 0 25px
+    .opcF
+        align-items: start
+        justify-items: start
+        font-size: 12px
+        line-height: 14px
+        grid-template: auto/repeat(4, 1fr)
+        padding: 0px 25px
+        grid-gap: 15px 30px 
+    .copyF
+        margin-top: 25px
+        margin-left: 25px
+        text-align: left
