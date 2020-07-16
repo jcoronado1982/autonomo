@@ -6,14 +6,24 @@ import { LoadingScreenService } from '../services/loading-screen/loading-screen.
 import { GlobalService } from '../global.service';
 import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA  } from '@angular/material/dialog';
 import { Subscription } from "rxjs";
-
+import { trigger, state, style, transition, animate } from '@angular/animations';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.sass']
+  styleUrls: ['./home.component.sass'],
+  animations: [
+    trigger('fadeInOut', [
+      state('void', style({
+        opacity: 0
+      })),
+      transition('void <=> *', animate(1000)),
+    ]),
+  ]
 })
 export class HomeComponent implements OnInit {
   public prodList = [];
+  public prodList2 = [];
+  public slideIcons:boolean = false;
   constructor(private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){}
   
   ngOnInit() {
@@ -69,6 +79,61 @@ export class HomeComponent implements OnInit {
       
     ];
     this.prodList = imgBan;
+    let imgBan2 = [      
+      {
+        name: "PHP",
+        imgAdj: "../../../../assets/images/phpLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },{
+        name: "CLOUD COMPUTING",
+        imgAdj: "../../../../assets/images/cloudComputing.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },
+      {
+        name: "MYSQL",
+        imgAdj: "../../../../assets/images/mysqlNewLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },
+      {
+        name: "JAVA",
+        imgAdj: "../../../../assets/images/java.svg",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },
+      {
+        name: "ORACLE",
+        imgAdj: "../../../../assets/images/oracleNewLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },  
+      {
+        name: "POSTGRESQL",
+        imgAdj: "../../../../assets/images/postgresql.svg",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },
+      {
+        name: "AZURE",
+        imgAdj: "../../../../assets/images/azure.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },
+      {
+        name: "IONIC",
+        imgAdj: "../../../../assets/images/ionicLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      }     
+      
+    ];
+    this.prodList2 = imgBan2;
+    setInterval(() => {this.changeIcon();}, 30000);
+  }
+  changeIcon(){
+    this.slideIcons = !this.slideIcons; 
   }
   gotoId(value){
     localStorage.setItem("idItem",value);

@@ -37,12 +37,20 @@
     </div>
   </div>
   <div class="iconsCarousel">
-    <div class="technologies-1">
+    <div class="layerLeft"></div>
+    <div class="technologies-1" *ngIf="this.slideIcons==false">
       <div *ngFor="let imge of this.prodList ; let i = index">
-        <div class="icon-{{i+1}}">
+        <div [@fadeInOut] class="icon-{{i+1}}">
           <img class="{{imge.nameofclass}}" src="{{imge.imgAdj}}"></div>
       </div>
     </div>
+    <div class="technologies-1" *ngIf="this.slideIcons==true">
+      <div *ngFor="let imge2 of this.prodList2 ; let i = index">
+        <div [@fadeInOut] class="icon-{{i+1}}">
+          <img class="{{imge2.nameofclass}}" src="{{imge2.imgAdj}}"></div>
+      </div>
+    </div>
+    <div class="layerRight"></div>
   </div>
   <div class="autonomoIsBox" id="aboutUs">
     <div class="autonomoIsDescription">
@@ -225,7 +233,7 @@
       </div>
     </div>
   </div>
-  <div class="our-method" id="howWeWork"> 
+  <div class="our-method" id="howWeWork">
     <div class="imageMeth">
       <img class="imgbaseMethod" src="../../assets/images/autonomoNewPage/scrumimg.png">
     </div>
