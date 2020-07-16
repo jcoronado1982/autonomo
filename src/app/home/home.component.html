@@ -37,7 +37,9 @@
     </div>
   </div>
   <div class="iconsCarousel">
-    <div class="layerLeft"></div>
+    <div class="layerLeft" (click)="this.changeIcon()">
+      <img class="signalSupport" src="../../assets/images/autonomoNewPage/leftSignalChange.png">
+    </div>
     <div class="technologies-1" *ngIf="this.slideIcons==false">
       <div *ngFor="let imge of this.prodList ; let i = index">
         <div [@fadeInOut] class="icon-{{i+1}}">
@@ -50,7 +52,9 @@
           <img class="{{imge2.nameofclass}}" src="{{imge2.imgAdj}}"></div>
       </div>
     </div>
-    <div class="layerRight"></div>
+    <div class="layerRight" (click)="this.changeIcon()">
+      <img class="signalSupport" src="../../assets/images/autonomoNewPage/rightSignalChange.png">
+    </div>
   </div>
   <div class="autonomoIsBox" id="aboutUs">
     <div class="autonomoIsDescription">

@@ -106,6 +106,8 @@
     margin: 60px 0px
     background: #F1F1F1
     cursor: pointer
+.signalSupport
+    margin: 12px 13px 12px 10px
 .technologies-1
     display: grid
     grid-template-columns: repeat(8,1fr)
@@ -284,7 +286,8 @@
     border-radius: 38px
     position: relative
     top: -15%
-    left: 115px
+    display: table
+    margin: 0 auto
 .rightSig
     display: table
     margin: 15px auto
@@ -329,7 +332,7 @@
     padding-right: 50px
 .ourWork    
     display: grid
-    grid-template: auto / 55% 45%
+    grid-template: auto / 50% 50%
 .ourWorkDesc
     padding-left: 50px
 .projectsOurW
@@ -461,7 +464,7 @@
     background-image: url("../../assets/images/autonomoNewPage/contactmapbg.png")
     background-size: 100% 410px
     background-repeat: no-repeat
-    background-position: 70px 145px
+    background-position: 0px 70px
 .sendUsTitleContact
     max-width: 761px !important
 .formBox
@@ -578,9 +581,9 @@
         display: grid
     .noExt
         display: none
-@media only screen and (max-width: 1280px)
+@media only screen and (max-width: 1350px)
     .ourWork
-        grid-template: auto/45% 55%
+        grid-template: auto/50% 50%
     .providesBox1
         grid-template: 330px/repeat(3, 31%)
         grid-gap: 45px 3.80%
@@ -595,11 +598,9 @@
         display: grid
     .no6Ext
         display: none
-    .ext15
-        margin-left: 15px
 @media only screen and (max-width: 991px)
     .containerAutonomoHome
-        grid-template: 100px 565px 170px 1175px auto auto 515px 610px 285px/100%
+        grid-template: 100px 565px 170px 905px auto auto 645px 610px 285px/100%
     .min5It
         display: none
     .noExt
@@ -624,7 +625,8 @@
         display: none
     .projectBox
         padding: 40px 25px 0px 25px
-        grid-template: repeat(2, 80px)/repeat(3, 100px)
+        grid-template: repeat(2, 130px)/repeat(3, 30%)
+        grid-gap: 8.3%
     .buttonWorkMob
         height: 50px
         margin: 50px 25px 0px 25px
@@ -642,9 +644,7 @@
         grid-template: 330px/repeat(1, 48%)
         grid-gap: 45px 4%
         justify-content: center
-        padding-bottom: 60px
-    .rightSignal
-        left: 175px
+        padding-bottom: 90px
     .only6, .min5It
         display: grid
     .ext15
@@ -663,26 +663,34 @@
         padding-left: 25px
     .howWeBigTitle
         padding-left: 25px
+        padding-right: 25px
     .howWeDescritpion 
         margin-top: 35px
         padding: 0px 25px
         max-width: 768px
         margin-bottom: 40px
     .autonomoisProducts
-        grid-template: repeat(4, 200px)/100%
+        grid-template: repeat(4, 130px)/100%
         grid-gap: 30px
     .itemPr
         max-width: 991px
-        padding: 20px
-        grid-template: 90px auto /100%
     .imgItemPr
-        width: 135px
-        height:90px
+        width: 100%
+        height: 130px
     .descBoxprod
         padding: 0px
         height: 50px
         margin-top: 20px
+        padding-left: 30px
+        padding-right: 30px
 @media only screen and (max-width: 768px)
+    .layerRight, .layerLeft
+        display: none
+    .iconsCarousel
+        grid-template: auto / auto
+    .descBoxprod
+        padding-left: 0px
+        padding-right: 0px
     .noExt, .no6Ext
         display: grid
     .only6
@@ -691,12 +699,16 @@
         display: none
     .ext15
         margin-left: 0px
-    .rightSignal
-        left: 115px
     .curvImgSettings
         height: 55px
     .curva
         bottom: 35px
+    .itemPr
+        padding: 20px
+        grid-template: 90px auto /100%
+    .imgItemPr
+        width: 135px
+        height:90px
     .providesBox
         grid-template: 125px auto auto/100%
         padding: 0px 25px
@@ -767,6 +779,9 @@
     .autonomoIsBox
         grid-template: 145px auto/100%
         padding: 0 25px
+    .autonomoisProducts
+        grid-template: repeat(4, 200px)/100%
+        grid-gap: 30px
     .ourServtitle
         padding-top: 45px
         text-align: left
@@ -782,7 +797,6 @@
         grid-template: 185px 80px/100%
     .rightSignal
         top: 55%
-        left: 45%
     .contactBox
         grid-template: 660px auto /100%
     .contectAdress
@@ -791,7 +805,7 @@
     .sendus
         grid-row: 1
         padding: 0px 25px
-        background-position: 50%
+        background-position: 0px 20px
     .formBox
         grid-template-columns: 1fr
         grid-template-rows: 50px 50px 50px
@@ -822,10 +836,10 @@
         margin-top: 25px
         margin-left: 25px
         text-align: left
+    .projectBox
+        grid-template: repeat(2, 80px)/repeat(3, 30%)
 @media only screen and (max-width: 438px)
     .tabImgSettings
         height: 455px
-    .projectBox
-        grid-template: repeat(2, 80px)/repeat(3, 25%)
     .buttonWorkMob
          margin: 25px 25px 0px 25px
