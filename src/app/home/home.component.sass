@@ -295,11 +295,12 @@
     background: #33CFC6
     display: grid
     grid-template: auto / 30% 70%
+    padding: 0px 50px
 .imgbaseMethod
     width: 260px
     height: 250px
 .imageMeth
-    padding: 75px 105px 120px 145px
+    padding: 75px 0px 120px 0px
 .howWeTitle
     padding-top: 90px
     font-family: Roboto
@@ -335,6 +336,7 @@
     grid-template: auto / 50% 50%
 .ourWorkDesc
     padding-left: 50px
+    padding-right: 20px
 .projectsOurW
     width: 100%
     max-width: 520px
@@ -393,6 +395,7 @@
     grid-template: auto / 375px  1fr
 .ourWorkImgs
     padding-right: 50px
+    padding-left: 20px
 .contectAdress
     padding-left: 50px
 .locationTitle, .contTitle
@@ -582,6 +585,8 @@
     .noExt
         display: none
 @media only screen and (max-width: 1350px)
+    .imageMeth
+        padding: 75px 0px 120px 0px
     .ourWork
         grid-template: auto/50% 50%
     .providesBox1
@@ -598,6 +603,10 @@
         display: grid
     .no6Ext
         display: none
+@media only screen and (min-width: 1225px)
+    .imgbaseMethod
+        display: table
+        margin: 0 auto
 @media only screen and (max-width: 991px)
     .containerAutonomoHome
         grid-template: 100px 565px 170px 905px auto auto 645px 610px 285px/100%
@@ -624,10 +633,15 @@
     .buttonWork
         display: none
     .projectBox
-        padding: 40px 25px 0px 25px
+        padding-top: 40px
         grid-template: repeat(2, 130px)/repeat(3, 30%)
         grid-gap: 8.3%
     .buttonWorkMob
+        height: 50px
+        margin-top: 50px
+        background: #33CFC6
+        border-radius: 5px
+    .buttonWorkMob1
         height: 50px
         margin: 50px 25px 0px 25px
         background: #33CFC6
@@ -651,6 +665,7 @@
         margin-left: 0px
     .our-method    
         grid-template: 230px auto/100%
+        padding: 0px 25px
     .imageMeth
         padding: 0px
     .imgbaseMethod
@@ -660,15 +675,11 @@
         margin: 40px 20px 25px 25px
     .howWeTitle
         padding-top: 25px
-        padding-left: 25px
-    .howWeBigTitle
-        padding-left: 25px
-        padding-right: 25px
     .howWeDescritpion 
         margin-top: 35px
-        padding: 0px 25px
         max-width: 768px
         margin-bottom: 40px
+        padding-right: 0px
     .autonomoisProducts
         grid-template: repeat(4, 130px)/100%
         grid-gap: 30px
@@ -684,6 +695,8 @@
         padding-left: 30px
         padding-right: 30px
 @media only screen and (max-width: 768px)
+    .buttonSent
+        display: none
     .layerRight, .layerLeft
         display: none
     .iconsCarousel
