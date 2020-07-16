@@ -362,7 +362,6 @@
 .ourWorkDescription
     margin-top: 30px
     width: 100%
-    max-width: 650px
     font-family: Roboto
     font-style: normal
     font-weight: normal
@@ -607,9 +606,18 @@
     .imgbaseMethod
         display: table
         margin: 0 auto
+@media only screen and (min-width: 991px) and (max-width: 1190px)
+    .projectBox
+        grid-template: repeat(3, 130px)/repeat(2, 45%)
+        grid-gap: 10%
+        padding-bottom: 130px
+    .containerAutonomoHome
+        grid-template: 100px 565px 170px 655px auto auto auto 610px 285px/100%
 @media only screen and (max-width: 991px)
     .containerAutonomoHome
         grid-template: 100px 565px 170px 905px auto auto 645px 610px 285px/100%
+    .contactBox
+        grid-template: auto/33% 1fr
     .min5It
         display: none
     .noExt
@@ -617,7 +625,7 @@
     .itempb
         max-width: 415px
     .ourWork
-        grid-template: auto auto 160px/100%
+        grid-template: auto auto 145px/100%
     .ourWorkDesc
         padding-left: 25px
         padding-right: 25px
@@ -698,6 +706,13 @@
         padding-left: 30px
         padding-right: 30px
 @media only screen and (max-width: 768px)
+    .titleAutoBus
+        max-width: 320px
+        font-size: 48px
+        line-height: 48px
+    .weDoBusi
+        line-height: 26px
+        height: auto
     .buttonSent
         display: none
     .layerRight, .layerLeft
@@ -718,7 +733,7 @@
     .curvImgSettings
         height: 55px
     .curva
-        bottom: 35px
+        bottom: 50px
     .itemPr
         padding: 20px
         grid-template: 90px auto /100%
@@ -748,7 +763,8 @@
     .buttonStart
         width: 100%
     .tabImgSettings
-        height: 520px
+        max-width: 395px
+        height: 215px
     .descTablet
         padding: 40px 25px 30px 25px
     .icon-1
@@ -766,11 +782,11 @@
     .webMenu
         display: none
     .containerAutonomoHome
-        grid-template: 65px 885px 105px 1100px auto auto 675px 950px 200px/100%
+        grid-template: 65px auto 105px 1100px auto auto auto 950px 200px/100%
     .headerAutonomohome
         grid-template: auto/80% 20%
     .automateBusiness
-        grid-template: auto auto / 100%
+        grid-template: auto auto 0px/100%
     .imgTablet
         grid-row: 2
     .descTablet
@@ -837,25 +853,35 @@
     .locationTitle
         padding-top: 30px
     .footerFinal
-        grid-template: 80px auto auto/100%
+        grid-template: 60px auto auto/100%
     .centeringF
         margin: 0 25px
+        padding-top: 15px
     .opcF
         align-items: start
         justify-items: start
         font-size: 12px
         line-height: 14px
-        grid-template: auto/repeat(4, 1fr)
+        grid-template: 15px /repeat(5, auto)
         padding: 0px 25px
-        grid-gap: 15px 30px 
+        grid-gap: 15px 25px
     .copyF
-        margin-top: 25px
+        margin-top: 15px
         margin-left: 25px
         text-align: left
     .projectBox
         grid-template: repeat(2, 80px)/repeat(3, 30%)
-@media only screen and (max-width: 438px)
+        padding-top: 40px
+    .howWeDescritpion, .ourWorkDescription
+        text-align: justify
+    
+@media only screen and (max-width: 375px)
+    .automateBusiness
+        grid-template: 66% 32% 0px/100%
     .tabImgSettings
-        height: 455px
-    .buttonWorkMob
-         margin: 25px 25px 0px 25px
+        max-width: 375px
+        height: 215px
+    .curva
+        bottom: 40px
+    .opcF
+        grid-template: 15px /repeat(4, auto)
