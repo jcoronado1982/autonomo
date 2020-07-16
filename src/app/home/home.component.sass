@@ -763,6 +763,7 @@
     .buttonStart
         width: 100%
     .tabImgSettings
+        width: 50%
         max-width: 395px
         height: 215px
     .descTablet
@@ -782,7 +783,7 @@
     .webMenu
         display: none
     .containerAutonomoHome
-        grid-template: 65px auto 105px 1100px auto auto auto 950px 200px/100%
+        grid-template: 65px auto 105px 1100px auto auto auto auto 200px/100%
     .headerAutonomohome
         grid-template: auto/80% 20%
     .automateBusiness
@@ -830,10 +831,11 @@
     .rightSignal
         top: 55%
     .contactBox
-        grid-template: 660px auto /100%
+        grid-template: auto auto /100%
     .contectAdress
         grid-row: 2
         padding-left: 25px
+        padding-bottom: 45px
     .sendus
         grid-row: 1
         padding: 0px 25px
@@ -876,6 +878,12 @@
         text-align: justify
     
 @media only screen and (max-width: 375px)
+    .rightSignal
+        top: 70%
+    .providesBox1, .providesBox2
+        grid-template: 365px/100%
+    .itempb
+        height: 365px
     .automateBusiness
         grid-template: 66% 32% 0px/100%
     .tabImgSettings
