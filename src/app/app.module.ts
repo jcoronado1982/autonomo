@@ -42,6 +42,7 @@ import { BusinessIntelligenceComponent } from './our-services/components/busines
 import { ProjectsCarouselComponent } from './our-projects/components/projects-carousel/projects-carousel.component';
 import { OwlModule } from 'ngx-owl-carousel';
 import { OurServicesNewComponent } from './our-services-new/our-services-new.component';
+import { CarouselIconsComponent } from './components/carousel-icons/carousel-icons.component';
 
 @NgModule({ 
   declarations: [
@@ -69,7 +70,8 @@ import { OurServicesNewComponent } from './our-services-new/our-services-new.com
     InfrastructureComponent,
     BusinessIntelligenceComponent,
     ProjectsCarouselComponent,
-    OurServicesNewComponent
+    OurServicesNewComponent,
+    CarouselIconsComponent
   ],
   imports: [
     MatRadioModule,

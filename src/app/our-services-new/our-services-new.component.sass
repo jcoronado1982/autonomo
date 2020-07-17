@@ -1,9 +1,9 @@
 .ourservicesContainer
     display: grid
-    grid-template: 115px auto 610px 285px/ 100%
+    grid-template: 100px auto 610px 285px/ 100%
 .headerAutonomohome
     display: grid
-    grid-template: auto/48% 52%
+    grid-template: auto/47% 53%
     background: linear-gradient(0deg, #0E8ECE, #0E8ECE)
 .webMenu
     display: block
@@ -141,9 +141,9 @@
 .sendus
     padding-right: 50px
     background-image: url("../../assets/images/autonomoNewPage/contactmapbg.png")
-    background-size: 100% 410px
+    background-size: 100% 475px
     background-repeat: no-repeat
-    background-position: 70px 145px
+    background-position: 0px 70px
 .sendUsTitleContact
     max-width: 761px !important
 .formBox
@@ -223,9 +223,7 @@
     margin: 0 auto
 .opcF
     display: grid
-    grid-template: auto/ repeat(5, 1fr)
-    align-items: center
-    justify-items: center
+    grid-template: auto/ repeat(5, auto)
     cursor: pointer
     margin-top: 30px
     padding: 0px 20%
@@ -246,13 +244,30 @@
     margin-top: 45px
 .buttonWorkMob, .min5It, .only6
     display: none
+.buttonSent
+    width: 240px
+    height: 50px
+    margin: 35px 0px 0px 0px
+    background: #33CFC6
+    border-radius: 5px
+    float: right
 @media only screen and (min-width: 1920px)
     .sendus
         background-position: 50%
-        background-size: 1200px 410px
+        background-size: 1200px 475px
     .descriptionOfService
         max-width: 2000px
+@media only screen and (max-width: 991px)
+    .headerAutonomohome
+        grid-template: auto/30% 70%
+    .contactBox
+        grid-template: auto/33% 1fr
 @media only screen and (max-width: 768px)
+    .sendUsTitleContact, .adressesTitle, .serviceTitleBlue
+        font-size: 34px
+        line-height: 45px
+    .buttonSent
+        display: none
     .webMenu
         display: none
     .mobileMenu, .buttonWorkMob
@@ -285,11 +300,14 @@
         max-width: 245px
     .descriptionOfService
         margin-top: 10px
+        padding-right: 0px
+        text-align: justify
     .contactBox
         grid-template: 660px auto /100%
     .contectAdress
         grid-row: 2
         padding-left: 25px
+        padding-bottom: 45px
     .buttonWorkMob
         height: 50px
         margin: 50px 0px 0px 0px
@@ -298,11 +316,13 @@
     .sendus
         grid-row: 1
         padding: 0px 25px
-        background-position: 50%
+        background-position: 0px 20px
+        background-size: 100% 205px
     .formBox
         grid-template-columns: 1fr
         grid-template-rows: 50px 50px 50px
         padding-right: 0px
+        padding-top: 30px
     .emailBox
         grid-row: 2
         grid-column: 1
@@ -312,20 +332,25 @@
     .contTitle
         padding-top: 50px
     .locationTitle
-        padding-top: 30px
+        padding-top: 45px
     .footerFinal
-        grid-template: 80px auto auto/100%
+        grid-template: 60px auto auto/100%
     .centeringF
         margin: 0 25px
+        padding-top: 15px
     .opcF
         align-items: start
         justify-items: start
         font-size: 12px
         line-height: 14px
-        grid-template: auto/repeat(4, 1fr)
+        grid-template: 15px /repeat(5, auto)
         padding: 0px 25px
-        grid-gap: 15px 30px 
+        grid-gap: 15px 25px
     .copyF
         margin-top: 25px
+        margin-bottom: 30px
         margin-left: 25px
         text-align: left
+@media only screen and (max-width: 375px)
+    .opcF
+        grid-template: 15px /repeat(4, auto)
