@@ -91,7 +91,7 @@
     padding: 20px 40px 20px 40px
 .iconsCarousel
     display: grid
-    grid-template: auto / 40px auto 40px
+    grid-template: auto / 45px auto 45px
 .layerLeft
     width: 45px
     height: 45px
@@ -391,7 +391,7 @@
 .contactBox
     background: #0E8ECE
     display: grid
-    grid-template: auto / 375px  1fr
+    grid-template: auto / 33% 67%
 .ourWorkImgs
     padding-right: 50px
     padding-left: 20px
@@ -464,7 +464,7 @@
 .sendus
     padding-right: 50px
     background-image: url("../../assets/images/autonomoNewPage/contactmapbg.png")
-    background-size: 100% 410px
+    background-size: 100% 475px
     background-repeat: no-repeat
     background-position: 0px 70px
 .sendUsTitleContact
@@ -572,7 +572,7 @@
 @media only screen and (min-width: 1920px)
     .sendus
         background-position: 50%
-        background-size: 1200px 410px
+        background-size: 1200px 475px
     .providesBox1
         grid-template: 330px/repeat(5, 16%)
         grid-gap: 0px 5%
@@ -636,6 +636,11 @@
         max-width: 245px
     .ourWorkTitle
         max-width: 330px
+        font-size: 40px
+        line-height: 50px 
+    .howWeBigTitle
+        font-size: 36px
+        line-height: 45px
     .ourWorkDescription
         margin-top: 25px
         margin-right: 25px
@@ -656,6 +661,7 @@
         background: #33CFC6
         border-radius: 5px
     .buttonWorkMob1
+        width: 200px
         height: 50px
         margin: 50px 25px 0px 25px
         background: #33CFC6
@@ -709,6 +715,9 @@
         padding-left: 30px
         padding-right: 30px
 @media only screen and (max-width: 768px)
+    .buttonWorkMob1
+        width: auto
+        max-width: 768px
     .titleAutoBusi
         font-size: 48px
         line-height: 48px
@@ -792,6 +801,7 @@
         grid-template: 65px auto 105px 1100px auto auto auto auto 200px/100%
     .headerAutonomohome
         grid-template: auto/80% 20%
+        border: 1px solid #0E8ECE
     .automateBusiness
         grid-template: auto auto 0px/100%
     .imgTablet
@@ -824,9 +834,14 @@
     .ourServtitle
         padding-top: 45px
         text-align: left
+    .sendUsTitleContact, .adressesTitle
+        font-size: 36px
+        line-height: 45px
     .servProvidesDesc
         max-width: 330px
         text-align: left
+        font-size: 36px
+        line-height: 45px
     .imgBaseProd
         padding: 30px 0px 15px 0px
         display: table
@@ -846,6 +861,7 @@
         grid-row: 1
         padding: 0px 25px
         background-position: 0px 20px
+        background-size: 100% 205px
     .formBox
         grid-template-columns: 1fr
         grid-template-rows: 50px 50px 50px
