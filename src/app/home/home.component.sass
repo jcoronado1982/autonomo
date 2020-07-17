@@ -66,7 +66,6 @@
 .weDoBusi
     width: 100%
     max-width: 612px
-    height: 25px
     margin-top: 25px
     font-family: Roboto
     font-style: normal
@@ -583,8 +582,6 @@
         display: grid
     .noExt
         display: none
-    .projectBox
-        justify-content: center
 @media only screen and (max-width: 1350px)
     .imageMeth
         padding: 75px 0px 120px 0px
@@ -604,6 +601,9 @@
         display: grid
     .no6Ext
         display: none
+@media only screen and (min-width: 1280px)
+    .projectBox
+        justify-content: center
 @media only screen and (min-width: 1225px)
     .imgbaseMethod
         display: table
@@ -617,7 +617,7 @@
         grid-template: 100px 565px 170px 655px auto auto auto 610px 285px/100%
 @media only screen and (max-width: 991px)
     .containerAutonomoHome
-        grid-template: 100px 565px 170px 905px auto auto 645px 610px 285px/100%
+        grid-template: 100px 565px 170px 905px auto auto auto 610px 285px/100%
     .contactBox
         grid-template: auto/33% 1fr
     .min5It
@@ -628,9 +628,7 @@
         max-width: 415px
     .ourWork
         grid-template: auto auto 145px/100%
-    .ourWorkDesc
-        padding-left: 25px
-        padding-right: 25px
+        padding: 0px 25px
     .projectsOurW
         padding-top: 50px
         max-width: 245px
@@ -641,14 +639,12 @@
     .howWeBigTitle
         font-size: 36px
         line-height: 45px
+    .ourWorkDesc
+        padding-left: 0px
+        padding-right: 0px   
     .ourWorkDescription
         margin-top: 25px
-        margin-right: 25px
         max-width: 991px
-    .ourWorkImgs
-        padding-top: 40px
-        padding-right: 25px
-        padding-left: 25px
     .buttonWork
         display: none
     .projectBox
@@ -663,7 +659,8 @@
     .buttonWorkMob1
         width: 200px
         height: 50px
-        margin: 50px 25px 0px 25px
+        display: table
+        margin: 50px auto 40px auto
         background: #33CFC6
         border-radius: 5px
     .providesBox
@@ -716,7 +713,7 @@
         padding-right: 30px
 @media only screen and (max-width: 768px)
     .buttonWorkMob1
-        width: auto
+        width: 100%
         max-width: 768px
     .titleAutoBusi
         font-size: 48px
@@ -746,9 +743,9 @@
     .ext15
         margin-left: 0px
     .curvImgSettings
-        height: 60px
+        height: 35px
     .curva
-        bottom: 55px
+        bottom: 30px
     .itemPr
         padding: 20px
         grid-template: 90px auto /100%
@@ -778,9 +775,8 @@
     .buttonStart
         width: 100%
     .tabImgSettings
-        width: 50%
-        max-width: 395px
-        height: 215px
+        width: 78%
+        height: auto
     .descTablet
         padding: 40px 25px 30px 25px
     .icon-1
@@ -892,15 +888,19 @@
         padding: 0px 25px
         grid-gap: 15px 25px
     .copyF
-        margin-top: 15px
+        margin-top: 25px
+        margin-bottom: 30px
         margin-left: 25px
         text-align: left
     .projectBox
         grid-template: repeat(2, 80px)/repeat(3, 30%)
         padding-top: 40px
+        justify-content: center
     .howWeDescritpion, .ourWorkDescription
         text-align: justify
-    
+    .ourWorkImgs
+        padding-right: 0px
+        padding-left: 0px
 @media only screen and (max-width: 375px)
     .rightSignal
         top: 70%
@@ -908,15 +908,5 @@
         grid-template: 365px/100%
     .itempb
         height: 365px
-    .automateBusiness
-        grid-template: 66% 32% 0px/100%
-    .tabImgSettings
-        max-width: 375px
-        height: 215px
-    .curva
-        bottom: 40px
     .opcF
         grid-template: 15px /repeat(4, auto)
-@media only screen and (max-width: 375px)
-    .tabImgSettings
-        max-width: 320px
