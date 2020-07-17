@@ -566,6 +566,8 @@
     background: #33CFC6
     border-radius: 5px
     float: right
+.menuMobileStyl
+    display: none
 @media only screen and (min-width: 1920px)
     .sendus
         background-position: 50%
@@ -725,7 +727,7 @@
         width: 100%
         max-width: 768px
     .buttonWorkMob
-        margin-top:30px
+        margin-top: 30px
     .titleAutoBusi
         font-size: 48px
         line-height: 48px
@@ -762,7 +764,7 @@
         grid-template: 90px auto /100%
     .imgItemPr
         width: 135px
-        height:90px
+        height: 90px
     .providesBox
         grid-template: 125px auto auto/100%
         padding: 0px 25px
@@ -801,6 +803,7 @@
     .logoAuto
         padding-left: 25px
     .mobileMenu
+        cursor: pointer
         display: block
     .webMenu
         display: none
@@ -844,7 +847,7 @@
         padding-top: 45px
         text-align: left
     .sendUsTitleContact, .adressesTitle
-        font-size: 34px
+        font-size: 36px
         line-height: 45px
     .servProvidesDesc
         max-width: 330px
@@ -912,6 +915,21 @@
     .ourWorkImgs
         padding-right: 0px
         padding-left: 0px
+    .menuMobileStyl
+        grid-column: 1 / span 2
+        background: linear-gradient(0deg, #0E8ECE, #0E8ECE)
+        align-items: center
+        justify-items: center
+        cursor: pointer
+        font-family: Roboto
+        font-style: normal
+        font-weight: bold
+        font-size: 18px
+        line-height: 20px
+        color: #FFFFFF
+        position: relative
+        height: 200px
+        display: grid
 @media only screen and (max-width: 375px)
     .rightSignal
         top: 70%
@@ -921,3 +939,6 @@
         height: 365px
     .opcF
         grid-template: 15px /repeat(4, auto)
+@media only screen and (max-width: 320px)
+    .sendUsTitleContact
+        font-size: 30px

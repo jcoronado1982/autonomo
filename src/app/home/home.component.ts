@@ -18,12 +18,23 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       transition('void <=> *', animate(1000)),
     ]),
+    trigger('EnterLeave', [
+      state('flyIn', style({ transform: 'translateX(0)' })),
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('0.5s 300ms ease-in')
+      ]),
+      transition(':leave', [
+        animate('0.3s ease-out', style({ transform: 'translateX(-100%)' }))
+      ])
+    ])
   ]
 })
 export class HomeComponent implements OnInit {
   public prodList = [];
   public prodList2 = [];
   public slideIcons:boolean = false;
+  public menuMobile:boolean = false;
   constructor(private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){}
   
   ngOnInit() {
@@ -135,6 +146,9 @@ export class HomeComponent implements OnInit {
   changeIcon(){
     this.slideIcons = !this.slideIcons; 
   }
+  showMenuMobile(){
+    this.menuMobile = !this.menuMobile;
+  }
   gotoId(value){
     localStorage.setItem("idItem",value);
     this.router.navigate(['our-services']);
@@ -149,16 +163,40 @@ export class HomeComponent implements OnInit {
   }
   goToId3(){
     var el = document.getElementById('howWeWork');
-    el.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
+    el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
   }
   goToId4(){
     var el = document.getElementById('projects');
-    el.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+    el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
   }
   goToId5(){
     var el = document.getElementById('contactUs');
     el.scrollIntoView({behavior: "smooth", inline: "nearest"});
   }
-  
+  goToId1M(){
+    this.menuMobile = !this.menuMobile;
+    var el = document.getElementById('aboutUs');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId2M(){
+    this.menuMobile = !this.menuMobile;
+    var el = document.getElementById('services');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId3M(){
+    this.menuMobile = !this.menuMobile;
+    var el = document.getElementById('howWeWork');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId4M(){
+    this.menuMobile = !this.menuMobile;
+    var el = document.getElementById('projects');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId5M(){
+    this.menuMobile = !this.menuMobile;
+    var el = document.getElementById('contactUs');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
 }
 

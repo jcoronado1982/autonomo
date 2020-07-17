@@ -11,12 +11,19 @@
         <div class="projectsBoxMenu" (click)="this.goToId4()">Projects</div>
         <div class="contactBoxMenu" (click)="this.goToId5()">Contact</div>
       </div>
-      <div class="mobileMenu">
+      <div class="mobileMenu" (click)="this.showMenuMobile()">
         <div>
           <img class="auxBtn" src="../../assets/images/autonomoNewPage/bar-icon2.png">
         </div>
       </div>
     </div>
+    <div class="menuMobileStyl" *ngIf="this.menuMobile==true" [@EnterLeave]>
+      <div class="aboutUsBoxMenu suportMob" (click)="this.goToId1M()">About Us</div>
+      <div class="servicesBoxMenu suportMob" (click)="this.goToId2M()">Services</div>
+      <div class="howWeWorkBoxMenu suportMob" (click)="this.goToId3M()">How we work</div>
+      <div class="projectsBoxMenu suportMob" (click)="this.goToId4M()">Projects</div>
+      <div class="contactBoxMenu suportMob" (click)="this.goToId5M()">Contact</div>
+    </div> 
   </div>
   <div class="automateBusiness">
     <div class="imgTablet">
