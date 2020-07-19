@@ -1,10 +1,13 @@
+*:focus
+    outline: none
 .container
     min-width: 100%
     display: grid
     padding: 0
     grid-gap: 0px
     grid-template-columns: 1fr
-    grid-template-rows: auto 768px auto auto auto auto auto auto auto auto auto auto auto auto auto 80px 
+    grid-template-rows: auto 768px auto auto 435px auto auto auto auto auto auto 90px auto auto auto auto
+    
 .header-items 
     display: grid
     grid-template-columns: 1fr 1fr
@@ -18,22 +21,34 @@
     grid-column: 1  / span 1
     grid-row: 2
 .as-logo-princ
-    width: 240px
+    width: 210px
 .as-logo-main
-    text-align: center
+    text-align: left
     cursor: pointer
+    padding-left: 50px
 .menu-as-items
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-rows: 60px
     font-size: 20px
     padding-right: 60px
+    cursor: pointer
 .menu-solutions, .menu-tech, .menu-services, .menu-contact-us
-    padding: 34px 0px
     color: #ffffff
     font-weight: 800
-    cursor: pointer
     text-align: center
     font-family: mons
+    text-decoration: none
+    position: relative
+    top: 12px
+    margin-top: 17px
+.witeTxt
+    color: #ffffff
+.menu-solutions:hover, .menu-tech:hover, .menu-services:hover, .menu-contact-us:hover
+    border-bottom: 1px solid #ffffff
+    margin-top: 17px
+a
+    text-decoration: none
 .big-text-as
     padding-top: 245px
 .big-title-as
@@ -63,11 +78,21 @@
     grid-template-columns: 1fr
     grid-template-rows: 1fr
     background-color: #3E3E4A
-    padding: 50px 60px
+    padding: 30px 0px
+.technologiesNon
+    display: none
 .technologies-1
     display: grid
     grid-template-columns: repeat(8,1fr)
     grid-template-rows: 1fr
+.technologies-1Non
+    display: none
+.technologies-2
+    display: grid
+    grid-template-columns: repeat(8,1fr)
+    grid-template-rows: 1fr
+.technologies-1Non
+    display: none
 .icon-1
     grid-column: 1 / span 1
     grid-row: 1
@@ -107,10 +132,13 @@
     grid-column: 8 / span 1
     grid-row: 1
     text-align: center
-    padding: 20px 0px
-.py-icon, .php-icon, .ang-icon, .react-icon, .ionic-icon, .chcar-icon, .aws-icon
-    width: 60px
-    height: 60px
+    padding: 30px 0px
+.py-icon, .php-icon, .ang-icon, .react-icon, .ionic-icon, .char-icon
+    width: 64px
+    height: 64px
+.aws-icon
+    width: 59px
+    height: 35px
 .text-autonomo-is
     grid-column: 1 / span 1
     grid-row: 4
@@ -119,8 +147,8 @@
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: auto auto
-    padding-top: 30px
-    padding-bottom: 40px
+    padding: 40px 0px 50px 0px
+    background-color: #f2f2f2
 .autonomo-is-title
     font-family: autonomo
     text-align: center
@@ -134,7 +162,8 @@
     grid-row: 2 / span 1
 .descripion-as-char
     font-family: mons
-    width: 41%
+    width: 55%
+    max-width: 996px
     margin: 0 auto
     line-height: 2.2
     font-weight: 600
@@ -147,11 +176,17 @@
     grid-column: 1 /span 1
     grid-row: 5
     background-color: #ffffff
+.ai-generalAux 
+    grid-column: 1 / span 1
+    grid-row: 5
+    position: relative
+    top: -50%  
+    bottom: 50%      
 .autonomo-products-general
     display: grid
     grid-template-columns: 1fr 1fr
     grid-template-rows: 1fr
-    padding-bottom: 30px
+    padding-bottom: 40px
 .products
     display: grid
     grid-template-columns: 220px 1fr
@@ -190,6 +225,66 @@
     grid-row: 3 / span 1
     padding-left: 20px
     cursor: pointer
+.products-7
+    grid-column: 1 / span 1
+    grid-row: 1 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-8
+    grid-column: 2 / span 1
+    grid-row: 1 / span 1
+    padding-left: 20px
+    cursor: pointer
+.products-9
+    grid-column: 1 / span 1
+    grid-row: 2 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-10
+    grid-column: 2 / span 1
+    grid-row: 2 / span 1
+    padding-left: 20px
+    cursor: pointer
+.products-11
+    grid-column: 1 / span 1
+    grid-row: 3 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-12
+    grid-column: 2 / span 1
+    grid-row: 3 / span 1
+    padding-left: 20px
+    cursor: pointer
+.products-13
+    grid-column: 1 / span 1
+    grid-row: 1 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-14
+    grid-column: 2 / span 1
+    grid-row: 1 / span 1
+    padding-left: 20px
+    cursor: pointer
+.products-15
+    grid-column: 1 / span 1
+    grid-row: 2 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-16
+    grid-column: 2 / span 1
+    grid-row: 2 / span 1
+    padding-left: 20px
+    cursor: pointer
+.products-17
+    grid-column: 1 / span 1
+    grid-row: 3 / span 1
+    padding-left: 120px
+    cursor: pointer
+.products-18
+    grid-column: 2 / span 1
+    grid-row: 3 / span 1
+    padding-left: 20px
+    cursor: pointer
 .text-products-title
     font-size: 16px
     font-weight: bold
@@ -205,6 +300,13 @@
     font-style: normal
     line-height: 1.90
     letter-spacing: normal
+.autonomo-products-general
+    display: none
+.foot1
+    width: 100%
+    position: relative
+.ffItem:hover
+    color: rgb(62, 62, 74)
 .border-yellow
     border-left: 3px solid #ff9209
     float: left
@@ -213,6 +315,8 @@
     margin-left: 120px
 .pr2, .pr3, .pr4
     width: 64px
+    display: table
+    margin: 0 auto
 .computer-img
     grid-column: 2 / span 1
     grid-row: 1 
@@ -221,6 +325,15 @@
     background-repeat: no-repeat
     width: 70%
     margin-top: 30px
+.computer-imgHov
+    grid-column: 2 / span 1
+    grid-row: 1 
+    background-image: url("../../assets/images/computer.png")
+    background-size: contain
+    background-repeat: no-repeat
+    width: 70%
+    margin-top: 30px
+    opacity: 50%
 .computer-img2
     grid-column: 2 / span 1
     grid-row: 1 
@@ -229,6 +342,15 @@
     background-repeat: no-repeat
     width: 70%
     margin-top: 30px
+.computer-img2Hov
+    grid-column: 2 / span 1
+    grid-row: 1 
+    background-image: url("../../assets/images/test2.jpg")
+    background-size: contain
+    background-repeat: no-repeat
+    width: 70%
+    margin-top: 30px
+    opacity: 50%
 .computer-img3
     grid-column: 2 / span 1
     grid-row: 1 
@@ -237,11 +359,20 @@
     background-repeat: no-repeat
     width: 70%
     margin-top: 30px
+.computer-img3Hov
+    grid-column: 2 / span 1
+    grid-row: 1 
+    background-image: url("../../assets/images/test3.jpg")
+    background-size: contain
+    background-repeat: no-repeat
+    width: 70%
+    margin-top: 30px
+    opacity: 50%
 .carousel-as
     grid-column: 1 / span 1
     grid-row: 6
-    padding-bottom: 140px
-    background-color: #ffffff
+    padding: 70px 10px 50px 10px
+    background-color: transparent
 .slides_web
     display: table
     width: 100%
@@ -249,18 +380,17 @@
     width: 50%
     float: left
     height: auto
-    padding-right: 10px
+    padding: 0px 5px 0px 0px
 .products-location
-    background-image: url("../../assets/images/location.png")
+    background-image: url("../../assets/images/new-icons/location2.jpg")
     width: 100%
     height: auto
-    background-size: contain
     background-repeat: round
 .padding-text-carrusel
     padding: 0px
-    height: 600px
+    height: 500px
 .padding-text-carrusel-int
-    padding: 20px 100px 20px 100px
+    padding: 20px 60px 20px 60px
     text-align: justify
 .centrado
     text-align: center
@@ -275,7 +405,7 @@
     line-height: 1.34
     letter-spacing: normal
     color: #ffffff
-    padding-top: 20px
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5)
 .comunication-text-2
     font-family: mons
     font-size: 24px
@@ -285,34 +415,35 @@
     line-height: 1.34
     letter-spacing: normal
     color: #ffffff
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5)
 .items-location
     position: relative
-    top: 79%
-    height: 130px 
+    top: 75%
+    height: 80px 
     background-blend-mode: multiply
     background-image: linear-gradient(to bottom, #868585, #868585)
-    opacity:0.5                
+    opacity: 0.6                
 .items-communication
     position: relative 
-    top: 79%
-    height: 130px 
+    top: 75%
+    height: 80px 
     background-blend-mode: multiply
     background-image: linear-gradient(to bottom, #868585, #868585)
-    opacity:0.5
+    opacity: 0.6
 .item-text
     float: left
     width: 50%
     text-align: center
-    padding: 25px 0px
+    padding: 5px 0px
 .item-text-1
     float: left
     width: 50%
     text-align: left
     padding-left: 20px
-    padding: 20px 0px
+    padding: 0px 0px
 .item-text-title
     color: #ffffff
-    font-size: 32px
+    font-size: 24px
     font-weight: 800
     font-family: autonomo
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5)
@@ -321,7 +452,7 @@
     letter-spacing: normal
 .item-text-title-1
     color: #ffffff
-    font-size: 32px
+    font-size: 24px
     font-weight: 800
     padding-left: 45px
     padding-right: 20px
@@ -330,6 +461,8 @@
     font-stretch: normal
     font-style: normal
     letter-spacing: normal
+    line-height: 1.4
+    height: 60px
 .item-text-description
     color: #ffffff
     font-weight: 500
@@ -343,26 +476,26 @@
     width: 50%
     float: left
     height: auto
-    padding-left: 10px
+    padding: 0px 0px 0px 5px
 .products-comunication
-    background-image: url("../../assets/images/comunication.png")
+    background-image: url("../../assets/images/new-icons/communication.jpg")
     width: 100%
     height: auto
-    background-size: contain
     background-repeat: round
 .products-location2
-    background-image: url("../../assets/images/comunication.png")
+    background-image: url("../../assets/images/new-icons/communication.jpg")
     width: 100%
     height: 100%
 .products-comunication2
-    background-image: url("../../assets/images/location.png")
+    background-image: url("../../assets/images/new-icons/location2.jpg")
     width: 100%
     height: 100%
 .ai-general 
     grid-column: 1 / span 1
     grid-row: 7
     background-color: #3F3F4B
-    padding-bottom: 60px
+    padding-bottom: 30px
+
 .container-ai-general
     display: grid
     grid-template-columns: 1fr 1fr
@@ -370,10 +503,15 @@
 .ai-title
     grid-column: 1 / span 1
     grid-row: 1
+    display: block
+.ai-title2
+    grid-column: 1 / span 1
+    grid-row: 1
+    display: none
 .text-ai-title
     font-size: 50px
     color: #FF9209
-    margin-top: 20px
+    margin-top: 40px
     padding-left: 60px
     font-family: autonomo
     font-weight: 800
@@ -407,7 +545,7 @@
     letter-spacing: normal
     padding-right: 80px
 .text-ai-desc-1
-    margin-bottom: 20px
+    margin-bottom: 10px
 .ai-button
     grid-column: 1 / span 1
     grid-row: 3
@@ -419,7 +557,7 @@
     font-size: 26px
     padding: 25px 0px
     margin-left: 60px
-    margin-top: 25px
+    margin-top: 20px
     width: 326px
     height: 80px
     font-family: autonomo
@@ -441,7 +579,7 @@
 .txt-msg-title
     color: #3E3E4A
     font-size: 50px
-    padding: 45px 60px
+    padding: 40px 60px 30px 60px
     font-family: autonomo
     font-weight: 800
     font-stretch: normal
@@ -523,7 +661,7 @@
 .message-buttons
     grid-column: 1 / span 1
     grid-row: 12
-    height: 170px
+    height: 145px
     padding: 0px 60px
     background-color: #ffffff
 .message-buttons-container
@@ -531,7 +669,6 @@
     grid-template-columns: 1fr
     grid-template-rows: 1fr
     height: 100%
-    margin-bottom: 45px
     margin-top: 15px
 .contact-button
     grid-column: 1 / span 1
@@ -580,18 +717,18 @@
     display: grid
     grid-template-columns: 1fr 1fr 1fr
     grid-template-rows: 1fr
-    background-color: #3E3E4A
+    background-color: transparent
     margin-top: 110px
 .button-contactenos
     grid-column: 1 / span 1
     grid-row: 14
-    background-color: #3E3E4A
+    background-color: transparent
     padding: 0px 300px
 .button-contactenos-container
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
     grid-template-rows: 1fr
-    background-color: #3E3E4A
+    background-color: transparent
 .button-c1, .button-c2, .button-c3, .button-c4
     font-family: autonomo
     font-weight: 800
@@ -631,14 +768,14 @@
 .banner-housing-ext  
     grid-column: 1 / span 1
     grid-row: 15
-    background-color: #3E3E4A
+    background-color: transparent
 .banner-housing-container
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: 1fr
-    background-color: #3E3E4A
-    margin-bottom: 23px
-    margin-top: 23px
+    background-color: transparent
+    margin-bottom: 0px
+    margin-top: 10px
 .img-bnhouse
     grid-column: 1 / span 1
     grid-row: 1
@@ -649,7 +786,7 @@
     width: 64px
     height: auto
 .logo-aut
-    width: 210px
+    width: 190px
 .logo-as-line
     text-align: center
 .text-bnhouse
@@ -676,7 +813,7 @@
     text-align: center
     padding: 30px 0px
     font-size: 14px
-    background-color: #27272E
+    background-color: transparent
     font-family: mons
     font-weight: 400
     font-stretch: normal
@@ -696,27 +833,43 @@
     border-radius: 100%
     background: #fff
     width: 112%
-    margin-top:20px
+    margin-top: 20px
 .borde-sep
     border-left: 2px solid #ffffff
     margin-top: 3px
+    height: 76px
 @media only screen and (min-width: 1920px)
+    .as-box, .text-autonomo-is
+        background-color: transparent
+    .foot1
+        right: 0%
+        height: 188px
     .container
-        min-width: 70%
+        min-width: 74.5%
     .descripion-as-char
-        width: 60%
+        width: 65%
+    .ffItem
+        padding-left: 10px
+    .ai-generalAux 
+        top: 130px
+        bottom: 130px
+    .carousel-as
+        padding: 70px 0px 50px 0px
 @media only screen and (max-width: 1368px)
     .descripion-as-char
         width: 70%
 @media only screen and (max-width: 1280px)
     .descripion-as-char
         width: 66%
-@media only screen and (max-width: 1024px)
+@media only screen and (max-width: 1115px)
     .menu-as-items
         font-size: 16px
+@media only screen and (max-width: 1024px)
+    .container-ai-general
+        grid-template-rows: 233px auto 233px
     .descripion-as-char
         width: 80%
-    .computer-img, .computer-img2, .computer-img3
+    .computer-img, .computer-img2, .computer-img3, .computer-img4, .computer-img5, .computer-img6, .computer-img7, .computer-img8, .computer-img9
         background-position: 50% 50%
         width: 95%
     .ai-logo
@@ -726,10 +879,15 @@
     .products-location, .products-comunication
         background-size: cover
     .item-text-title-1, .item-text-title
-        font-size: 25px
+        font-size: 20px
         padding-left: 20px
+        position: relative
+        bottom: 0px
     .item-text-description
         padding-left: 20px
+        position: relative
+        bottom: 0px
+        font-size: 16px
     .padding-text-carrusel-int
         padding: 20px 50px 20px 50px
     .curva-general-2
@@ -743,6 +901,31 @@
     .banner-housing-container
         margin-bottom: 23px
 @media only screen and (max-width: 991px)
+    .padding-text-carrusel
+        height: 450px
+    .txt-msg-title
+        padding: 40px 16px 30px 16px
+    .name-and-email, .message-description, .message-buttons
+        padding: 0px 16px
+    .project-type
+        padding: 25px 16px
+    .ai-button-txt
+        margin-left: 16px
+    .text-ai-description
+        padding-left: 16px
+    .text-ai-title, .text-ai-title-1
+        padding-left: 16px
+    .as-logo-main
+        padding-left: 16px
+    .padding-text-carrusel-int
+        text-align: left
+    .comunication-text-1, .comunication-text-2
+        position: relative
+        bottom: 40px
+    .comunication-text-1
+        font-size: 32px
+    .comunication-text-2
+        font-size: 20px
     .autonomo-products-general
         padding-bottom: 10px
     .computer-img, .computer-img2, .computer-img3
@@ -762,7 +945,7 @@
         padding: 0
         grid-gap: 0px
         grid-template-columns: 100%
-        grid-template-rows: auto 384px auto auto auto auto auto auto auto auto auto auto auto auto auto 80px
+        grid-template-rows: auto 384px auto auto 450px auto auto auto auto auto auto auto auto auto auto auto
     .header-items 
         display: grid
         grid-template-columns: 100%
@@ -785,9 +968,53 @@
     .desc-title-as
         font-size: 20px
 @media only screen and (max-width: 768px)
+    .borde-sep
+        height: 108px
+    .ai-generalAux
+        display: none
+    .as-logo-main
+        padding-left: 0px
+        text-align: center
+        display: table
+        margin: 0 auto
+    .text-products-title
+        font-size: 14px
+    .text-products-description
+        font-size: 12px
+    .text-ai-title
+        margin-top: 20px
+    .container
+        grid-template-rows: auto 384px auto auto 400px auto auto auto auto auto auto auto auto auto auto auto
+        background-color: #ffffff
+    .prd2
+        grid-template-rows: 100px 110px 110px !important
+    .autonomo-is
+        background-color: #f2f2f2
+    .as-box
+        background-color: #f2f2f2
+    .line-style-container
+        margin-top: 20px
+    .items-communication
+        height: 111px
+    li.mobSpac
+        padding-bottom: 20px
+    .text-ai-desc-1, .text-ai-desc-2
+        line-height: 1.5
+    .ai-title
+        display: none
+    .ai-title2
+        display: block
+    .py-icon, .php-icon, .ang-icon, .react-icon, .ionic-icon, .chcar-icon
+        width: 40px
+        height: 40px
+    .aws-icon
+        width: 48px
+        height: 29px
+    .icon-8Hov
+        display: none
     .items-location
         height: 110px
-    .products-1.border-yellow, .products-3.border-yellow, .products-5.border-yellow
+    .products-1.border-yellow, .products-3.border-yellow, .products-5.border-yellow, .products-7.border-yellow, .products-9.border-yellow, .products-11.border-yellow, .products-13.border-yellow, .products-15.border-yellow, .products-17.border-yellow
         padding-left: 6px
     .border-yellow
         margin-left: 48%
@@ -808,43 +1035,55 @@
     .item-text-title
         font-size: 20px
     .comunication-text-1
-        font-size: 40px
+        font-size: 32px
+        position: relative
+        bottom: 50px
     .comunication-text-2
         font-size: 20px
+        position: relative
+        bottom: 50px
     .padding-text-carrusel-int
         padding: 20px 20% 20px 20%
     .as-logo-princ
         width: 200px
+        float: left
+        margin-left: 4%
     .text-ai-title, .text-ai-title-1, .text-ai-description
         padding-left: 20px
         padding-right: 20px
+    .ai-button
+        margin-top: 20px
     .ai-button-txt
-        margin-left: 20px
+        display: table
+        margin: 0 auto
         width: 95%
+        padding: 20px 0px
+        height: 50px
+        font-size: 20px
     .container-ai-general
         grid-template-rows: auto auto auto
     .carousel-as
-        margin-top: -35px
-        padding-bottom: 60px
+        padding: 0px 10px
+        padding-bottom: 20px
+        background-color: #ffffff
     .as-box
         padding-top: 20px
         padding-bottom: 0px
     .autonomo-is-title
-        font-size: 35px
-    .products-1, .products-2
-        margin-top: 30px
-    .products-2, .products-4, .products-6
-        margin-bottom: -50px
-    .products-1, .products-3, .products-5
-        padding-left: 50%
+        font-size: 32px 
+    .products-2, .products-4, .products-6, .products-8, .products-10, .products-12, .products-14, .products-16, .products-18
+        margin-bottom: 0px
+    .products-1, .products-3, .products-5, .products-7, .products-9, .products-11, .products-13, .products-15, .products-17
+        padding-left: 0%
+        border-left: 2px solid #ffffff
     .header
         background-image: url("../../assets/images/hero-images-Tab.png")
     .products-location
-        background-image: url("../../assets/images/locationTab.png")
+        background-image: url("../../assets/images/new-icons/location2.jpg")
         background-size: 100% 100%
         background-repeat: no-repeat
     .products-comunication
-        background-image: url("../../assets/images/comunicationTab.png")
+        background-image: url("../../assets/images/new-icons/communication.jpg")
         background-size: 100% 100%
         background-repeat: no-repeat
     .computer-img
@@ -869,11 +1108,17 @@
         display: none
     .descripion-as-char
         width: 100%
+        font-size: 14px
     .autonomo-products-general
+        display: grid
         grid-template-columns: 1fr
         grid-template-rows: 1fr 1fr
-        height: 1000px
-        padding-bottom: 80px
+        height: 1px
+        padding: 30px 0px
+    .products-1:hover, .products-3:hover, .products-5:hover, .products-7:hover, .products-9:hover, .products-11:hover, .products-13:hover, .products-15:hover, .products-17:hover
+        border-left: 2px solid #ff9209
+    .img-pr2
+        margin-left: 10px
     .computer-img
         grid-column: 1/span 1
         grid-row: 1 / span 1
@@ -886,11 +1131,12 @@
     .computer-company
         width: 100%
     .products
-        grid-template-columns: 30% 1fr
-        grid-template-rows: auto auto auto
+        grid-template-columns: 20% 1fr
+        grid-template-rows: 120px 120px 120px
         grid-column: 1/span 1
         grid-row: 2 
-        margin-bottom: 200px
+    .prd320
+        grid-template-rows: 120px 120px 120px
     .products-left, .products-right
         width: 100%
         padding-right: 0px
@@ -902,7 +1148,7 @@
         grid-row: 1
     .line-style
         padding: 0px
-        margin-top: 38px
+        margin-top: 0px
     .line-style-container
         grid-template-columns: 1fr auto 1fr
     .button-contactenos
@@ -921,56 +1167,75 @@
         grid-column: 1 / span 1
         grid-row: 2/span 2
         margin-top: 10px
-    .redondeadonorelieve
+    .redondeadonorelieve, .redondeadonorelieve-1
         width: 100%
+        font-size: 20px
+        height: 50px
+    .redondeadonorelieve-2
+        width: 100%
+        font-size: 20px
+        height: 100px
     .txt-msg-title
         font-size: 35px
-        padding: 45px 20px
+        padding: 20px
     .ai-logo
         display: none
     .container-ai-general
         grid-template-columns: 1fr
     .comunication-text-2
-        font-size: 28px
+        font-size: 24px
     .item-text-title, .item-text-title-1
-        font-size: 32px
+        font-size: 22px
     .curva-general-2
         margin-top: 45px
     .products-location
-        background-image: url("../../assets/images/locationTab.png")
+        background-image: url("../../assets/images/new-icons/location2.jpg")
     .padding-text-carrusel
         height: 530px
     .padding-text-carrusel-int
         padding: 20px 10% 20px 10%
-    .item-text, .item-text-1
-        padding: 10px 0px
+    .item-text
+        padding: 20px 0px
+    .item-text-1
+        padding: 22px 0px
     .text-products-description
-        padding-right: 40% 
+        padding-right: 15% 
+        line-height: 1.5
     .curva-general
         left: -6%
+    li
+        line-height: 1.5
+    .text-ai-title
+        font-size: 32px
 @media only screen and (max-width: 414px)
+    .borde-sep
+        height: 58px
+    .text-ai-description
+        font-size: 14px
+    .item-text-title-1, .item-text-title
+        padding-top: 0px
+    .text-products-description
+        padding-right: 0%
     .item-text-title, .item-text-title-1
-        font-size: 20px
+        font-size: 15px
     .comunication-text-2
         font-size: 20px
     .redondeadonorelieve, .redondeadonorelieve-1, .redondeadonorelieve-2
         font-size: 14pt
     .curva-general-2
         margin-top: 45px
-    .line-style
-        margin-top: 35px
     .padding-text-carrusel
         height: 330px
     .products-location
-        background-image: url("../../assets/images/locationMov.png")
+        background-image: url("../../assets/images/new-icons/location2.jpg")
     .items-location, .items-communication
-        top: 250px
-        height: 80px
+        top: 267px
+        height: 65px
     .ai-button-txt
         width: 86%
         font-size: 20px
     .item-text, .item-text-1
-        padding: 10px 0px
+        padding: 0px 0px
     .comunication-text-2
         font-size: 16px
     .padding-text-carrusel-int
@@ -979,15 +1244,22 @@
         font-size: 24px
     .curva-general
         left: -6%
-    .products-1, .products-3, .products-5
-        padding-left: 40%
     .border-yellow
         margin-left: 30%
     .img-bnhouse
         padding-right: 275px
 @media only screen and (max-width: 375px)
-    .products-1, .products-3, .products-5
-        padding-left: 25%
+    .container
+        grid-template-rows: auto 384px auto auto 550px auto auto auto auto auto auto auto auto auto auto auto
+    .borde-sep
+        margin-top: 0px
+    .products
+        grid-template-columns: 25% 1fr
+        grid-template-rows: 170px 170px 170px
+    .prd2
+        grid-template-rows: 170px 170px 170px !important
+    .products-1, .products-3, .products-5,  .products-7,  .products-9, .products-11, .products-13, .products-15,  .products-17
+        padding-left: 0%
     .border-yellow
         margin-left: 15%
     .curva-general-2
@@ -997,16 +1269,16 @@
         font-size: 20px
         padding-top: 0px
     .item-text, .item-text-1
-        padding: 10px 0px
+        padding: 6px 0px
     .banner-housing-container
         margin-bottom: 0px
         margin-top: 0px
     .items-location
-        top: 229px
-        height: 80px
+        top: 251px
+        height: 59px
     .items-communication
-        top: 229px
-        height: 80px
+        top: 251px
+        height: 59px
     .padding-text-carrusel
         height: 310px
     .busi-logo
@@ -1019,10 +1291,11 @@
         padding-right: 0px
     .comunication-text-2
         font-size: 14px
+        bottom: 12px
     .padding-text-carrusel-int
         padding: 10px 45px 20px 45px
-    .products-2, .products-4, .products-6
-        padding-left: 10px
+    .products-2, .products-4, .products-6,  .products-8,  .products-10, .products-12, .products-14, .products-16,  .products-18
+        padding-left: 20px
         padding-right: 10px
     .computer-img
         width: 100%
@@ -1030,6 +1303,7 @@
         padding-right: 10px
     .comunication-text-1
         font-size: 30px
+        bottom: 10px
     .item-text-title-1
         padding-left: 9px
     .img-bnhouse
@@ -1037,14 +1311,20 @@
         text-align: left
     .txt-msg-title
         padding: 20px 20px
+    .products-1, .products-2
+        margin-top: 0px
 @media only screen and (max-width: 320px)
     .busi-logo
         margin-left: 0px
     .padding-text-carrusel-int
         padding: 10px 20px 6px 20px
     .item-text-title-1
-        font-size: 16px
-    .products-1, .products-3, .products-5
-        padding-left: 25%
+        font-size: 14px
+    .item-text-description
+        font-size: 10px
+    .products-1, .products-3, .products-5,  .products-7,  .products-9, .products-11, .products-13, .products-15, .products-17
+        padding-left: 0%
     .border-yellow
         margin-left: 14%
+    .products-1, .products-2
+        margin-top: 0px

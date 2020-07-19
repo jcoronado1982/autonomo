@@ -1,0 +1,42 @@
+.gridBox
+    display: grid
+    grid-template-columns: 100%
+    grid-template-rows: auto auto auto
+.header
+    grid-column: 1
+    grid-row: 1
+.content
+    grid-column: 1
+    grid-row: 2
+    background-color: #ffffff
+    padding: 0px 100px
+.foot  
+    grid-column: 1
+    grid-row: 3  
+    background-color: #ffffff
+.titleContent
+    font-family: autonomo
+    text-align: left
+    color: #3E3E4A
+    font-size: 36px
+    font-weight: 800
+.description
+    margin-top: 20px
+    color: #3e3e4a
+    font-size: 16px
+    text-align: justify
+    font-family: mons
+    font-weight: 500
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.5
+    letter-spacing: normal
+    padding-bottom: 20px
+@media only screen and (min-width: 1920px)
+    .content
+        padding: 0px 12.75%
+@media only screen and (max-width: 768px)
+    .titleContent
+        font-size: 32px
+    .content
+        padding: 0px 5%

@@ -4,173 +4,199 @@ import { AppComponent } from '../app.component';
 import { Service } from '../services';
 import { LoadingScreenService } from '../services/loading-screen/loading-screen.service';
 import { GlobalService } from '../global.service';
-import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA  } from '@angular/material';
+import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA  } from '@angular/material/dialog';
 import { Subscription } from "rxjs";
-
+import { trigger, state, style, transition, animate } from '@angular/animations';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.sass']
+  styleUrls: ['./home.component.sass'],
+  animations: [
+    trigger('fadeInOut', [
+      state('void', style({
+        opacity: 0
+      })),
+      transition('void <=> *', animate(1000)),
+    ]),
+    trigger('EnterLeave', [
+      state('flyIn', style({ transform: 'translateX(0)' })),
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('0.5s 300ms ease-in')
+      ]),
+      transition(':leave', [
+        animate('0.3s ease-out', style({ transform: 'translateX(-100%)' }))
+      ])
+    ])
+  ]
 })
 export class HomeComponent implements OnInit {
-  public tabActive='Dashboard';
-  public selectBan;
-  public currentList;
-  public postpago=false;
-  public prepago=false;
-  public telefoniaFijo=false;
-  public totalAccountList;
-  public viewPaper=1;
-
-  public billDueDateField;
-  public billDateField;
-  public lastPaymentAmountField;
-  public billBalanceField;
-  public paperless;
-  public accountType;
-  public accountSubtype;
-  public type;
-  public popPreguntasSeguridad;
-  public token:string=sessionStorage.getItem("token");
-  public subscribers;
-  public subscriber;
-  loadObserver: Subscription;
-  
-  public giftMessage = '';
-  public nameSend;
-  public gui;
-  public cr='';
+  public prodList = [];
+  public prodList2 = [];
+  public slideIcons:boolean = false;
+  public menuMobile:boolean = false;
   constructor(private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){}
   
   ngOnInit() {
-    this.global.validateSession();
-    this.loadObserver = this.global.loadObserver.subscribe((value:number) => {
-      this.dataLoading(value)
-    });
-    this.selectBan=atob(sessionStorage.getItem("selectBan"));
-    this.nameSend = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.firstNameField + ' ' + JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.lastNameField;
-    this.lastPaymentAmountField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.lastPaymentAmountField;
-    
-    this.billBalanceField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.billBalanceField;
-    if(this.billBalanceField.search('CR')>-1){
-      this.cr='CR';
-      this.billBalanceField=parseFloat(this.billBalanceField);
-    }
-    else{
-      this.cr='';
-    }
-    this.billDueDateField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.billDueDateField;
-    this.billDateField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.billDateField;
-    this.paperless = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).qualification.RefererResponse.paperless;
-    this.accountType= JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.accountTypeField;
-    this.accountSubtype= JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.accountSubtypeField;
-    //if(this.prepago==true){
-      this.subscribers=JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).SubscriberInfo;
-      this.subscriber=this.subscribers[0].subscriberNumberField;
-    //}
-   
-    
-    this.popPreguntasSeguridad=JSON.parse(atob(sessionStorage.getItem("popPreguntasSeguridad")));
+    let imgBan = [
+      {
+        name: "KOTLIN",
+        imgAdj: "../../../../assets/images/kotlin.png",
+        nameofclass:"py-icon",
+        paddingIcon:"65px 0px"
+      },
+      {
+        name: "PYTHON",
+        imgAdj: "../../../../assets/images/pyLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"65px 0px"
+      },
+      {
+        name: "CSHARP",
+        imgAdj: "../../../../assets/images/csharpLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"65px 0px"
+      },
+      {
+        name: "ANGULAR",
+        imgAdj: "../../../../assets/images/angularLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"65px 0px"
+      },
+      {
+        name: "REACT",
+        imgAdj: "../../../../assets/images/reactLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"65px 0px"
+      },
+      {
+        name: "SQL",
+        imgAdj: "../../../../assets/images/sqlSLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"65px 0px"
+      },
+      {
+        name: "GCP",
+        imgAdj: "../../../../assets/images/gcpLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"65px 0px"
+      },      
+      {
+        name: "AWS",
+        imgAdj: "../../../../assets/images/awsNewLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"65px 0px"
+      }      
+      
+    ];
+    this.prodList = imgBan;
+    let imgBan2 = [      
+      {
+        name: "PHP",
+        imgAdj: "../../../../assets/images/phpLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },{
+        name: "CLOUD COMPUTING",
+        imgAdj: "../../../../assets/images/cloudComputing.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },
+      {
+        name: "MYSQL",
+        imgAdj: "../../../../assets/images/mysqlNewLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },
+      {
+        name: "JAVA",
+        imgAdj: "../../../../assets/images/java.svg",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },
+      {
+        name: "ORACLE",
+        imgAdj: "../../../../assets/images/oracleNewLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },  
+      {
+        name: "POSTGRESQL",
+        imgAdj: "../../../../assets/images/postgresql.svg",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },
+      {
+        name: "AZURE",
+        imgAdj: "../../../../assets/images/azure.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      },
+      {
+        name: "IONIC",
+        imgAdj: "../../../../assets/images/ionicLogo.png",
+        nameofclass:"py-icon",
+        paddingIcon:"20px 0px"
+      }     
+      
+    ];
+    this.prodList2 = imgBan2;
+    setInterval(() => {this.changeIcon();}, 30000);
   }
-
-  ngAfterViewInit(){
-    if(this.prepago==true){
-      /*this.services.updateToken(this.token,btoa(this.selectBan),this.subscriber).subscribe(data =>{
-        if(data.hasError==false){
-          sessionStorage.setItem("idCustomerCard",btoa(JSON.stringify(data.response)));
-         this.GetGift1GBSendData();
-        }
-        else{
-         this.GetGift1GBSendData();
-          //mensaje que no se genero el token  
-        }
-      });*/
-    }
-    else{
-      /*this.GetGift1GBSendData();*/
-    }
-    /*if(this.popPreguntasSeguridad==true){
-      const dialogConfig = new MatDialogConfig();
-      dialogConfig.disableClose = true;
-      dialogConfig.autoFocus = true;
-      const dialogRef =this.dialog.open(PopupQuestionComponent, dialogConfig);
-    }*/
+  changeIcon(){
+    this.slideIcons = !this.slideIcons; 
   }
-  initializeData(){
-    this.global.refreshDataTo(this.token);
+  showMenuMobile(){
+    this.menuMobile = !this.menuMobile;
   }
-  refreshDataTo(event:Event) {
-    let index =parseInt(event.target["selectedIndex"]);
-    let ban = this.currentList[index].account;
-    sessionStorage.setItem("selectBan",btoa(ban));
-    this.initializeData();
+  gotoId(value){
+    localStorage.setItem("idItem",value);
+    this.router.navigate(['our-services']);
   }
-  dataLoading(sw){
-    this.selectBan=atob(sessionStorage.getItem("selectBan"));
-    this.lastPaymentAmountField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.lastPaymentAmountField;
-    this.billBalanceField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.billBalanceField;
-    this.accountType= JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.accountTypeField;
-    this.accountSubtype= JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.accountSubtypeField;
-    if(this.billBalanceField.search('CR')>-1){
-      this.cr='CR';
-      this.billBalanceField=parseFloat(this.billBalanceField);
-    }
-    else{
-      this.cr='';
-    }
-    this.billDueDateField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.billDueDateField;
-    this.billDateField = JSON.parse(atob(sessionStorage.getItem("getAccountDetails"))).AccounInfo.billDateField;
-    if(this.postpago==true){
-      this.type="postpaid";
-    }
-    else if(this.prepago==true){
-      this.type="prepaid";
-    }
-    else if(this.telefoniaFijo==true){
-      this.type="fixed";
-    }
-    /*this.GetGift1GBSendData();*/
+  goToId1(){
+    var el = document.getElementById('aboutUs');
+    el.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
   }
-  ngOnDestroy() {
-    this.loadObserver.unsubscribe();
+  goToId2(){
+    var el = document.getElementById('services');
+    el.scrollIntoView({behavior: "smooth", block: "start", inline: "end"});
   }
-  /*recibirRegalo(BANReceiver, Message, NameSender, GUI){
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.data = {BANReceiver:this.selectBan,Message:Message,NameSender:NameSender,GUI:GUI};
-    const dialogRef =this.dialog.open(PopupGiftAcceptedComponent, dialogConfig);
-    this.loadingScreenService.stopLoading();
-    this.giftMessage = Message;
-    this.nameSend = NameSender;
-    this.gui = GUI;
-  }*/
-  /*GetGift1GBSendData(){
-    this.services.getGift1GBSend(this.token, this.selectBan).subscribe(data=>{
-     if (vm.runPrepaid === false) {
-        this.loadingScreenService.stopLoading();
-    }
-    this.loadingScreenService.stopLoading();
-    if (data.HasError === false) {
-      if (data.Gift1GBsents.length > 0) {
-          for (var i = 0; i < data.Gift1GBsents.length; i++) {
-              if (i === 0) {
-                  this.recibirRegalo(data.Gift1GBsents[i].BANReceiver,data.Gift1GBsents[i].Message,data.Gift1GBsents[i].NameSender,data.Gift1GBsents[i].GUI);
-              }
-          }
-      }
-    } 
-    else {
-      this.global.notif(data.ErrorDesc);
-    }
-    });
-  }*/
-  /*
-  viewGiftExpired(){
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    const dialogRef =this.dialog.open(PopupGiftExpiredComponent, dialogConfig);
-  }*/
+  goToId3(){
+    var el = document.getElementById('howWeWork');
+    el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+  }
+  goToId4(){
+    var el = document.getElementById('projects');
+    el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+  }
+  goToId5(){
+    var el = document.getElementById('contactUs');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId1M(){
+    this.menuMobile = !this.menuMobile;
+    var el = document.getElementById('aboutUs');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId2M(){
+    this.menuMobile = !this.menuMobile;
+    var el = document.getElementById('services');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId3M(){
+    this.menuMobile = !this.menuMobile;
+    var el = document.getElementById('howWeWork');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId4M(){
+    this.menuMobile = !this.menuMobile;
+    var el = document.getElementById('projects');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  goToId5M(){
+    this.menuMobile = !this.menuMobile;
+    var el = document.getElementById('contactUs');
+    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
 }
 

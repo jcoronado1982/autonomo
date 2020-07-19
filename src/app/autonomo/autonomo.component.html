@@ -6,10 +6,22 @@
             </div>
             <div class="menu-as">
                 <div class="menu-as-items">
-                    <div class="menu-solutions">Solutions</div>
-                    <div class="menu-tech">Technologies</div>
-                    <div class="menu-services">Services</div>
-                    <div class="menu-contact-us">Contact Us</div>
+                    <div class="menu-solutions" (click)="this.goToId1();">
+                        Solutions
+                        <div class="witeTxt"></div>
+                    </div>
+                    <div class="menu-tech" (click)="this.goToId2();">
+                        Technologies
+                        <div class="witeTxt"></div>
+                    </div>
+                    <div class="menu-services" (click)="this.goToId3();">
+                        Services
+                        <div class="witeTxt"></div>
+                    </div>
+                    <div class="menu-contact-us" (click)="this.goToId4();">
+                        Contact Us
+                        <div class="witeTxt"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -22,22 +34,24 @@
                 your business.
             </div>
             <div class="desc-title-as">
-                We do data analysis, artificial intelligence, software
+                We do software development in cloud,
                 <br>
-                development and cloud computing
+                data analysis
             </div>
         </div>
     </div>
-    <div class="technologies">
-        <div class="technologies-1">
-            <div class="icon-1"><img width="100%" class="py-icon" src="../../assets/images/pyLogo.png"></div>
-            <div class="icon-2"><img width="100%" class="php-icon" src="../../assets/images/phpLogo.png"></div>
-            <div class="icon-3"><img width="100%" class="react-icon" src="../../assets/images/reactLogo.png"></div>
-            <div class="icon-4"><img width="100%" class="ionic-icon" src="../../assets/images/ionicLogo.png"></div>
-            <div class="icon-5"><img width="100%" class="chcar-icon" src="../../assets/images/csharpLogo.png"></div>
-            <div class="icon-6"><img width="100%" class="aws-icon" src="../../assets/images/awsLogo.png"></div>
-            <div class="icon-7"><img width="100%" class="ang-icon" src="../../assets/images/angularLogo.png"></div>
-            <div class="icon-8"><img width="100%" class="php-icon" src="../../assets/images/phpLogo.png"></div>
+    <div class="technologies" id="technologies">
+        <div class="technologies-1" *ngIf="this.slideIcons==false">
+            <div *ngFor="let imge of this.prodList ; let i = index">
+                <div [@fadeInOut] class="icon-{{i+1}}" [style.padding]=imge.paddingIcon>
+                    <img class="{{imge.nameofclass}}" src="{{imge.imgAdj}}"></div>
+            </div>
+        </div>
+        <div class="technologies-1" *ngIf="this.slideIcons==true">
+            <div *ngFor="let imge2 of this.prodList2 ; let i = index">
+                <div [@fadeInOut] class="icon-{{i+1}}" [style.padding]=imge2.paddingIcon>
+                    <img class="{{imge2.nameofclass}}" src="{{imge2.imgAdj}}"></div>
+            </div>
         </div>
     </div>
     <div class="text-autonomo-is">
@@ -48,91 +62,258 @@
             <div class="characteristics-autonomo">
                 <div class="descripion-as-char">
                     <ul>
-                        <li style="padding-right: 20px;">A company with over 15 years of experience
-                            in the software development industry.</li>
-                        <li style="padding-right: 20px;">WEB and mobile develop based applications
-                            with custom integration to fit clients needs.</li>
-                        <li style="padding-right: 20px;">The best service by creating technological
-                            solutions to enhance the growth to your business.</li>
-                        <li style="padding-right: 20px;">You can count on us to assist your
-                            bussiness in the automatization of your processes.</li>
+                        <li style="padding-right: 20px;" class="mobSpac">A company with over 15 years of experience
+                            in the software development industry.
+                        </li>
+                        <li style="padding-right: 20px;" class="mobSpac">
+                            WEB and mobile devices we develop customized applications to meet the needs of our client
+                            customers.
+                        </li>
+                        <li style="padding-right: 20px;" class="mobSpac">
+                            We provide the best service by creating technological solutions to improve the growth of
+                            your business.
+                        </li>
+                        <li style="padding-right: 20px;" class="mobSpac">
+                            Contamos con un equipo profesional de alto nivel en la industria de la tecnología.
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="autonomo-products">
+    <div class="ai-generalAux" id="services"></div>
+    <div class="autonomo-products" id="solutions">
         <div class="autonomo-products-general">
-            <div class="products">
-                    <div (click)="this.statusChange(1);" [className]="this.selTab===1 ? 'products-1 border-yellow' : 'products-1'">
-                        <div class="img-pr2"><img class="pr2" src="../../assets/images/movil_web.png"></div>
-                    </div>
-                    <div  (click)="this.statusChange(1);" [className]="this.selTab===1 ? 'products-2' : 'products-2'">
-                        <div class="text-products4" [ngStyle]="{'color':this.selTab === 1 ? '#3E3E4A' : '#B6B6BB' }">
-                            <div class="text-products-title">
-                                MOBILES AND WEB APPLICATIONS
+            <div id="slides_control" class="slides_web">
+                <carousel interval="30000" [showIndicators]="false">
+                    <slide style="padding: 0px 20px;">
+                        <div class="products prd320">
+                            <div (click)="this.goToOurServices(1);" class="products-1">
+                                <div class="img-pr2"><img class="pr2" src="../../assets/images/new-icons/code.png">
+                                </div>
                             </div>
-                            <div class="text-products-description">
-                                The past few years have seen a dramatic change in the public perception of cosmetic
-                                surgery.
+                            <div (click)="this.goToOurServices(1);" class="products-2">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            MOBILE APPLICATION DEVELOPMENT
+                                        </div>
+                                        <div class="text-products-description">
+                                            We develop custom applications and integrations with existing applications.
+                                            <br>
+                                            Drives the growth of your business
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(2);" class="products-3">
+                                <div class="img-pr2"><img class="pr2" src="../../assets/images/new-icons/upload.png">
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(2);" class="products-4">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            CLOUD STORAGE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Google Cloud Platform
+                                                </li>
+                                                <li>
+                                                    Amazon Web Services
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(3);" class="products-5">
+                                <div class="img-pr2"><img class="pr2"
+                                        src="../../assets/images/new-icons/supermarket.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(3);" class="products-6">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            CREATE A STORE TO SELL ONLINE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    We offer tailored stores
+                                                </li>
+                                                <li>
+                                                    Start selling online
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div (click)="this.statusChange(2);" [className]="this.selTab===2 ? 'products-3 border-yellow' : 'products-3'">
-                        <div class="img-pr2"><img class="pr3" src="../../assets/images/inactive.png"></div>
-                    </div>
-                    <div (click)="this.statusChange(2);" [className]="this.selTab===2 ? 'products-4' : 'products-4'">
-                        <div class="text-products4" [ngStyle]="{'color':this.selTab === 2 ? '#3E3E4A' : '#B6B6BB' }">
-                            <div class="text-products-title">
-                                CLOUD STORAGE
+                    </slide>
+                    <slide style="padding: 0px 20px;">
+                        <div class="products prd2">
+                            <div (click)="this.goToOurServices(4);" class="products-7">
+                                <div class="img-pr2"><img class="pr2" src="../../assets/images/new-icons/shout.png">
+                                </div>
                             </div>
-                            <div class="text-products-description">
-                                <ul style="padding-left: 15px;">
-                                    <li>
-                                        Microsoft Azure
-                                    </li>
-                                    <li>
-                                        Google Cloud
-                                    </li>
-                                    <li>
-                                        Amazon web Services
-                                    </li>
-                                </ul>
+                            <div (click)="this.goToOurServices(4);" class="products-8">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            DIGITAL MARKETING
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Digital campaigns system.
+                                                </li>
+                                                <li>
+                                                    Massive email and SMS sending.
+                                                </li>
+                                                <li>
+                                                    Referall programs
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(5);" class="products-9">
+                                <div class="img-pr2"><img class="pr2"
+                                        src="../../assets/images/new-icons/innovation.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(5);" class="products-10">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            MANAGE YOUR PROJECTS
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Project Manager System
+                                                </li>
+                                                <li>
+                                                    Hours and costs report
+                                                </li>
+                                                <li>
+                                                    Share activities with your work teams
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(6);" class="products-11">
+                                <div class="img-pr2"><img class="pr2"
+                                        src="../../assets/images/new-icons/infrastructure.png"></div>
+                            </div>
+                            <div (click)="this.goToOurServices(6);" class="products-12">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            INFRASTRUCTURE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Build this Structure
+                                                </li>
+                                                <li>
+                                                    Manage your servers
+                                                </li>
+                                                <li>
+                                                    Manage any networks
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div (click)="this.statusChange(3);" [className]="this.selTab===3 ? 'products-5 border-yellow' : 'products-5'">
-                        <div class="img-pr2"><img class="pr4" src="../../assets/images/inactive2.png"></div>
-                    </div>
-                    <div (click)="this.statusChange(3);" [className]="this.selTab===3 ? 'products-6' : 'products-6'">
-                        <div class="text-products4" [ngStyle]="{'color':this.selTab === 3 ? '#3E3E4A' : '#B6B6BB' }">
-                            <div class="text-products-title">
-                                DIGITAL MARKETING
+                    </slide>
+                    <slide style="padding: 0px 20px;">
+                        <div class="products prd2">
+                            <div (click)="this.goToOurServices(7);" class="products-13">
+                                <div class="img-pr2"><img class="pr2"
+                                        src="../../assets/images/new-icons/machine-learning.png"></div>
                             </div>
-                            <div class="text-products-description">
-                                <ul style="padding-left: 15px;">
-                                    <li>
-                                        Digital campaigns manager.
-                                    </li>
-                                    <li>
-                                        Massive email and SMS sending.
-                                    </li>
-                                    <li>
-                                        Referall programs
-                                    </li>
-                                </ul>
+                            <div (click)="this.goToOurServices(7);" class="products-14">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            BUSINESS INTELLIGENCE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Apply a Big Data.
+                                                </li>
+                                                <li>
+                                                    Analyze your information.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(1);" class="products-15">
+                                <div class="img-pr2"><img class="pr2" src="../../assets/images/new-icons/code.png">
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(1);" class="products-16">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            MOBILE APPLICATION DEVELOPMENT
+                                        </div>
+                                        <div class="text-products-description">
+                                            We develop custom applications and integrations with existing applications.
+                                            <br>
+                                            Drives the growth of your business
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(2);" class="products-17">
+                                <div class="img-pr2"><img class="pr2" src="../../assets/images/new-icons/upload.png">
+                                </div>
+                            </div>
+                            <div (click)="this.goToOurServices(2);" class="products-18">
+                                <div class="text-products4">
+                                    <div class="ffItem">
+                                        <div class="text-products-title">
+                                            CLOUD STORAGE
+                                        </div>
+                                        <div class="text-products-description">
+                                            <ul style="padding-left: 15px;">
+                                                <li>
+                                                    Google Cloud
+                                                </li>
+                                                <li>
+                                                    Amazon web Services
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </slide>
+                </carousel>
             </div>
-            <div id="image1" class="computer-img" [ngStyle]="{'display':this.selTab === 1 ? 'block' : 'none' }"></div>
-            <div id="image2" class="computer-img2" [ngStyle]="{'display':this.selTab === 2 ? 'block' : 'none' }"></div>
-            <div id="image3" class="computer-img3" [ngStyle]="{'display':this.selTab === 3 ? 'block' : 'none' }"></div>
+        </div>
+        <div class="carouselAutonomoProducts">
+            <app-carousel-products></app-carousel-products>
         </div>
     </div>
     <div class="carousel-as">
         <div id="slides_control" class="slides_web">
-            <carousel interval="this.myInterval">
+            <carousel interval="10000" [showIndicators]="false">
                 <slide>
                     <div class="products-left ">
                         <div class="products-location">
@@ -143,15 +324,15 @@
                                             Bogotá
                                         </div>
                                         <div class="item-text-description">
-                                            CRA 7#127-38
+                                            Cra. 58 #117-50
                                         </div>
                                     </div>
                                     <div class="item-text borde-sep">
                                         <div class="item-text-title">
-                                            EEUU
+                                            México
                                         </div>
                                         <div class="item-text-description">
-                                            ****
+                                            Calle 1
                                         </div>
                                     </div>
                                 </div>
@@ -159,9 +340,8 @@
                                     Location
                                 </div>
                                 <div class="comunication-text-2  padding-text-carrusel-int">
-                                    Nuestras oficinas estan ubicadas en una Time Zone comoda para comunicarnos con
-                                    nuestros
-                                    clientes en Norteamerica, Canada y Europa.
+                                    Our offices are located in a comfortable Time Zone to communicate with our clients
+                                    in North America, Canada, Europe and Latin America.
                                 </div>
                             </div>
                         </div>
@@ -185,8 +365,9 @@
                                     Comunication
                                 </div>
                                 <div class="comunication-text-2 justificado padding-text-carrusel-int">
-                                    El manejo nativo del ingles de nuestro equipo del ingles, cerramos la brecha del
-                                    lenguaje, por lo que nuestros clientes pueden sentirse como en casa.
+                                    We use the scrum methodology to manage software development, you will be able to
+                                    visualize the growth of your project step by step and align your company's
+                                    commercial objectives.
                                 </div>
                             </div>
                         </div>
@@ -212,8 +393,9 @@
                                     Comunication
                                 </div>
                                 <div class="comunication-text-2 justificado padding-text-carrusel-int">
-                                    El manejo nativo del ingles de nuestro equipo del ingles, cerramos la brecha del
-                                    lenguaje, por lo que nuestros clientes pueden sentirse como en casa.
+                                    We use the scrum methodology to manage software development, you will be able to
+                                    visualize the growth of your project step by step and align your company's
+                                    commercial objectives.
                                 </div>
                             </div>
                         </div>
@@ -227,15 +409,15 @@
                                             Bogotá
                                         </div>
                                         <div class="item-text-description">
-                                            CRA 7#127-38
+                                            Cra. 58 #117-50
                                         </div>
                                     </div>
                                     <div class="item-text borde-sep">
                                         <div class="item-text-title">
-                                            EEUU
+                                            México
                                         </div>
                                         <div class="item-text-description">
-                                            ****
+                                            Calle 1
                                         </div>
                                     </div>
                                 </div>
@@ -243,9 +425,8 @@
                                     Location
                                 </div>
                                 <div class="comunication-text-2  padding-text-carrusel-int">
-                                    Nuestras oficinas estan ubicadas en una Time Zone comoda para comunicarnos con
-                                    nuestros
-                                    clientes en Norteamerica, Canada y Europa.
+                                    Our offices are located in a comfortable Time Zone to communicate with our clients
+                                    in North America, Canada, Europe and Latin America.
                                 </div>
                             </div>
                         </div>
@@ -258,105 +439,86 @@
         <div class="container-ai-general">
             <div class="ai-title">
                 <div class="text-ai-title">
-                    Inteligencia
+                    Software
                 </div>
                 <div class="text-ai-title-1">
-                    Artificial
+                    Development
+                </div>
+            </div>
+            <div class="ai-title2">
+                <div class="text-ai-title">
+                    Software Development
                 </div>
             </div>
             <div class="ai-description">
                 <div class="text-ai-description">
-                    <div class="text-ai-desc-1">Most offshore developers were trianed in "Outsourcer Culture" which
-                        devalues information in favor
-                        of
-                        "Labor-Arbitrage Behavior," suffering from a sever storage of experienced mentors from the West.
+                    <div class="text-ai-desc-1">
+                        We have a specialized team in areas such as web development, mobile, infrastructure and business
+                        intelligence with more than 15 years in the area.
                     </div>
-                    <div class="text-ai-desc-2">We used a variety of offshore developers to build our two startups
-                        (Five9, DoctorBase) and over
-                        the years
-                        we built a framework for closing the performance gap between offshore developers and Valley
-                        engineers.
+                    <div class="text-ai-desc-2" style="padding-bottom: 10px;">
+                        Counting with clients from different countries in the areas of telecommunications, insurance,
+                        laboratories, we can enhance their processes.
+                    </div>
+                    <div class="text-ai-desc-2">
+                        We focus on development in C#, Angular, React, Sql Server, Cloud computing
                     </div>
                 </div>
             </div>
             <div class="ai-button">
                 <div class="ai-button-txt">
-                    Prueba nuestro demo
+                    <a href="/our-projects" style="color: #ffffff;">
+                        Our projects
+                    </a>
                 </div>
             </div>
             <div class="ai-logo">
             </div>
         </div>
     </div>
-    <div class="message-title">
+    <div class="message-title" id="contactUs">
         <div class="txt-msg-title">
-            <b>Envíenos un Mensaje</b>
+            <b>Send us a Message</b>
         </div>
     </div>
-    <div class="name-and-email">
-        <div class="container-name-and-email">
-            <div class="message-name">
-                <input type="text" class="redondeadonorelieve" placeholder="Nombre">
-            </div>
-            <div class="message-email">
-                <input type="text" class="redondeadonorelieve-1" placeholder="Correo electrónico">
+    <form id="formAutonomo" [formGroup]="orderForm">
+        <div class="name-and-email">
+            <div class="container-name-and-email">
+                <div class="message-name">
+                    <input type="text" class="redondeadonorelieve" placeholder="Name" required
+                        formControlName="nameClient" id="nameClient">
+                </div>
+                <div class="message-email">
+                    <input type="text" class="redondeadonorelieve-1" placeholder="E-mail" required
+                        formControlName="emailClient" id="emailClient">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="project-type">
-        <select class="redondeadonorelieve-1">
-            <option value="tp">Tipo de proyecto</option>
-            <option value="pw">Página Web</option>
-            <option value="am">App Móvil</option>
-        </select>
-    </div>
-    <div class="message-description">
-        <textarea class="redondeadonorelieve-2" placeholder="Descripción del Proyecto"></textarea>
-    </div>
+        <div class="project-type">
+            <select class="redondeadonorelieve-1" required formControlName="projectType" id="projectType">
+                <option disabled value="">Project Type</option>
+                <option value="pw">Web Development</option>
+                <option value="am">Mobile App</option>
+                <option value="in">Infrastructure</option>
+                <option value="bi">Business intelligence</option>
+            </select>
+        </div>
+        <div class="message-description">
+            <textarea class="redondeadonorelieve-2" placeholder="Write a brief description of your project." required
+                formControlName="projectDescription" id="projectDescription"></textarea>
+        </div>
+    </form>
     <div class="message-buttons">
         <div class="message-buttons-container">
-            <div class="contact-button">
-                <div class="contact-button-txt">Contactarnos</div>
+            <div class="contact-button" (click)="this.sentForm()">
+                <div class="contact-button-txt">Contact us</div>
             </div>
-            <div class="reset-button">
+            <div class="reset-button" (click)="this.resetForm()">
                 <div class="reset-button-txt">Reset</div>
             </div>
         </div>
     </div>
-    <div class="line-style">
-        <div class="curva-general">
-            <div class="curva-general-2">
-            </div>
-        </div>
-        <div class="line-style-container">
-            <div class="line-1">
-                <img width="100%" class="separation-line" src="../../assets/images/lineLimit.png">
-            </div>
-            <div class="logo-as-line">
-                <img class="logo-aut" src="../../assets/images/white.png">
-            </div>
-            <div class="line-2">
-                <img width="100%" class="separation-line" src="../../assets/images/lineLimit.png">
-            </div>
-        </div>
-    </div>
-    <div class="button-contactenos">
-        <div class="button-contactenos-container">
-            <div class="button-c1">Contactenos</div>
-            <div class="button-c2">Contactenos</div>
-            <div class="button-c3">Contactenos</div>
-            <div class="button-c4">Contactenos</div>
-        </div>
-    </div>
-    <div class="banner-housing-ext">
-        <div class="banner-housing-container">
-            <div class="img-bnhouse"><img width="100%" class="busi-logo" src="../../assets/images/logoBusi.png"></div>
-            <div class="text-bnhouse">
-                <div class="bnhouse-txt2">Powered by Autonomo System.</div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        © 2020 All rights reserved.
-    </div>
+</div>
+<div class="gridTwo">
+    <app-footer></app-footer>
 </div>

@@ -14,7 +14,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatInputModule} from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule,MatNativeDateModule,MatDialogModule, MatButtonModule ,MatTooltipModule} from '@angular/material';
+import { MatDialogModule} from '@angular/material/dialog';
+import { MatTooltipModule} from '@angular/material/tooltip';
+import { MatButtonModule} from '@angular/material/button';
+import { MatFormFieldModule} from '@angular/material/form-field';
 import { HttpClientModule} from '@angular/common/http';
 import { Service } from './services';
 import { Bridge } from './bridge';
@@ -24,8 +27,23 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { OptionsComponent } from './components/options/options.component';
 import { CollapseComponent } from './components/collapse/collapse.component';
 import { SkeletonComponent } from './skeleton/skeleton.component';
-import { AutonomoPagComponent } from './autonomo-pag/autonomo-pag.component';
 import { AutonomoComponent } from './autonomo/autonomo.component';
+import { CarouselProductsComponent } from './autonomo/components/carousel-products/carousel-products.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { OurProjectsComponent } from './our-projects/our-projects.component';
+import { HeaderComponent } from './components/header/header.component';
+import { WebDevelopComponent } from './our-services/components/web-develop/web-develop.component';
+import { CloudStorageComponent } from './our-services/components/cloud-storage/cloud-storage.component';
+import { DigitalMarketingComponent } from './our-services/components/digital-marketing/digital-marketing.component';
+import { ShopOnlineComponent } from './our-services/components/shop-online/shop-online.component';
+import { ProjectsManagerComponent } from './our-services/components/projects-manager/projects-manager.component';
+import { InfrastructureComponent } from './our-services/components/infrastructure/infrastructure.component';
+import { BusinessIntelligenceComponent } from './our-services/components/business-intelligence/business-intelligence.component';
+import { ProjectsCarouselComponent } from './our-projects/components/projects-carousel/projects-carousel.component';
+import { OwlModule } from 'ngx-owl-carousel';
+import { OurServicesNewComponent } from './our-services-new/our-services-new.component';
+import { CarouselIconsComponent } from './components/carousel-icons/carousel-icons.component';
+import { PlansBoxComponent } from './our-services-new/components/plans-box/plans-box.component';
 
 @NgModule({ 
   declarations: [
@@ -40,8 +58,22 @@ import { AutonomoComponent } from './autonomo/autonomo.component';
     OptionsComponent,
     CollapseComponent,
     SkeletonComponent,
-    AutonomoPagComponent,
     AutonomoComponent,
+    CarouselProductsComponent,
+    OurServicesComponent,
+    OurProjectsComponent,
+    HeaderComponent,
+    WebDevelopComponent,
+    CloudStorageComponent,
+    DigitalMarketingComponent,
+    ShopOnlineComponent,
+    ProjectsManagerComponent,
+    InfrastructureComponent,
+    BusinessIntelligenceComponent,
+    ProjectsCarouselComponent,
+    OurServicesNewComponent,
+    CarouselIconsComponent,
+    PlansBoxComponent
   ],
   imports: [
     MatRadioModule,
@@ -51,13 +83,13 @@ import { AutonomoComponent } from './autonomo/autonomo.component';
     BrowserModule,
     HttpClientModule,
     MatDatepickerModule,
-    MatNativeDateModule,
     MatFormFieldModule,
     MatButtonModule,
     MatTooltipModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatDialogModule,
+    OwlModule,
     RouterModule.forRoot([
       {
         path:'login',
@@ -68,10 +100,6 @@ import { AutonomoComponent } from './autonomo/autonomo.component';
          component:HomeComponent
       },
       {
-        path:'autonomo_pag',
-         component:AutonomoPagComponent
-      },
-      {
         path:'skeleton',
          component:SkeletonComponent
       },
@@ -80,8 +108,16 @@ import { AutonomoComponent } from './autonomo/autonomo.component';
          component:AutonomoComponent
       },
       {
+        path:'our-services',
+         component:OurServicesNewComponent
+      },
+      {
+        path:'our-projects',
+         component:OurProjectsComponent
+      },
+      {
         path:'',
-        component:AutonomoComponent
+        component:HomeComponent
       },
   ]),
     CarouselModule.forRoot()],

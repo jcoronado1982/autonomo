@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Service} from './services';
-import {MatDialog, MatDialogConfig} from '@angular/material';
+import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {AlertasComponent} from './alertas/alertas.component';
 import {LoadingScreenService} from './services/loading-screen/loading-screen.service';
 import {Router} from '@angular/router';
@@ -18,9 +18,10 @@ export class GlobalService {
   public referredAccount;
 
 
+  
   loadObserver= new Subject();
   loadObserver2= new Subject();
-
+  goHomeSection = new Subject();
   chatStatus= new Subject(); // suscripcion para abrir el chat
   uptypeAccount= new Subject(); //suscripcion al tipo de cuenta
 
@@ -93,24 +94,6 @@ export class GlobalService {
     }
   }
 
-  validateSession() {
-    if (sessionStorage.getItem("session") == "false" || sessionStorage.getItem("session") == null) {
-      this.router.navigate(['login']);
-      return false;
-    }
-    else {
-      this.session();
-      return true;
-    }
-  }
-  sessionReview() {
-    if (sessionStorage.getItem("session") == "false" || sessionStorage.getItem("session") == null || sessionStorage.getItem("session") == undefined) {
-      return false;
-    }
-    else {
-      return true;
-    }
-  }
 
   public signOff() {
     this.sessionCounter = 1;
@@ -125,6 +108,10 @@ export class GlobalService {
   }
   validarEmail(email) {
     let expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    return !expr.test(email)
+    if (!expr.test(email)) {
+      return false;
+    } else {
+      return true;
+    }
   }
 }
