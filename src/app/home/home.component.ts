@@ -38,6 +38,7 @@ export class HomeComponent implements OnInit {
   constructor(private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){}
   
   ngOnInit() {
+    this.languageDetection();
     let imgBan = [
       {
         name: "KOTLIN",
@@ -197,6 +198,56 @@ export class HomeComponent implements OnInit {
     this.menuMobile = !this.menuMobile;
     var el = document.getElementById('contactUs');
     el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  languageDetection(){
+    var language=String(window.navigator.language);
+    language=language.substring(0,2);
+    if(language=="es"){
+      console.log("Español");
+    }
+    if(language=="en"){
+      console.log("Ingles");
+    }
+    /*
+    ar-SA Arabic Saudi Arabia
+    cs-CZ Czech Czech Republic
+    da-DK Danish Denmark
+    de-DE German Germany
+    el-GR Modern Greek Greece
+    en-AU English Australia
+    en-GB English United Kingdom
+    en-IE English Ireland
+    en-US English United States
+    en-ZA English South Africa
+    es-ES Spanish Spain
+    es-MX Spanish Mexico
+    fi-FI Finnish Finland
+    fr-CA French Canada
+    fr-FR French France
+    he-IL Hebrew Israel
+    hi-IN Hindi India
+    hu-HU Hungarian Hungary
+    id-ID Indonesian Indonesia
+    it-IT Italian Italy
+    ja-JP Japanese Japan
+    ko-KR Korean Republic of Korea
+    nl-BE Dutch Belgium
+    nl-NL Dutch Netherlands
+    no-NO Norwegian Norway
+    pl-PL Polish Poland
+    pt-BR Portuguese Brazil
+    pt-PT Portuguese Portugal
+    ro-RO Romanian Romania
+    ru-RU Russian Russian Federation
+    sk-SK Slovak Slovakia
+    sv-SE Swedish Sweden
+    th-TH Thai Thailand
+    tr-TR Turkish Turkey
+    zh-CN Chinese China
+    zh-HK Chinese Hong Kong
+    zh-TW Chinese Taiwan 
+    */
+    //  Si necesitas informacion --> https://github.com/libyal/libfwnt/wiki/Language-Code-identifiers
   }
 }
 
