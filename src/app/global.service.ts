@@ -5,6 +5,7 @@ import {AlertasComponent} from './alertas/alertas.component';
 import {LoadingScreenService} from './services/loading-screen/loading-screen.service';
 import {Router} from '@angular/router';
 import { Subject } from "rxjs";
+import { LanguageService } from './language.service';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,7 @@ export class GlobalService {
   chatStatus= new Subject(); // suscripcion para abrir el chat
   uptypeAccount= new Subject(); //suscripcion al tipo de cuenta
 
-  constructor(private router: Router, public dialog: MatDialog, public services: Service, private loadingScreenService: LoadingScreenService) {}
+  constructor(private router: Router, public dialog: MatDialog, public services: Service,  private language: LanguageService, private loadingScreenService: LoadingScreenService) {}
   irChat(){
     this.chatStatus.next(true);
   }
@@ -41,7 +42,7 @@ export class GlobalService {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.data = {message: msg};
+    dialogConfig.data = {message: msg, labelTitle: this.language.content.contact.right.adviceTitle};
     const dialogRef = this.dialog.open(AlertasComponent, dialogConfig);
   }
 

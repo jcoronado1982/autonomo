@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from 'src/app/language.service';
 
 @Component({
   selector: 'app-plans-box',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlansBoxComponent implements OnInit {
 
-  constructor() { }
+  constructor(private language: LanguageService) { }
 
   ngOnInit(): void {
   }

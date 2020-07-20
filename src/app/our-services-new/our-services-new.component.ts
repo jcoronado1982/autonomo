@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-our-services-new',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class OurServicesNewComponent implements OnInit {
   public idService;
-  constructor(private router:Router) { }
+  constructor(private language: LanguageService, private router:Router) { }
 
   ngOnInit(): void {
     window.scroll(0, 0);
