@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="menuMobileStyl" *ngIf="this.menuMobile==true" [@EnterLeave]>
-      <div class="aboutUsBoxMenu suportMob" (click)="this.goToId1M(i)"
+      <div class="aboutUsBoxMenu suportMob" (click)="this.goToIdM(i)"
         *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
     </div>
   </div>
