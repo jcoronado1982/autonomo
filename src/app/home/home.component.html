@@ -257,20 +257,24 @@
     <div class="sendus">
       <div class="contTitle">{{this.language.content.contact.right.titleA}}</div>
       <div class="sendUsTitleContact">{{this.language.content.contact.right.titleA}}</div>
-      <div class="formBox">
-        <input class="nameBox" placeholder="{{this.language.content.contact.right.placeholderA}}">
-        <input class="emailBox" placeholder="{{this.language.content.contact.right.placeholderB}}">
-        <select class="selectBox">
-          <option disabled value="">{{this.language.content.contact.right.placeholderC}}</option>
-          <option value="pw">Web Development</option>
-          <option value="am">Mobile App</option>
-          <option value="in">Infrastructure</option>
-          <option value="bi">Business intelligence</option>
-        </select>
-      </div>
-      <textarea class="descriptionForWrite"
-        placeholder="{{this.language.content.contact.right.placeholderD}}"></textarea>
-      <div class="buttonSent">
+      <form id="formAutonomo" [formGroup]="orderForm">
+        <div class="formBox">
+          <input type="text" class="nameBox" placeholder="{{this.language.content.contact.right.placeholderA}}" required
+            formControlName="nameClient" id="nameClient">
+          <input type="text" class="emailBox" placeholder="{{this.language.content.contact.right.placeholderB}}"
+            required formControlName="emailClient" id="emailClient">
+          <select class="selectBox" required formControlName="projectType" id="projectType">
+            <option disabled value="">{{this.language.content.contact.right.placeholderC}}</option>
+            <option value="pw">Web Development</option>
+            <option value="am">Mobile App</option>
+            <option value="in">Infrastructure</option>
+            <option value="bi">Business intelligence</option>
+          </select>
+        </div>
+        <textarea class="descriptionForWrite" placeholder="{{this.language.content.contact.right.placeholderD}}"
+          required formControlName="projectDescription" id="projectDescription"></textarea>
+      </form>
+      <div class="buttonSent" (click)="this.sentForm()">
         <div class="startProjectsTxtButton">
           {{this.language.content.contact.right.button}}
         </div>

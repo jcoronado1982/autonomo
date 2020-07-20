@@ -8,6 +8,7 @@ import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA  } from '@angular/material/d
 import { Subscription } from "rxjs";
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { LanguageService } from '../language.service';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { AngularFireAnalytics } from '@angular/fire/analytics';
 @Component({
   selector: 'app-home',
@@ -37,9 +38,11 @@ export class HomeComponent implements OnInit {
   public prodList2 = [];
   public slideIcons:boolean = false;
   public menuMobile:boolean = false;
-  constructor(private language:LanguageService,public AngularFireAnalytics:AngularFireAnalytics,private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){
+  orderForm: FormGroup;
+  constructor(private formBuilder: FormBuilder, private language:LanguageService,public AngularFireAnalytics:AngularFireAnalytics,private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){
     this.AngularFireAnalytics.setCurrentScreen("Home");
     this.AngularFireAnalytics.logEvent("Home-Screenview");
+    this.createForm();
   }
   
   ngOnInit() {
@@ -148,6 +151,14 @@ export class HomeComponent implements OnInit {
     this.prodList2 = imgBan2;
     setInterval(() => {this.changeIcon();}, 30000);
   }
+  private createForm() {
+    this.orderForm = this.formBuilder.group({
+      nameClient: ['', Validators.required],
+      emailClient: ['', Validators.required],
+      projectType: ['', Validators.required],
+      projectDescription: ['', Validators.required]
+    });
+  }
   changeIcon(){
     this.slideIcons = !this.slideIcons; 
   }
@@ -205,6 +216,29 @@ export class HomeComponent implements OnInit {
     this.menuMobile = !this.menuMobile;
     var el = document.getElementById('contactUs');
     el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+  }
+  sentForm(){
+    if(this.orderForm.value.nameClient == ''){
+      this.global.notif("Please write the client name.");
+    }
+    else if(this.orderForm.value.emailClient == ''){
+      this.global.notif("Please write the client email.");
+    }
+    else if (this.global.validarEmail(this.orderForm.value.emailClient) == false) {
+      this.global.notif("The e-mail has an invalid format.");
+    }
+    else if(this.orderForm.value.projectType == ''){
+      this.global.notif("Please select the project type.");
+    }
+    else if(this.orderForm.value.projectDescription == ''){
+      this.global.notif("Please write the project description.");
+    }
+    else{
+      this.global.notif("Thanks for your sending.");
+    }
+  }
+  resetForm(){
+    (<HTMLFormElement>document.getElementById("formAutonomo")).reset();
   }
 }
 

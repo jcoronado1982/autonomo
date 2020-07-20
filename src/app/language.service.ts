@@ -16,7 +16,11 @@ export class LanguageService {
           this.content=data.es;
           console.log(this.content);
         }
-        if(language=="en"){
+        else if(language=="en"){
+          console.log("Ingles");
+          this.content=data.en;
+        }
+        else{
           console.log("Ingles");
           this.content=data.en;
         }
