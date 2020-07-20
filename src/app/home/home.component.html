@@ -5,7 +5,8 @@
     </div>
     <div class="menuAuto">
       <div class="webMenu">
-        <div class="aboutUsBoxMenu" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
+        <div class="aboutUsBoxMenu" (click)="this.goToId1(i)"
+          *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
       </div>
       <div class="mobileMenu" (click)="this.showMenuMobile()">
         <div>
@@ -14,8 +15,9 @@
       </div>
     </div>
     <div class="menuMobileStyl" *ngIf="this.menuMobile==true" [@EnterLeave]>
-      <div class="aboutUsBoxMenu suportMob" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
-    </div> 
+      <div class="aboutUsBoxMenu suportMob" (click)="this.goToId1(i)"
+        *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
+    </div>
   </div>
   <div class="automateBusiness">
     <div class="imgTablet">
@@ -85,7 +87,25 @@
       <div class="ourServtitle">{{this.language.content.servicesTitleA}}</div>
       <div class="servProvidesDesc">{{this.language.content.servicesTitleB}}</div>
     </div>
-    <div class="providesBox1">
+    <!--Inicio resolución minima 1920px-->
+    <div class="providesBox1 extend5">
+      <div class="itempb" *ngFor="let service of this.language.content.services | slice:0:5; index as i;">
+        <div class="imgBaseProd">
+          <img class="imgBasePr" [src]="service.src">
+        </div>
+        <div class="descriptionPrBox">
+          <div class="descTitlePrBox">{{service.title}}</div>
+          <div class="contentdescTitlePrBox">{{service.text}}</div>
+        </div>
+        <div class="rightSignal" (click)="this.gotoId(i+1)">
+          <div class="rightSig">
+            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin resolución minima 1920px-->
+    <div class="providesBox1 normalBox">
       <div class="itempb" *ngFor="let service of this.language.content.services | slice:0:4; index as i;">
         <div class="imgBaseProd">
           <img class="imgBasePr" [src]="service.src">
@@ -101,7 +121,43 @@
         </div>
       </div>
     </div>
-    <div class="providesBox2">
+    <!--Inicio resolución maxima 1350px-->
+    <div class="providesBox1 extend3">
+      <div class="itempb" *ngFor="let service of this.language.content.services | slice:0:6; index as i;">
+        <div class="imgBaseProd">
+          <img class="imgBasePr" [src]="service.src">
+        </div>
+        <div class="descriptionPrBox">
+          <div class="descTitlePrBox">{{service.title}}</div>
+          <div class="contentdescTitlePrBox">{{service.text}}</div>
+        </div>
+        <div class="rightSignal" (click)="this.gotoId(i+1)">
+          <div class="rightSig">
+            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin resolución maxima 1350px-->
+    <!--Inicio resolución minima 1920px-->
+    <div class="providesBox2 extend5">
+      <div class="itempb" *ngFor="let service of this.language.content.services | slice:5:7; index as i;">
+        <div class="imgBaseProd">
+          <img class="imgBasePr" [src]="service.src">
+        </div>
+        <div class="descriptionPrBox">
+          <div class="descTitlePrBox">{{service.title}}</div>
+          <div class="contentdescTitlePrBox">{{service.text}}</div>
+        </div>
+        <div class="rightSignal" (click)="this.gotoId(i+1)">
+          <div class="rightSig">
+            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin resolución minima 1920px-->
+    <div class="providesBox2 normalBox">
       <div class="itempb" *ngFor="let service of this.language.content.services | slice:4:7; index as i;">
         <div class="imgBaseProd">
           <img class="imgBasePr" [src]="service.src">
@@ -117,7 +173,24 @@
         </div>
       </div>
     </div>
-    
+    <!--Inicio resolución maxima 1350px-->
+    <div class="providesBox2 extend3">
+      <div class="itempb" *ngFor="let service of this.language.content.services | slice:6:7; index as i;">
+        <div class="imgBaseProd">
+          <img class="imgBasePr" [src]="service.src">
+        </div>
+        <div class="descriptionPrBox">
+          <div class="descTitlePrBox">{{service.title}}</div>
+          <div class="contentdescTitlePrBox">{{service.text}}</div>
+        </div>
+        <div class="rightSignal" (click)="this.gotoId(i+1)">
+          <div class="rightSig">
+            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin resolución maxima 1350px-->
   </div>
   <div class="our-method" id="howWeWork">
     <div class="imageMeth">
@@ -195,7 +268,8 @@
           <option value="bi">Business intelligence</option>
         </select>
       </div>
-      <textarea class="descriptionForWrite" placeholder="{{this.language.content.contact.right.placeholderD}}"></textarea>
+      <textarea class="descriptionForWrite"
+        placeholder="{{this.language.content.contact.right.placeholderD}}"></textarea>
       <div class="buttonSent">
         <div class="startProjectsTxtButton">
           {{this.language.content.contact.right.button}}
@@ -213,7 +287,8 @@
       <img width="100%" class="as-logo-princ centeringF" src="../../assets/images/white.png">
     </div>
     <div class="opcF">
-      <div class="itemFC" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu" >{{menuItem.text}}</div>
+      <div class="itemFC" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu">
+        {{menuItem.text}}</div>
     </div>
     <div class="copyF">© 2020 Autonomo System - All rights reserved.</div>
   </div>

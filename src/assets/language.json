@@ -74,11 +74,11 @@
         "titleB": "Direcciones",
         "addresses": [
           {
-            "city": "Bogotá",
+            "city": "Colombia - Bogotá",
             "address": "Cra. 58 #117-50"
           },
           {
-            "city": "México",
+            "city": "México - Ciudad de México",
             "address": "Calle 1"
           }
         ]
@@ -170,11 +170,11 @@
         "titleB": "Addresses",
         "addresses": [
           {
-            "city": "Bogotá",
+            "city": "Colombia - Bogotá",
             "address": "Cra. 58 #117-50"
           },
           {
-            "city": "México",
+            "city": "México - Ciudad de México",
             "address": "Calle 1"
           }
         ]
