@@ -86,12 +86,12 @@
         "titleB": "Direcciones",
         "addresses": [
           {
-            "city": "Colombia - Bogotá",
-            "address": "Cra. 58 #117-50"
+            "city": "Colombia",
+            "address": "Bogotá"
           },
           {
-            "city": "México - Ciudad de México",
-            "address": "Calle 1"
+            "city": "México",
+            "address": "Ciudad de México"
           }
         ]
       },
@@ -193,12 +193,12 @@
         "titleB": "Addresses",
         "addresses": [
           {
-            "city": "Colombia - Bogota",
-            "address": "Cra. 58 #117-50"
+            "city": "Colombia",
+            "address": "Bogota"
           },
           {
-            "city": "México - Mexico City",
-            "address": "Calle 1"
+            "city": "México",
+            "address": "Mexico City"
           }
         ]
       },
