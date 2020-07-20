@@ -44,6 +44,11 @@ import { OwlModule } from 'ngx-owl-carousel';
 import { OurServicesNewComponent } from './our-services-new/our-services-new.component';
 import { CarouselIconsComponent } from './components/carousel-icons/carousel-icons.component';
 import { PlansBoxComponent } from './our-services-new/components/plans-box/plans-box.component';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { environment } from '../environments/environment';
+
 @NgModule({ 
   declarations: [
     AppComponent,
@@ -75,6 +80,9 @@ import { PlansBoxComponent } from './our-services-new/components/plans-box/plans
     PlansBoxComponent
   ],
   imports: [
+    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAnalyticsModule,
     MatRadioModule,
     ReactiveFormsModule,
     FormsModule,

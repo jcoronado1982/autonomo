@@ -8,6 +8,7 @@ import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA  } from '@angular/material/d
 import { Subscription } from "rxjs";
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { LanguageService } from '../language.service';
+import { AngularFireAnalytics } from '@angular/fire/analytics';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -36,8 +37,10 @@ export class HomeComponent implements OnInit {
   public prodList2 = [];
   public slideIcons:boolean = false;
   public menuMobile:boolean = false;
-  public content;
-  constructor(private language:LanguageService,private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){}
+  constructor(private language:LanguageService,public AngularFireAnalytics:AngularFireAnalytics,private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){
+    this.AngularFireAnalytics.setCurrentScreen("Home");
+    this.AngularFireAnalytics.logEvent("Home-Screenview");
+  }
   
   ngOnInit() {
     let imgBan = [
