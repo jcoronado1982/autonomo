@@ -44,7 +44,6 @@ export class HomeComponent implements OnInit {
     this.AngularFireAnalytics.logEvent("Home-Screenview");
     this.createForm();
   }
-  
   ngOnInit() {
     let imgBan = [
       {
