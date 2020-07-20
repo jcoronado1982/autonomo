@@ -7,9 +7,9 @@ import { GlobalService } from '../global.service';
 import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Subscription } from "rxjs";
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { LanguageService } from '../language.service';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { AngularFireAnalytics } from '@angular/fire/analytics';
+import { LanguageService } from '../language.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
