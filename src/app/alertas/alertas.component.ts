@@ -79,7 +79,8 @@ export class AlertasComponent implements OnInit {
       this.labelNo=data.labelNo;
     }
   }
-  ngOnInit() {}
+  ngOnInit() {
+  }
   continue(){
     this.matDialogRef.close('continue');
   }

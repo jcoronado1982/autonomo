@@ -217,22 +217,22 @@ export class HomeComponent implements OnInit {
   }
   sentForm() {
     if (this.orderForm.value.nameClient == '') {
-      this.global.notif("Please write the client name.");
+      this.global.notif(this.language.content.contact.right.nameAdvice);
     }
     else if (this.orderForm.value.emailClient == '') {
-      this.global.notif("Please write the client email.");
+      this.global.notif(this.language.content.contact.right.emailAdvice);
     }
     else if (this.global.validarEmail(this.orderForm.value.emailClient) == false) {
-      this.global.notif("The e-mail has an invalid format.");
+      this.global.notif(this.language.content.contact.right.emailInvalidAdvice);
     }
     else if (this.orderForm.value.projectType == '') {
-      this.global.notif("Please select the project type.");
+      this.global.notif(this.language.content.contact.right.typeAdvice);
     }
     else if (this.orderForm.value.projectDescription == '') {
-      this.global.notif("Please write the project description.");
+      this.global.notif(this.language.content.contact.right.descriptionAdvice);
     }
     else {
-      this.global.notif("Thanks for your sending.");
+      this.global.notif(this.language.content.contact.right.sentAdvice);
     }
   }
   resetForm() {
