@@ -1,102 +1,88 @@
 <div class="plansBox">
     <div class="plan1">
-        <div class="planTitle">Basic</div>
+        <div class="planTitle">{{this.language.content.plansText.basicTitle}}</div>
         <div class="pricesDiv">
-            Free
+            {{this.language.content.plansText.basicCost}}
         </div>
-        <ul style="margin-top: 20px; line-height: 2;">
-            <li>Maximum 3 Users</li>
-            <li>Maximum 10 Projects</li>
-            <li>Up to 5GB of storage</li>
-        </ul>
+        <div class="spacTitle" [innerHTML]="this.language.content.plansText.descriptionBasic"></div>
         <div class="buttonStyle">
-            Contract
+            {{this.language.content.plansText.contractTitle}}
         </div>
     </div>
     <div class="plan2">
-        <div class="planTitle">Plus</div>
+        <div class="planTitle">{{this.language.content.plansText.plusTitle}}</div>
         <div class="pricesDiv">
-            $4.99/month
+            {{this.language.content.plansText.plusCost}}
         </div>
-        <ul style="margin-top: 20px; line-height: 2;">
-            <li>Maximum 20 Users</li>
-            <li>Unlimited Projects</li>
-            <li>Up to 20GB of storage</li>
-        </ul>
+        <div class="spacTitle" [innerHTML]="this.language.content.plansText.descriptionPlus"></div>
         <div class="buttonStyle">
-            Contract
+            {{this.language.content.plansText.contractTitle}}
         </div>
     </div>
     <div class="plan3">
-        <div class="planTitle">Business</div>
+        <div class="planTitle">{{this.language.content.plansText.businessTitle}}</div>
         <div class="pricesDiv">
-            $29.99/month
+            {{this.language.content.plansText.businessCost}}
         </div>
-        <ul style="margin-top: 20px; line-height: 2;">
-            <li>Maximum 50 Users</li>
-            <li>Unlimited Projects</li>
-            <li>In a dedicated environment</li>
-            <li>Up to 100GB of storage</li>
-            <li>With Support</li>
-        </ul>
+        <div  class="spacTitle" [innerHTML]="this.language.content.plansText.descriptionBusiness"></div>
         <div class="buttonStyle">
-            Contract
+            {{this.language.content.plansText.contractTitle}}
         </div>
     </div>
     <div class="planSpac"></div>
-    <div class="planSpac1">Basic</div>
-    <div class="planSpac2">Plus</div>
-    <div class="planSpac3">Business</div>
-    <div class="acT1">Activities - Create daily activities</div>
-    <div class="acT2">YES</div>
-    <div class="acT3">YES</div>
-    <div class="acT4">YES</div>
-	<div class="mnG1">Manager - Manage the number of projects and activities</div>
-    <div class="mnG2">YES</div>
-    <div class="mnG3">YES</div>
-    <div class="mnG4">YES</div>
-    <div class="rpt1">Report - View the total of hours and payment of each user</div>
-    <div class="rpt2">YES</div>
-    <div class="rpt3">YES</div>
-    <div class="rpt4">YES</div>
-    <div class="gnt1">Gantt - View the progess of each prject</div>
-    <div class="gnt2">YES</div>
-    <div class="gnt3">YES</div>
-    <div class="gnt4">YES</div>
-    <div class="tsk1">Task - Report your activities</div>
-    <div class="tsk2">YES</div>
-    <div class="tsk3">YES</div>
-    <div class="tsk4">YES</div>
-    <div class="uP1">Users and Permisions - Create users and your respective roles</div>
-    <div class="uP2">YES</div>
-    <div class="uP3">YES</div>
-    <div class="uP4">YES</div>
-    <div class="qt1">Quotation - Determine your business finances</div>
-    <div class="qt2">YES</div>
-    <div class="qt3">YES</div>
-    <div class="qt4">YES</div>
-    <div class="tcK1">Tickets - Report any cases</div>
-    <div class="tcK2">NO</div>
-    <div class="tcK3">YES</div>
-    <div class="tcK4">YES</div>
-    <div class="dC1">Documentation - A essential guide for advance your project</div>
-    <div class="dC2">NO</div>
-    <div class="dC3">YES</div>
-    <div class="dC4">YES</div>
-    <div class="dedS1">Dedicated Server - In a environment</div>
-    <div class="dedS2">NO</div>
-    <div class="dedS3">NO</div>
-    <div class="dedS4">YES</div>
-    <div class="sP1">Support - Need to optimize the site</div>
-    <div class="sP2">NO</div>
-    <div class="sP3">NO</div>
-    <div class="sP4">YES</div>
-    <div class="nU1">Number of Users - Quantity allowed</div>
+    <div class="planSpac1">{{this.language.content.plansText.basicTitle}}</div>
+    <div class="planSpac2">{{this.language.content.plansText.plusTitle}}</div>
+    <div class="planSpac3">{{this.language.content.plansText.businessTitle}}</div>
+    <div class="acT1">{{this.language.content.plansText.activitiesTitle}}</div>
+    <div class="acT2">{{this.language.content.plansText.afirmative}}</div>
+    <div class="acT3">{{this.language.content.plansText.afirmative}}</div>
+    <div class="acT4">{{this.language.content.plansText.afirmative}}</div>
+	<div class="mnG1">{{this.language.content.plansText.managerTitle}}</div>
+    <div class="mnG2">{{this.language.content.plansText.afirmative}}</div>
+    <div class="mnG3">{{this.language.content.plansText.afirmative}}</div>
+    <div class="mnG4">{{this.language.content.plansText.afirmative}}</div>
+    <div class="rpt1">{{this.language.content.plansText.reportTitle}}</div>
+    <div class="rpt2">{{this.language.content.plansText.afirmative}}</div>
+    <div class="rpt3">{{this.language.content.plansText.afirmative}}</div>
+    <div class="rpt4">{{this.language.content.plansText.afirmative}}</div>
+    <div class="gnt1">{{this.language.content.plansText.ganttTitle}}</div>
+    <div class="gnt2">{{this.language.content.plansText.afirmative}}</div>
+    <div class="gnt3">{{this.language.content.plansText.afirmative}}</div>
+    <div class="gnt4">{{this.language.content.plansText.afirmative}}</div>
+    <div class="tsk1">{{this.language.content.plansText.taskTitle}}</div>
+    <div class="tsk2">{{this.language.content.plansText.afirmative}}</div>
+    <div class="tsk3">{{this.language.content.plansText.afirmative}}</div>
+    <div class="tsk4">{{this.language.content.plansText.afirmative}}</div>
+    <div class="uP1">{{this.language.content.plansText.userPerTitle}}</div>
+    <div class="uP2">{{this.language.content.plansText.afirmative}}</div>
+    <div class="uP3">{{this.language.content.plansText.afirmative}}</div>
+    <div class="uP4">{{this.language.content.plansText.afirmative}}</div>
+    <div class="qt1">{{this.language.content.plansText.quotationTitle}}</div>
+    <div class="qt2">{{this.language.content.plansText.afirmative}}</div>
+    <div class="qt3">{{this.language.content.plansText.afirmative}}</div>
+    <div class="qt4">{{this.language.content.plansText.afirmative}}</div>
+    <div class="tcK1">{{this.language.content.plansText.ticketsTitle}}</div>
+    <div class="tcK2">{{this.language.content.plansText.negative}}</div>
+    <div class="tcK3">{{this.language.content.plansText.afirmative}}</div>
+    <div class="tcK4">{{this.language.content.plansText.afirmative}}</div>
+    <div class="dC1">{{this.language.content.plansText.documentationTitle}}</div>
+    <div class="dC2">{{this.language.content.plansText.negative}}</div>
+    <div class="dC3">{{this.language.content.plansText.afirmative}}</div>
+    <div class="dC4">{{this.language.content.plansText.afirmative}}</div>
+    <div class="dedS1">{{this.language.content.plansText.dedicatedServerTitle}}</div>
+    <div class="dedS2">{{this.language.content.plansText.negative}}</div>
+    <div class="dedS3">{{this.language.content.plansText.negative}}</div>
+    <div class="dedS4">{{this.language.content.plansText.afirmative}}</div>
+    <div class="sP1">{{this.language.content.plansText.supportTitle}}</div>
+    <div class="sP2">{{this.language.content.plansText.negative}}</div>
+    <div class="sP3">{{this.language.content.plansText.negative}}</div>
+    <div class="sP4">{{this.language.content.plansText.afirmative}}</div>
+    <div class="nU1">{{this.language.content.plansText.numOfUsersTitle}}</div>
     <div class="nU2">3</div>
     <div class="nU3">20</div>
-    <div class="nU4">Unlimited</div>
-    <div class="nP1">Number Projects - Quantity allowed</div>
+    <div class="nU4">{{this.language.content.plansText.unlimitedTitle}}</div>
+    <div class="nP1">{{this.language.content.plansText.numOfProjectsTitle}}</div>
     <div class="nP2">5</div>
     <div class="nP3">20</div>
-    <div class="nP4">Unlimited</div>
+    <div class="nP4">{{this.language.content.plansText.unlimitedTitle}}</div>
 </div>
