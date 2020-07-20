@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="menuMobileStyl" *ngIf="this.menuMobile==true" [@EnterLeave]>
-      <div class="aboutUsBoxMenu suportMob" (click)="this.goToId1(i)"
+      <div class="aboutUsBoxMenu suportMob" (click)="this.goToId1M(i)"
         *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
     </div>
   </div>
@@ -192,7 +192,8 @@
     </div>
     <!--Fin resolución maxima 1350px-->
   </div>
-  <div class="our-method" id="howWeWork">
+  <div class="howWeSpac" id="howWeWork"></div>
+  <div class="our-method" id="howWeWorkMob">
     <div class="imageMeth">
       <img class="imgbaseMethod" src="../../assets/images/autonomoNewPage/scrumimg.png">
     </div>
@@ -204,7 +205,8 @@
         {{this.language.content.howWeWork.textB}}</div>
     </div>
   </div>
-  <div class="ourWork" id="projects">
+  <div class="projectSpac" id="projects"></div>
+  <div class="ourWork" id="projectsMob">
     <div class="ourWorkDesc">
       <div class="projectsOurW">{{this.language.content.projects.titleA}}</div>
       <div class="ourWorkTitle">{{this.language.content.projects.titleB}}</div>
@@ -291,7 +293,7 @@
       <img width="100%" class="as-logo-princ centeringF" src="../../assets/images/white.png">
     </div>
     <div class="opcF">
-      <div class="itemFC" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu">
+      <div class="itemFC" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu ; let i = index">
         {{menuItem.text}}</div>
     </div>
     <div class="copyF">© 2020 Autonomo System - All rights reserved.</div>

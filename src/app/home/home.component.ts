@@ -1,10 +1,10 @@
-import { Component, OnInit ,ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { Service } from '../services';
 import { LoadingScreenService } from '../services/loading-screen/loading-screen.service';
 import { GlobalService } from '../global.service';
-import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA  } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Subscription } from "rxjs";
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { LanguageService } from '../language.service';
@@ -36,120 +36,120 @@ import { AngularFireAnalytics } from '@angular/fire/analytics';
 export class HomeComponent implements OnInit {
   public prodList = [];
   public prodList2 = [];
-  public slideIcons:boolean = false;
-  public menuMobile:boolean = false;
+  public slideIcons: boolean = false;
+  public menuMobile: boolean = false;
   orderForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, private language:LanguageService,public AngularFireAnalytics:AngularFireAnalytics,private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){
+  constructor(private formBuilder: FormBuilder, private language: LanguageService, public AngularFireAnalytics: AngularFireAnalytics, private router: Router, public appComponent: AppComponent, private services: Service, private loadingScreenService: LoadingScreenService, private global: GlobalService, public dialog: MatDialog) {
     this.AngularFireAnalytics.setCurrentScreen("Home");
     this.AngularFireAnalytics.logEvent("Home-Screenview");
     this.createForm();
   }
-  
+
   ngOnInit() {
     let imgBan = [
       {
         name: "KOTLIN",
         imgAdj: "../../../../assets/images/kotlin.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "PYTHON",
         imgAdj: "../../../../assets/images/pyLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "CSHARP",
         imgAdj: "../../../../assets/images/csharpLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "ANGULAR",
         imgAdj: "../../../../assets/images/angularLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "REACT",
         imgAdj: "../../../../assets/images/reactLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "SQL",
         imgAdj: "../../../../assets/images/sqlSLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "GCP",
         imgAdj: "../../../../assets/images/gcpLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
-      },      
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
+      },
       {
         name: "AWS",
         imgAdj: "../../../../assets/images/awsNewLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
-      }      
-      
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
+      }
+
     ];
     this.prodList = imgBan;
-    let imgBan2 = [      
+    let imgBan2 = [
       {
         name: "PHP",
         imgAdj: "../../../../assets/images/phpLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
-      },{
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
+      }, {
         name: "CLOUD COMPUTING",
         imgAdj: "../../../../assets/images/cloudComputing.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
       },
       {
         name: "MYSQL",
         imgAdj: "../../../../assets/images/mysqlNewLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
       },
       {
         name: "JAVA",
         imgAdj: "../../../../assets/images/java.svg",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
       },
       {
         name: "ORACLE",
         imgAdj: "../../../../assets/images/oracleNewLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
-      },  
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
+      },
       {
         name: "POSTGRESQL",
         imgAdj: "../../../../assets/images/postgresql.svg",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
       },
       {
         name: "AZURE",
         imgAdj: "../../../../assets/images/azure.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
       },
       {
         name: "IONIC",
         imgAdj: "../../../../assets/images/ionicLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
-      }     
-      
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
+      }
+
     ];
     this.prodList2 = imgBan2;
-    setInterval(() => {this.changeIcon();}, 30000);
+    setInterval(() => { this.changeIcon(); }, 30000);
   }
   private createForm() {
     this.orderForm = this.formBuilder.group({
@@ -159,85 +159,83 @@ export class HomeComponent implements OnInit {
       projectDescription: ['', Validators.required]
     });
   }
-  changeIcon(){
-    this.slideIcons = !this.slideIcons; 
+  changeIcon() {
+    this.slideIcons = !this.slideIcons;
   }
-  showMenuMobile(){
+  showMenuMobile() {
     this.menuMobile = !this.menuMobile;
   }
-  gotoId(value){
-    localStorage.setItem("idItem",value);
+  gotoId(value) {
+    localStorage.setItem("idItem", value);
     this.router.navigate(['our-services']);
   }
-  goToId1(i){
-    if(i==1){
+  goToId1(i) {
+    if (i == 0) {
       var el = document.getElementById('aboutUs');
-      el.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
+      el.scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
     }
-    if(i==2){
+    if (i == 1) {
       var el = document.getElementById('services');
-    el.scrollIntoView({behavior: "smooth", block: "start", inline: "end"});
+      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
     }
-    if(i==3){
+    if (i == 2) {
       var el = document.getElementById('howWeWork');
-      el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
     }
-    if(i==4){
+    if (i == 3) {
       var el = document.getElementById('projects');
-    el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
     }
-    if(i==5){
+    if (i == 4) {
       var el = document.getElementById('contactUs');
-      el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
     }
-    
+
   }
-  goToId1M(){
+  goToIdM(i) {
     this.menuMobile = !this.menuMobile;
-    var el = document.getElementById('aboutUs');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+    if (i == 0) {
+      var el = document.getElementById('aboutUs');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+    if (i == 1) {
+      var el = document.getElementById('services');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+    if (i == 2) {
+      var el = document.getElementById('howWeWorkMob');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+    if (i == 3) {
+      var el = document.getElementById('projectsMob');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+    if (i == 4) {
+      var el = document.getElementById('contactUs');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
   }
-  goToId2M(){
-    this.menuMobile = !this.menuMobile;
-    var el = document.getElementById('services');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
-  }
-  goToId3M(){
-    this.menuMobile = !this.menuMobile;
-    var el = document.getElementById('howWeWork');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
-  }
-  goToId4M(){
-    this.menuMobile = !this.menuMobile;
-    var el = document.getElementById('projects');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
-  }
-  goToId5M(){
-    this.menuMobile = !this.menuMobile;
-    var el = document.getElementById('contactUs');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
-  }
-  sentForm(){
-    if(this.orderForm.value.nameClient == ''){
+  sentForm() {
+    if (this.orderForm.value.nameClient == '') {
       this.global.notif("Please write the client name.");
     }
-    else if(this.orderForm.value.emailClient == ''){
+    else if (this.orderForm.value.emailClient == '') {
       this.global.notif("Please write the client email.");
     }
     else if (this.global.validarEmail(this.orderForm.value.emailClient) == false) {
       this.global.notif("The e-mail has an invalid format.");
     }
-    else if(this.orderForm.value.projectType == ''){
+    else if (this.orderForm.value.projectType == '') {
       this.global.notif("Please select the project type.");
     }
-    else if(this.orderForm.value.projectDescription == ''){
+    else if (this.orderForm.value.projectDescription == '') {
       this.global.notif("Please write the project description.");
     }
-    else{
+    else {
       this.global.notif("Thanks for your sending.");
     }
   }
-  resetForm(){
+  resetForm() {
     (<HTMLFormElement>document.getElementById("formAutonomo")).reset();
   }
 }
