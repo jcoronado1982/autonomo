@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
   public prodList2 = [];
   public slideIcons:boolean = false;
   public menuMobile:boolean = false;
-  constructor(private language:LanguageService,public AngularFireAnalytics:AngularFireAnalytics,private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){
+  constructor(public language:LanguageService,public AngularFireAnalytics:AngularFireAnalytics,private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){
     this.AngularFireAnalytics.setCurrentScreen("Home");
     this.AngularFireAnalytics.logEvent("Home-Screenview");
   }
