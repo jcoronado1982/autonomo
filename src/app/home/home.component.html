@@ -5,11 +5,7 @@
     </div>
     <div class="menuAuto">
       <div class="webMenu">
-        <div class="aboutUsBoxMenu" (click)="this.goToId1()">About Us</div>
-        <div class="servicesBoxMenu" (click)="this.goToId2()">Services</div>
-        <div class="howWeWorkBoxMenu" (click)="this.goToId3()">How we work</div>
-        <div class="projectsBoxMenu" (click)="this.goToId4()">Projects</div>
-        <div class="contactBoxMenu" (click)="this.goToId5()">Contact</div>
+        <div class="aboutUsBoxMenu" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
       </div>
       <div class="mobileMenu" (click)="this.showMenuMobile()">
         <div>
@@ -18,11 +14,7 @@
       </div>
     </div>
     <div class="menuMobileStyl" *ngIf="this.menuMobile==true" [@EnterLeave]>
-      <div class="aboutUsBoxMenu suportMob" (click)="this.goToId1M()">About Us</div>
-      <div class="servicesBoxMenu suportMob" (click)="this.goToId2M()">Services</div>
-      <div class="howWeWorkBoxMenu suportMob" (click)="this.goToId3M()">How we work</div>
-      <div class="projectsBoxMenu suportMob" (click)="this.goToId4M()">Projects</div>
-      <div class="contactBoxMenu suportMob" (click)="this.goToId5M()">Contact</div>
+      <div class="aboutUsBoxMenu suportMob" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
     </div> 
   </div>
   <div class="automateBusiness">
@@ -30,12 +22,12 @@
       <img class="tabImgSettings" src="../../assets/images/autonomoNewPage/autonomomock.png">
     </div>
     <div class="descTablet">
-      <div class="weAnswer">WE ARE THE ANSWER</div>
-      <div class="titleAutoBusi">Automate your business</div>
-      <div class="weDoBusi">We do software development in cloud, data analysis.</div>
+      <div class="weAnswer">{{this.language.content.titleA}}</div>
+      <div class="titleAutoBusi">{{this.language.content.titleB}}</div>
+      <div class="weDoBusi">{{this.language.content.titleC}}</div>
       <div class="buttonStart">
         <div class="txtButtonStart">
-          Get details
+          {{this.language.content.button}}
         </div>
       </div>
     </div>
@@ -65,128 +57,44 @@
   </div>
   <div class="autonomoIsBox" id="aboutUs">
     <div class="autonomoIsDescription">
-      <div class="aboutUsAutoIsText">ABOUT US</div>
-      <div class="autoistext2">Autonomo is</div>
+      <div class="aboutUsAutoIsText">{{this.language.content.aboutUsTitleA}}</div>
+      <div class="autoistext2">{{this.language.content.aboutUsTitleB}}</div>
     </div>
     <div class="autonomoisProducts">
       <div class="itemPr">
         <img class="imgItemPr" src="../../assets/images/autonomoNewPage/autonomo-illu1.png">
-        <div class="descBoxprod">A company with over 15 years of experience in the software development industry.</div>
+        <div class="descBoxprod">{{this.language.content.aboutUsItems[0]}}</div>
       </div>
       <div class="itemPr">
         <img class="imgItemPr" src="../../assets/images/autonomoNewPage/autonomo-illu2.png">
-        <div class="descBoxprod">We develop customized Web and Mobile Applications to meet the needs of our clients.
+        <div class="descBoxprod">{{this.language.content.aboutUsItems[1]}}
         </div>
       </div>
       <div class="itemPr">
         <img class="imgItemPr" src="../../assets/images/autonomoNewPage/autonomo-illu3.png">
-        <div class="descBoxprod">We provide the best service by creating technological solutions to improve the growth
-          of your business.</div>
+        <div class="descBoxprod">{{this.language.content.aboutUsItems[2]}}</div>
       </div>
       <div class="itemPr">
         <img class="imgItemPr" src="../../assets/images/autonomoNewPage/autonomo-illu4.png">
-        <div class="descBoxprod">We have a high-level professional team in the technology industry.</div>
+        <div class="descBoxprod">{{this.language.content.aboutUsItems[3]}}</div>
       </div>
     </div>
   </div>
   <div class="providesBox" id="services">
     <div class="provdesTitle">
-      <div class="ourServtitle">SERVICES</div>
-      <div class="servProvidesDesc">Our company provides</div>
+      <div class="ourServtitle">{{this.language.content.servicesTitleA}}</div>
+      <div class="servProvidesDesc">{{this.language.content.servicesTitleB}}</div>
     </div>
     <div class="providesBox1">
-      <div class="itempb">
+      <div class="itempb" *ngFor="let service of this.language.content.services | slice:0:4; index as i;">
         <div class="imgBaseProd">
-          <img class="imgBasePr" src="../../assets/images/autonomoNewPage/service01.png">
+          <img class="imgBasePr" [src]="service.src">
         </div>
         <div class="descriptionPrBox">
-          <div class="descTitlePrBox">Mobile App Development</div>
-          <div class="contentdescTitlePrBox">
-            We develop custom applications and integrations with existing applications. Drives the growth of your
-            business.
-          </div>
+          <div class="descTitlePrBox">{{service.title}}</div>
+          <div class="contentdescTitlePrBox">{{service.text}}</div>
         </div>
-        <div class="rightSignal" (click)="this.gotoId(1)">
-          <div class="rightSig">
-            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
-          </div>
-        </div>
-      </div>
-      <div class="itempb">
-        <div class="imgBaseProd">
-          <img class="imgBasePr" src="../../assets/images/autonomoNewPage/service02.png">
-        </div>
-        <div class="descriptionPrBox">
-          <div class="descTitlePrBox">Cloud Hosting</div>
-          <div class="contentdescTitlePrBox">
-            Google Cloud and Amazon web Services.
-          </div>
-        </div>
-        <div class="rightSignal" (click)="this.gotoId(2)">
-          <div class="rightSig">
-            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
-          </div>
-        </div>
-      </div>
-      <div class="itempb">
-        <div class="imgBaseProd">
-          <img class="imgBasePr" src="../../assets/images/autonomoNewPage/service03.png">
-        </div>
-        <div class="descriptionPrBox">
-          <div class="descTitlePrBox">Create a store to sell online</div>
-          <div class="contentdescTitlePrBox">
-            We offer tailored stores, start selling online.
-          </div>
-        </div>
-        <div class="rightSignal" (click)="this.gotoId(3)">
-          <div class="rightSig">
-            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
-          </div>
-        </div>
-      </div>
-      <div class="itempb">
-        <div class="imgBaseProd">
-          <img class="imgBasePr" src="../../assets/images/autonomoNewPage/service04.png">
-        </div>
-        <div class="descriptionPrBox">
-          <div class="descTitlePrBox">Digital Marketing</div>
-          <div class="contentdescTitlePrBox">
-            Digital campaign system: Massive email and SMS sending, referral program.
-          </div>
-        </div>
-        <div class="rightSignal" (click)="this.gotoId(4)">
-          <div class="rightSig">
-            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
-          </div>
-        </div>
-      </div>
-      <div class="itempb min5It">
-        <div class="imgBaseProd">
-          <img class="imgBasePr" src="../../assets/images/autonomoNewPage/service05.png">
-        </div>
-        <div class="descriptionPrBox">
-          <div class="descTitlePrBox">Manage your projects</div>
-          <div class="contentdescTitlePrBox">
-            Project Manager System: Hours and costs report, share activities with your work teams.
-          </div>
-        </div>
-        <div class="rightSignal" (click)="this.gotoId(5)">
-          <div class="rightSig">
-            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
-          </div>
-        </div>
-      </div>
-      <div class="itempb only6">
-        <div class="imgBaseProd">
-          <img class="imgBasePr" src="../../assets/images/autonomoNewPage/service06.png">
-        </div>
-        <div class="descriptionPrBox">
-          <div class="descTitlePrBox">Infrastructure</div>
-          <div class="contentdescTitlePrBox">
-            Build this Structure: Manage your servers, manage any networks.
-          </div>
-        </div>
-        <div class="rightSignal" (click)="this.gotoId(6)">
+        <div class="rightSignal" (click)="this.gotoId(i+1)">
           <div class="rightSig">
             <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
           </div>
@@ -194,84 +102,44 @@
       </div>
     </div>
     <div class="providesBox2">
-      <div class="itempb noExt">
+      <div class="itempb" *ngFor="let service of this.language.content.services | slice:4:7; index as i;">
         <div class="imgBaseProd">
-          <img class="imgBasePr" src="../../assets/images/autonomoNewPage/service05.png">
+          <img class="imgBasePr" [src]="service.src">
         </div>
         <div class="descriptionPrBox">
-          <div class="descTitlePrBox">Manage your projects</div>
-          <div class="contentdescTitlePrBox">
-            Project Manager System: Hours and costs report, share activities with your work teams.
-          </div>
+          <div class="descTitlePrBox">{{service.title}}</div>
+          <div class="contentdescTitlePrBox">{{service.text}}</div>
         </div>
-        <div class="rightSignal" (click)="this.gotoId(5)">
-          <div class="rightSig">
-            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
-          </div>
-        </div>
-      </div>
-      <div class="itempb no6Ext">
-        <div class="imgBaseProd">
-          <img class="imgBasePr" src="../../assets/images/autonomoNewPage/service06.png">
-        </div>
-        <div class="descriptionPrBox">
-          <div class="descTitlePrBox">Infrastructure</div>
-          <div class="contentdescTitlePrBox">
-            Build this Structure: Manage your servers, manage any networks.
-          </div>
-        </div>
-        <div class="rightSignal" (click)="this.gotoId(6)">
-          <div class="rightSig">
-            <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
-          </div>
-        </div>
-      </div>
-      <div class="itempb ext15">
-        <div class="imgBaseProd">
-          <img class="imgBasePr" src="../../assets/images/autonomoNewPage/service07.png">
-        </div>
-        <div class="descriptionPrBox">
-          <div class="descTitlePrBox">Business Intelligence</div>
-          <div class="contentdescTitlePrBox">
-            Apply a Big Data and analyze your information.
-          </div>
-        </div>
-        <div class="rightSignal" (click)="this.gotoId(7)">
+        <div class="rightSignal" (click)="this.gotoId(i+1)">
           <div class="rightSig">
             <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
           </div>
         </div>
       </div>
     </div>
+    
   </div>
   <div class="our-method" id="howWeWork">
     <div class="imageMeth">
       <img class="imgbaseMethod" src="../../assets/images/autonomoNewPage/scrumimg.png">
     </div>
     <div class="descMeth">
-      <div class="howWeTitle">HOW WE WORK</div>
-      <div class="howWeBigTitle">Our methodologies: Agile & live product advance status</div>
-      <div class="howWeDescritpion">We use the scrum methodology to manage software development, you will be able to
-        visualize the growth of your
-        project step by step and align your company's commercial objectives.
+      <div class="howWeTitle">{{this.language.content.howWeWork.titleA}}</div>
+      <div class="howWeBigTitle">{{this.language.content.howWeWork.titleB}}</div>
+      <div class="howWeDescritpion">{{this.language.content.howWeWork.textA}}
         <br><br>
-        Our offices are located in a comfortable
-        Time Zone to communicate with our clients in North America, Canada, Europe and Latin America.</div>
+        {{this.language.content.howWeWork.textB}}</div>
     </div>
   </div>
   <div class="ourWork" id="projects">
     <div class="ourWorkDesc">
-      <div class="projectsOurW">PROJECTS</div>
-      <div class="ourWorkTitle">Our work</div>
-      <div class="ourWorkDescription">
-        We have a specialized team in areas such as web development, mobile, infrastructure and business intelligence
-        with more than 15 years in the area. Counting with clients from different countries in the areas of
-        telecommunications, insurance, laboratories, we can enhance their processes. We focus on development in C#,
-        Angular, React, Sql Server, Cloud computing.
+      <div class="projectsOurW">{{this.language.content.projects.titleA}}</div>
+      <div class="ourWorkTitle">{{this.language.content.projects.titleB}}</div>
+      <div class="ourWorkDescription">{{this.language.content.projects.text}}
       </div>
       <div class="buttonWork">
         <div class="startProjectsTxtButton">
-          See all our projects
+          {{this.language.content.projects.button}}
         </div>
       </div>
     </div>
@@ -299,38 +167,38 @@
     </div>
     <div class="buttonWorkMob1">
       <div class="startProjectsTxtButton">
-        See all our projects
+        {{this.language.content.projects.button}}
       </div>
     </div>
   </div>
   <div class="contactBox" id="contactUs">
     <div class="contectAdress">
-      <div class="locationTitle">LOCATION</div>
-      <div class="adressesTitle">Addresses</div>
-      <div class="city1">Bogotá</div>
-      <div class="address1">Cra. 58 #117-50</div>
-      <div class="lineSep"></div>
-      <div class="city2">México</div>
-      <div class="address2">Calle 1</div>
+      <div class="locationTitle">{{this.language.content.contact.left.titleA}}</div>
+      <div class="adressesTitle">{{this.language.content.contact.left.titleB}}</div>
+      <div *ngFor="let address of this.language.content.contact.left.addresses; index as i;">
+        <div class="city1">{{address.city}}</div>
+        <div class="address1">{{address.address}}</div>
+        <div class="lineSep"></div>
+      </div>
     </div>
     <div class="sendus">
-      <div class="contTitle">CONTACT</div>
-      <div class="sendUsTitleContact">Send us a Message</div>
+      <div class="contTitle">{{this.language.content.contact.right.titleA}}</div>
+      <div class="sendUsTitleContact">{{this.language.content.contact.right.titleA}}</div>
       <div class="formBox">
-        <input class="nameBox" placeholder="Your name">
-        <input class="emailBox" placeholder="Your email">
+        <input class="nameBox" placeholder="{{this.language.content.contact.right.placeholderA}}">
+        <input class="emailBox" placeholder="{{this.language.content.contact.right.placeholderB}}">
         <select class="selectBox">
-          <option disabled value="">Project Type</option>
+          <option disabled value="">{{this.language.content.contact.right.placeholderC}}</option>
           <option value="pw">Web Development</option>
           <option value="am">Mobile App</option>
           <option value="in">Infrastructure</option>
           <option value="bi">Business intelligence</option>
         </select>
       </div>
-      <textarea class="descriptionForWrite" placeholder="Write a brief description of your project."></textarea>
+      <textarea class="descriptionForWrite" placeholder="{{this.language.content.contact.right.placeholderD}}"></textarea>
       <div class="buttonSent">
         <div class="startProjectsTxtButton">
-          Send message
+          {{this.language.content.contact.right.button}}
         </div>
       </div>
       <div class="buttonWorkMob">
@@ -345,11 +213,7 @@
       <img width="100%" class="as-logo-princ centeringF" src="../../assets/images/white.png">
     </div>
     <div class="opcF">
-      <div class="itemFC" (click)="this.goToId1()">About us</div>
-      <div class="itemFC" (click)="this.goToId2()">Services</div>
-      <div class="itemFC" (click)="this.goToId3()">How we work</div>
-      <div class="itemFC" (click)="this.goToId4()">Projects</div>
-      <div class="itemFC" (click)="this.goToId5()">Contact</div>
+      <div class="itemFC" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu" >{{menuItem.text}}</div>
     </div>
     <div class="copyF">© 2020 Autonomo System - All rights reserved.</div>
   </div>

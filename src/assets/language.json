@@ -1,0 +1,192 @@
+{
+  "es": {
+    "menu": [
+      {"text":"Nosotros"},
+      {"text":"Servicios"},
+      {"text":"Como trabajamos"},
+      {"text":"Proyectos"},
+      {"text":"Contactenos"}
+    ],
+    "titleA": "Somos la respuesta",
+    "titleB": "Automatiza tu negocio",
+    "titleC": "desarrollo en cloud y implementacion con Data analysis",
+	"button": "Ver detalles",
+	"aboutUsTitleA":"Sobre Nosotros",
+	"aboutUsTitleB":"Autonomo es",
+    "aboutUsItems": [
+      "Una empresa con más de 15 años de experiencia en la industria del desarrollo de software",
+      "Desarrollamos aplicaciones web y móviles personalizadas para satisfacer las necesidades de nuestros clientes",
+      "Brindamos el mejor servicio creando soluciones tecnológicas para mejorar el crecimiento de su negocio",
+      "Tenemos un equipo profesional de alto nivel en la industria de la tecnología"
+    ],
+	"servicesTitleA":"SERVICIOS",
+	"servicesTitleB":"Nuestra empresa ofrece",
+    "services": [
+      {
+        "title": "Aplicaciones móviles",
+        "text": "Desarrollamos aplicaciones personalizadas e integraciones con aplicaciones existentes. Impulsa el crecimiento de su negocio.",
+		"src":"../../assets/images/autonomoNewPage/service01.png"
+      },
+      {
+        "title": "Cloud Hosting",
+        "text": "Servicios web de Google Cloud y Amazon.",
+		"src":"../../assets/images/autonomoNewPage/service02.png"
+      },
+      {
+        "title": "Crea una tienda en línea",
+        "text": "Ofrecemos tiendas personalizadas, comience a vender en línea.",
+		"src":"../../assets/images/autonomoNewPage/service03.png"
+      },
+      {
+        "title": "Digital Marketing",
+        "text": "Sistema de campaña digital: envío masivo de correo electrónico y SMS, programa de referencia.",
+		"src":"../../assets/images/autonomoNewPage/service04.png"
+      },
+      {
+        "title": "Administra tus proyectos",
+        "text": "Sistema de Project Manager: informe de horas y costos, comparta actividades con sus equipos de trabajo.",
+		"src":"../../assets/images/autonomoNewPage/service05.png"
+      },
+      {
+        "title": "Infraestructura",
+        "text": "Construye tu Infraestructura: administra tus servidores y redes segun tu nececidad.",
+		"src":"../../assets/images/autonomoNewPage/service06.png"
+      },
+      {
+        "title": "Inteligencia de negocios",
+        "text": "Aplica un Big Data y analiza tu información.",
+		"src":"../../assets/images/autonomoNewPage/service07.png"
+      }
+    ],"howWeWork": {
+      "titleA": "CÓMO TRABAJAMOS",
+      "titleB": "Nuestras metodologías: estado de avance del producto ágil y en vivo",
+      "textA": "Utilizamos la metodología scrum para gestionar el desarrollo de software, podrá visualizar el crecimiento de su proyecto paso a paso y alinear los objetivos comerciales de su empresa",
+      "textB": "Nuestras oficinas están ubicadas en una zona horaria cómoda para comunicarse con nuestros clientes en Norteamérica, Canadá, Europa y América Latina"
+    },"projects": {
+      "titleA": "PROYECTOS",
+      "titleB": "Nuestro trabajo",
+      "text": "Contamos con un equipo especializado en áreas como desarrollo web, dispositivos móviles, infraestructura e inteligencia de negocios con más de 15 años en el área. Contando con clientes de diferentes países en las áreas de telecomunicaciones, seguros, laboratorios, podemos mejorar sus procesos. Nos centramos en el desarrollo en C #, Angular, React, Sql Server, Cloud computing.",
+      "button": "Ver todos nuestros proyectos"
+    },
+    "contact": {
+      "left": {
+        "titleA": "UBICACIÓNES",
+        "titleB": "Direcciones",
+        "addresses": [
+          {
+            "city": "Bogotá",
+            "address": "Cra. 58 #117-50"
+          },
+          {
+            "city": "México",
+            "address": "Calle 1"
+          }
+        ]
+      },
+      "right": {"titleA": "CONTACTO",
+        "titleB": "Envíenos un mensaje",
+        "placeholderA":"Tu nombre",
+        "placeholderB":"Su correo electrónico",
+        "placeholderC":"Tipo de proyecto",
+        "placeholderD":"Escriba una breve descripción de su proyecto",
+		"button":"Enviar"
+      }
+    }
+  },
+  "en": {
+    "menu": [
+      {"text":"About Us"},
+      {"text":"Services"},
+      {"text":"How we work"},
+      {"text":"Projects"},
+      {"text":"Contact"}
+    ],
+    "titleA": "WE ARE THE ANSWER ",
+    "titleB": "Automate your business",
+    "titleC": "We do software development in cloud, data analysis.",
+	"button": "Get details",
+	"aboutUsTitleA":"ABOUT US",
+	"aboutUsTitleB":"Autonomo is",
+    "aboutUsItems": [
+      "A company with over 15 years of experience in the software development industry.",
+      "We develop customized Web and Mobile Applications to meet the needs of our clients.",
+      "We provide the best service by creating technological solutions to improve the growth of your business.",
+      "We have a high-level professional team in the technology industry."
+    ],
+	"servicesTitleA":"SERVICES",
+	"servicesTitleB":"Our company provides",
+    "services": [
+      {
+        "title": "Mobile App Development",
+        "text": "We develop custom applications and integrations with existing applications. Drives the growth of your business. ",
+		"src":"../../assets/images/autonomoNewPage/service01.png"
+      },
+      {
+        "title": "Cloud Hosting",
+        "text": "Google Cloud and Amazon web Services.",
+		"src":"../../assets/images/autonomoNewPage/service02.png"
+      },
+      {
+        "title": "Create a store to sell online",
+        "text": "We offer tailored stores, start selling online.",
+		"src":"../../assets/images/autonomoNewPage/service03.png"
+      },
+      {
+        "title": "Digital Marketing",
+        "text": "Digital campaign system: Massive email and SMS sending, referral program.",
+		"src":"../../assets/images/autonomoNewPage/service04.png"
+      },
+      {
+        "title": "Manage your projects",
+        "text": "Project Manager System: Hours and costs report, share activities with your work teams.",
+		"src":"../../assets/images/autonomoNewPage/service05.png"
+      },
+      {
+        "title": "Infrastructure",
+        "text": "Build this Structure: Manage your servers, manage any networks.",
+		"src":"../../assets/images/autonomoNewPage/service06.png"
+      },
+      {
+        "title": "Business Intelligence",
+        "text": "Apply a Big Data and analyze your information.",
+		"src":"../../assets/images/autonomoNewPage/service07.png"
+      }
+    ],
+    "howWeWork": {
+      "titleA": "HOW WE WORK",
+      "titleB": "Our methodologies: Agile & live product advance status",
+      "textA": "We use the scrum methodology to manage software development, you will be able to visualize the growth of your project step by step and align your company's commercial objectives.",
+      "textB": "Our offices are located in a comfortable Time Zone to communicate with our clients in North America, Canada, Europe and Latin America."
+    },
+    "projects": {
+      "titleA": "PROJECTS",
+      "titleB": "Our work",
+      "text": "We have a specialized team in areas such as web development, mobile, infrastructure and business intelligence with more than 15 years in the area. Counting with clients from different countries in the areas of telecommunications, insurance, laboratories, we can enhance their processes. We focus on development in C#, Angular, React, Sql Server, Cloud computing. ",
+      "button": "See all our projects "
+    },
+    "contact": {
+      "left": {
+        "titleA": "LOCATION",
+        "titleB": "Addresses",
+        "addresses": [
+          {
+            "city": "Bogotá",
+            "address": "Cra. 58 #117-50"
+          },
+          {
+            "city": "México",
+            "address": "Calle 1"
+          }
+        ]
+      },
+      "right": {"titleA": "CONTACT",
+        "titleB": "Send us a Message",
+        "placeholderA":"Your name",
+        "placeholderB":"Your email",
+        "placeholderC":"Project Type",
+        "placeholderD":"Write a brief description of your project.",
+		"button":"Send message"
+      }
+    }
+  }
+}

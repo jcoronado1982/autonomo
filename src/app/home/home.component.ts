@@ -7,6 +7,7 @@ import { GlobalService } from '../global.service';
 import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA  } from '@angular/material/dialog';
 import { Subscription } from "rxjs";
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { LanguageService } from '../language.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -35,7 +36,8 @@ export class HomeComponent implements OnInit {
   public prodList2 = [];
   public slideIcons:boolean = false;
   public menuMobile:boolean = false;
-  constructor(private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){}
+  public content;
+  constructor(private language:LanguageService,private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){}
   
   ngOnInit() {
     let imgBan = [
@@ -153,25 +155,28 @@ export class HomeComponent implements OnInit {
     localStorage.setItem("idItem",value);
     this.router.navigate(['our-services']);
   }
-  goToId1(){
-    var el = document.getElementById('aboutUs');
-    el.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
-  }
-  goToId2(){
-    var el = document.getElementById('services');
+  goToId1(i){
+    if(i==1){
+      var el = document.getElementById('aboutUs');
+      el.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
+    }
+    if(i==2){
+      var el = document.getElementById('services');
     el.scrollIntoView({behavior: "smooth", block: "start", inline: "end"});
-  }
-  goToId3(){
-    var el = document.getElementById('howWeWork');
+    }
+    if(i==3){
+      var el = document.getElementById('howWeWork');
+      el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+    }
+    if(i==4){
+      var el = document.getElementById('projects');
     el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
-  }
-  goToId4(){
-    var el = document.getElementById('projects');
-    el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
-  }
-  goToId5(){
-    var el = document.getElementById('contactUs');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+    }
+    if(i==5){
+      var el = document.getElementById('contactUs');
+      el.scrollIntoView({behavior: "smooth", inline: "nearest"});
+    }
+    
   }
   goToId1M(){
     this.menuMobile = !this.menuMobile;
