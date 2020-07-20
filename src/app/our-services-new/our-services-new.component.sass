@@ -256,6 +256,9 @@
     background: #33CFC6
     border-radius: 5px
     float: right
+.plBoxItemComp
+    grid-column: 1 / span 2
+    padding: 0px 50px 50px 50px
 @media only screen and (min-width: 1920px)
     .sendus
         background-position: 50%
@@ -271,6 +274,8 @@
     .contactBox
         grid-template: auto/33% 1fr
 @media only screen and (max-width: 768px)
+    .plBoxItemComp
+        display: none
     .sendUsTitleContact, .adressesTitle, .serviceTitleBlue
         font-size: 36px
         line-height: 45px
@@ -323,7 +328,7 @@
         background: #33CFC6
         border-radius: 5px
     .buttonWorkMob
-        margin-top:30px
+        margin-top: 30px
     .sendus
         grid-row: 1
         padding: 0px 25px
