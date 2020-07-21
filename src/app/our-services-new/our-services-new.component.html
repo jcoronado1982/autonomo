@@ -90,32 +90,37 @@
   </div>
   <div class="contactBox" id="contactUs">
     <div class="contectAdress">
-      <div class="locationTitle">LOCATION</div>
-      <div class="adressesTitle">Addresses</div>
-      <div class="city1">Bogotá</div>
-      <div class="address1">Cra. 58 #117-50</div>
-      <div class="lineSep"></div>
-      <div class="city2">México</div>
-      <div class="address2">Calle 1</div>
+      <div class="locationTitle">{{this.language.content.contact.left.titleA}}</div>
+      <div class="adressesTitle">{{this.language.content.contact.left.titleB}}</div>
+      <div *ngFor="let address of this.language.content.contact.left.addresses; index as i;">
+        <div class="city1">{{address.city}}</div>
+        <div class="address1">{{address.address}}</div>
+        <div class="lineSep"></div>
+      </div>
     </div>
     <div class="sendus">
-      <div class="contTitle">CONTACT</div>
-      <div class="sendUsTitleContact">Send us a Message</div>
-      <div class="formBox">
-        <input class="nameBox" placeholder="Your name">
-        <input class="emailBox" placeholder="Your email">
-        <select class="selectBox">
-          <option disabled value="">Project Type</option>
-          <option value="pw">Web Development</option>
-          <option value="am">Mobile App</option>
-          <option value="in">Infrastructure</option>
-          <option value="bi">Business intelligence</option>
-        </select>
-      </div>
-      <textarea class="descriptionForWrite" placeholder="Write a brief description of your project."></textarea>
-      <div class="buttonSent">
+      <div class="contTitle">{{this.language.content.contact.right.titleA}}</div>
+      <div class="sendUsTitleContact">{{this.language.content.contact.right.titleA}}</div>
+      <form id="formAutonomo" [formGroup]="orderForm">
+        <div class="formBox">
+          <input type="text" class="nameBox" placeholder="{{this.language.content.contact.right.placeholderA}}" required
+            formControlName="nameClient" id="nameClient">
+          <input type="text" class="emailBox" placeholder="{{this.language.content.contact.right.placeholderB}}"
+            required formControlName="emailClient" id="emailClient">
+          <select class="selectBox" required formControlName="projectType" id="projectType">
+            <option disabled value="">{{this.language.content.contact.right.placeholderC}}</option>
+            <option value="pw">{{this.language.content.contact.right.placeholderC1}}</option>
+            <option value="am">{{this.language.content.contact.right.placeholderC2}}</option>
+            <option value="in">{{this.language.content.contact.right.placeholderC3}}</option>
+            <option value="bi">{{this.language.content.contact.right.placeholderC4}}</option>
+          </select>
+        </div>
+        <textarea class="descriptionForWrite" placeholder="{{this.language.content.contact.right.placeholderD}}"
+          required formControlName="projectDescription" id="projectDescription"></textarea>
+      </form>
+      <div class="buttonSent" (click)="this.sentForm()">
         <div class="startProjectsTxtButton">
-          Send message
+          {{this.language.content.contact.right.button}}
         </div>
       </div>
       <div class="buttonWorkMob">
@@ -130,12 +135,9 @@
       <img width="100%" class="as-logo-princ centeringF" src="../../assets/images/white.png">
     </div>
     <div class="opcF">
-      <div class="itemFC">About us</div>
-      <div class="itemFC">Services</div>
-      <div class="itemFC">How we work</div>
-      <div class="itemFC">Projects</div>
-      <div class="itemFC">Contact</div>
+      <div class="itemFC" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu ; let i = index">
+        {{menuItem.text}}</div>
     </div>
-    <div class="copyF">© 2020 Autonomo System - All rights reserved.</div>
+    <div class="copyF">{{this.language.content.copyrightText}}</div>
   </div>
 </div>

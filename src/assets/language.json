@@ -165,7 +165,8 @@
         "descriptionAdvice": "Por favor describa el proyecto.",
         "sentAdvice": "Gracias por enviar los datos."
       }
-    }
+    },
+    "copyrightText":"© 2020 Autonomo System - Todos los derechos reservados."
   },
   "en": {
     "menu": [
@@ -333,6 +334,7 @@
         "descriptionAdvice": "Please write the project description.",
         "sentAdvice": "Thanks for your sending."
       }
-    }
+    },
+    "copyrightText":"© 2020 Autonomo System - All rights reserved."
   }
 }

@@ -296,6 +296,6 @@
       <div class="itemFC" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu ; let i = index">
         {{menuItem.text}}</div>
     </div>
-    <div class="copyF">© 2020 Autonomo System - All rights reserved.</div>
+    <div class="copyF">{{this.language.content.copyrightText}}</div>
   </div>
 </div>
