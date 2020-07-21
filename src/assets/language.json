@@ -121,14 +121,14 @@
     },
     "howWeWork": {
       "titleA": "METODOLOGÍA",
-      "titleB": "Nuestras metodologías: estado de avance del producto ágil y en vivo",
-      "textA": "Utilizamos la metodología scrum para gestionar el desarrollo de software, podrá visualizar el crecimiento de su proyecto paso a paso y alinear los objetivos comerciales de su empresa",
-      "textB": "Nuestras oficinas están ubicadas en una zona horaria cómoda para comunicarse con nuestros clientes en Norteamérica, Canadá, Europa y América Latina"
+      "titleB": "Nuestras metodologías: Ágiles que le permite visualiza en tiempo real el trascuso del proyecto día a día.",
+      "textA": "Utilizamos la metodología scrum para gestionar el desarrollo de la aplicación, podrá visualizar el crecimiento de su proyecto paso a paso y alinear los objetivos comerciales de su empresa",
+      "textB": "Nuestras oficinas están ubicadas en una zona horaria cómoda para comunicarse con nuestros clientes en Norteamérica, Canadá, Europa y América Latina."
     },
     "projects": {
       "titleA": "PROYECTOS",
       "titleB": "Nuestro trabajo",
-      "text": "Contamos con un equipo especializado en áreas como desarrollo web, dispositivos móviles, infraestructura e inteligencia de negocios con más de 15 años en el área. Contando con clientes de diferentes países en las áreas de telecomunicaciones, seguros, laboratorios, podemos mejorar sus procesos. Nos centramos en el desarrollo en C #, Angular, React, Sql Server, Cloud computing.",
+      "text": "Contamos con un equipo especializado en áreas como desarrollo web, dispositivos móviles, infraestructura e inteligencia de negocios con más de 15 años en el área. Contando con clientes de diferentes países en las áreas de telecomunicaciones, seguros, laboratorios, podemos mejorar sus procesos. Nos centramos en el desarrollo en C#, Angular, React, Sql Server, Cloud Computing.",
       "button": "Nuestros proyectos"
     },
     "contact": {
