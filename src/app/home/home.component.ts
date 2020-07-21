@@ -170,7 +170,7 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['our-services']);
   }
   gotoOurP(){
-    this.router.navigate(['our-projects']);
+    //this.router.navigate(['our-projects']);
   }
   seeDetails(){
     var el = document.getElementById('howWeWorkMob');

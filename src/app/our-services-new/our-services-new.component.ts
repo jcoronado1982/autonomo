@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { LanguageService } from '../language.service';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
@@ -6,7 +6,8 @@ import { GlobalService } from '../global.service';
 @Component({
   selector: 'app-our-services-new',
   templateUrl: './our-services-new.component.html',
-  styleUrls: ['./our-services-new.component.sass']
+  styleUrls: ['./our-services-new.component.sass'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class OurServicesNewComponent implements OnInit {
   public idService;
