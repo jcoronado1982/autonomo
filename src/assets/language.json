@@ -33,7 +33,7 @@
     "servicesTitleB": "Nuestra empresa ofrece",
     "services": [
       {
-        "title": "Aplicaciones móviles",
+        "title": "Aplicaciones web y móviles",
         "text": "Desarrollamos aplicaciones personalizadas e integraciones con aplicaciones existentes. Impulsa el crecimiento de su negocio.",
         "src": "../../assets/images/autonomoNewPage/service01.png"
       },
@@ -203,7 +203,7 @@
     "servicesTitleB": "Our company provides",
     "services": [
       {
-        "title": "Mobile App Development",
+        "title": "Mobile and Web App Development",
         "text": "We develop custom applications and integrations with existing applications. Drives the growth of your business. ",
         "src": "../../assets/images/autonomoNewPage/service01.png"
       },
