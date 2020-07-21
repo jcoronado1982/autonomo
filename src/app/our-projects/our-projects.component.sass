@@ -31,7 +31,8 @@
     color: #FFFFFF
 .serviceComp
     display: grid
-    grid-template: auto/ 375px 1fr
+    grid-template: auto/ 100%
+    padding: 0px 50px
 .imgSer
     padding-top: 90px
     padding-right: 95px
@@ -259,6 +260,9 @@
 .plBoxItemComp
     grid-column: 1 / span 2
     padding: 0px 50px 50px 50px
+.carouselBox
+    position: relative
+    top: -90px
 @media only screen and (min-width: 1920px)
     .sendus
         background-position: 50%
@@ -299,8 +303,11 @@
         display: table
         margin: 15px auto
     .serviceComp
-        grid-template: 170px auto/ 100%
+        grid-template: auto auto 200px/ 100%
         padding: 0px 25px
+    .carouselBox
+        position: relative
+        top: -190px
     .paddingEmpty, .paddingFull
         padding-bottom: 30px
     .imgSer

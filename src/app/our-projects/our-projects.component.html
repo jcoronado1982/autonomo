@@ -15,14 +15,12 @@
             </div>
         </div>
     </div>
-    <div class="serviceComp paddingEmpty">
-        <div class="titleContent">Our Projects</div>
-        <div class="description">
-            Our projects have been carried out with the Angular 9 Framework with mainly international clients
-            applying our corresponding techniques and in addition to the creation of our platforms to guarantee
-            control of our clients.
+    <div class="serviceComp">
+        <div class="serviceTitleBlue">{{this.language.content.ourProjectsTitle}}</div>
+        <div class="descriptionOfService">
+            {{this.language.content.ourProjectsDescription}}
         </div>
-        <div style="grid-column: 1 / span 2; padding: 0px 50px">
+        <div class="carouselBox">
             <app-projects-carousel></app-projects-carousel>
         </div>
     </div>

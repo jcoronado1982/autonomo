@@ -169,7 +169,9 @@
         "sentAdvice": "Gracias por enviar los datos."
       }
     },
-    "copyrightText":"© 2020 Autonomo System - Todos los derechos reservados."
+    "copyrightText":"© 2020 Autonomo System - Todos los derechos reservados.",
+    "ourProjectsTitle": "Nuestros Proyectos",
+    "ourProjectsDescription": "Nuestros proyectos se han llevado a cabo con el Framework Angular 9 con clientes principalmente internacionales que aplican nuestras técnicas correspondientes y además de la creación de nuestras plataformas para garantizar el control de nuestros clientes."
   },
   "en": {
     "menu": [
@@ -341,6 +343,8 @@
         "sentAdvice": "Thanks for your sending."
       }
     },
-    "copyrightText":"© 2020 Autonomo System - All rights reserved."
+    "copyrightText":"© 2020 Autonomo System - All rights reserved.",
+    "ourProjectsTitle": "Our Projects",
+    "ourProjectsDescription": "Our projects have been carried out with the Angular 9 Framework with mainly international clients applying our corresponding techniques and in addition to the creation of our platforms to guarantee control of our clients."
   }
 }
