@@ -33,28 +33,28 @@
     "servicesTitleB": "Nuestra empresa ofrece",
     "services": [
       {
-        "title": "Aplicaciones web y móviles",
+        "title": "Aplicaciones Web y Móviles",
         "text": "Desarrollamos aplicaciones personalizadas e integraciones con aplicaciones existentes. Impulsa el crecimiento de su negocio.",
         "src": "../../assets/images/autonomoNewPage/service01.png"
       },
       {
         "title": "Cloud Hosting",
-        "text": "Microsoft Azure, Servicios web de Google Cloud y Amazon.",
+        "text": "Microsoft Azure, Google Cloud y Amazon Web Services.",
         "src": "../../assets/images/autonomoNewPage/service02.png"
       },
       {
         "title": "Crea una tienda en línea",
-        "text": "Ofrecemos tiendas personalizadas, comience a vender en línea.",
+        "text": "Ofrecemos tiendas personalizadas para que comience a vender en línea.",
         "src": "../../assets/images/autonomoNewPage/service03.png"
       },
       {
         "title": "Digital Marketing",
-        "text": "Sistema de campaña digital: envío masivo de correo electrónico y SMS, programa de referencia.",
+        "text": "Ofrecemos un sistema de campaña digital atraves de envío de Email masivo, Sms, Push y Programa de referidos.",
         "src": "../../assets/images/autonomoNewPage/service04.png"
       },
       {
         "title": "Administra tus proyectos",
-        "text": "Sistema de Project Manager: informe de horas y costos, comparta actividades con sus equipos de trabajo.",
+        "text": "Maneja tus proyectos, crea actividades, lleva el control de horas de tus recusos y visualiza el avance de tus proyecto en tiempo real.",
         "src": "../../assets/images/autonomoNewPage/service05.png"
       },
       {
