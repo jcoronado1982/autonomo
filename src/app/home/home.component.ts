@@ -169,6 +169,13 @@ export class HomeComponent implements OnInit {
     localStorage.setItem("idItem", value);
     this.router.navigate(['our-services']);
   }
+  gotoOurP(){
+    this.router.navigate(['our-projects']);
+  }
+  seeDetails(){
+    var el = document.getElementById('howWeWorkMob');
+    el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+  }
   goToId1(i) {
     if (i == 0) {
       var el = document.getElementById('aboutUs');

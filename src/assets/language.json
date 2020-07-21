@@ -49,7 +49,7 @@
       },
       {
         "title": "Digital Marketing",
-        "text": "Sistema de creación de campaña digital atraves de envío de Email masivo, Sms, Push y Programa de referidos.",
+        "text": "Sistema de creación de campaña digital a través de envío de Email masivo, Sms, Push y Programa de referidos.",
         "src": "../../assets/images/autonomoNewPage/service04.png"
       },
       {
@@ -59,7 +59,7 @@
       },
       {
         "title": "Infraestructura",
-        "text": "Hacemos análisis y licenciamiento, adecuaciones de centros de datos, venta, instalación, configuración y migración de equipamiento.",
+        "text": "We do analysis and licensing, adaptation of data centers, sale, installation, configuration and migration of equipment.",
         "src": "../../assets/images/autonomoNewPage/service06.png"
       },
       {
@@ -138,11 +138,13 @@
         "addresses": [
           {
             "city": "Colombia",
-            "address": "Bogotá"
+            "address": "Bogota",
+            "phone":"+573134568729"
           },
           {
             "city": "México",
-            "address": "Ciudad de México"
+            "address": "Mexico City",
+            "phone":"+521557367577"
           }
         ]
       },
@@ -219,12 +221,12 @@
       },
       {
         "title": "Digital Marketing",
-        "text": "Digital campaign system: Massive email and SMS sending, referral program.",
+        "text": "Digital campaign creation system through mass email, Sms, Push and Referral Program.",
         "src": "../../assets/images/autonomoNewPage/service04.png"
       },
       {
         "title": "Manage your projects",
-        "text": "Project Manager System: Hours and costs report, share activities with your work teams.",
+        "text": "Manage your projects, create activities, keep track of your resources and view the progress of your project in real time.",
         "src": "../../assets/images/autonomoNewPage/service05.png"
       },
       {
@@ -291,14 +293,14 @@
     },
     "howWeWork": {
       "titleA": "HOW WE WORK",
-      "titleB": "Our methodologies: Agile & live product advance status",
-      "textA": "We use the scrum methodology to manage software development, you will be able to visualize the growth of your project step by step and align your company's commercial objectives.",
-      "textB": "Our offices are located in a comfortable Time Zone to communicate with our clients in North America, Canada, Europe and Latin America."
+      "titleB": "Our methodologies: Agile that allows you to visualize in real time the transfer of the project day by day.",
+      "textA": "We use the scrum methodology to manage the development of the application, you will be able to visualize the growth of your project step by step and align the commercial objectives of your company",
+      "textB": "Our offices are located in a comfortable time zone to communicate with our clients in North America, Canada, Europe and Latin America."
     },
     "projects": {
       "titleA": "PROJECTS",
       "titleB": "Our work",
-      "text": "We have a specialized team in areas such as web development, mobile, infrastructure and business intelligence with more than 15 years in the area. Counting with clients from different countries in the areas of telecommunications, insurance, laboratories, we can enhance their processes. We focus on development in C#, Angular, React, Sql Server, Cloud computing. ",
+      "text": "We have a specialized team in areas such as web development, mobile devices, infrastructure and business intelligence with more than 15 years in the area. Having clients from different countries in the areas of telecommunications, insurance, laboratories, we can improve their processes. We focus on development in C #, Angular, React, Sql Server, Cloud Computing.",
       "button": "Our projects "
     },
     "contact": {
@@ -308,11 +310,13 @@
         "addresses": [
           {
             "city": "Colombia",
-            "address": "Bogota"
+            "address": "Bogota",
+            "phone":"+573134568729"
           },
           {
             "city": "México",
-            "address": "Mexico City"
+            "address": "Mexico City",
+            "phone":"+521557367577"
           }
         ]
       },
