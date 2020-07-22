@@ -56,6 +56,9 @@ export class OurServicesNewComponent implements OnInit {
       this.router.navigate(['home']);
     }
   }
+  clickHereInfra(){
+    this.idService = 6;
+  }
   backHome() {
     this.router.navigate(['home']);
   }
