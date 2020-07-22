@@ -28,6 +28,7 @@ export class OurServicesNewComponent implements OnInit {
       projectDescription: ['', Validators.required]
     });
   }
+
   goToId1(i) {
     if (i == 0) {
       this.global.goHomeSection.next(i);
