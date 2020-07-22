@@ -30,22 +30,27 @@ export class OurServicesNewComponent implements OnInit {
   }
   goToId1(i) {
     if (i == 0) {
+      this.global.goHomeSection.next(i);
       sessionStorage.setItem("idSelected",i);
       this.router.navigate(['home']);
     }
-    if (i == 1) {
+    else if (i == 1) {
+      this.global.goHomeSection.next(i);
       sessionStorage.setItem("idSelected",i);
       this.router.navigate(['home']);
     }
-    if (i == 2) {
+    else if (i == 2) {
+      this.global.goHomeSection.next(i);
       sessionStorage.setItem("idSelected",i);
       this.router.navigate(['home']);
     }
-    if (i == 3) {
+    else if (i == 3) {
+      this.global.goHomeSection.next(i);
       sessionStorage.setItem("idSelected",i);
       this.router.navigate(['home']);
     }
-    if (i == 4) {
+    else if (i == 4) {
+      this.global.goHomeSection.next(i);
       sessionStorage.setItem("idSelected",i);
       this.router.navigate(['home']);
     }

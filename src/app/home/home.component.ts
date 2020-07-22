@@ -209,19 +209,19 @@ export class HomeComponent implements OnInit {
       var el = document.getElementById('aboutUs');
       el.scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
     }
-    if (i == 1) {
+    else if (i == 1) {
       var el = document.getElementById('services');
       el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
     }
-    if (i == 2) {
+    else if (i == 2) {
       var el = document.getElementById('howWeWork');
       el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
     }
-    if (i == 3) {
+    else if (i == 3) {
       var el = document.getElementById('projects');
       el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
     }
-    if (i == 4) {
+    else if (i == 4) {
       var el = document.getElementById('contactUs');
       el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
     }
