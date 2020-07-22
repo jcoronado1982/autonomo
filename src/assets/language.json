@@ -207,7 +207,7 @@
     "servicesTitleB": "Our company provides",
     "services": [
       {
-        "title": "Mobile and Web App Development",
+        "title": "Mobile and Web Development",
         "text": "We develop custom applications and integrations with existing applications. Drives the growth of your business. ",
         "src": "../../assets/images/autonomoNewPage/service01.png"
       },
