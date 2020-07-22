@@ -897,7 +897,6 @@
         grid-gap: 15px 25px
     .copyF
         margin-top: 25px
-        margin-bottom: 30px
         margin-left: 25px
         text-align: left
     .projectBox
@@ -936,9 +935,17 @@
         height: 365px
     .opcF
         grid-template: 15px /repeat(3, auto)
+@media only screen and (max-width: 430px)
+    .autoistext2, .servProvidesDesc, .howWeBigTitle, .ourWorkTitle, .sendUsTitleContact, .adressesTitle
+        font-size: 30px
+        line-height: 36px
 @media only screen and (max-width: 353px)
     .descBoxprod
-        height: 0px
-@media only screen and (max-width: 320px)
-    .sendUsTitleContact
-        font-size: 30px
+        height: auto
+    .autonomoisProducts
+        grid-template: repeat(4, auto)/100%
+@media only screen and (max-width: 346px)
+    .weDoBusi
+        font-size: 16px
+    .contentdescTitlePrBox
+        font-size: 12px
