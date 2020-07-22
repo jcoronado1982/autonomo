@@ -51,20 +51,35 @@ export class HomeComponent implements OnInit {
     if (this.elementAux != null || this.elementAux != NaN) {
       switch (this.elementAux) {
         case 0:
-          this.goToId1(4);
+          window.scroll({
+            top: 555,
+            left: 100,
+            behavior: 'smooth'
+          });
           break;
         case 1:
-          this.goToId1(4);
+          window.scroll({
+            top: 1550,
+            left: 100,
+            behavior: 'smooth'
+          });
           break;
         case 2:
-          let el1 = document.getElementById('aboutUs');
-          el1.scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
+          window.scroll({
+            top: 2500,
+            left: 100,
+            behavior: 'smooth'
+          });
           break;
         case 3:
-          this.goToId1(1);
+          window.scroll({
+            top: 2950,
+            left: 100,
+            behavior: 'smooth'
+          });
           break;
         case 4:
-          this.goToId1(3);
+          this.goToId1(2);
           break;
       }
     }
