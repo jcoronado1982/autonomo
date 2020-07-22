@@ -29,29 +29,26 @@ export class OurServicesNewComponent implements OnInit {
     });
   }
   goToId1(i) {
-    //this.global.goHomeSection.next(i);
-    sessionStorage.setItem("idSelected",i);
-    this.router.navigate(['home']);
-    /*if (i == 0) {
-      sessionStorage.setItem("optionSelected",i);
-      
+    if (i == 0) {
+      sessionStorage.setItem("idSelected",i);
+      this.router.navigate(['home']);
     }
     if (i == 1) {
-      var el = document.getElementById('services');
-      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
+      sessionStorage.setItem("idSelected",i);
+      this.router.navigate(['home']);
     }
     if (i == 2) {
-      var el = document.getElementById('howWeWork');
-      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
+      sessionStorage.setItem("idSelected",i);
+      this.router.navigate(['home']);
     }
     if (i == 3) {
-      var el = document.getElementById('projects');
-      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
+      sessionStorage.setItem("idSelected",i);
+      this.router.navigate(['home']);
     }
     if (i == 4) {
-      var el = document.getElementById('contactUs');
-      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
-    }*/
+      sessionStorage.setItem("idSelected",i);
+      this.router.navigate(['home']);
+    }
   }
   backHome() {
     this.router.navigate(['home']);

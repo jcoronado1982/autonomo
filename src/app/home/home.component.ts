@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
   public prodList2 = [];
   public slideIcons: boolean = false;
   public menuMobile: boolean = false;
-  public elementAux = sessionStorage.getItem("idSelected");
+  public elementAux: number = parseInt(sessionStorage.getItem("idSelected"));
   orderForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private language: LanguageService, public AngularFireAnalytics: AngularFireAnalytics, private router: Router, public appComponent: AppComponent, private services: Service, private loadingScreenService: LoadingScreenService, private global: GlobalService, public dialog: MatDialog) {
     this.AngularFireAnalytics.setCurrentScreen("Home");
@@ -48,13 +48,32 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(this.elementAux!=null){
-      this.goToId1(this.elementAux);
-    } 
+    if (this.elementAux != null || this.elementAux != NaN) {
+      switch (this.elementAux) {
+        case 0:
+          this.goToId1(4);
+          break;
+        case 1:
+          this.goToId1(2);
+          break;
+        case 2:
+          let el1 = document.getElementById('aboutUs');
+          el1.scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
+          break;
+        case 3:
+          this.goToId1(1);
+          break;
+        case 4:
+          this.goToId1(3);
+          break;
+      }
+    }
     else {
       window.scroll(0, 0);
     }
-    sessionStorage.setItem("idSelected",null);
+    setTimeout(() => {
+      sessionStorage.removeItem("idSelected");
+    }, 10000);
     let imgBan = [
       {
         name: "KOTLIN",
@@ -178,10 +197,10 @@ export class HomeComponent implements OnInit {
     localStorage.setItem("idItem", value);
     this.router.navigate(['our-services']);
   }
-  gotoOurP(){
+  gotoOurP() {
     //this.router.navigate(['our-projects']);
   }
-  seeDetails(){
+  seeDetails() {
     var el = document.getElementById('howWeWorkMob');
     el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
   }
