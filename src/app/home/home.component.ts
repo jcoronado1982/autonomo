@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { Service } from '../services';
@@ -40,6 +40,7 @@ export class HomeComponent implements OnInit {
   public menuMobile: boolean = false;
   orderForm: FormGroup;
   goHomeSection: Subscription;
+  @ViewChild("howWeWorkMob") MyProp: ElementRef;
   constructor(private formBuilder: FormBuilder, private language: LanguageService, public AngularFireAnalytics: AngularFireAnalytics, private router: Router, public appComponent: AppComponent, private services: Service, private loadingScreenService: LoadingScreenService, private global: GlobalService, public dialog: MatDialog) {
     this.AngularFireAnalytics.setCurrentScreen("Home");
     this.AngularFireAnalytics.logEvent("Home-Screenview");
@@ -48,8 +49,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.goHomeSection = this.global.goHomeSection.subscribe((index:any) => {
-      alert(index);
-      this.goToId1(index);
+      if(index==0){
+        var el = document.getElementById('howWeWorkMob');
+        el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+      }
     });
     let imgBan = [
       {

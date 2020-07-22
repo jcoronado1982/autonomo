@@ -28,7 +28,6 @@ export class OurProjectsComponent implements OnInit {
   goToId1(i) {
     if (i == 0) {
       this.global.goHomeSection.next(0);
-      this.router.navigate(['home']);
     }
     if (i == 1) {
       var el = document.getElementById('services');
