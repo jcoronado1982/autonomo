@@ -145,6 +145,11 @@
             "city": "México",
             "address": "Mexico City",
             "phone":"+521557367577"
+          },
+          {
+            "city": "Chile",
+            "address": "Santiago",
+            "phone":"+521557367577"
           }
         ]
       },
@@ -318,6 +323,11 @@
           {
             "city": "México",
             "address": "Mexico City",
+            "phone":"+521557367577"
+          },
+          {
+            "city": "Chile",
+            "address": "Santiago",
             "phone":"+521557367577"
           }
         ]
