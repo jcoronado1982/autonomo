@@ -29,8 +29,12 @@ export class OurServicesNewComponent implements OnInit {
     });
   }
   goToId1(i) {
-    if (i == 0) {
-      this.global.goHomeSection.next(0);
+    //this.global.goHomeSection.next(i);
+    sessionStorage.setItem("idSelected",i);
+    this.router.navigate(['home']);
+    /*if (i == 0) {
+      sessionStorage.setItem("optionSelected",i);
+      
     }
     if (i == 1) {
       var el = document.getElementById('services');
@@ -47,7 +51,7 @@ export class OurServicesNewComponent implements OnInit {
     if (i == 4) {
       var el = document.getElementById('contactUs');
       el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
-    }
+    }*/
   }
   backHome() {
     this.router.navigate(['home']);

@@ -34,13 +34,13 @@ import { LanguageService } from '../language.service';
   ]
 })
 export class HomeComponent implements OnInit {
+  goHomeSection: Subscription;
   public prodList = [];
   public prodList2 = [];
   public slideIcons: boolean = false;
   public menuMobile: boolean = false;
+  public elementAux = sessionStorage.getItem("idSelected");
   orderForm: FormGroup;
-  goHomeSection: Subscription;
-  @ViewChild("howWeWorkMob") MyProp: ElementRef;
   constructor(private formBuilder: FormBuilder, private language: LanguageService, public AngularFireAnalytics: AngularFireAnalytics, private router: Router, public appComponent: AppComponent, private services: Service, private loadingScreenService: LoadingScreenService, private global: GlobalService, public dialog: MatDialog) {
     this.AngularFireAnalytics.setCurrentScreen("Home");
     this.AngularFireAnalytics.logEvent("Home-Screenview");
@@ -48,12 +48,13 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.goHomeSection = this.global.goHomeSection.subscribe((index:any) => {
-      if(index==0){
-        var el = document.getElementById('howWeWorkMob');
-        el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
-      }
-    });
+    if(this.elementAux!=null){
+      this.goToId1(this.elementAux);
+    } 
+    else {
+      window.scroll(0, 0);
+    }
+    sessionStorage.setItem("idSelected",null);
     let imgBan = [
       {
         name: "KOTLIN",
