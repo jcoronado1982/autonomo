@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit {
           this.goToId1(4);
           break;
         case 1:
-          this.goToId1(2);
+          this.goToId1(4);
           break;
         case 2:
           let el1 = document.getElementById('aboutUs');
