@@ -5,8 +5,9 @@
     </div>
     <div class="menuAuto">
       <div class="webMenu">
-        <div class="aboutUsBoxMenu"
-          *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
+        <div class="aboutUsBoxMenu" *ngFor="let menuItem of this.language.content.menu ; let i = index"
+        (click)="this.goToId1(i)">
+          {{menuItem.text}}</div>
       </div>
       <div class="mobileMenu">
         <div>
@@ -42,7 +43,7 @@
     <div class="descSer">
       <div class="titleService">{{this.language.content.servicesTitleA}}</div>
       <div class="serviceTitleBlue">{{this.language.content.services[2].title}}</div>
-      <div class="descriptionOfService"  [innerHTML]="this.language.content.servicesDescription[2].description"></div>
+      <div class="descriptionOfService" [innerHTML]="this.language.content.servicesDescription[2].description"></div>
     </div>
   </div>
   <div class="serviceComp paddingEmpty" *ngIf="this.idService==4">
@@ -52,7 +53,7 @@
     <div class="descSer">
       <div class="titleService">{{this.language.content.servicesTitleA}}</div>
       <div class="serviceTitleBlue">{{this.language.content.services[3].title}}</div>
-      <div class="descriptionOfService"  [innerHTML]="this.language.content.servicesDescription[3].description"></div>
+      <div class="descriptionOfService" [innerHTML]="this.language.content.servicesDescription[3].description"></div>
     </div>
   </div>
   <div class="serviceComp paddingEmpty" *ngIf="this.idService==5">

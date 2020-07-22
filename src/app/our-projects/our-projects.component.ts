@@ -25,6 +25,28 @@ export class OurProjectsComponent implements OnInit {
       projectDescription: ['', Validators.required]
     });
   }
+  goToId1(i) {
+    if (i == 0) {
+      this.global.goHomeSection.next(0);
+      this.router.navigate(['home']);
+    }
+    if (i == 1) {
+      var el = document.getElementById('services');
+      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
+    }
+    if (i == 2) {
+      var el = document.getElementById('howWeWork');
+      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
+    }
+    if (i == 3) {
+      var el = document.getElementById('projects');
+      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
+    }
+    if (i == 4) {
+      var el = document.getElementById('contactUs');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+  }
   backHome() {
     this.router.navigate(['home']);
   }

@@ -39,6 +39,7 @@ export class HomeComponent implements OnInit {
   public slideIcons: boolean = false;
   public menuMobile: boolean = false;
   orderForm: FormGroup;
+  goHomeSection: Subscription;
   constructor(private formBuilder: FormBuilder, private language: LanguageService, public AngularFireAnalytics: AngularFireAnalytics, private router: Router, public appComponent: AppComponent, private services: Service, private loadingScreenService: LoadingScreenService, private global: GlobalService, public dialog: MatDialog) {
     this.AngularFireAnalytics.setCurrentScreen("Home");
     this.AngularFireAnalytics.logEvent("Home-Screenview");
@@ -46,6 +47,10 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.goHomeSection = this.global.goHomeSection.subscribe((index:any) => {
+      alert(index);
+      this.goToId1(index);
+    });
     let imgBan = [
       {
         name: "KOTLIN",

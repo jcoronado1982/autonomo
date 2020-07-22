@@ -5,7 +5,8 @@
         </div>
         <div class="menuAuto">
             <div class="webMenu">
-                <div class="aboutUsBoxMenu" *ngFor="let menuItem of this.language.content.menu ; let i = index">
+                <div class="aboutUsBoxMenu" *ngFor="let menuItem of this.language.content.menu ; let i = index"
+                (click)="this.goToId1(i)">
                     {{menuItem.text}}</div>
             </div>
             <div class="mobileMenu">
