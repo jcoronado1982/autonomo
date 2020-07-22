@@ -57,6 +57,7 @@ export class OurServicesNewComponent implements OnInit {
     }
   }
   clickHereInfra(){
+    window.scroll(0,0);
     this.idService = 6;
   }
   backHome() {
