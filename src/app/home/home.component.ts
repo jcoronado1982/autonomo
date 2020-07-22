@@ -225,8 +225,11 @@ export class HomeComponent implements OnInit {
       el.scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
     }
     else if (i == 1) {
-      var el = document.getElementById('services');
-      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
+      window.scroll({
+        top: 1550,
+        left: 100,
+        behavior: 'smooth'
+      });
     }
     else if (i == 2) {
       var el = document.getElementById('howWeWork');
