@@ -1,6 +1,6 @@
 .containerAutonomoHome
     display: grid
-    grid-template: 100px 565px 170px 655px auto auto 515px 610px 285px/100%
+    grid-template: 100px 565px 170px 655px auto 0px auto 0px 515px 610px 285px/100%
 .boldTxt
     font-weight: bold
 .headerAutonomohome
@@ -15,6 +15,8 @@
     width: 195px
 .logoAuto
     padding-left: 50px
+.menuAuto
+    padding-right: 50px
 .webMenu
     display: grid
     grid-template: auto/ repeat(5, 1fr)
@@ -79,6 +81,7 @@
     height: 50px
     background: #33CFC6
     border-radius: 5px
+    cursor: pointer
 .txtButtonStart
     font-family: Roboto
     font-style: normal
@@ -211,7 +214,7 @@
     grid-template: auto auto auto / 100%
     padding: 0px 50px
 .ourServtitle
-    padding-top: 85px
+    margin-top: 85px
     font-family: Roboto
     font-style: normal
     font-weight: bold
@@ -298,6 +301,10 @@
 .imgbaseMethod
     width: 260px
     height: 250px
+.howWeSpac, .projectSpac
+    position: relative
+    top: -120px
+    bottom: 0%     
 .imageMeth
     padding: 75px 0px 120px 0px
 .howWeTitle
@@ -312,7 +319,6 @@
 .howWeBigTitle
     margin-top: 5px
     width: 100%
-    max-width: 707px
     font-family: Continuum Medium
     font-style: normal
     font-weight: normal
@@ -322,7 +328,6 @@
 .howWeDescritpion
     margin-top: 30px
     width: 100%
-    max-width: 840px
     font-family: Roboto
     font-style: normal
     font-weight: bold
@@ -373,6 +378,7 @@
     background: #33CFC6
     border-radius: 5px
     margin-top: 45px
+    cursor: pointer
 .startProjectsTxtButton
     font-family: Roboto
     font-style: normal
@@ -505,13 +511,14 @@
     grid-column: 3
     width: 100%
     background: #FFFFFF
+    color: #757575
     border: 1px solid #ffffff
     border-radius: 5px
     font-family: Roboto
     font-style: normal
     font-weight: normal
     font-size: 14px
-    line-height: 16px
+    line-height: 1.5
     padding: 15px
 .descriptionForWrite
     margin-top: 35px
@@ -566,6 +573,7 @@
     background: #33CFC6
     border-radius: 5px
     float: right
+    cursor: pointer
 .extend5
     display: none
 .mobBox
@@ -612,7 +620,7 @@
         grid-gap: 10%
         padding-bottom: 130px
     .containerAutonomoHome
-        grid-template: 100px 565px 170px 655px auto auto auto 610px 285px/100%
+        grid-template: 100px 565px 170px 655px auto 0px auto 0px auto 610px 285px/100%
 @media only screen and (max-width: 1045px)
     .headerAutonomohome
         grid-template: auto/30% 70%
@@ -620,7 +628,7 @@
     .webMenu
         font-size: 16px
     .containerAutonomoHome
-        grid-template: 100px 565px 170px 905px auto auto auto 610px 285px/100%
+        grid-template: 100px 565px 170px 905px auto 0px auto 0px auto 610px 285px/100%
     .contactBox
         grid-template: auto/33% 1fr
     .itempb
@@ -655,6 +663,7 @@
         margin-top: 50px
         background: #33CFC6
         border-radius: 5px
+        cursor: pointer
     .buttonWorkMob1
         width: 240px
         height: 50px
@@ -662,6 +671,7 @@
         margin: 50px auto 40px auto
         background: #33CFC6
         border-radius: 5px
+        cursor: pointer
     .ourWorkImgs
         padding-right: 20px
         padding-top: 40px
@@ -793,7 +803,7 @@
     .webMenu
         display: none
     .containerAutonomoHome
-        grid-template: 65px auto 105px 1100px auto auto auto auto 200px/100%
+        grid-template: 65px auto 105px 1100px auto 0px auto 0px auto auto 200px/100%
     .headerAutonomohome
         grid-template: auto/80% 20%
         border: 1px solid #0E8ECE
@@ -835,7 +845,6 @@
         font-size: 36px
         line-height: 45px
     .servProvidesDesc
-        max-width: 330px
         text-align: left
         font-size: 36px
         line-height: 45px

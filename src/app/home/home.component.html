@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="menuMobileStyl" *ngIf="this.menuMobile==true" [@EnterLeave]>
-      <div class="aboutUsBoxMenu suportMob" (click)="this.goToId1(i)"
+      <div class="aboutUsBoxMenu suportMob" (click)="this.goToIdM(i)"
         *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
     </div>
   </div>
@@ -27,7 +27,7 @@
       <div class="weAnswer">{{this.language.content.titleA}}</div>
       <div class="titleAutoBusi">{{this.language.content.titleB}}</div>
       <div class="weDoBusi">{{this.language.content.titleC}}</div>
-      <div class="buttonStart">
+      <div class="buttonStart" (click)="this.seeDetails()">
         <div class="txtButtonStart">
           {{this.language.content.button}}
         </div>
@@ -82,9 +82,9 @@
       </div>
     </div>
   </div>
-  <div class="providesBox" id="services">
+  <div class="providesBox">
     <div class="provdesTitle">
-      <div class="ourServtitle">{{this.language.content.servicesTitleA}}</div>
+      <div class="ourServtitle" id="services">{{this.language.content.servicesTitleA}}</div>
       <div class="servProvidesDesc">{{this.language.content.servicesTitleB}}</div>
     </div>
     <!--Inicio resolución minima 1920px-->
@@ -149,7 +149,7 @@
           <div class="descTitlePrBox">{{service.title}}</div>
           <div class="contentdescTitlePrBox">{{service.text}}</div>
         </div>
-        <div class="rightSignal" (click)="this.gotoId(i+1)">
+        <div class="rightSignal" (click)="this.gotoId(i+6)">
           <div class="rightSig">
             <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
           </div>
@@ -166,7 +166,7 @@
           <div class="descTitlePrBox">{{service.title}}</div>
           <div class="contentdescTitlePrBox">{{service.text}}</div>
         </div>
-        <div class="rightSignal" (click)="this.gotoId(i+1)">
+        <div class="rightSignal" (click)="this.gotoId(i+5)">
           <div class="rightSig">
             <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
           </div>
@@ -183,7 +183,7 @@
           <div class="descTitlePrBox">{{service.title}}</div>
           <div class="contentdescTitlePrBox">{{service.text}}</div>
         </div>
-        <div class="rightSignal" (click)="this.gotoId(i+1)">
+        <div class="rightSignal" (click)="this.gotoId(i+7)">
           <div class="rightSig">
             <img src="../../assets/images/autonomoNewPage/rightFlecha.png">
           </div>
@@ -192,7 +192,8 @@
     </div>
     <!--Fin resolución maxima 1350px-->
   </div>
-  <div class="our-method" id="howWeWork">
+  <div class="howWeSpac" id="howWeWork"></div>
+  <div class="our-method" id="howWeWorkMob">
     <div class="imageMeth">
       <img class="imgbaseMethod" src="../../assets/images/autonomoNewPage/scrumimg.png">
     </div>
@@ -204,13 +205,14 @@
         {{this.language.content.howWeWork.textB}}</div>
     </div>
   </div>
-  <div class="ourWork" id="projects">
+  <div class="projectSpac" id="projects"></div>
+  <div class="ourWork" id="projectsMob">
     <div class="ourWorkDesc">
       <div class="projectsOurW">{{this.language.content.projects.titleA}}</div>
       <div class="ourWorkTitle">{{this.language.content.projects.titleB}}</div>
       <div class="ourWorkDescription">{{this.language.content.projects.text}}
       </div>
-      <div class="buttonWork">
+      <div class="buttonWork" (click)="this.gotoOurP()">
         <div class="startProjectsTxtButton">
           {{this.language.content.projects.button}}
         </div>
@@ -238,7 +240,7 @@
         </div>
       </div>
     </div>
-    <div class="buttonWorkMob1">
+    <div class="buttonWorkMob1" (click)="this.gotoOurP()">
       <div class="startProjectsTxtButton">
         {{this.language.content.projects.button}}
       </div>
@@ -251,6 +253,7 @@
       <div *ngFor="let address of this.language.content.contact.left.addresses; index as i;">
         <div class="city1">{{address.city}}</div>
         <div class="address1">{{address.address}}</div>
+        <div class="address1">{{address.phone}}</div>
         <div class="lineSep"></div>
       </div>
     </div>
@@ -265,10 +268,10 @@
             required formControlName="emailClient" id="emailClient">
           <select class="selectBox" required formControlName="projectType" id="projectType">
             <option disabled value="">{{this.language.content.contact.right.placeholderC}}</option>
-            <option value="pw">Web Development</option>
-            <option value="am">Mobile App</option>
-            <option value="in">Infrastructure</option>
-            <option value="bi">Business intelligence</option>
+            <option value="pw">{{this.language.content.contact.right.placeholderC1}}</option>
+            <option value="am">{{this.language.content.contact.right.placeholderC2}}</option>
+            <option value="in">{{this.language.content.contact.right.placeholderC3}}</option>
+            <option value="bi">{{this.language.content.contact.right.placeholderC4}}</option>
           </select>
         </div>
         <textarea class="descriptionForWrite" placeholder="{{this.language.content.contact.right.placeholderD}}"
@@ -279,9 +282,9 @@
           {{this.language.content.contact.right.button}}
         </div>
       </div>
-      <div class="buttonWorkMob">
+      <div class="buttonWorkMob" (click)="this.sentForm()">
         <div class="startProjectsTxtButton">
-          See all our projects
+          {{this.language.content.contact.right.button}}
         </div>
       </div>
     </div>
@@ -291,9 +294,9 @@
       <img width="100%" class="as-logo-princ centeringF" src="../../assets/images/white.png">
     </div>
     <div class="opcF">
-      <div class="itemFC" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu">
+      <div class="itemFC" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu ; let i = index">
         {{menuItem.text}}</div>
     </div>
-    <div class="copyF">© 2020 Autonomo System - All rights reserved.</div>
+    <div class="copyF">{{this.language.content.copyrightText}}</div>
   </div>
 </div>

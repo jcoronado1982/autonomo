@@ -1,15 +1,12 @@
 <div class="ourservicesContainer">
-  <div class="headerAutonomohome">
-    <div class="logoAuto" (click)="this.backHome()">
+  <div class="headerAutonomohome" (click)="this.backHome()">
+    <div class="logoAuto">
       <img width="100%" class="as-logo-princ" src="../../assets/images/white.png">
     </div>
     <div class="menuAuto">
       <div class="webMenu">
-        <div class="aboutUsBoxMenu">About Us</div>
-        <div class="servicesBoxMenu">Services</div>
-        <div class="howWeWorkBoxMenu">How we work</div>
-        <div class="projectsBoxMenu">Projects</div>
-        <div class="contactBoxMenu">Contact</div>
+        <div class="aboutUsBoxMenu"
+          *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
       </div>
       <div class="mobileMenu">
         <div>
@@ -18,54 +15,24 @@
       </div>
     </div>
   </div>
-  <div class="serviceComp paddingEmpty" *ngIf="this.idService==1" >
+  <div class="serviceComp paddingEmpty" *ngIf="this.idService==1">
     <div class="imgSer">
       <img class="adjustIcon" src="../../assets/images/autonomoNewPage/service01.png">
     </div>
     <div class="descSer">
-      <div class="titleService">SERVICE</div>
-      <div class="serviceTitleBlue">Mobile App Development</div>
-      <div class="descriptionOfService">
-        We offer web solutions for companies, creation of professional websites, for mobile devices and
-        computers, according to your budget, with support and improvement plans as its development passes over
-        time.
-        <br><br>
-        Designs updated to market trends in 2020
-        Web pages with high response speed
-        Available for all kinds of browsers such as, Google chorme, mozila Firefox, safari, and others.
-        Support and warranty for each product
-        Developments for mobile web users and applications for the AppStore and PlayStore
-        <br><br>
-        Web developments
-        We develop web environments in Angular 9 where your applications will look spectacular. Due to being a
-        cutting-edge framework, this also allows it high support for updates to the latest on the market.
-        <br><br>
-        Advice on hosting choice
-        Web solutions management
-        Integration with existing systems in your company
-      </div>
+      <div class="titleService">{{this.language.content.servicesTitleA}}</div>
+      <div class="serviceTitleBlue">{{this.language.content.services[0].title}}</div>
+      <div class="descriptionOfService" [innerHTML]="this.language.content.servicesDescription[0].description"></div>
     </div>
   </div>
-  <div class="serviceComp paddingEmpty" *ngIf="this.idService==2" >
+  <div class="serviceComp paddingEmpty" *ngIf="this.idService==2">
     <div class="imgSer">
       <img class="adjustIcon" src="../../assets/images/autonomoNewPage/service02.png">
     </div>
     <div class="descSer">
-      <div class="titleService">SERVICE</div>
-      <div class="serviceTitleBlue">Cloud Storage</div>
-      <div class="descriptionOfService">
-        We manage platforms like Google Cloud and Amazon Web Service, forget about local infrastructure and migrate to cloud services.
-        <br><br>
-        Benefits
-        <ul>
-            <li>Costs per use: Bill the expense according to the growth of your business.</li>
-            <li>Performance: We manage your resources to improve performance on high flow days and level off for standard flow days thereby reducing overhead and offering a stable user on your system.</li>
-            <li>State-of-the-art security: your applications are on the most reliable platforms in the world with periodic security updates and certified worldwide.</li>
-            <li>Live Migration: Don't let your web application go offline at any time, your application will be updated repaired in both software and hardware without the need to stop your site.</li>
-            <li>Continuous expansion: your application can be seen around the world thanks to the implementation of new data centers managed by Google Cloud, your user can have quick access regardless of their region.</li>
-            <li>Security backups: Your system will be in less than 2 regions of the world, thanks to this it will be safe and online against any catastrophe.</li>
-        </ul>
-      </div>
+      <div class="titleService">{{this.language.content.servicesTitleA}}</div>
+      <div class="serviceTitleBlue">{{this.language.content.services[1].title}}</div>
+      <div class="descriptionOfService" [innerHTML]="this.language.content.servicesDescription[1].description"></div>
     </div>
   </div>
   <div class="serviceComp paddingFull" *ngIf="this.idService==3">
@@ -73,41 +40,9 @@
       <img class="adjustIcon" src="../../assets/images/autonomoNewPage/service03.png">
     </div>
     <div class="descSer">
-      <div class="titleService">SERVICE</div>
-      <div class="serviceTitleBlue">Create a store to sell online</div>
-      <div class="descriptionOfService">
-        We develop your tailored online store with options for expansion. Our main objective is to develop pages
-        that grow according to your company.
-        <br><br>
-        We achieve this thanks to modular programming, with this you can choose relevant sections for the start,
-        development and post-delivery product of your application in order to reduce your initial investment
-        costs and grow at your own pace on this platform.
-        <br><br>
-        We generate solutions from the total design of your website as integration of additional services to
-        automate your processes.
-        <br><br>
-        • Cloud storage: We offer administration services for your domains and cloud storage.
-        <br><br>
-        • Total and functional deliveries of your product: We stand out for delivering satisfactory products to
-        the client which allow generating sales from the moment of publication without the need for extra
-        configurations, as a minimum we offer availability of 5 products of your choice for sale.
-        <br><br>
-        • Product publication system: We offer a space where you can modify, add or remove your products from
-        the stores, thanks to this you will have a flexible system that helps you to have a constant inventory
-        rotation according to your wishes.
-        <br><br>
-        • SSl Certificate: For no online store it is a secret that security is the most important thing, we
-        offer an SSL certificate so that you have the confidence that your products sell correctly and your
-        customer is satisfied with your purchase.
-        <br><br>
-        • No limit on the sale of products: Our solutions grow with you and the administration systems will be
-        available at all times if your page begins to grow in sales.
-        <br><br>
-        • Low cost:
-        One of the great challenges for all companies is to reduce development costs, for this we evaluate
-        alternatives regarding what is available with the user and their initial budget, in order to make it
-        accessible to them to obtain a website with us and to be able to grow from according to your needs.
-      </div>
+      <div class="titleService">{{this.language.content.servicesTitleA}}</div>
+      <div class="serviceTitleBlue">{{this.language.content.services[2].title}}</div>
+      <div class="descriptionOfService"  [innerHTML]="this.language.content.servicesDescription[2].description"></div>
     </div>
   </div>
   <div class="serviceComp paddingEmpty" *ngIf="this.idService==4">
@@ -115,57 +50,32 @@
       <img class="adjustIcon" src="../../assets/images/autonomoNewPage/service04.png">
     </div>
     <div class="descSer">
-      <div class="titleService">SERVICE</div>
-      <div class="serviceTitleBlue">Digital Marketing</div>
-      <div class="descriptionOfService">
-        Digital Marketing is the set of strategies aimed at promoting a brand on the internet. It differs from
-        traditional marketing in that it includes the use of channels and methods that allow the analysis of
-        results in real time.
-        <br>
-        We carry out platforms at the level of marketing campaigns, with the purpose that customers can obtain
-        offers from your business, based on the correct logic to create advertising campaigns.
-        <br><br>
-        It is a strategy with the objective of attracting new businesses, which develops a new brand identity.
-        Strategies where they are directed to the subject of communication and marketing of goods and services.
-        <br><br>
-        The advantage offered to the client is to be able to communicate directly to the public to arrive at an
-        appropriate moment when giving the publicity that is offered.
-        It can be related to organizations taking into account the cultural, psychological, geographic, and
-        legal factors that influence people when buying or selling a product or service.
-      </div>
+      <div class="titleService">{{this.language.content.servicesTitleA}}</div>
+      <div class="serviceTitleBlue">{{this.language.content.services[3].title}}</div>
+      <div class="descriptionOfService"  [innerHTML]="this.language.content.servicesDescription[3].description"></div>
     </div>
   </div>
-  <div class="serviceComp paddingEmpty" *ngIf="this.idService==5" >
+  <div class="serviceComp paddingEmpty" *ngIf="this.idService==5">
     <div class="imgSer">
       <img class="adjustIcon" src="../../assets/images/autonomoNewPage/service05.png">
     </div>
     <div class="descSer">
-      <div class="titleService">SERVICE</div>
-      <div class="serviceTitleBlue">Manage your projects</div>
-      <div class="descriptionOfService">
-        We offer our project management system, with this you can carry generate productivity reports, costs,
-        time analysis for each project you have at your disposal, carry out a complete control of your workers
-        and the activities that are carried out on a daily, biweekly basis. , monthly or annual in your company,
-        with this evaluate the effectiveness of each worker group or area of ​​your company and if you wish we
-        can also develop a specialized management system for your company which develops reports according to
-        your need, reduce your management times in your company and have the necessary information at hand so
-        that you can make decisions in real time according to the operation of your company.
+      <div class="titleService">{{this.language.content.servicesTitleA}}</div>
+      <div class="serviceTitleBlue">{{this.language.content.services[4].title}}</div>
+      <div class="descriptionOfService" [innerHTML]="this.language.content.servicesDescription[4].description">
+
       </div>
     </div>
-    <app-plans-box style="grid-column: 1 / span 2;  padding: 0px 50px 50px 50px;"></app-plans-box>
+    <app-plans-box class="plBoxItemComp"></app-plans-box>
   </div>
-  <div class="serviceComp paddingEmpty" *ngIf="this.idService==6" >
+  <div class="serviceComp paddingEmpty" *ngIf="this.idService==6">
     <div class="imgSer">
       <img class="adjustIcon" src="../../assets/images/autonomoNewPage/service06.png">
     </div>
     <div class="descSer">
-      <div class="titleService">SERVICE</div>
-      <div class="serviceTitleBlue">Infrastructure</div>
-      <div class="descriptionOfService">
-        We have a necessary infrastructure at the project level, using the latest versions of the servers with
-        the highest quality standards, guaranteeing the security of the data information and content provided on
-        the website.
-      </div>
+      <div class="titleService">{{this.language.content.servicesTitleA}}</div>
+      <div class="serviceTitleBlue">{{this.language.content.services[5].title}}</div>
+      <div class="descriptionOfService" [innerHTML]="this.language.content.servicesDescription[5].description"></div>
     </div>
   </div>
   <div class="serviceComp paddingFull" *ngIf="this.idService==7">
@@ -173,56 +83,44 @@
       <img class="adjustIcon" src="../../assets/images/autonomoNewPage/service07.png">
     </div>
     <div class="descSer">
-      <div class="titleService">SERVICE</div>
-      <div class="serviceTitleBlue">Business Intelligence</div>
-      <div class="descriptionOfService">
-        The business world is based on strategic decision making. What makes the difference between a successful
-        company and another that does not, is the correct and timely decision making. To be able to do this in
-        the best way, it is essential to have the adequate information and in time that supports all the
-        management of the company's operations in an agile and fast way.
-        <br><br>
-        Business intelligence (BI) is the set of processes, applications and technologies that facilitate the
-        quick and easy obtaining of data from business management systems for analysis and interpretation, so
-        that they can be used for data collection. decisions and become knowledge for those responsible for the
-        business.
-        <br><br>
-        It consists of a set of business management techniques that allow an organization to make business
-        decisions based on data, which have been treated by different tools to convert them into information.
-        <br><br>
-        Therefore in terms of their differences: while Big Data focuses on the capture, storage and processing
-        of data, Business Intelligence focuses on the analysis processes of such data to convert it into
-        information and make the appropriate business decisions.
-      </div>
+      <div class="titleService">{{this.language.content.servicesTitleA}}</div>
+      <div class="serviceTitleBlue">{{this.language.content.services[6].title}}</div>
+      <div class="descriptionOfService" [innerHTML]="this.language.content.servicesDescription[6].description"></div>
     </div>
   </div>
   <div class="contactBox" id="contactUs">
     <div class="contectAdress">
-      <div class="locationTitle">LOCATION</div>
-      <div class="adressesTitle">Addresses</div>
-      <div class="city1">Bogotá</div>
-      <div class="address1">Cra. 58 #117-50</div>
-      <div class="lineSep"></div>
-      <div class="city2">México</div>
-      <div class="address2">Calle 1</div>
+      <div class="locationTitle">{{this.language.content.contact.left.titleA}}</div>
+      <div class="adressesTitle">{{this.language.content.contact.left.titleB}}</div>
+      <div *ngFor="let address of this.language.content.contact.left.addresses; index as i;">
+        <div class="city1">{{address.city}}</div>
+        <div class="address1">{{address.address}}</div>
+        <div class="lineSep"></div>
+      </div>
     </div>
     <div class="sendus">
-      <div class="contTitle">CONTACT</div>
-      <div class="sendUsTitleContact">Send us a Message</div>
-      <div class="formBox">
-        <input class="nameBox" placeholder="Your name">
-        <input class="emailBox" placeholder="Your email">
-        <select class="selectBox">
-          <option disabled value="">Project Type</option>
-          <option value="pw">Web Development</option>
-          <option value="am">Mobile App</option>
-          <option value="in">Infrastructure</option>
-          <option value="bi">Business intelligence</option>
-        </select>
-      </div>
-      <textarea class="descriptionForWrite" placeholder="Write a brief description of your project."></textarea>
-      <div class="buttonSent">
+      <div class="contTitle">{{this.language.content.contact.right.titleA}}</div>
+      <div class="sendUsTitleContact">{{this.language.content.contact.right.titleA}}</div>
+      <form id="formAutonomo" [formGroup]="orderForm">
+        <div class="formBox">
+          <input type="text" class="nameBox" placeholder="{{this.language.content.contact.right.placeholderA}}" required
+            formControlName="nameClient" id="nameClient">
+          <input type="text" class="emailBox" placeholder="{{this.language.content.contact.right.placeholderB}}"
+            required formControlName="emailClient" id="emailClient">
+          <select class="selectBox" required formControlName="projectType" id="projectType">
+            <option disabled value="">{{this.language.content.contact.right.placeholderC}}</option>
+            <option value="pw">{{this.language.content.contact.right.placeholderC1}}</option>
+            <option value="am">{{this.language.content.contact.right.placeholderC2}}</option>
+            <option value="in">{{this.language.content.contact.right.placeholderC3}}</option>
+            <option value="bi">{{this.language.content.contact.right.placeholderC4}}</option>
+          </select>
+        </div>
+        <textarea class="descriptionForWrite" placeholder="{{this.language.content.contact.right.placeholderD}}"
+          required formControlName="projectDescription" id="projectDescription"></textarea>
+      </form>
+      <div class="buttonSent" (click)="this.sentForm()">
         <div class="startProjectsTxtButton">
-          Send message
+          {{this.language.content.contact.right.button}}
         </div>
       </div>
       <div class="buttonWorkMob">
@@ -237,12 +135,9 @@
       <img width="100%" class="as-logo-princ centeringF" src="../../assets/images/white.png">
     </div>
     <div class="opcF">
-      <div class="itemFC">About us</div>
-      <div class="itemFC">Services</div>
-      <div class="itemFC">How we work</div>
-      <div class="itemFC">Projects</div>
-      <div class="itemFC">Contact</div>
+      <div class="itemFC" (click)="this.goToId1(i)" *ngFor="let menuItem of this.language.content.menu ; let i = index">
+        {{menuItem.text}}</div>
     </div>
-    <div class="copyF">© 2020 Autonomo System - All rights reserved.</div>
+    <div class="copyF">{{this.language.content.copyrightText}}</div>
   </div>
 </div>
