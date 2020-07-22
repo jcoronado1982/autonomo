@@ -33,7 +33,11 @@
     <div class="descSer">
       <div class="titleService">{{this.language.content.servicesTitleA}}</div>
       <div class="serviceTitleBlue">{{this.language.content.services[1].title}}</div>
-      <div class="descriptionOfService" [innerHTML]="this.language.content.servicesDescription[1].description"></div>
+      <div class="descriptionOfService" [innerHTML]="this.language.content.servicesDescription[1].description" style="padding-bottom: 0px;">
+      </div>
+      <div class='descriptionOfService'>
+        Tambien ofrecemos servicios de infraestructura para más información haga click aquí
+      </div>
     </div>
   </div>
   <div class="serviceComp paddingFull" *ngIf="this.idService==3">
