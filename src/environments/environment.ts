@@ -4,14 +4,14 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: "AIzaSyAv79kkZMd99fryQC9SbQ5CxSyOOpe5b8Y",
-    authDomain: "autonomosystem-bc6dc.firebaseapp.com",
-    databaseURL: "https://autonomosystem-bc6dc.firebaseio.com",
-    projectId: "autonomosystem-bc6dc",
-    storageBucket: "autonomosystem-bc6dc.appspot.com",
-    messagingSenderId: "425027125317",
-    appId: "1:425027125317:web:38e95716d6096cc7d0232c",
-    measurementId: "G-CLMHLWMVRB"
+    apiKey: "AIzaSyC8eAiDV3fnroAppZWv2Xy2FjxyTdekHug",
+    authDomain: "autonomo-283423.firebaseapp.com",
+    databaseURL: "https://autonomo-283423.firebaseio.com",
+    projectId: "autonomo-283423",
+    storageBucket: "autonomo-283423.appspot.com",
+    messagingSenderId: "840562033646",
+    appId: "1:840562033646:web:611126de6846bb60d244ff",
+    measurementId: "G-SC4RJTLMN5"
   }
 };
 /*
