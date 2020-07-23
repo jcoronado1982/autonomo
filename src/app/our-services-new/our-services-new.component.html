@@ -99,7 +99,8 @@
       <div *ngFor="let address of this.language.content.contact.left.addresses; index as i;">
         <div class="city1">{{address.city}}</div>
         <div class="address1">{{address.address}}</div>
-        <div class="address1">{{address.phone}}</div>
+        <a class="address1 tabMob" href="tel:{{address.phone}}">{{address.phone}}</a>
+        <a class="address1 webLink" href="https://api.whatsapp.com/send?phone={{address.phone | slice: 1}}&text=mensaje" target="_blank">{{address.phone}}</a>
         <div class="lineSep"></div>
       </div>
     </div>
