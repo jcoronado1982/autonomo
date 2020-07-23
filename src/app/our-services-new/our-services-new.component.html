@@ -36,7 +36,7 @@
       <div class="descriptionOfService" [innerHTML]="this.language.content.servicesDescription[1].description" style="padding-bottom: 0px;">
       </div>
       <div class='descriptionOfService'>
-        Tambien ofrecemos servicios de infraestructura para más información haga <span class="linkDirect" (click)="this.clickHereInfra()">click aquí</span>
+        {{this.language.content.infoCloud}} <span class="linkDirect" (click)="this.clickHereInfra()">{{this.language.content.clickHTitle}}</span>
       </div>
     </div>
   </div>
