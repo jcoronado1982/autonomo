@@ -173,8 +173,8 @@
       "right": {
         "titleA": "CONTACTO",
         "titleB": "Envíenos un mensaje",
-        "placeholderA": "Tu nombre",
-        "placeholderB": "Su correo electrónico",
+        "placeholderA": "Nombre",
+        "placeholderB": "Correo Electrónico",
         "placeholderC": "Tipo de proyecto",
         "placeholderC1": "Desarrollo Web",
         "placeholderC2": "Aplicación Móvil",
@@ -369,8 +369,8 @@
       "right": {
         "titleA": "CONTACT",
         "titleB": "Send us a Message",
-        "placeholderA": "Your name",
-        "placeholderB": "Your email",
+        "placeholderA": "Name",
+        "placeholderB": "E-mail",
         "placeholderC": "Project Type",
         "placeholderC1": "Web Development",
         "placeholderC2": "Mobile App",
