@@ -12,12 +12,9 @@ export class LanguageService {
         var language=String(window.navigator.language);
         language=language.substring(0,2);
         if(language=="es"){
-          console.log("Español");
           this.content=data.es;
-          console.log(this.content);
         }
         else if(language=="en"){
-          console.log("Ingles");
           this.content=data.en;
         }
         else{
