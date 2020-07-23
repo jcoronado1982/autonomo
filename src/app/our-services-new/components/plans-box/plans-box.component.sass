@@ -626,12 +626,17 @@ ul.planItemsUl
         margin-top: 20px
     .tableChar
         display: grid
-        grid-template: 50px / 20% 80%
+        grid-template: repeat(13, auto) / 20% 80%
         font-family: Roboto
         font-weight: bold
     .aff
         color: #20bf0f
     .neg
         color: #f70c0c
-    .act1M
+    .act1M, .mng1M, .rpt1M, .gnt1M, .tsk1M, .usrP1M, .quot1M, .tck1M, .doc1M, .dedS1M, .spT1M, .nU1M, .nP1M
+        padding: 15px 0px
         text-align: center
+    .act2M, .mng2M, .rpt2M, .gnt2M, .tsk2M, .usrP2M, .quot2M, .tck2M, .doc2M, .dedS2M, .spT2M, .nU2M, .nP2M
+        padding: 15px 15px 15px 0px
+    .mng1M, .mng2M, .gnt1M, .gnt2M, .usrP1M, .usrP2M, .tck1M, .tck2M, .dedS1M, .dedS2M, .nU1M, .nU2M
+        background-color: #f2f2f2
