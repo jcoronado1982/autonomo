@@ -9,9 +9,7 @@
           *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
       </div>
       <div class="mobileMenu" (click)="this.showMenuMobile()">
-        <div>
           <img class="auxBtn" src="../../assets/images/autonomoNewPage/bar-icon2.png">
-        </div>
       </div>
     </div>
     <div class="menuMobileStyl" *ngIf="this.menuMobile==true" [@EnterLeave]>
@@ -65,12 +63,11 @@
     <div class="autonomoisProducts">
       <div class="itemPr">
         <img class="imgItemPr" src="../../assets/images/autonomoNewPage/autonomo-illu1.png">
-        <div class="descBoxprod">{{this.language.content.aboutUsItems[0]}}</div>
+        <div class="descBoxprod" [innerHtml]="this.language.content.aboutUsItems[0]"></div>
       </div>
       <div class="itemPr">
         <img class="imgItemPr" src="../../assets/images/autonomoNewPage/autonomo-illu2.png">
-        <div class="descBoxprod">{{this.language.content.aboutUsItems[1]}}
-        </div>
+        <div class="descBoxprod" [innerHtml]="this.language.content.aboutUsItems[1]"></div>
       </div>
       <div class="itemPr">
         <img class="imgItemPr" src="../../assets/images/autonomoNewPage/autonomo-illu3.png">
@@ -255,12 +252,12 @@
         <div class="address1">{{address.address}}</div>
         <a class="address1 tabMob" href="tel:{{address.phone}}">{{address.phone}}</a>
         <a class="address1 webLink" href="https://api.whatsapp.com/send?phone={{address.phone | slice: 1}}&text=mensaje"  target="_blank">{{address.phone}}</a>
-        <div class="lineSep"></div>
+        <div class="lineSep" *ngIf="i<2"></div>
       </div>
     </div>
     <div class="sendus">
       <div class="contTitle">{{this.language.content.contact.right.titleA}}</div>
-      <div class="sendUsTitleContact">{{this.language.content.contact.right.titleA}}</div>
+      <div class="sendUsTitleContact">{{this.language.content.contact.right.titleB}}</div>
       <form id="formAutonomo" [formGroup]="orderForm">
         <div class="formBox">
           <input type="text" class="nameBox" placeholder="{{this.language.content.contact.right.placeholderA}}" required

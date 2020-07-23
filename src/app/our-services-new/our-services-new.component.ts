@@ -3,14 +3,28 @@ import { Router } from '@angular/router';
 import { LanguageService } from '../language.service';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { GlobalService } from '../global.service';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 @Component({
   selector: 'app-our-services-new',
   templateUrl: './our-services-new.component.html',
   styleUrls: ['./our-services-new.component.sass'],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None,  
+  animations: [
+    trigger('EnterLeave', [
+      state('flyIn', style({ transform: 'translateX(0)' })),
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('0.5s 300ms ease-in')
+      ]),
+      transition(':leave', [
+        animate('0.3s ease-out', style({ transform: 'translateX(-100%)' }))
+      ])
+    ])
+  ]
 })
 export class OurServicesNewComponent implements OnInit {
   public idService;
+  public menuMobile: boolean = false;
   orderForm: FormGroup;
   constructor(private global: GlobalService, private formBuilder: FormBuilder, private language: LanguageService, private router: Router) {
     this.createForm();
@@ -28,7 +42,9 @@ export class OurServicesNewComponent implements OnInit {
       projectDescription: ['', Validators.required]
     });
   }
-
+  showMenuMobile() {
+    this.menuMobile = !this.menuMobile;
+  }
   goToId1(i) {
     if (i == 0) {
       this.global.goHomeSection.next(i);
@@ -51,6 +67,34 @@ export class OurServicesNewComponent implements OnInit {
       this.router.navigate(['home']);
     }
     else if (i == 4) {
+      this.global.goHomeSection.next(i);
+      sessionStorage.setItem("idSelected",i);
+      this.router.navigate(['home']);
+    }
+  }
+  goToIdM(i) {
+    this.menuMobile = !this.menuMobile;
+    if (i == 0) {
+      this.global.goHomeSection.next(i);
+      sessionStorage.setItem("idSelected",i);
+      this.router.navigate(['home']);
+    }
+    if (i == 1) {
+      this.global.goHomeSection.next(i);
+      sessionStorage.setItem("idSelected",i);
+      this.router.navigate(['home']);
+    }
+    if (i == 2) {
+      this.global.goHomeSection.next(i);
+      sessionStorage.setItem("idSelected",i);
+      this.router.navigate(['home']);
+    }
+    if (i == 3) {
+      this.global.goHomeSection.next(i);
+      sessionStorage.setItem("idSelected",i);
+      this.router.navigate(['home']);
+    }
+    if (i == 4) {
       this.global.goHomeSection.next(i);
       sessionStorage.setItem("idSelected",i);
       this.router.navigate(['home']);

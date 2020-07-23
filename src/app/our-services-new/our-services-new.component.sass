@@ -297,6 +297,25 @@ a
     .contactBox
         grid-template: auto/33% 1fr
 @media only screen and (max-width: 768px)
+    .menuMobileStyl
+        grid-column: 1 / span 2
+        background: linear-gradient(0deg, #0E8ECE, #0E8ECE)
+        align-items: center
+        justify-items: center
+        cursor: pointer
+        font-family: Roboto
+        font-style: normal
+        font-weight: bold
+        font-size: 18px
+        line-height: 20px
+        color: #FFFFFF
+        position: relative
+        height: 200px
+        display: grid
+    .suportMob
+        border-bottom: 2px solid #0E8ECE
+    .suportMob:hover
+        border-bottom: 2px solid #ffffff
     .plBoxItemComp
         grid-column: 1
         padding: 0px
@@ -307,19 +326,22 @@ a
         display: none
     .webMenu
         display: none
-    .mobileMenu, .buttonWorkMob
+    .buttonWorkMob
+        display: block
+    .mobileMenu
+        cursor: pointer
         display: block
     .ourservicesContainer
         grid-template: 65px auto auto 200px/ 100%
     .headerAutonomohome
-        grid-template: auto/80% 20%
+        grid-template: auto/1fr 50px
     .as-logo-princ
         width: 135px
     .logoAuto
         padding-left: 25px
     .auxBtn
-        width: 24px
-        height: 24px
+        width: 30px
+        height: 30px
         display: table
         margin: 15px auto
     .serviceComp

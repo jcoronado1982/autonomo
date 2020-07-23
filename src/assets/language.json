@@ -24,8 +24,8 @@
     "aboutUsTitleA": "SOBRE NOSOTROS",
     "aboutUsTitleB": "Autonomo es",
     "aboutUsItems": [
-      "Una empresa con más de 15 años de experiencia en la industria del desarrollo de software",
-      "Desarrollamos aplicaciones web y móviles personalizadas para satisfacer las necesidades de nuestros clientes",
+      "Una empresa con más de <b>15 años de experiencia</b> en la industria del desarrollo de software",
+      "Desarrollamos <b>aplicaciones web y móviles</b> personalizadas para satisfacer las necesidades de nuestros clientes",
       "Brindamos el mejor servicio creando soluciones tecnológicas para mejorar el crecimiento de su negocio",
       "Tenemos un equipo profesional de alto nivel en la industria de la tecnología"
     ],
@@ -117,7 +117,7 @@
         "description4":"Hasta 100 GB de almacenamiento",
         "description5":"Con soporte"
       },
-      "contractTitle": "Contratar",
+      "contractTitle": "Suscribir",
       "afirmative":"SI",
       "negative":"NO",
       "unlimitedTitle":"Ilimitado",
@@ -220,8 +220,8 @@
     "aboutUsTitleA": "ABOUT US",
     "aboutUsTitleB": "Autonomo is",
     "aboutUsItems": [
-      "A company with over 15 years of experience in the software development industry.",
-      "We develop customized Web and Mobile Applications to meet the needs of our clients.",
+      "A company with over <b>15 years of experience</b> in the software development industry.",
+      "We develop customized <b>Web and Mobile Applications</b> to meet the needs of our clients.",
       "We provide the best service by creating technological solutions to improve the growth of your business.",
       "We have a high-level professional team in the technology industry."
     ],
@@ -307,13 +307,13 @@
         "description3":"Up to 20GB of storage"
       },
       "descriptionBusiness":{
-        "description1":"Maximum 50 Userss",
+        "description1":"Maximum 50 Users",
         "description2":"Unlimited Projects",
         "description3":"In a dedicated environment",
         "description4":"Up to 100GB of storage",
-        "description5":"With Support"
+        "description5":"Supported"
       },
-      "contractTitle": "Contract",
+      "contractTitle": "Subscribe",
       "afirmative":"YES",
       "negative":"NO",
       "unlimitedTitle":"Unlimited",
