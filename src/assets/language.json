@@ -183,11 +183,11 @@
         "placeholderD": "Escriba una breve descripción de su proyecto",
         "button": "Enviar",
         "adviceTitle": "Aviso",
-        "nameAdvice": "Por favor escribir el nombre del cliente.",
-        "emailAdvice": "Por favor escribir el correo electrónico del cliente.",
-        "emailInvalidAdvice": "El correo electrónico tiene un formato inválido.",
-        "typeAdvice": "Por favor seleccione el tipo de proyecto.",
-        "descriptionAdvice": "Por favor describa el proyecto.",
+        "nameAdvice": "Por favor escriba el Nombre del Cliente.",
+        "emailAdvice": "Por favor escriba el Correo Electrónico del Cliente.",
+        "emailInvalidAdvice": "El Correo Electrónico tiene un formato inválido.",
+        "typeAdvice": "Por favor selecciona el Tipo de Proyecto.",
+        "descriptionAdvice": "Por favor describa el Proyecto.",
         "sentAdvice": "Gracias por enviar los datos."
       }
     },
@@ -379,11 +379,11 @@
         "placeholderD": "Write a brief description of your project.",
         "button": "Send",
         "adviceTitle": "Advice",
-        "nameAdvice": "Please write the client name.",
-        "emailAdvice": "Please write the client email.",
-        "emailInvalidAdvice": "The e-mail has an invalid format.",
-        "typeAdvice": "Please select the project type.",
-        "descriptionAdvice": "Please write the project description.",
+        "nameAdvice": "Please write the Client Name.",
+        "emailAdvice": "Please write the Client E-mail.",
+        "emailInvalidAdvice": "The E-mail has an invalid format.",
+        "typeAdvice": "Please select the Project Type.",
+        "descriptionAdvice": "Please write the Project description.",
         "sentAdvice": "Thanks for your sending."
       }
     },
