@@ -379,11 +379,11 @@
         "placeholderD": "Write a brief description of your project.",
         "button": "Send",
         "adviceTitle": "Advice",
-        "nameAdvice": "Please write the Name.",
-        "emailAdvice": "Please write the E-mail.",
+        "nameAdvice": "Please write your Name.",
+        "emailAdvice": "Please write your E-mail.",
         "emailInvalidAdvice": "The E-mail has an invalid format.",
-        "typeAdvice": "Please select the Project Type.",
-        "descriptionAdvice": "Please write the Project description.",
+        "typeAdvice": "Please select your Project Type.",
+        "descriptionAdvice": "Please write your Project description.",
         "sentAdvice": "Thanks for your sending."
       }
     },
