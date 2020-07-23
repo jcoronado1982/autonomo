@@ -100,9 +100,23 @@
       "basicCost":"Gratis",
       "plusCost":"$4.99/mes",
       "businessCost":"$29.99/mes",
-      "descriptionBasic":"<ul style='margin-top: 20px; line-height: 2;'><li>Maximo 3 usuarios</li> <li>Maximo 10 Proyectos</li> <li>Hasta 5 GB de almacenamiento.</li></ul>",
-      "descriptionPlus":"<ul style='margin-top: 20px; line-height: 2;'><li>Maximo 10 usuarios</li> <li>Proyectos ilimitados</li> <li>Hasta 20 GB de almacenamiento.</li></ul>",
-      "descriptionBusiness":"<ul style='margin-top: 20px; line-height: 2;'><li>Maximo 50 usuarios</li> <li>Proyectos ilimitados</li> <li>En un ambiente dedicado</li> <li>Hasta 100 GB de almacenamiento.</li> <li>Con soporte.</li></ul>",
+      "descriptionBasic":{
+        "description1":"Maximo 3 usuarios",
+        "description2":"Maximo 10 Proyectos",
+        "description3":"Hasta 5 GB de almacenamiento."
+      },
+      "descriptionPlus":{
+        "description1":"Maximo 10 usuarios",
+        "description2":"Proyectos ilimitados",
+        "description3":"Hasta 20 GB de almacenamiento."
+      },
+      "descriptionBusiness":{
+        "description1":"Maximo 50 usuarios",
+        "description2":"Proyectos ilimitados",
+        "description3":"En un ambiente dedicado",
+        "description4":"Hasta 100 GB de almacenamiento",
+        "description5":"Con soporte"
+      },
       "contractTitle": "Contratar",
       "afirmative":"SI",
       "negative":"NO",
@@ -281,9 +295,23 @@
       "basicCost":"Free",
       "plusCost":"$4.99/month",
       "businessCost":"$29.99/month",
-      "descriptionBasic":"<ul style='margin-top: 20px; line-height: 2;'><li>Maximum 3 Users</li><li>Maximum 10 Projects</li><li>Up to 5GB of storage</li></ul>",
-      "descriptionPlus":"<ul style='margin-top: 20px; line-height: 2;'><li>Maximum 20 Users</li><li>Unlimited Projects</li><li>Up to 20GB of storage</li></ul>",
-      "descriptionBusiness":"<ul style='margin-top: 20px; line-height: 2;'><li>Maximum 50 Users</li><li>Unlimited Projects</li><li>In a dedicated environment</li><li>Up to 100GB of storage</li><li>With Support</li></ul>",
+      "descriptionBasic":{
+        "description1":"Maximum 3 Users",
+        "description2":"Maximum 10 Projects",
+        "description3":"Up to 5GB of storage"
+      },
+      "descriptionPlus":{
+        "description1":"Maximum 10 Users",
+        "description2":"Unlimited Projects",
+        "description3":"Up to 20GB of storage"
+      },
+      "descriptionBusiness":{
+        "description1":"Maximum 50 Userss",
+        "description2":"Unlimited Projects",
+        "description3":"In a dedicated environment",
+        "description4":"Up to 100GB of storage",
+        "description5":"With Support"
+      },
       "contractTitle": "Contract",
       "afirmative":"YES",
       "negative":"NO",

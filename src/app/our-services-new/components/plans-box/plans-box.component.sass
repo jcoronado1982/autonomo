@@ -4,6 +4,8 @@
     grid-template-columns: 40% 20% 20% 20%
     grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
     padding-bottom: 30px
+.plansBoxMob
+    display: none
 .spacTitle
     margin-top: 20px
     font-family: Roboto
@@ -557,6 +559,8 @@ li
     font-family: Continuum Medium
     font-weight: bold
     color: #0E8ECE
+ul.planItemsUl
+    line-height: 1.5 !important
 @media only screen and (max-width: 1320px)
     .plansBox
         grid-template-rows: auto 60px 60px 60px 80px 60px 60px 80px 60px 60px 80px 60px 60px 60px 60px
@@ -573,24 +577,10 @@ li
     .plansBox
         grid-template-rows: auto 60px 60px 80px 80px 60px 60px 80px 80px 60px 80px 60px 60px 60px 60px
 @media only screen and (max-width: 991px)
+    .plan1, .plan2, .plan3
+        display: none
+@media only screen and (max-width: 768px)
     .plansBox
         display: none
-        grid-template-columns: 100%
-        grid-template-rows: auto auto auto
-    .plan1
-        grid-column: 1
-        grid-row: 1
-        margin-right: 0px
-        margin-bottom: 10px
-    .plan2
-        grid-column: 1
-        grid-row: 2
-        margin-right: 0px
-        margin-left: 0px
-        margin-bottom: 10px
-        margin-top: 10px
-    .plan3
-        grid-column: 1
-        grid-row: 3
-        margin-left: 0px
-        margin-top: 10px
+    .plansBoxMob
+        display: block
