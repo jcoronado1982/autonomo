@@ -4,7 +4,7 @@
     grid-template-columns: 40% 20% 20% 20%
     grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
     padding-bottom: 30px
-.plansBoxMob
+.plansBoxMob,.plansboxTab
     display: none
 .spacTitle
     margin-top: 20px
@@ -579,8 +579,32 @@ ul.planItemsUl
 @media only screen and (max-width: 991px)
     .plan1, .plan2, .plan3
         display: none
+    .plansboxTab
+        display: grid
+        grid-template: auto / repeat(3, 33.33%)
+    .planTab1, .planTab2, .planTab3
+        border: 1px solid #f2f2f2
+        margin-right: 10px
+        border-radius: 5px
+        padding: 10px
+        margin-bottom: 30px
+        height: 400px
+        display: grid
+        grid-template-columns: 100%
+        grid-template-rows: 50px 55px 210px auto
 @media only screen and (max-width: 768px)
-    .plansBox
+    .plansBox, .plansboxTab
         display: none
     .plansBoxMob
         display: block
+    .Planbuttons
+        display: grid
+        grid-template: auto / repeat(3, 33.33%)
+        font-family: Roboto
+        border: 1px solid #0E8ECE
+        border-radius: 5px
+    .basicPlanBtn, .plusPlanBtn, .businessPlanBtn
+        text-align: center
+        padding: 10px 0px
+    .basicPlanBtn, .plusPlanBtn
+        border-right: 1px solid #0E8ECE  
