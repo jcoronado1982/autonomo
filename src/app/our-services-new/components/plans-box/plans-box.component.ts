@@ -7,10 +7,13 @@ import { LanguageService } from 'src/app/language.service';
   styleUrls: ['./plans-box.component.sass']
 })
 export class PlansBoxComponent implements OnInit {
-
+  public selTab:number;
   constructor(private language: LanguageService) { }
 
   ngOnInit(): void {
+    this.selTab=1;
   }
-
+  statusChange(sw) {
+    this.selTab = sw;
+  }
 }
