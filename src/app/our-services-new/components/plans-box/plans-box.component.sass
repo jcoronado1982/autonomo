@@ -4,6 +4,8 @@
     grid-template-columns: 40% 20% 20% 20%
     grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
     padding-bottom: 30px
+.plansBoxMob,.plansboxTab
+    display: none
 .spacTitle
     margin-top: 20px
     font-family: Roboto
@@ -557,6 +559,8 @@ li
     font-family: Continuum Medium
     font-weight: bold
     color: #0E8ECE
+ul.planItemsUl
+    line-height: 1.5 !important
 @media only screen and (max-width: 1320px)
     .plansBox
         grid-template-rows: auto 60px 60px 60px 80px 60px 60px 80px 60px 60px 80px 60px 60px 60px 60px
@@ -573,24 +577,34 @@ li
     .plansBox
         grid-template-rows: auto 60px 60px 80px 80px 60px 60px 80px 80px 60px 80px 60px 60px 60px 60px
 @media only screen and (max-width: 991px)
-    .plansBox
+    .plan1, .plan2, .plan3
         display: none
+    .plansboxTab
+        display: grid
+        grid-template: auto / repeat(3, 33.33%)
+    .planTab1, .planTab2, .planTab3
+        border: 1px solid #f2f2f2
+        margin-right: 10px
+        border-radius: 5px
+        padding: 10px
+        margin-bottom: 30px
+        height: 400px
+        display: grid
         grid-template-columns: 100%
-        grid-template-rows: auto auto auto
-    .plan1
-        grid-column: 1
-        grid-row: 1
-        margin-right: 0px
-        margin-bottom: 10px
-    .plan2
-        grid-column: 1
-        grid-row: 2
-        margin-right: 0px
-        margin-left: 0px
-        margin-bottom: 10px
-        margin-top: 10px
-    .plan3
-        grid-column: 1
-        grid-row: 3
-        margin-left: 0px
-        margin-top: 10px
+        grid-template-rows: 50px 55px 210px auto
+@media only screen and (max-width: 768px)
+    .plansBox, .plansboxTab
+        display: none
+    .plansBoxMob
+        display: block
+    .Planbuttons
+        display: grid
+        grid-template: auto / repeat(3, 33.33%)
+        font-family: Roboto
+        border: 1px solid #0E8ECE
+        border-radius: 5px
+    .basicPlanBtn, .plusPlanBtn, .businessPlanBtn
+        text-align: center
+        padding: 10px 0px
+    .basicPlanBtn, .plusPlanBtn
+        border-right: 1px solid #0E8ECE  
