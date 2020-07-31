@@ -13,11 +13,11 @@
       </div>
     </div>
     <div class="languageOptionsBox">
-      <div class="borderLang">
-        <div class="esOff">
+      <div class="borderLang" (click)="this.changeLanguage()">
+        <div [ngClass]="{'on': this.changedLanguage == false, 'off': this.changedLanguage == true}">
           ES
         </div>
-        <div class="enOn">
+        <div  [ngClass]="{'on': this.changedLanguage == true, 'off': this.changedLanguage == false}">
           EN
         </div>
       </div>

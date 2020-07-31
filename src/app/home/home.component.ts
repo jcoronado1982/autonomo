@@ -39,7 +39,8 @@ export class HomeComponent implements OnInit {
   public prodList2 = [];
   public slideIcons: boolean = false;
   public menuMobile: boolean = false;
-  public elementAux:number = parseInt(sessionStorage.getItem("idSelected"));
+  public changedLanguage: boolean = false;
+  public elementAux: number = parseInt(sessionStorage.getItem("idSelected"));
   orderForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private language: LanguageService, public AngularFireAnalytics: AngularFireAnalytics, private router: Router, public appComponent: AppComponent, private services: Service, private loadingScreenService: LoadingScreenService, private global: GlobalService, public dialog: MatDialog) {
     this.AngularFireAnalytics.setCurrentScreen("Home");
@@ -201,6 +202,9 @@ export class HomeComponent implements OnInit {
       projectType: ['', Validators.required],
       projectDescription: ['', Validators.required]
     });
+  }
+  changeLanguage() {
+    this.changedLanguage = !this.changedLanguage;
   }
   changeIcon() {
     this.slideIcons = !this.slideIcons;
