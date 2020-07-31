@@ -13,6 +13,6 @@ export class AppComponent {
 
   }
   ngOnInit(){    
-    this.language.languagefile()
+    this.language.languagefile();
   }
 }

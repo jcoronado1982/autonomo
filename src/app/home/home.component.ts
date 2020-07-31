@@ -205,7 +205,12 @@ export class HomeComponent implements OnInit {
   }
   changeLanguage() {
     this.changedLanguage = !this.changedLanguage;
-
+    if(this.changedLanguage){
+      this.language.changeLanguage('en');
+    }
+    else{
+      this.language.changeLanguage('es');
+    }
   }
   changeIcon() {
     this.slideIcons = !this.slideIcons;

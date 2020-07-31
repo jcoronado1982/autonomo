@@ -23,7 +23,23 @@ export class LanguageService {
         else{
           this.content=data.en;
         }
-    });
-    
+    }); 
+  }
+
+  changeLanguage(language:string){
+    this.http.get("../../assets/language.json").subscribe((data:any)=>{
+      if(language=="es"){
+        this.content=data.es;
+      }
+      else if(language=="en"){
+        this.content=data.en;
+      }
+      else if(language=="pt"){
+        this.content=data.en;
+      }
+      else{
+        this.content=data.en;
+      }
+  }); 
   }
 }
