@@ -49,6 +49,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    if(this.language.languageNavigator()=='en'){
+      this.changedLanguage=true;
+    }
+    else{
+      this.changedLanguage=false;
+    }
     if (this.elementAux != null || this.elementAux != NaN) {
       switch (this.elementAux) {
         case 0:

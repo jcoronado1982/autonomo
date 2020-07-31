@@ -9,8 +9,7 @@ export class LanguageService {
   }
   languagefile(){
     this.http.get("../../assets/language.json").subscribe((data:any)=>{
-        var language=String(window.navigator.language);
-        language=language.substring(0,2);
+        let language=this.languageNavigator();
         if(language=="es"){
           this.content=data.es;
         }
@@ -40,6 +39,12 @@ export class LanguageService {
       else{
         this.content=data.en;
       }
-  }); 
+    }); 
+  }
+
+  languageNavigator(){
+    var language=String(window.navigator.language);
+    language=language.substring(0,2);
+    return language;
   }
 }

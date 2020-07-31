@@ -6,7 +6,6 @@ import {LoadingScreenService} from './services/loading-screen/loading-screen.ser
 import {Router} from '@angular/router';
 import { Subject } from "rxjs";
 import { LanguageService } from './language.service';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -17,9 +16,6 @@ export class GlobalService {
   private checker: boolean = false;
   public referredSubscriber;
   public referredAccount;
-
-
-  
   loadObserver= new Subject();
   loadObserver2= new Subject();
   goHomeSection = new Subject();
