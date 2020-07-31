@@ -4,6 +4,7 @@ import { GlobalService } from '../global.service';
 import { Subscription } from "rxjs";
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { LanguageService } from '../language.service';
 @Component({
   selector: 'app-autonomo',
   templateUrl: './autonomo.component.html',
@@ -26,13 +27,17 @@ export class AutonomoComponent implements OnInit {
   public prodList = [];
   public prodList2 = [];
   public slideIcons:boolean = false;
+  public content;
   goHomeSection: Subscription;
   orderForm: FormGroup;
-  constructor(private formBuilder: FormBuilder,private global:GlobalService, private router: Router, private route: ActivatedRoute) { 
+  constructor(private language:LanguageService,private formBuilder: FormBuilder,private global:GlobalService, private router: Router, private route: ActivatedRoute) { 
     this.createForm();
+    
   }
 
   ngOnInit() {
+    this.content=this.language.content;
+    console.log(this.content)
     this.selTab = 1;
     let imgBan = [
       {

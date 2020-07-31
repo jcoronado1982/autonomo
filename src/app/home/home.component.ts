@@ -1,12 +1,15 @@
-import { Component, OnInit ,ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { Service } from '../services';
 import { LoadingScreenService } from '../services/loading-screen/loading-screen.service';
 import { GlobalService } from '../global.service';
-import { MatDialog, MatDialogConfig,MAT_DIALOG_DATA  } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Subscription } from "rxjs";
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { AngularFireAnalytics } from '@angular/fire/analytics';
+import { LanguageService } from '../language.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -31,223 +34,266 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ]
 })
 export class HomeComponent implements OnInit {
+  goHomeSection: Subscription;
   public prodList = [];
   public prodList2 = [];
-  public slideIcons:boolean = false;
-  public menuMobile:boolean = false;
-  constructor(private router:Router,public appComponent:AppComponent,private services: Service,private loadingScreenService:LoadingScreenService,private global:GlobalService, public dialog:MatDialog){}
-  
+  public slideIcons: boolean = false;
+  public menuMobile: boolean = false;
+  public changedLanguage: boolean = false;
+  public elementAux: number = parseInt(sessionStorage.getItem("idSelected"));
+  orderForm: FormGroup;
+  constructor(private formBuilder: FormBuilder, private language: LanguageService, public AngularFireAnalytics: AngularFireAnalytics, private router: Router, public appComponent: AppComponent, private services: Service, private loadingScreenService: LoadingScreenService, private global: GlobalService, public dialog: MatDialog) {
+    this.AngularFireAnalytics.setCurrentScreen("Home");
+    this.AngularFireAnalytics.logEvent("Home-Screenview");
+    this.createForm();
+  }
+
   ngOnInit() {
-    this.languageDetection();
+    if (this.elementAux != null || this.elementAux != NaN) {
+      switch (this.elementAux) {
+        case 0:
+          window.scroll({
+            top: 555,
+            left: 100,
+            behavior: 'smooth'
+          });
+          break;
+        case 1:
+          window.scroll({
+            top: 1550,
+            left: 100,
+            behavior: 'smooth'
+          });
+          break;
+        case 2:
+          window.scroll({
+            top: 2500,
+            left: 100,
+            behavior: 'smooth'
+          });
+          break;
+        case 3:
+          window.scroll({
+            top: 2950,
+            left: 100,
+            behavior: 'smooth'
+          });
+          break;
+        case 4:
+          this.goToId1(2);
+          break;
+      }
+    }
+    else {
+      window.scroll(0, 0);
+    }
+    setTimeout(() => {
+      sessionStorage.removeItem("idSelected");
+    }, 10000);
     let imgBan = [
       {
         name: "KOTLIN",
         imgAdj: "../../../../assets/images/kotlin.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "PYTHON",
         imgAdj: "../../../../assets/images/pyLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "CSHARP",
         imgAdj: "../../../../assets/images/csharpLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "ANGULAR",
         imgAdj: "../../../../assets/images/angularLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "REACT",
         imgAdj: "../../../../assets/images/reactLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "SQL",
         imgAdj: "../../../../assets/images/sqlSLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
       },
       {
         name: "GCP",
         imgAdj: "../../../../assets/images/gcpLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
-      },      
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
+      },
       {
         name: "AWS",
         imgAdj: "../../../../assets/images/awsNewLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"65px 0px"
-      }      
-      
+        nameofclass: "py-icon",
+        paddingIcon: "65px 0px"
+      }
+
     ];
     this.prodList = imgBan;
-    let imgBan2 = [      
+    let imgBan2 = [
       {
         name: "PHP",
         imgAdj: "../../../../assets/images/phpLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
-      },{
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
+      }, {
         name: "CLOUD COMPUTING",
         imgAdj: "../../../../assets/images/cloudComputing.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
       },
       {
         name: "MYSQL",
         imgAdj: "../../../../assets/images/mysqlNewLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
       },
       {
         name: "JAVA",
         imgAdj: "../../../../assets/images/java.svg",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
       },
       {
         name: "ORACLE",
         imgAdj: "../../../../assets/images/oracleNewLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
-      },  
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
+      },
       {
         name: "POSTGRESQL",
         imgAdj: "../../../../assets/images/postgresql.svg",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
       },
       {
         name: "AZURE",
         imgAdj: "../../../../assets/images/azure.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
       },
       {
         name: "IONIC",
         imgAdj: "../../../../assets/images/ionicLogo.png",
-        nameofclass:"py-icon",
-        paddingIcon:"20px 0px"
-      }     
-      
+        nameofclass: "py-icon",
+        paddingIcon: "20px 0px"
+      }
+
     ];
     this.prodList2 = imgBan2;
-    setInterval(() => {this.changeIcon();}, 30000);
+    setInterval(() => { this.changeIcon(); }, 30000);
   }
-  changeIcon(){
-    this.slideIcons = !this.slideIcons; 
+  private createForm() {
+    this.orderForm = this.formBuilder.group({
+      nameClient: ['', Validators.required],
+      emailClient: ['', Validators.required],
+      projectType: ['', Validators.required],
+      projectDescription: ['', Validators.required]
+    });
   }
-  showMenuMobile(){
+  changeLanguage() {
+    this.changedLanguage = !this.changedLanguage;
+
+  }
+  changeIcon() {
+    this.slideIcons = !this.slideIcons;
+  }
+  showMenuMobile() {
     this.menuMobile = !this.menuMobile;
   }
-  gotoId(value){
-    localStorage.setItem("idItem",value);
+  gotoId(value) {
+    localStorage.setItem("idItem", value);
     this.router.navigate(['our-services']);
   }
-  goToId1(){
-    var el = document.getElementById('aboutUs');
-    el.scrollIntoView({behavior: "smooth", block: "end", inline: "end"});
+  gotoOurP() {
+    //this.router.navigate(['our-projects']);
   }
-  goToId2(){
-    var el = document.getElementById('services');
-    el.scrollIntoView({behavior: "smooth", block: "start", inline: "end"});
+  seeDetails() {
+    var el = document.getElementById('howWeWorkMob');
+    el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
   }
-  goToId3(){
-    var el = document.getElementById('howWeWork');
-    el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
-  }
-  goToId4(){
-    var el = document.getElementById('projects');
-    el.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
-  }
-  goToId5(){
-    var el = document.getElementById('contactUs');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
-  }
-  goToId1M(){
-    this.menuMobile = !this.menuMobile;
-    var el = document.getElementById('aboutUs');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
-  }
-  goToId2M(){
-    this.menuMobile = !this.menuMobile;
-    var el = document.getElementById('services');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
-  }
-  goToId3M(){
-    this.menuMobile = !this.menuMobile;
-    var el = document.getElementById('howWeWork');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
-  }
-  goToId4M(){
-    this.menuMobile = !this.menuMobile;
-    var el = document.getElementById('projects');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
-  }
-  goToId5M(){
-    this.menuMobile = !this.menuMobile;
-    var el = document.getElementById('contactUs');
-    el.scrollIntoView({behavior: "smooth", inline: "nearest"});
-  }
-  languageDetection(){
-    var language=String(window.navigator.language);
-    language=language.substring(0,2);
-    if(language=="es"){
-      console.log("Español");
+  goToId1(i) {
+    if (i == 0) {
+      var el = document.getElementById('aboutUs');
+      el.scrollIntoView({ behavior: "smooth", block: "end", inline: "end" });
     }
-    if(language=="en"){
-      console.log("Ingles");
+    else if (i == 1) {
+      window.scroll({
+        top: 1550,
+        left: 100,
+        behavior: 'smooth'
+      });
     }
-    /*
-    ar-SA Arabic Saudi Arabia
-    cs-CZ Czech Czech Republic
-    da-DK Danish Denmark
-    de-DE German Germany
-    el-GR Modern Greek Greece
-    en-AU English Australia
-    en-GB English United Kingdom
-    en-IE English Ireland
-    en-US English United States
-    en-ZA English South Africa
-    es-ES Spanish Spain
-    es-MX Spanish Mexico
-    fi-FI Finnish Finland
-    fr-CA French Canada
-    fr-FR French France
-    he-IL Hebrew Israel
-    hi-IN Hindi India
-    hu-HU Hungarian Hungary
-    id-ID Indonesian Indonesia
-    it-IT Italian Italy
-    ja-JP Japanese Japan
-    ko-KR Korean Republic of Korea
-    nl-BE Dutch Belgium
-    nl-NL Dutch Netherlands
-    no-NO Norwegian Norway
-    pl-PL Polish Poland
-    pt-BR Portuguese Brazil
-    pt-PT Portuguese Portugal
-    ro-RO Romanian Romania
-    ru-RU Russian Russian Federation
-    sk-SK Slovak Slovakia
-    sv-SE Swedish Sweden
-    th-TH Thai Thailand
-    tr-TR Turkish Turkey
-    zh-CN Chinese China
-    zh-HK Chinese Hong Kong
-    zh-TW Chinese Taiwan 
-    */
-    //  Si necesitas informacion --> https://github.com/libyal/libfwnt/wiki/Language-Code-identifiers
+    else if (i == 2) {
+      var el = document.getElementById('howWeWork');
+      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
+    }
+    else if (i == 3) {
+      var el = document.getElementById('projects');
+      el.scrollIntoView({ behavior: "smooth", block: "start", inline: "end" });
+    }
+    else if (i == 4) {
+      var el = document.getElementById('contactUs');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+
+  }
+  goToIdM(i) {
+    this.menuMobile = !this.menuMobile;
+    if (i == 0) {
+      var el = document.getElementById('aboutUs');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+    if (i == 1) {
+      var el = document.getElementById('services');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+    if (i == 2) {
+      var el = document.getElementById('howWeWorkMob');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+    if (i == 3) {
+      var el = document.getElementById('projectsMob');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+    if (i == 4) {
+      var el = document.getElementById('contactUs');
+      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    }
+  }
+  sentForm() {
+    if (this.orderForm.value.nameClient == '') {
+      this.global.notif(this.language.content.contact.right.nameAdvice);
+    }
+    else if (this.orderForm.value.emailClient == '') {
+      this.global.notif(this.language.content.contact.right.emailAdvice);
+    }
+    else if (this.global.validarEmail(this.orderForm.value.emailClient) == false) {
+      this.global.notif(this.language.content.contact.right.emailInvalidAdvice);
+    }
+    else if (this.orderForm.value.projectType == '') {
+      this.global.notif(this.language.content.contact.right.typeAdvice);
+    }
+    else if (this.orderForm.value.projectDescription == '') {
+      this.global.notif(this.language.content.contact.right.descriptionAdvice);
+    }
+    else {
+      this.global.notif(this.language.content.contact.right.sentAdvice);
+    }
+  }
+  resetForm() {
+    (<HTMLFormElement>document.getElementById("formAutonomo")).reset();
   }
 }
-

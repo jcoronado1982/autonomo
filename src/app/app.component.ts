@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import 'hammerjs';
 import { Router } from '@angular/router';
+import { LanguageService } from './language.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  constructor(private router:Router){
+  constructor(private router:Router,private language:LanguageService){
 
   }
-  ngOnInit(){
-    
-
+  ngOnInit(){    
+    this.language.languagefile()
   }
 }

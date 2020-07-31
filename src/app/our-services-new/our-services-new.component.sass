@@ -14,6 +14,8 @@
 .logoAuto
     padding-left: 50px
     cursor: pointer
+.menuAuto
+    padding-right: 20px
 .webMenu
     display: grid
     grid-template: auto/ repeat(5, 1fr)
@@ -62,12 +64,11 @@
 .descriptionOfService
     margin-top: 30px
     width: 100%
-    max-width: 904px
     font-family: Roboto
     font-style: normal
     font-weight: normal
     font-size: 14px
-    line-height: 21px
+    line-height: 1.5
     color: #363636
     padding-right: 50px
     padding-bottom: 50px
@@ -186,13 +187,14 @@
     grid-column: 3
     width: 100%
     background: #FFFFFF
+    color: #757575
     border: 1px solid #ffffff
     border-radius: 5px
     font-family: Roboto
     font-style: normal
     font-weight: normal
     font-size: 14px
-    line-height: 16px
+    line-height: 1.5
     padding: 15px
 .descriptionForWrite
     margin-top: 35px
@@ -254,6 +256,28 @@
     background: #33CFC6
     border-radius: 5px
     float: right
+    cursor: pointer
+.plBoxItemComp
+    grid-column: 1 / span 2
+    padding: 0px 50px 50px 50px
+.sepBottom
+    margin-bottom: 15px
+.boldTextSubtitle
+    font-weight: bold
+.linkDirect
+    cursor: pointer
+    font-weight: bold
+    color: #0E8ECE
+.linkDirect:hover
+    text-decoration: underline
+ul
+    line-height: 2.5
+.tabMob
+    display: none
+.webLink
+    display: block
+a
+    color: #ffffff !important
 @media only screen and (min-width: 1920px)
     .sendus
         background-position: 50%
@@ -264,11 +288,39 @@
     .headerAutonomohome
         grid-template: auto/30% 70%
 @media only screen and (max-width: 991px)
+    .tabMob
+        display: block
+    .webLink
+        display: none
     .webMenu
         font-size: 16px
     .contactBox
         grid-template: auto/33% 1fr
 @media only screen and (max-width: 768px)
+    ul
+        padding-inline-start: 15px
+    .menuMobileStyl
+        grid-column: 1 / span 2
+        background: linear-gradient(0deg, #0E8ECE, #0E8ECE)
+        align-items: center
+        justify-items: center
+        cursor: pointer
+        font-family: Roboto
+        font-style: normal
+        font-weight: bold
+        font-size: 18px
+        line-height: 20px
+        color: #FFFFFF
+        position: relative
+        height: 200px
+        display: grid
+    .suportMob
+        border-bottom: 2px solid #0E8ECE
+    .suportMob:hover
+        border-bottom: 2px solid #ffffff
+    .plBoxItemComp
+        grid-column: 1
+        padding: 0px
     .sendUsTitleContact, .adressesTitle, .serviceTitleBlue
         font-size: 36px
         line-height: 45px
@@ -276,21 +328,24 @@
         display: none
     .webMenu
         display: none
-    .mobileMenu, .buttonWorkMob
+    .buttonWorkMob
+        display: block
+    .mobileMenu
+        cursor: pointer
         display: block
     .ourservicesContainer
-        grid-template: 65px auto 950px 200px/ 100%
+        grid-template: 65px auto auto 200px/ 100%
     .headerAutonomohome
-        grid-template: auto/80% 20%
+        grid-template: auto/1fr 50px
     .as-logo-princ
         width: 135px
     .logoAuto
         padding-left: 25px
     .auxBtn
-        width: 20px
+        width: 25px
         height: 20px
         display: table
-        margin: 15px auto
+        margin: 20px auto
     .serviceComp
         grid-template: 170px auto/ 100%
         padding: 0px 25px
@@ -309,6 +364,7 @@
     .descriptionOfService
         margin-top: 10px
         padding-right: 0px
+        padding-bottom: 0px
         text-align: justify
     .contactBox
         grid-template: auto auto /100%
@@ -321,7 +377,7 @@
         background: #33CFC6
         border-radius: 5px
     .buttonWorkMob
-        margin-top:30px
+        margin-top: 30px
     .sendus
         grid-row: 1
         padding: 0px 25px
@@ -352,17 +408,16 @@
         justify-items: start
         font-size: 12px
         line-height: 14px
-        grid-template: 15px /repeat(5, auto)
+        grid-template: 15px /repeat(4, auto)
         padding: 0px 25px
         grid-gap: 15px 25px
     .copyF
         margin-top: 25px
-        margin-bottom: 30px
         margin-left: 25px
         text-align: left
 @media only screen and (max-width: 375px)
     .opcF
-        grid-template: 15px /repeat(4, auto)
+        grid-template: 15px /repeat(3, auto)
 @media only screen and (max-width: 320px)
     .sendUsTitleContact
         font-size: 30px

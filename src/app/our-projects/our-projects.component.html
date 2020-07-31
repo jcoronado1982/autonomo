@@ -1,21 +1,83 @@
-<div class="gridBox">
-    <div class="header">
-        <app-header></app-header>
-    </div>
-    <div class="content">
-        <div>
-            <div class="titleContent">Our Projects</div>
-            <div class="description">
-                Our projects have been carried out with the Angular 9 Framework with mainly international clients
-                applying our corresponding techniques and in addition to the creation of our platforms to guarantee
-                control of our clients.
+<div class="ourservicesContainer">
+    <div class="headerAutonomohome" (click)="this.backHome()">
+        <div class="logoAuto">
+            <img width="100%" class="as-logo-princ" src="../../assets/images/white.png">
+        </div>
+        <div class="menuAuto">
+            <div class="webMenu">
+                <div class="aboutUsBoxMenu" *ngFor="let menuItem of this.language.content.menu ; let i = index"
+                (click)="this.goToId1(i)">
+                    {{menuItem.text}}</div>
+            </div>
+            <div class="mobileMenu">
+                <div>
+                    <img class="auxBtn" src="../../assets/images/autonomoNewPage/bar-icon2.png">
+                </div>
             </div>
         </div>
-        <div style="position: relative; height: 350px;">
+    </div>
+    <div class="serviceComp">
+        <div class="serviceTitleBlue">{{this.language.content.ourProjectsTitle}}</div>
+        <div class="descriptionOfService">
+            {{this.language.content.ourProjectsDescription}}
+        </div>
+        <div class="carouselBox">
             <app-projects-carousel></app-projects-carousel>
         </div>
     </div>
-    <div class="foot">
-        <app-footer></app-footer>
+    <div class="contactBox" id="contactUs">
+        <div class="contectAdress">
+            <div class="locationTitle">{{this.language.content.contact.left.titleA}}</div>
+            <div class="adressesTitle">{{this.language.content.contact.left.titleB}}</div>
+            <div *ngFor="let address of this.language.content.contact.left.addresses; index as i;">
+                <div class="city1">{{address.city}}</div>
+                <div class="address1">{{address.address}}</div>
+                <div class="lineSep"></div>
+            </div>
+        </div>
+        <div class="sendus">
+            <div class="contTitle">{{this.language.content.contact.right.titleA}}</div>
+            <div class="sendUsTitleContact">{{this.language.content.contact.right.titleA}}</div>
+            <form id="formAutonomo" [formGroup]="orderForm">
+                <div class="formBox">
+                    <input type="text" class="nameBox"
+                        placeholder="{{this.language.content.contact.right.placeholderA}}" required
+                        formControlName="nameClient" id="nameClient">
+                    <input type="text" class="emailBox"
+                        placeholder="{{this.language.content.contact.right.placeholderB}}" required
+                        formControlName="emailClient" id="emailClient">
+                    <select class="selectBox" required formControlName="projectType" id="projectType">
+                        <option disabled value="">{{this.language.content.contact.right.placeholderC}}</option>
+                        <option value="pw">{{this.language.content.contact.right.placeholderC1}}</option>
+                        <option value="am">{{this.language.content.contact.right.placeholderC2}}</option>
+                        <option value="in">{{this.language.content.contact.right.placeholderC3}}</option>
+                        <option value="bi">{{this.language.content.contact.right.placeholderC4}}</option>
+                    </select>
+                </div>
+                <textarea class="descriptionForWrite" placeholder="{{this.language.content.contact.right.placeholderD}}"
+                    required formControlName="projectDescription" id="projectDescription"></textarea>
+            </form>
+            <div class="buttonSent" (click)="this.sentForm()">
+                <div class="startProjectsTxtButton">
+                    {{this.language.content.contact.right.button}}
+                </div>
+            </div>
+            <div class="buttonWorkMob">
+                <div class="startProjectsTxtButton">
+                    See all our projects
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerFinal">
+        <div class="logoF">
+            <img width="100%" class="as-logo-princ centeringF" src="../../assets/images/white.png">
+        </div>
+        <div class="opcF">
+            <div class="itemFC" (click)="this.goToId1(i)"
+                *ngFor="let menuItem of this.language.content.menu ; let i = index">
+                {{menuItem.text}}</div>
+        </div>
+        <div class="copyF">{{this.language.content.copyrightText}}</div>
     </div>
 </div>

@@ -1,0 +1,394 @@
+{
+  "es": {
+    "menu": [
+      {
+        "text": "Nosotros"
+      },
+      {
+        "text": "Servicios"
+      },
+      {
+        "text": "Metodología"
+      },
+      {
+        "text": "Proyectos"
+      },
+      {
+        "text": "Contactenos"
+      }
+    ],
+    "titleA": "SOMOS LA RESPUESTA",
+    "titleB": "Automatiza tu negocio",
+    "titleC": "Desarrolla aplicaciones e implementa tus procesos.",
+    "button": "Ver detalles",
+    "aboutUsTitleA": "SOBRE NOSOTROS",
+    "aboutUsTitleB": "Autonomo es",
+    "aboutUsItems": [
+      "Una empresa con más de <b>15 años de experiencia</b> en la industria del desarrollo de software",
+      "Desarrollamos <b>aplicaciones web y móviles</b> personalizadas para satisfacer las necesidades de nuestros clientes",
+      "Brindamos el mejor servicio creando soluciones tecnológicas para mejorar el crecimiento de su negocio",
+      "Tenemos un equipo profesional de alto nivel en la industria de la tecnología"
+    ],
+    "servicesTitleA": "SERVICIOS",
+    "servicesTitleB": "Nuestra empresa ofrece",
+    "services": [
+      {
+        "title": "Aplicaciones Web y Móviles",
+        "text": "Desarrollamos aplicaciones personalizadas e integraciones con aplicaciones existentes. Impulsa el crecimiento de su negocio.",
+        "src": "../../assets/images/autonomoNewPage/service01.png"
+      },
+      {
+        "title": "Cloud Hosting",
+        "text": "Microsoft Azure, Google Cloud y Amazon Web Services.",
+        "src": "../../assets/images/autonomoNewPage/service02.png"
+      },
+      {
+        "title": "Crea una Tienda en línea",
+        "text": "Tiendas personalizadas para que comience a vender en línea.",
+        "src": "../../assets/images/autonomoNewPage/service03.png"
+      },
+      {
+        "title": "Marketing Digital",
+        "text": "Sistema de creación de campaña digital a través de envío de Email masivo, Sms, Push y Programa de Referidos.",
+        "src": "../../assets/images/autonomoNewPage/service04.png"
+      },
+      {
+        "title": "Administra tus Proyectos",
+        "text": "Maneja tus proyectos, crea actividades, lleva el control de horas de tus recusos y visualiza el avance de tus proyecto en tiempo real.",
+        "src": "../../assets/images/autonomoNewPage/service05.png"
+      },
+      {
+        "title": "Infraestructura",
+        "text": "Hacemos análisis y licencias, adaptación de centros de datos, venta, instalación, configuración y migración de equipos.",
+        "src": "../../assets/images/autonomoNewPage/service06.png"
+      },
+      {
+        "title": "Inteligencia de negocios",
+        "text": "Aplica tecnicas asociadas a Big Data y construye el análisis de tu información.",
+        "src": "../../assets/images/autonomoNewPage/service07.png"
+      }
+    ],
+    "servicesDescription": [
+      {
+        "description":"<div class='sepBottom'>         Es el momento de ser mas ágil y adaptarse a los nuevo tiempos, desarrolla tus aplicaciones con nosotros, obtenga acceso desde cualquier parte del mundo y visualiza el avance del mismo en tiempo real.        </div>        <div class='sepBottom'>         Desarrollamos aplicaciones web y moviles, para empresas en el area de telecomunicaciones, seguros, laboratorios y afines.        </div>        <div class='sepBottom'>         Brindamos asesoría y análisis según las necesidades del cliente. Gracias a nuestra experiencia y capacitación constante de nuestros equipos de trabajo, te ofrecemos distintas opciones de desarrollo y te garantizamos un buen rendimiento, flexibilidad, escalabilidad y fiabilidad para organizaciones de mediano y gran tamaño.         </div>        <div class='sepBottom'>         Estos son algunas de las tecnologias que trabajamos:       </div>        <ul>        <li>Angular</li>        <li>React</li>        <li>Ionic</li>        <li>C#</li>        <li>PHP</li>        <li>Sql server</li>        <li>Oracle</li>        <li>Google cloud</li>        <li>Amazon web service</li>        <li>Azure</li>        </ul>"
+      },
+      {
+        "description":"<div class='sepBottom'>        Trabajamos con las siguientes plataformas Google Cloud, Amazon Web Service y Microsoft Azure, nos olvidamos de la infraestructura local y migramos a los servicios de la nube.        </div>        <div class='sepBottom'>        Esto le permite alojar sus aplicaciones en la nube y beneficiarse de la rapidez, seguridad, escalabilidad y almacenamiento.        </div>        <div class='sepBottom'>        Beneficios:         </div>        <ul>        <li><span class='boldTextSubtitle'>Costes por uso:</span> factura los gastos según el crecimiento de tu aplicación.</li>        <li><span class='boldTextSubtitle'>Rendimiento:</span> gestionamos sus recursos y  mejoramos el rendimiento de sus servicios contratados (Cloud Computing, Máquinas Virtuales, Base de datos, Almacenamiento).</li>        <li><span class='boldTextSubtitle'>Seguridad:</span> Sus aplicaciones se encontrarán en las plataformas más confiables del mundo con encriptación de sus archivos, actualizaciones de seguridad periódicas y certificado de seguridad.</li>        <li><span class='boldTextSubtitle'>Migración:</span> Nos encargamos de migrar sus aplicaciones nativas a la nube.</li>        <li><span class='boldTextSubtitle'>Escalabilidad:</span> Le permite una expansion continua de sus servicios de una manera sencilla.</li>        <li><span class='boldTextSubtitle'>Copias de seguridad:</span> Permite hacer respaldos programados de su data y su aplicación.</li>        </ul>"      
+      },
+      {
+        "description":"<div class='sepBottom'>        Crea una tienda para vender en línea        </div>        <div class='sepBottom'>        Desarrollamos plataformas de ventas online que le permite aumentar el rango de visibilidad de sus productos, hacer ventas a través del Internet.        </div>        <div class='sepBottom'>        Contamos con una amplia experiencia en esta rama. Automatizamos los procesos a la medida del cliente y tambien los integramos con sistemas ya existentes en su compañia, como sistemas de inventario, despacho y rastreo.        </div>"      
+      },
+      {
+        "description":"<div class='sepBottom'>        Ofrecemos herramientas de marketing digital, cree campañas publicitarias masivas automatizadas a través de <b>EMAIL, SMS, PUSH y MMS.</b>        </div>        <div class='sepBottom'>        Comparta sus productos en redes sociales.        </div>        <div class='sepBottom'>        Analice el comportamiento de sus campañas y lleve su empresa a otro nivel de marketing digital.        </div>        "                  
+      },      
+      {
+        "description":"<div class='sepBottom'>        En nuestro sistema de gestión de proyectos usted tendrá la capacidad de llevar un registro de actividades diarias por proyectos.        </div><ul>          <li>Lleve el conteo de horas trabajadas.</li>          <li>Analice el estado de cada actividad.</li>         <li>Lleve un control de documentos para sus tareas diarias.</li>          <li>Realmente sus actividades a través de comentarios.</li>          <li>Filtre sus actividades por usuario , proyectos , módulo ,etc.</li>          <li>Genere reportes de sus actividades por proyectos , grupos de trabajo o desarrollos.</li>          <li>Administre sus recursos.</li>          <li>Cree y visualice sus actividades en forma de gantt.</li>          <li>Maneje sus costos por actividad y proyectos.</li>          <li>Esté al tanto de sus actividades diarias y las actividades pendientes .</li>          <li>Implemente un sistema de tickets para el reporte de sus errores.</li>          <li>Genera documentación para su empresa y agiliza los procesos de búsqueda y capacitación.</li>          <li>Gestione Usuarios , agregue, elimine , o retire permisos a sus empleados de acuerdo a el espacio en donde esté trabajando.</li>          <li>Genere cotizaciones según sus activos y  presente propuestas sólidas para sus clientes. </li>        </ul>"
+      },
+      {
+        "description":"<div class='sepBottom'>         Garantice las operaciones diarias de su aplicación con nuestros servicios de infraestructura, contamos con una experiencia de 10 años en análisis de infraestructura y licenciamiento, adecuaciones de centros de datos, venta, instalación, configuración y migración de equipamiento tecnológico. Entre nuestros servicios disponemos de:        </div>        <div class='sepBottom boldTextSubtitle'>        Análisis de Capacidad:         </div>        <div class='sepBottom'>         Evite gastos excesivos, realizamos una serie de mediciones en periodos críticos de los procesos de las empresas (facturación, cierres contables, ventas, entre otros), para garantizar que cada uno de los datos obtenidos.        </div>        <div class='sepBottom boldTextSubtitle'>         Servicios de virtualización de servidores y contenedores:         </div>        <div class='sepBottom'>         Implemente sus procesos en ambientes seguros sin la necesidad de una infraestructura, reduzca o elimine los tiempos de inactividad de sus sistemas críticos por causas como mantenimiento o actualizaciones        </div>        <div class='sepBottom boldTextSubtitle'>         Servicios de almacenamiento SAN / NAS:         </div>        <div class='sepBottom'>         Ofrecemos servicios que van desde la instalación física, configuración y migración de componentes de las redes de almacenamiento (switches, cableado de fibra, storage) hasta la interconexión y configuración con los sistemas críticos de su empresa, garantizando la correcta operación de los componentes y generando las documentaciones necesarias para sus procesos de Calidad.        </div>        <div class='sepBottom boldTextSubtitle'>         Servicios de respaldos de información On-premise y Cloud:         </div>        <div class='sepBottom'>         Entendemos la importancia que tiene la información para las organizaciones, es por ello, que contamos con servicios profesionales de calidad, que le ayudarán a mantener su información y sistemas críticos respaldados ante eventos de corrupción de datos, borrado intencional o mal funcionamiento de infraestructura, Dentro de los servicios de respaldos de la información contamos con:        </div>        <ul>        <li>Diseño, instalación y migración de ambientes de respaldos.</li>        <li>Dimensionamiento de almacenamiento en Cinta / Cloud.</li>        <li>Creación de esquema de respaldos de la información basados en mejores prácticas.</li>        <li>Análisis de rendimiento y planes de remediación.</li>        <li>Actualización de versiones.</li>  </ul>      <div class='sepBottom boldTextSubtitle'>                 Monitoreo de ambientes distribuidos:         </div>        <div class='sepBottom'>         Esté al tanto de su proyecto en cualquier momento y reciba alertas ante cualquier caso crítico que pueda significar la pérdida de recursos, con nuestros sistemas podrá hacer frente ante cualquier situación de riesgo que presente.        </div>"
+      },
+      {
+        "description":"<div class='sepBottom'>        El mundo de los negocios se basa en la toma de decisiones estratégicas. Lo que marca la diferencia entre una empresa exitosa y otra que no lo hace es la toma de decisiones correcta y oportuna. Para poder hacer esto de la mejor manera, es esencial contar con la información adecuada y a tiempo que respalde toda la gestión de las operaciones de la empresa de forma ágil y rápida.        </div>        <div class='sepBottom'>        Business Intelligence (BI) es el conjunto de procesos, aplicaciones y tecnologías que facilitan la obtención rápida y fácil de datos de los sistemas de gestión empresarial para su análisis e interpretación, de modo que puedan utilizarse para las decisiones de recopilación de datos y convertirse en conocimiento para los responsables de negocio.        </div>        <div class='sepBottom'>        Consiste en un conjunto de técnicas de gestión empresarial que permiten a una organización tomar decisiones comerciales basadas en datos, que han sido tratadas por diferentes herramientas para convertirlas en información.        </div>        <div class='sepBottom'>        Por lo tanto, en términos de sus diferencias: mientras Big Data se enfoca en la captura, almacenamiento y procesamiento de datos, Business Intelligence se enfoca en los procesos de análisis de dichos datos para convertirlos en información y tomar las decisiones comerciales apropiadas.        </div>"
+      }
+    ],
+    "infoCloud":"También ofrecemos servicios de infraestructura para más información haga",
+    "clickHTitle":"Click aquí",
+    "plansText": {
+      "basicTitle":"Básico",
+      "plusTitle":"Plus",
+      "businessTitle":"Business",
+      "basicCost":"Gratis",
+      "plusCost":"$4.99/mes",
+      "businessCost":"$29.99/mes",
+      "descriptionBasic":{
+        "description1":"Maximo 3 usuarios",
+        "description2":"Maximo 10 Proyectos",
+        "description3":"Hasta 5 GB de almacenamiento."
+      },
+      "descriptionPlus":{
+        "description1":"Maximo 10 usuarios",
+        "description2":"Proyectos ilimitados",
+        "description3":"Hasta 20 GB de almacenamiento."
+      },
+      "descriptionBusiness":{
+        "description1":"Maximo 50 usuarios",
+        "description2":"Proyectos ilimitados",
+        "description3":"En un ambiente dedicado",
+        "description4":"Hasta 100 GB de almacenamiento",
+        "description5":"Con soporte"
+      },
+      "contractTitle": "Suscribir",
+      "afirmative":"SI",
+      "negative":"NO",
+      "unlimitedTitle":"Ilimitado",
+      "unlimitedTitleMob":"Ilim.",
+      "activitiesTitle":"Actividades - Crea actividades diarias",
+      "managerTitle":"Manager - Administra el número de proyectos y actividades",
+      "reportTitle":"Reporte - Ver el total de horas y el pago de cada usuario",
+      "ganttTitle":"Gantt - Vea el progreso de cada proyecto",
+      "taskTitle":"Tarea - Informe sus actividades",
+      "userPerTitle":"Usuarios y permisos - Crea usuarios y sus roles respectivos",
+      "quotationTitle":"Cotización - Determine las finanzas de su empresa",
+      "ticketsTitle":"Tickets - Reporta diferentes casos",
+      "documentationTitle":"Documentación - Una guía esencial para avanzar el proyecto",
+      "dedicatedServerTitle":"Servidor dedicado - En un entorno",
+      "supportTitle":"Soporte - Necesidad de optimizar el sitio",
+      "numOfUsersTitle":"Número de Usuarios - Cantidad permiitida.",
+      "numOfProjectsTitle":"Número de Proyectos - Cantidad permitida"
+    },
+    "howWeWork": {
+      "titleA": "METODOLOGÍA",
+      "titleB": "Nuestras metodologías: Ágiles que le permite visualiza en tiempo real el trascuso del proyecto día a día.",
+      "textA": "Utilizamos la metodología scrum para gestionar el desarrollo de la aplicación, podrá visualizar el crecimiento de su proyecto paso a paso y alinear los objetivos comerciales de su empresa",
+      "textB": "Nuestras oficinas están ubicadas en una zona horaria cómoda para comunicarse con nuestros clientes en Norteamérica, Canadá, Europa y América Latina."
+    },
+    "projects": {
+      "titleA": "PROYECTOS",
+      "titleB": "Nuestro trabajo",
+      "text": "Contamos con un equipo especializado en áreas como desarrollo web, dispositivos móviles, infraestructura e inteligencia de negocios con más de 15 años en el área. Contando con clientes de diferentes países en las áreas de telecomunicaciones, seguros, laboratorios, podemos mejorar sus procesos. Nos centramos en el desarrollo en C#, Angular, React, Sql Server, Cloud Computing.",
+      "button": "Nuestros proyectos"
+    },
+    "contact": {
+      "left": {
+        "titleA": "UBICACIONES",
+        "titleB": "Direcciones",
+        "addresses": [
+          {
+            "city": "Colombia",
+            "address": "Bogotá",
+            "phone":"+573134568729"
+          },
+          {
+            "city": "México",
+            "address": "Ciudad de México",
+            "phone":"+521557367577"
+          },
+          {
+            "city": "Chile",
+            "address": "Santiago",
+            "phone":"+56949961428"
+          }
+        ]
+      },
+      "right": {
+        "titleA": "CONTACTO",
+        "titleB": "Envíenos un mensaje",
+        "placeholderA": "Nombre",
+        "placeholderB": "Correo Electrónico",
+        "placeholderC": "Tipo de proyecto",
+        "placeholderC1": "Desarrollo Web",
+        "placeholderC2": "Aplicación Móvil",
+        "placeholderC3": "Infraestructura",
+        "placeholderC4": "Inteligencia de Negocios",
+        "placeholderD": "Escriba una breve descripción de su proyecto",
+        "button": "Enviar",
+        "adviceTitle": "Aviso",
+        "nameAdvice": "Por favor escriba su Nombre.",
+        "emailAdvice": "Por favor escriba su Correo Electrónico.",
+        "emailInvalidAdvice": "El Correo Electrónico tiene un formato inválido.",
+        "typeAdvice": "Por favor selecciona el Tipo de Proyecto.",
+        "descriptionAdvice": "Por favor describa el Proyecto.",
+        "sentAdvice": "Gracias por enviar los datos."
+      }
+    },
+    "copyrightText":"© 2020 Autonomo System - Todos los derechos reservados.",
+    "ourProjectsTitle": "Nuestros Proyectos",
+    "ourProjectsDescription": "Nuestros proyectos se han llevado a cabo con el Framework Angular 9 con clientes principalmente internacionales que aplican nuestras técnicas correspondientes y además de la creación de nuestras plataformas para garantizar el control de nuestros clientes."
+  },
+  "en": {
+    "menu": [
+      {
+        "text": "About Us"
+      },
+      {
+        "text": "Services"
+      },
+      {
+        "text": "How we work"
+      },
+      {
+        "text": "Projects"
+      },
+      {
+        "text": "Contact"
+      }
+    ],
+    "titleA": "WE ARE THE ANSWER ",
+    "titleB": "Automate your business",
+    "titleC": "Develop applications and implement your processes.",
+    "button": "Get details",
+    "aboutUsTitleA": "ABOUT US",
+    "aboutUsTitleB": "Autonomo is",
+    "aboutUsItems": [
+      "A company with over <b>15 years of experience</b> in the software development industry.",
+      "We develop customized <b>Web and Mobile Applications</b> to meet the needs of our clients.",
+      "We provide the best service by creating technological solutions to improve the growth of your business.",
+      "We have a high-level professional team in the technology industry."
+    ],
+    "servicesTitleA": "SERVICES",
+    "servicesTitleB": "Our company provides",
+    "services": [
+      {
+        "title": "Mobile and Web Development",
+        "text": "We develop custom applications and integrations with existing applications. It drives the growth of your business.",
+        "src": "../../assets/images/autonomoNewPage/service01.png"
+      },
+      {
+        "title": "Cloud Hosting",
+        "text": "Microsoft Azure, Google Cloud and Amazon web Services.",
+        "src": "../../assets/images/autonomoNewPage/service02.png"
+      },
+      {
+        "title": "Create a store to sell online",
+        "text": "Custom stores to start selling online.",
+        "src": "../../assets/images/autonomoNewPage/service03.png"
+      },
+      {
+        "title": "Digital Marketing",
+        "text": "Digital campaign creation system through mass Email, SMS, Push and Referral Program.",
+        "src": "../../assets/images/autonomoNewPage/service04.png"
+      },
+      {
+        "title": "Manage your projects",
+        "text": "Manage your projects, create activities, keep track of your resources and view the progress of your project in real time.",
+        "src": "../../assets/images/autonomoNewPage/service05.png"
+      },
+      {
+        "title": "Infrastructure",
+        "text": "We do analysis and licenses, adaptation of data centers, sale, installation, configuration and migration of equipment.",
+        "src": "../../assets/images/autonomoNewPage/service06.png"
+      },
+      {
+        "title": "Business Intelligence",
+        "text": "Apply techniques associated with Big Data and build the analysis of your information.",
+        "src": "../../assets/images/autonomoNewPage/service07.png"
+      }
+    ],
+    "servicesDescription": [
+      {
+        "description": "<div class='sepBottom'>        It is the time to be more agile and adapt to the new times, develop your applications with us, get access from anywhere in the world and view the progress of it in real time.        </div>        <div class='sepBottom'>        We develop web and mobile applications for companies in the telecommunications, insurance, laboratories and related areas.        </div>        <div class='sepBottom'>        We provide advice and analysis according to customer needs. Thanks to our experience and constant training of our work teams, we offer you different development options and we guarantee good performance, flexibility, scalability and reliability for medium and large organizations.        </div>        <div class='sepBottom'>        These are some of the technologies we work with:        </div>        <ul>        <li>Angular</li>        <li>React</li>        <li>Ionic</li>        <li>C#</li>        <li>PHP</li>        <li>Sql server</li>        <li>Oracle</li>        <li>Google cloud</li>        <li>Amazon web service</li>        <li>Azure</li>        </ul>"
+      },
+      {
+        "description": "<div class='sepBottom'>        We work with the following platforms Google Cloud, Amazon Web Service and Microsoft Azure, we forget about local infrastructure and migrate to cloud services.        </div>        <div class='sepBottom'>        This allows you to host your applications in the cloud and take advantage of speed, security, scalability and storage.        </div>        <div class='sepBottom'>        We provide advice and analysis according to customer needs. Thanks to our experience and constant training of our work teams, we offer you different development options and we guarantee good performance, flexibility, scalability and reliability for medium and large organizations.        </div>        <div class='sepBottom'>        Benefits:        </div>        <ul>        <li><span class='boldTextSubtitle'>Costs for use:</span> invoice the expenses according to the growth of your application.</li>        <li><span class='boldTextSubtitle'>Performance:</span> we manage your resources and improve the performance of your contracted services (Cloud Computing, Virtual Machines, Database, Storage).</li>        <li><span class='boldTextSubtitle'>Security:</span> Your applications will be found on the most reliable platforms in the world with encryption of your files, regular security updates and a security certificate.</li>        <li><span class='boldTextSubtitle'>Migration:</span> We take care of migrating your native applications to the cloud.</li>        <li><span class='boldTextSubtitle'>Scalability:</span> Allows you to continuously expand your services in a simple way.</li>        <li><span class='boldTextSubtitle'>Backups:</span> Allows you to make scheduled backups of your data and your application.</li>        </ul>"
+      },
+      {
+        "description":"<div class='sepBottom'>        Create a store to sell online        </div>        <div class='sepBottom'>        We develop online sales platforms that allow you to increase the visibility range of your products, make sales through the Internet.        </div>        <div class='sepBottom'>        We have extensive experience in this field. We automate processes tailored to the client and also integrate them with existing systems in your company, such as inventory, dispatch and tracking systems.        </div>"            
+      },
+      {
+        "description":"<div class='sepBottom'>        We offer digital marketing tools, create automated mass advertising campaigns through <b>EMAIL, SMS, PUSH and MMS.</b>        </div>        <div class='sepBottom'>        Share your products on social networks.        </div>        <div class='sepBottom'>        Analyze the behavior of your campaigns and take your company to another level of digital marketing.        </div>"      
+      },
+      {
+        "description":"<div class='sepBottom'>        In our project management system you will have the ability to keep track of daily activities by projects.        </div>        <ul>        <li>Keep track of hours worked.</li>        <li>Analyze the status of each activity.</li>        <li>Keep track of documents for your daily tasks.</li>        <li>Actually its activities through comments.</li>        <li>Filter your activities by user, projects, module, etc.</li>        <li>Generate reports of your activities by projects, work groups or developments.</li>        <li>Manage your resources.</li>        <li>Create and visualize your activities in Gantt form.</li>        <li>Manage your activity and project costs.</li>        <li>Be aware of your daily activities and pending activities.</li>        <li>Implement a ticket system to report your errors.</li>        <li>Generate documentation for your company and streamline the search and training processes.</li>        <li>Manage Users, add, delete, or withdraw permissions to your employees according to the space where you are working.</li>        <li>Generate quotes based on your assets and present solid proposals for your clients.</li>        </ul>"            
+      },
+      {
+        "description":"<div class='sepBottom'>        Guarantee the daily operations of your application with our infrastructure services, we have 10 years experience in infrastructure analysis and licensing, data center adaptations, sale, installation, configuration and migration of technological equipment. Among our services we have:        </div>        <div class='sepBottom boldTextSubtitle'>        Capacity Analysis:        </div>        <div class='sepBottom'>        Avoid excessive expenses, we carry out a series of measurements in critical periods of the companies' processes (billing, accounting closings, sales, among others), to ensure that each of the data obtained.        </div>        <div class='sepBottom boldTextSubtitle'>        Server and container virtualization services:        </div>        <div class='sepBottom'>        Deploy your processes in secure environments without the need for an infrastructure, reduce or eliminate downtime of your critical systems for reasons such as maintenance or updates.        </div>        <div class='sepBottom boldTextSubtitle'>        SAN / NAS storage services:        </div>        <div class='sepBottom'>        We offer services ranging from the physical installation, configuration and migration of components of storage networks (switches, fiber cabling, storage) to the interconnection and configuration with the critical systems of your company, guaranteeing the correct operation of the components and generating the necessary documentation for your Quality processes.        </div>        <div class='sepBottom boldTextSubtitle'>        On-premise and Cloud information backup services:        </div>        <div class='sepBottom'>        We understand the importance of information for organizations, which is why we have quality professional services that will help you keep your information and critical systems supported in the event of data corruption, intentional deletion or infrastructure malfunction, within of the information backup services we have:        </div>        <ul>        <li>Design, installation and migration of backup environments.</li>        <li>Tape / Cloud storage sizing.</li>        <li>Creation of an information backup scheme based on best practices.</li>        <li>Performance analysis and remediation plans.</li>        <li>Updating versions.</li>        </ul>        <div class='sepBottom boldTextSubtitle'>        Monitoring of distributed environments:        </div>        <div class='sepBottom'>        Be aware of your project at any time and receive alerts in case of any critical case that could mean the loss of resources, with our systems you will be able to face any risk situation that may arise.        </div>"      
+      },
+      {
+        "description":"<div class='sepBottom'>        The business world is based on strategic decision making. What makes the difference between a successful company and one that does not is correct and timely decision making. To be able to do this in the best way, it is essential to have adequate and timely information that supports all the management of the company's operations in an agile and fast way.        </div>        <div class='sepBottom'>        Business Intelligence (BI) is the set of processes, applications and technologies that facilitate the quick and easy obtaining of data from business management systems for analysis and interpretation, so that they can be used for data collection decisions and become knowledge for business managers.        </div>        <div class='sepBottom'>        It consists of a set of business management techniques that allow an organization to make business decisions based on data, which have been treated by different tools to convert them into information.        </div>        <div class='sepBottom'>        Therefore, in terms of their differences: while Big Data focuses on data capture, storage, and processing, Business Intelligence focuses on the processes of analyzing that data to convert it into information and make appropriate business decisions.        </div>"      
+      }
+    ],
+    "infoCloud":"We also offer infrastructure services for more information do",
+    "clickHTitle":"Click here",
+    "plansText": {
+      "basicTitle":"Basic",
+      "plusTitle":"Plus",
+      "businessTitle":"Business",
+      "basicCost":"Free",
+      "plusCost":"$4.99/month",
+      "businessCost":"$29.99/month",
+      "descriptionBasic":{
+        "description1":"Maximum 3 Users",
+        "description2":"Maximum 10 Projects",
+        "description3":"Up to 5GB of storage"
+      },
+      "descriptionPlus":{
+        "description1":"Maximum 10 Users",
+        "description2":"Unlimited Projects",
+        "description3":"Up to 20GB of storage"
+      },
+      "descriptionBusiness":{
+        "description1":"Maximum 50 Users",
+        "description2":"Unlimited Projects",
+        "description3":"In a dedicated environment",
+        "description4":"Up to 100GB of storage",
+        "description5":"Supported"
+      },
+      "contractTitle": "Subscribe",
+      "afirmative":"YES",
+      "negative":"NO",
+      "unlimitedTitle":"Unlimited",
+      "unlimitedTitleMob":"Unlim.",
+      "activitiesTitle":"Activities - Create daily activities",
+      "managerTitle":"Manager - Manage the number of projects and activities",
+      "reportTitle":"Report - View the total of hours and payment of each user",
+      "ganttTitle":"Gantt - View the progess of each project",
+      "taskTitle":"Task - Report your activities",
+      "userPerTitle":"Users and Permisions - Create users and your respective roles",
+      "quotationTitle":"Quotation - Determine your business finances",
+      "ticketsTitle":"Tickets - Report any cases",
+      "documentationTitle":"Documentation - A essential guide for advance your project",
+      "dedicatedServerTitle":"Dedicated Server - In a environment",
+      "supportTitle":"Support - Need to optimize the site",
+      "numOfUsersTitle":"Number of Users - Quantity allowed",
+      "numOfProjectsTitle":"Number Projects - Quantity allowed"
+    },
+    "howWeWork": {
+      "titleA": "HOW WE WORK",
+      "titleB": "Our methodologies: Agile that allows you to visualize in real time the transfer of the project day by day.",
+      "textA": "We use the scrum methodology to manage the development of the application, you will be able to visualize the growth of your project step by step and align the commercial objectives of your company",
+      "textB": "Our offices are located in a comfortable time zone to communicate with our clients in North America, Canada, Europe and Latin America."
+    },
+    "projects": {
+      "titleA": "PROJECTS",
+      "titleB": "Our work",
+      "text": "We have a specialized team in areas such as web development, mobile devices, infrastructure and business intelligence with more than 15 years in the area. Having clients from different countries in the areas of telecommunications, insurance, laboratories, we can improve their processes. We focus on development in C #, Angular, React, Sql Server, Cloud Computing.",
+      "button": "Our projects "
+    },
+    "contact": {
+      "left": {
+        "titleA": "LOCATION",
+        "titleB": "Addresses",
+        "addresses": [
+          {
+            "city": "Colombia",
+            "address": "Bogotá",
+            "phone":"+573134568729"
+          },
+          {
+            "city": "México",
+            "address": "México City",
+            "phone":"+521557367577"
+          },
+          {
+            "city": "Chile",
+            "address": "Santiago",
+            "phone":"+56949961428"
+          }
+        ]
+      },
+      "right": {
+        "titleA": "CONTACT",
+        "titleB": "Send us a Message",
+        "placeholderA": "Name",
+        "placeholderB": "E-mail",
+        "placeholderC": "Project Type",
+        "placeholderC1": "Web Development",
+        "placeholderC2": "Mobile App",
+        "placeholderC3": "Infrastructure",
+        "placeholderC4": "Business intelligence",
+        "placeholderD": "Write a brief description of your project.",
+        "button": "Send",
+        "adviceTitle": "Advice",
+        "nameAdvice": "Please write your Name.",
+        "emailAdvice": "Please write your E-mail.",
+        "emailInvalidAdvice": "The E-mail has an invalid format.",
+        "typeAdvice": "Please select your Project Type.",
+        "descriptionAdvice": "Please write your Project description.",
+        "sentAdvice": "Thanks for your sending."
+      }
+    },
+    "copyrightText":"© 2020 Autonomo System - All rights reserved.",
+    "ourProjectsTitle": "Our Projects",
+    "ourProjectsDescription": "Our projects have been carried out with the Angular 9 Framework with mainly international clients applying our corresponding techniques and in addition to the creation of our platforms to guarantee control of our clients."
+  }
+}
