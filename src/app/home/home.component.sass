@@ -5,18 +5,15 @@
     font-weight: bold
 .headerAutonomohome
     display: grid
-    grid-template: auto/47% 53%
+    grid-template: auto/35% auto 70px
     background: linear-gradient(0deg, #0E8ECE, #0E8ECE)
+    padding: 0 50px
 .webMenu
     display: block
 .mobileMenu
     display: none
 .as-logo-princ
     width: 195px
-.logoAuto
-    padding-left: 50px
-.menuAuto
-    padding-right: 20px
 .webMenu
     display: grid
     grid-template: auto/ repeat(5, 1fr)
@@ -30,6 +27,39 @@
     font-size: 18px
     line-height: 20px
     color: #FFFFFF
+    margin-right: 55px
+.borderLang
+    display: grid
+    grid-template: 30px / 35px 35px
+    border-radius: 5px
+    border: 1px solid #ffffff
+    width: 70px
+    margin: 40px 0px
+    margin-right: 50px
+.esOff
+    width: 35px
+    height: 30px
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 14px
+    text-align: center
+    color: #FFFFFF
+    padding: 10px 0px
+.enOn
+    width: 35px
+    height: 30px
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 14px
+    text-align: center
+    color: #0E8ECE
+    padding: 10px 0px
+    background: #FFFFFF
+    border-radius: 5px
 .automateBusiness
     display: grid
     grid-template: auto 0px/ 50% 50%
@@ -629,8 +659,11 @@ a
         grid-template: 100px auto 170px 655px auto 0px auto 0px auto 610px 285px/100%
 @media only screen and (max-width: 1045px)
     .headerAutonomohome
-        grid-template: auto/30% 70%
+        grid-template: auto/auto auto 70px
 @media only screen and (max-width: 991px)
+    .as-logo-princ
+        width: 100%
+        max-width: 195px
     .tabMob
         display: block
     .webLink
@@ -813,8 +846,6 @@ a
         padding: 35px 0px
     .icon-4
         padding: 35px 0px
-    .logoAuto
-        padding-left: 25px
     .mobileMenu
         cursor: pointer
         display: block
@@ -825,6 +856,7 @@ a
     .headerAutonomohome
         grid-template: auto/1fr 50px
         border: 1px solid #0E8ECE
+        padding: 0 25px
     .automateBusiness
         grid-template: auto auto 0px/100%
     .imgTablet

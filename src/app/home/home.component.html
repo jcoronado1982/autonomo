@@ -12,6 +12,16 @@
           <img class="auxBtn" src="../../assets/images/autonomoNewPage/bar-icon2.png">
       </div>
     </div>
+    <div class="languageOptionsBox">
+      <div class="borderLang">
+        <div class="esOff">
+          ES
+        </div>
+        <div class="enOn">
+          EN
+        </div>
+      </div>
+    </div>
     <div class="menuMobileStyl" *ngIf="this.menuMobile==true" [@EnterLeave]>
       <div class="aboutUsBoxMenu suportMob" (click)="this.goToIdM(i)"
         *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
