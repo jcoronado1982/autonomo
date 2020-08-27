@@ -1,7 +1,11 @@
 .plansBox
     display: grid
     grid-template-columns: 40% 20% 20% 20%
-    grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
+    grid-template-rows: repeat(14, auto)
+.plansBoxInd
+    display: grid
+    grid-template-columns: 40% 20% 20% 20%
+    grid-template-rows: auto
 .plansBoxMob,.plansboxTab
     display: none
 .spacTitle
@@ -59,6 +63,7 @@
     text-align: center
     padding-top: 20px
     background-color: #f2f2f2
+    min-height: 60px
 .planSpac2
     grid-column: 3
     grid-row: 2
@@ -67,6 +72,7 @@
     text-align: center
     padding-top: 20px
     background-color: #f2f2f2
+    min-height: 60px
 .planSpac3
     grid-column: 4
     grid-row: 2
@@ -75,6 +81,7 @@
     text-align: center
     padding-top: 20px
     background-color: #f2f2f2
+    min-height: 60px
 .acT1
     grid-column: 1
     grid-row: 3
@@ -82,7 +89,9 @@
     font-weight: bold
     text-align: left
     padding-left: 5%
-    margin-top: 20px
+    padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
 .acT2
     grid-column: 2
     grid-row: 3
@@ -115,6 +124,8 @@
     text-align: left
     padding-left: 5%
     padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
     background-color: #f2f2f2
 .mnG2
     grid-column: 2
@@ -150,7 +161,9 @@
     font-weight: bold
     text-align: left
     padding-left: 5%
-    margin-top: 20px
+    padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
 .rpt2
     grid-column: 2
     grid-row: 5
@@ -183,6 +196,8 @@
     text-align: left
     padding-left: 5%
     padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
     background-color: #f2f2f2
 .gnt2
     grid-column: 2
@@ -218,7 +233,9 @@
     font-weight: bold
     text-align: left
     padding-left: 5%
-    margin-top: 20px
+    padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
 .tsk2
     grid-column: 2
     grid-row: 7
@@ -251,6 +268,8 @@
     text-align: left
     padding-left: 5%
     padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
     background-color: #f2f2f2
 .uP2
     grid-column: 2
@@ -286,7 +305,9 @@
     font-weight: bold
     text-align: left
     padding-left: 5%
-    margin-top: 20px
+    padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
 .qt2
     grid-column: 2
     grid-row: 9
@@ -319,6 +340,8 @@
     text-align: left
     padding-left: 5%
     padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
     background-color: #f2f2f2
 .tcK2
     grid-column: 2
@@ -354,7 +377,9 @@
     font-weight: bold
     text-align: left
     padding-left: 5%
-    margin-top: 20px
+    padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
 .dC2
     grid-column: 2
     grid-row: 11
@@ -387,6 +412,8 @@
     text-align: left
     padding-left: 5%
     padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
     background-color: #f2f2f2
 .dedS2
     grid-column: 2
@@ -422,7 +449,9 @@
     font-weight: bold
     text-align: left
     padding-left: 5%
-    margin-top: 20px
+    padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
 .sP2
     grid-column: 2
     grid-row: 13
@@ -455,6 +484,8 @@
     text-align: left
     padding-left: 5%
     padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
     background-color: #f2f2f2
 .nU2
     grid-column: 2
@@ -490,7 +521,9 @@
     font-weight: bold
     text-align: left
     padding-left: 5%
-    margin-top: 20px
+    padding-top: 20px
+    min-height: 60px
+    padding-bottom: 20px
 .nP2
     grid-column: 2
     grid-row: 15
@@ -563,7 +596,7 @@ ul.planItemsUl
 @media only screen and (max-width: 1980px)
     .plansBox
         grid-template-columns: 22% 26% 26% 26%
-        grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
+        grid-template-rows: repeat(14, auto)
     .plan1
         margin: 40px 60px
     .plan2
@@ -573,7 +606,7 @@ ul.planItemsUl
 @media only screen and (max-width: 1680px)
     .plansBox
         grid-template-columns: 23% 25% 25% 25%
-        grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
+        grid-template-rows: repeat(14, auto)
     .plan1
         margin: 40px 30px
     .plan2
@@ -583,7 +616,7 @@ ul.planItemsUl
 @media only screen and (max-width: 1400px)
     .plansBox
         grid-template-columns: 25%
-        grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
+        grid-template-rows: repeat(14, auto)
     .plan1
         margin: 40px 20px
     .plan2
@@ -593,14 +626,14 @@ ul.planItemsUl
 
 @media only screen and (max-width: 1320px)
     .plansBox
-        grid-template-rows: auto 60px 60px 60px 80px 60px 60px 80px 60px 60px 80px 60px 60px 60px 60px
+        grid-template-rows: repeat(14, auto)
 @media only screen and (max-width: 1288px)
     .plansBox
-        grid-template-rows: auto 60px 60px 80px 80px 60px 60px 80px 60px 60px 80px 60px 60px 60px 60px
+        grid-template-rows: repeat(14, auto)
 @media only screen and (max-width: 1280px)
     .plansBox
         grid-template-columns: 25%
-        grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
+        grid-template-rows: repeat(14, auto)
     .plan1
         margin: 40px 10px
     .plan2
@@ -615,7 +648,7 @@ ul.planItemsUl
         font-size: 20px
 @media only screen and (max-width: 1073px)
     .plansBox
-        grid-template-rows: auto 60px 60px 80px 80px 60px 60px 80px 80px 60px 80px 60px 60px 60px 60px
+        grid-template-rows: repeat(14, auto)
 @media only screen and (max-width: 991px)
     .plan1, .plan2, .plan3
         display: none
