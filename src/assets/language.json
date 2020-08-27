@@ -24,7 +24,7 @@
     "aboutUsTitleA": "SOBRE NOSOTROS",
     "aboutUsTitleB": "Autonomo es",
     "aboutUsItems": [
-      "Una empresa con más de <b>15 años de experiencia</b> en la industria del desarrollo de software",
+      "Una empresa con más de <b>16 años de experiencia</b> en la industria del desarrollo de software",
       "Desarrollamos <b>aplicaciones web y móviles</b> personalizadas para satisfacer las necesidades de nuestros clientes",
       "Brindamos el mejor servicio creando soluciones tecnológicas para mejorar el crecimiento de su negocio",
       "Tenemos un equipo profesional de alto nivel en la industria de la tecnología"
@@ -82,7 +82,7 @@
         "description":"<div class='sepBottom'>        Ofrecemos herramientas de marketing digital, cree campañas publicitarias masivas automatizadas a través de <b>EMAIL, SMS, PUSH y MMS.</b>        </div>        <div class='sepBottom'>        Comparta sus productos en redes sociales.        </div>        <div class='sepBottom'>        Analice el comportamiento de sus campañas y lleve su empresa a otro nivel de marketing digital.        </div>        "                  
       },      
       {
-        "description":"<div class='sepBottom'>        En nuestro sistema de gestión de proyectos usted tendrá la capacidad de llevar un registro de actividades diarias por proyectos.        </div><ul>          <li>Lleve el conteo de horas trabajadas.</li>          <li>Analice el estado de cada actividad.</li>         <li>Lleve un control de documentos para sus tareas diarias.</li>          <li>Realmente sus actividades a través de comentarios.</li>          <li>Filtre sus actividades por usuario , proyectos , módulo ,etc.</li>          <li>Genere reportes de sus actividades por proyectos , grupos de trabajo o desarrollos.</li>          <li>Administre sus recursos.</li>          <li>Cree y visualice sus actividades en forma de gantt.</li>          <li>Maneje sus costos por actividad y proyectos.</li>          <li>Esté al tanto de sus actividades diarias y las actividades pendientes .</li>          <li>Implemente un sistema de tickets para el reporte de sus errores.</li>          <li>Genera documentación para su empresa y agiliza los procesos de búsqueda y capacitación.</li>          <li>Gestione Usuarios , agregue, elimine , o retire permisos a sus empleados de acuerdo a el espacio en donde esté trabajando.</li>          <li>Genere cotizaciones según sus activos y  presente propuestas sólidas para sus clientes. </li>        </ul>"
+        "description":"<div class='sepBottom'>        En nuestro sistema de gestión de proyectos usted tendrá la capacidad de llevar un registro de actividades diarias por proyectos.        </div><ul>          <li>Lleve el conteo de horas trabajadas.</li>          <li>Analice el estado de cada actividad.</li>         <li>Lleve un control de documentos para sus tareas diarias.</li>          <li>Comente sus actividades a través de comentarios.</li>          <li>Filtre sus actividades por usuario , proyectos , módulo ,etc.</li>          <li>Genere reportes de sus actividades por proyectos , grupos de trabajo.</li>          <li>Administre sus recursos.</li>          <li>Visualice el Gantt por proyectos.</li>          <li>Maneje sus costos por actividad y proyectos.</li>          <li>Esté al tanto de sus actividades diarias y las actividades pendientes .</li>          <li>Sistema de tickets para el reporte de errores.</li>          <li>Genera documentación para su empresa y agiliza los procesos de búsqueda y capacitación.</li>          <li>Administre su usuarios, agregue, elimine o retire permisos.</li>          <li>Cree cotizaciones y  presente propuestas sólidas para sus clientes. </li>        </ul>"
       },
       {
         "description":"<div class='sepBottom'>         Garantice las operaciones diarias de su aplicación con nuestros servicios de infraestructura, contamos con una experiencia de 10 años en análisis de infraestructura y licenciamiento, adecuaciones de centros de datos, venta, instalación, configuración y migración de equipamiento tecnológico. Entre nuestros servicios disponemos de:        </div>        <div class='sepBottom boldTextSubtitle'>        Análisis de Capacidad:         </div>        <div class='sepBottom'>         Evite gastos excesivos, realizamos una serie de mediciones en periodos críticos de los procesos de las empresas (facturación, cierres contables, ventas, entre otros), para garantizar que cada uno de los datos obtenidos.        </div>        <div class='sepBottom boldTextSubtitle'>         Servicios de virtualización de servidores y contenedores:         </div>        <div class='sepBottom'>         Implemente sus procesos en ambientes seguros sin la necesidad de una infraestructura, reduzca o elimine los tiempos de inactividad de sus sistemas críticos por causas como mantenimiento o actualizaciones        </div>        <div class='sepBottom boldTextSubtitle'>         Servicios de almacenamiento SAN / NAS:         </div>        <div class='sepBottom'>         Ofrecemos servicios que van desde la instalación física, configuración y migración de componentes de las redes de almacenamiento (switches, cableado de fibra, storage) hasta la interconexión y configuración con los sistemas críticos de su empresa, garantizando la correcta operación de los componentes y generando las documentaciones necesarias para sus procesos de Calidad.        </div>        <div class='sepBottom boldTextSubtitle'>         Servicios de respaldos de información On-premise y Cloud:         </div>        <div class='sepBottom'>         Entendemos la importancia que tiene la información para las organizaciones, es por ello, que contamos con servicios profesionales de calidad, que le ayudarán a mantener su información y sistemas críticos respaldados ante eventos de corrupción de datos, borrado intencional o mal funcionamiento de infraestructura, Dentro de los servicios de respaldos de la información contamos con:        </div>        <ul>        <li>Diseño, instalación y migración de ambientes de respaldos.</li>        <li>Dimensionamiento de almacenamiento en Cinta / Cloud.</li>        <li>Creación de esquema de respaldos de la información basados en mejores prácticas.</li>        <li>Análisis de rendimiento y planes de remediación.</li>        <li>Actualización de versiones.</li>  </ul>      <div class='sepBottom boldTextSubtitle'>                 Monitoreo de ambientes distribuidos:         </div>        <div class='sepBottom'>         Esté al tanto de su proyecto en cualquier momento y reciba alertas ante cualquier caso crítico que pueda significar la pérdida de recursos, con nuestros sistemas podrá hacer frente ante cualquier situación de riesgo que presente.        </div>"
@@ -101,20 +101,20 @@
       "plusCost":"$4.99/mes",
       "businessCost":"$29.99/mes",
       "descriptionBasic":{
-        "description1":"Maximo 3 usuarios",
+        "description1":"Maximo 5 usuarios",
         "description2":"Maximo 10 Proyectos",
-        "description3":"Hasta 5 GB de almacenamiento."
+        "description3":"Hasta 5GB de almacenamiento."
       },
       "descriptionPlus":{
-        "description1":"Maximo 10 usuarios",
+        "description1":"Maximo 20 usuarios",
         "description2":"Proyectos ilimitados",
-        "description3":"Hasta 20 GB de almacenamiento."
+        "description3":"Hasta 20GB de almacenamiento."
       },
       "descriptionBusiness":{
-        "description1":"Maximo 50 usuarios",
+        "description1":"Usuarios ilimitados",
         "description2":"Proyectos ilimitados",
         "description3":"En un ambiente dedicado",
-        "description4":"Hasta 100 GB de almacenamiento",
+        "description4":"Hasta 50GB de almacenamiento",
         "description5":"Con soporte"
       },
       "contractTitle": "Suscribir",
@@ -145,7 +145,7 @@
     "projects": {
       "titleA": "PROYECTOS",
       "titleB": "Nuestro trabajo",
-      "text": "Contamos con un equipo especializado en áreas como desarrollo web, dispositivos móviles, infraestructura e inteligencia de negocios con más de 15 años en el área. Contando con clientes de diferentes países en las áreas de telecomunicaciones, seguros, laboratorios, podemos mejorar sus procesos. Nos centramos en el desarrollo en C#, Angular, React, Sql Server, Cloud Computing.",
+      "text": "Contamos con un equipo especializado en áreas como desarrollo web, dispositivos móviles, infraestructura e inteligencia de negocios con más de 16 años en el área. Contando con clientes de diferentes países en las áreas de telecomunicaciones, seguros, laboratorios, podemos mejorar sus procesos. Nos centramos en el desarrollo en C#, Angular, React, Sql Server, Cloud Computing.",
       "button": "Nuestros proyectos"
     },
     "contact": {
@@ -297,17 +297,17 @@
       "plusCost":"$4.99/month",
       "businessCost":"$29.99/month",
       "descriptionBasic":{
-        "description1":"Maximum 3 Users",
+        "description1":"Maximum 5 Users",
         "description2":"Maximum 10 Projects",
         "description3":"Up to 5GB of storage"
       },
       "descriptionPlus":{
-        "description1":"Maximum 10 Users",
+        "description1":"Maximum 20 Users",
         "description2":"Unlimited Projects",
         "description3":"Up to 20GB of storage"
       },
       "descriptionBusiness":{
-        "description1":"Maximum 50 Users",
+        "description1":"unlimited users",
         "description2":"Unlimited Projects",
         "description3":"In a dedicated environment",
         "description4":"Up to 100GB of storage",
@@ -341,7 +341,7 @@
     "projects": {
       "titleA": "PROJECTS",
       "titleB": "Our work",
-      "text": "We have a specialized team in areas such as web development, mobile devices, infrastructure and business intelligence with more than 15 years in the area. Having clients from different countries in the areas of telecommunications, insurance, laboratories, we can improve your processes. We focus on development in C #, Angular, React, Sql Server, Cloud Computing.",
+      "text": "We have a specialized team in areas such as web development, mobile devices, infrastructure and business intelligence with more than 16 years in the area. Having clients from different countries in the areas of telecommunications, insurance, laboratories, we can improve your processes. We focus on development in C #, Angular, React, Sql Server, Cloud Computing.",
       "button": "Our projects "
     },
     "contact": {

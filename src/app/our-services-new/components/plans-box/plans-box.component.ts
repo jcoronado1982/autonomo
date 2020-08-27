@@ -16,4 +16,7 @@ export class PlansBoxComponent implements OnInit {
   statusChange(sw) {
     this.selTab = sw;
   }
+  toSubscribe(){
+    window.open("https://theruby.net/create", "_blank");
+  }
 }

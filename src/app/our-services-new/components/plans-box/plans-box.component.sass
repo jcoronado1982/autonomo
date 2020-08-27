@@ -1,9 +1,7 @@
 .plansBox
-    margin-top: 20px
     display: grid
     grid-template-columns: 40% 20% 20% 20%
     grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
-    padding-bottom: 30px
 .plansBoxMob,.plansboxTab
     display: none
 .spacTitle
@@ -550,7 +548,7 @@ li
     line-height: normal
     letter-spacing: normal
     margin: 0 auto
-    border-radius: 5px
+    border-radius: 4px
     display: table
 .pricesDiv
     margin-top: 20px
@@ -561,12 +559,54 @@ li
     color: #0E8ECE
 ul.planItemsUl
     line-height: 1.5 !important
+
+@media only screen and (max-width: 1980px)
+    .plansBox
+        grid-template-columns: 22% 26% 26% 26%
+        grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
+    .plan1
+        margin: 40px 60px
+    .plan2
+        margin: 40px 60px
+    .plan3
+        margin: 40px 60px
+@media only screen and (max-width: 1680px)
+    .plansBox
+        grid-template-columns: 23% 25% 25% 25%
+        grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
+    .plan1
+        margin: 40px 30px
+    .plan2
+        margin: 40px 30px
+    .plan3
+        margin: 40px 30px
+@media only screen and (max-width: 1400px)
+    .plansBox
+        grid-template-columns: 25%
+        grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
+    .plan1
+        margin: 40px 20px
+    .plan2
+        margin: 40px 20px
+    .plan3
+        margin: 40px 20px
+
 @media only screen and (max-width: 1320px)
     .plansBox
         grid-template-rows: auto 60px 60px 60px 80px 60px 60px 80px 60px 60px 80px 60px 60px 60px 60px
 @media only screen and (max-width: 1288px)
     .plansBox
         grid-template-rows: auto 60px 60px 80px 80px 60px 60px 80px 60px 60px 80px 60px 60px 60px 60px
+@media only screen and (max-width: 1280px)
+    .plansBox
+        grid-template-columns: 25%
+        grid-template-rows: auto 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px
+    .plan1
+        margin: 40px 10px
+    .plan2
+        margin: 40px 10px
+    .plan3
+        margin: 40px 10px
 @media only screen and (max-width: 1233px)
     li
         font-size: 14px
@@ -593,6 +633,10 @@ ul.planItemsUl
         grid-template-columns: 100%
         grid-template-rows: 50px 55px 210px auto
 @media only screen and (max-width: 768px)
+    .buttonStyle
+        margin: 10px
+        width: 100%
+        max-width: auto
     .plansBox, .plansboxTab
         display: none
     .plansBoxMob
@@ -615,7 +659,6 @@ ul.planItemsUl
         border-right: 1px solid #0E8ECE  
     .planBoxMobGen
         border: 1px solid #f2f2f2
-        margin-right: 10px
         border-radius: 5px
         padding: 10px
         margin-bottom: 30px
