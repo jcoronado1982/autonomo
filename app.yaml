@@ -9,5 +9,7 @@ handlers:
 - url: /
   static_files: dist/index.html
   upload: dist/index.html
+  secure: always
+  redirect_http_response_code: 301
 skip_files:
 - ^(?!dist)  # Skip any files not in the dist folder
