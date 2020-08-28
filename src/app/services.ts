@@ -42,27 +42,16 @@ interface permissions {
   providedIn: 'root'
 })
 export class Service {
-  private urlService: string = "/api";
+  //private urlService: string = "/api";
+  private urlService: string = "http://localhost:55651/api/";
   constructor(private http: HttpClient, private router: Router) { }
-  login(Username, Password) {
+  contactUs(name, email,type,description) {
     var form = new FormData();
-    form.append("Username", Username);
-    form.append("Password", Password);
-    return this.http.post<login>(this.urlService + '/Authenticate/Login', form);
-  }
-  accountDetails(token, subscriber, account) {
-    var form = new FormData();
-    form.append("token", token);
-    form.append("subscriber", subscriber);
-    form.append("account", account);
-    return this.http.post<accountDetails>(this.urlService + '/Authenticate/AccountDetails', form);
-  }
-  permissions(token, accountType, name, lastName) {
-    var form = new FormData();
-    form.append("token", token);
-    form.append("accountType", accountType);
+    form.append("token", "ndjoglñklf1df2749gh789dh56fg1ndjoglñklf1df2749gh789dh56fg16h489df789aeythohviuvghgu44undjoglñklf1df2749gh789dh56fg16h489df789aeythohviuvghgu44u6h489df789aeythohviuvghgu44u");
     form.append("name", name);
-    form.append("lastName", lastName);
-    return this.http.post<permissions>(this.urlService + '/Authenticate/permissions', form);
+    form.append("email", email);
+    form.append("type", type);
+    form.append("description", description);
+    return this.http.post<login>(this.urlService + '/permissions/contactUs', form);
   }
 }

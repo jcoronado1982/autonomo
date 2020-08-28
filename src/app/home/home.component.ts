@@ -284,7 +284,8 @@ export class HomeComponent implements OnInit {
       el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
     }
   }
-  sentForm() {
+  
+  sendContact() {
     if (this.orderForm.value.nameClient == '') {
       this.global.notif(this.language.content.contact.right.nameAdvice);
     }
@@ -301,7 +302,15 @@ export class HomeComponent implements OnInit {
       this.global.notif(this.language.content.contact.right.descriptionAdvice);
     }
     else {
-      this.global.notif(this.language.content.contact.right.sentAdvice);
+      this.services.contactUs(this.orderForm.value.nameClient,this.orderForm.value.emailClient,this.orderForm.value.projectType,this.orderForm.value.projectDescription).subscribe(data => {
+        if (data.hasError == false) {
+          this.global.notif(this.language.content.contact.right.sentAdvice);   
+        }
+        else {
+          this.loadingScreenService.stopLoading();
+          this.global.notif(data.errorDesc);
+        }
+      });
     }
   }
   resetForm() {
