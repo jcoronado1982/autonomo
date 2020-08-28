@@ -52,6 +52,6 @@ export class Service {
     form.append("email", email);
     form.append("type", type);
     form.append("description", description);
-    return this.http.post<login>(this.urlService + '/permissions/contactUs', form);
+    return this.http.post<login>(this.urlService + 'permissions/contactUs', form);
   }
 }
