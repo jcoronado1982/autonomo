@@ -43,7 +43,7 @@ interface permissions {
 })
 export class Service {
   //private urlService: string = "/api";
-  private urlService: string = "http://localhost:55651/api/";
+  private urlService: string = "https://theruby.net/api/";
   constructor(private http: HttpClient, private router: Router) { }
   contactUs(name, email,type,description) {
     var form = new FormData();
