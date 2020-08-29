@@ -11,5 +11,8 @@ handlers:
   upload: dist/index.html
   secure: always
   redirect_http_response_code: 301
+  http_headers: 
+    Access-Control-Allow-Origin: "*"
+    Access-Control-Allow-Methods: "POST"
 skip_files:
 - ^(?!dist)  # Skip any files not in the dist folder

@@ -310,6 +310,8 @@ export class HomeComponent implements OnInit {
           this.loadingScreenService.stopLoading();
           this.global.notif(data.errorDesc);
         }
+      }, error => {
+        this.global.notif(this.language.content.contact.right.sentAdvice);   
       });
     }
   }

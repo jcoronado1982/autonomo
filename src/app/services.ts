@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Router } from '@angular/router';
 import { dependenciesFromGlobalMetadata } from '@angular/compiler/src/render3/r3_factory';
-
+import { HttpHeaders } from '@angular/common/http';
 
 interface login {
   errorNum: number;
@@ -42,10 +42,23 @@ interface permissions {
   providedIn: 'root'
 })
 export class Service {
-  //private urlService: string = "/api";
-  private urlService: string = "https://theruby.net/api/";
+  //private urlService: string = "/api/";
+  private urlService: string = "http://theruby2.com/api/";
   constructor(private http: HttpClient, private router: Router) { }
   contactUs(name, email,type,description) {
+    const payloadHeaders = new Headers({'Access-Control-Allow-Origin' : '*','authorization':'Bearer *********'});
+    
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST',
+        'Access-Control-Allow-Origin': '*'
+      })
+    };
+
+
+
     var form = new FormData();
     form.append("token", "ndjoglñklf1df2749gh789dh56fg1ndjoglñklf1df2749gh789dh56fg16h489df789aeythohviuvghgu44undjoglñklf1df2749gh789dh56fg16h489df789aeythohviuvghgu44u6h489df789aeythohviuvghgu44u");
     form.append("name", name);
