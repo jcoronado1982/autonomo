@@ -48,6 +48,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { environment } from '../environments/environment';
+import { SendEmailComponent } from './components/send-email/send-email.component';
 
 @NgModule({ 
   declarations: [
@@ -77,7 +78,8 @@ import { environment } from '../environments/environment';
     ProjectsCarouselComponent,
     OurServicesNewComponent,
     CarouselIconsComponent,
-    PlansBoxComponent
+    PlansBoxComponent,
+    SendEmailComponent
   ],
   imports: [
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
