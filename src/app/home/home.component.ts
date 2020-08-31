@@ -42,6 +42,7 @@ export class HomeComponent implements OnInit {
   public changedLanguage: boolean = false;
   public elementAux: number = parseInt(sessionStorage.getItem("idSelected"));
   orderForm: FormGroup;
+  public sending;
   constructor(private formBuilder: FormBuilder, private language: LanguageService, public AngularFireAnalytics: AngularFireAnalytics, private router: Router, public appComponent: AppComponent, private services: Service, private loadingScreenService: LoadingScreenService, private global: GlobalService, public dialog: MatDialog) {
     this.AngularFireAnalytics.setCurrentScreen("Home");
     this.AngularFireAnalytics.logEvent("Home-Screenview");
@@ -302,7 +303,9 @@ export class HomeComponent implements OnInit {
       this.global.notif(this.language.content.contact.right.descriptionAdvice);
     }
     else {
+      this.sending=true;
       this.services.contactUs(this.orderForm.value.nameClient,this.orderForm.value.emailClient,this.orderForm.value.projectType,this.orderForm.value.projectDescription).subscribe(data => {
+        this.sending=false;
         if (data.hasError == false) {
           this.global.notif(this.language.content.contact.right.sentAdvice);   
         }
@@ -311,6 +314,7 @@ export class HomeComponent implements OnInit {
           this.global.notif(data.errorDesc);
         }
       }, error => {
+        this.sending=false;
         this.global.notif(this.language.content.contact.right.sentAdvice);   
       });
     }

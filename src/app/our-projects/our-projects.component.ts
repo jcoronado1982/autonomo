@@ -10,6 +10,7 @@ import { GlobalService } from '../global.service';
 })
 export class OurProjectsComponent implements OnInit {
   orderForm: FormGroup;
+  public sending;
   constructor(private global: GlobalService, private formBuilder: FormBuilder, private language: LanguageService, private router: Router) {
     this.createForm();
   }
@@ -67,6 +68,10 @@ export class OurProjectsComponent implements OnInit {
     }
     else {
       this.global.notif(this.language.content.contact.right.sentAdvice);
+      
+    this.sending=true;
+    
+    this.sending=false;
     }
   }
 }

@@ -25,6 +25,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class OurServicesNewComponent implements OnInit {
   public idService;
   public menuMobile: boolean = false;
+  public sending;
   orderForm: FormGroup;
   constructor(private global: GlobalService, private formBuilder: FormBuilder, private language: LanguageService, private router: Router) {
     this.createForm();
@@ -125,6 +126,8 @@ export class OurServicesNewComponent implements OnInit {
     }
     else {
       this.global.notif(this.language.content.contact.right.sentAdvice);
+      this.sending=true;
+      this.sending=false;
     }
   }
 }

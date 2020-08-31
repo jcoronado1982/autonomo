@@ -44,7 +44,7 @@ import { OwlModule } from 'ngx-owl-carousel';
 import { OurServicesNewComponent } from './our-services-new/our-services-new.component';
 import { CarouselIconsComponent } from './components/carousel-icons/carousel-icons.component';
 import { PlansBoxComponent } from './our-services-new/components/plans-box/plans-box.component';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { environment } from '../environments/environment';
@@ -97,6 +97,7 @@ import { environment } from '../environments/environment';
     MatInputModule,
     MatDialogModule,
     OwlModule,
+    MatProgressBarModule,
     RouterModule.forRoot([
       {
         path:'login',
