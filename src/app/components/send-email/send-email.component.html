@@ -1,0 +1,56 @@
+<div class="contactBox" id="contactUs">
+    <div class="contectAdress">
+      <div class="locationTitle">{{this.language.content.contact.left.titleA}}</div>
+      <div class="adressesTitle">{{this.language.content.contact.left.titleB}}</div>
+      <div *ngFor="let address of this.language.content.contact.left.addresses; index as i;">
+        <div class="city1">{{address.city}}</div>
+        <div class="address1">{{address.address}}</div>
+        <a class="address1 tabMob" href="tel:{{address.phone}}">{{address.phone}}</a>
+        <a class="address1 webLink" href="https://api.whatsapp.com/send?phone={{address.phone | slice: 1}}&text=mensaje"  target="_blank">{{address.phone}}</a>
+        <div class="lineSep" *ngIf="i<2"></div>
+      </div>
+    </div>
+    <div class="sendus">
+      <div class="contTitle">{{this.language.content.contact.right.titleA}}</div>
+      <div class="sendUsTitleContact">{{this.language.content.contact.right.titleB}}</div>
+      <form id="formAutonomo" [formGroup]="orderForm">
+        <div class="formBox">
+          <input type="text" class="nameBox" placeholder="{{this.language.content.contact.right.placeholderA}}" required
+            formControlName="nameClient" id="nameClient">
+          <input type="text" class="emailBox" placeholder="{{this.language.content.contact.right.placeholderB}}"
+            required formControlName="emailClient" id="emailClient">
+          <select class="selectBox" required formControlName="projectType" id="projectType">
+            <option disabled value="">{{this.language.content.contact.right.placeholderC}}</option>
+            <option value="pw">{{this.language.content.contact.right.placeholderC1}}</option>
+            <option value="am">{{this.language.content.contact.right.placeholderC2}}</option>
+            <option value="in">{{this.language.content.contact.right.placeholderC3}}</option>
+            <option value="bi">{{this.language.content.contact.right.placeholderC4}}</option>
+          </select>
+        </div>
+        <textarea class="descriptionForWrite" placeholder="{{this.language.content.contact.right.placeholderD}}"
+          required formControlName="projectDescription" id="projectDescription"></textarea>
+      </form>
+      <button mat-button [disabled]="this.sending==true" class="buttonSent" (click)="this.sendContact()">
+        <div class="startProjectsTxtButton" *ngIf="this.sending!=true">
+          {{this.language.content.contact.right.button}} 
+        </div>
+        <div class="startProjectsTxtButton" *ngIf="this.sending==true">
+          <mat-progress-bar mode="buffer" style="    width: 50px;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: auto;"></mat-progress-bar>
+        </div>        
+      </button>
+      <button mat-button  [disabled]="this.sending==true"   class="buttonWorkMob" (click)="this.sendContact()">
+        <div class="startProjectsTxtButton" *ngIf="this.sending!=true">
+          {{this.language.content.contact.right.button}} 
+        </div>
+        <div class="startProjectsTxtButton" *ngIf="this.sending==true">
+          <mat-progress-bar mode="buffer" style="    width: 50px;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: auto;"></mat-progress-bar>
+        </div>      
+      </button>
+    </div>
+  </div>
