@@ -273,21 +273,21 @@ export class HomeComponent implements OnInit {
     }
     if (i == 1) {
       window.scroll({
-        top: 1755,
+        top: 1765,
         left: 100,
         behavior: 'smooth'
       });
     }
     if (i == 2) {
       window.scroll({
-        top: 4830,
+        top: 4800,
         left: 100,
         behavior: 'smooth'
       });
     }
     if (i == 3) {
       window.scroll({
-        top: 5630,
+        top: 5520,
         left: 100,
         behavior: 'smooth'
       });
