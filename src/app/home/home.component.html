@@ -22,9 +22,9 @@
         </div>
       </div>
     </div>
+    <div class="transparentLayer" *ngIf="this.menuMobile==true"></div>
     <div class="menuMobileStyl" *ngIf="this.menuMobile==true" [@EnterLeave]>
-      <div class="aboutUsBoxMenu suportMob" (click)="this.goToIdM(i)"
-        *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
+      <div class="aboutUsBoxMenu suportMob" (click)="this.goToIdM(i)" *ngFor="let menuItem of this.language.content.menu ; let i = index">{{menuItem.text}}</div>
     </div>
   </div>
   <div class="automateBusiness">
