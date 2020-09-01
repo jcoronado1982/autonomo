@@ -6,7 +6,6 @@ import { MenuComponent } from './menu/menu.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -43,7 +42,6 @@ import { SendEmailComponent } from './components/send-email/send-email.component
 @NgModule({ 
   declarations: [
     AppComponent,
-    LoginComponent,
     FooterComponent,
     AlertasComponent,
     HomeComponent,
@@ -81,10 +79,6 @@ import { SendEmailComponent } from './components/send-email/send-email.component
     OwlModule,
     MatProgressBarModule,
     RouterModule.forRoot([
-      {
-        path:'login',
-         component:LoginComponent
-      },
       {
         path:'home',
          component:HomeComponent
