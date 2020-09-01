@@ -265,24 +265,39 @@ export class HomeComponent implements OnInit {
   goToIdM(i) {
     this.menuMobile = !this.menuMobile;
     if (i == 0) {
-      var el = document.getElementById('aboutUs');
-      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+      window.scroll({
+        top: 660,
+        left: 100,
+        behavior: 'smooth'
+      });
     }
     if (i == 1) {
-      var el = document.getElementById('services');
-      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+      window.scroll({
+        top: 1755,
+        left: 100,
+        behavior: 'smooth'
+      });
     }
     if (i == 2) {
-      var el = document.getElementById('howWeWorkMob');
-      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+      window.scroll({
+        top: 4830,
+        left: 100,
+        behavior: 'smooth'
+      });
     }
     if (i == 3) {
-      var el = document.getElementById('projectsMob');
-      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+      window.scroll({
+        top: 5630,
+        left: 100,
+        behavior: 'smooth'
+      });
     }
     if (i == 4) {
-      var el = document.getElementById('contactUs');
-      el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+      window.scroll({
+        top: 6300,
+        left: 100,
+        behavior: 'smooth'
+      });
     }
   }
   goToOurProjects(){
