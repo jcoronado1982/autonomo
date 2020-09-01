@@ -294,7 +294,7 @@ export class HomeComponent implements OnInit {
     }
     if (i == 4) {
       window.scroll({
-        top: 6300,
+        top: 6200,
         left: 100,
         behavior: 'smooth'
       });
