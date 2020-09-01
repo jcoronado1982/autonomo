@@ -774,13 +774,30 @@ a
     .curvImgSettings
         height: 50px
 @media only screen and (max-width: 768px)
+    .tabImgSettings, .curva
+        position: static
+    .languageOptionsBox
+        display: none
     .buttonWorkMob1
         width: 100%
         max-width: 768px
     .buttonWorkMob
         margin-top: 30px
         width: 100%
-
+    .menuAuto
+        width: auto
+        height: 5%
+        position: fixed
+        grid-column: 2
+        grid-row: 1
+        right: 0%
+    .logoAuto
+        width: 100%
+        height: 7%
+        position: fixed
+        grid-column: 1
+        grid-row: 1
+        background: linear-gradient(0deg, #0E8ECE, #0E8ECE)
     .titleAutoBusi
         font-size: 48px
         line-height: 48px
@@ -854,7 +871,6 @@ a
         grid-template: 65px auto 105px auto auto 0px auto 0px auto auto 200px/100%
     .headerAutonomohome
         grid-template: auto/1fr 50px
-        border: 1px solid #0E8ECE
     .automateBusiness
         grid-template: auto auto 0px/100%
     .imgTablet
@@ -899,9 +915,11 @@ a
         margin: 30px auto 15px auto
     .itempb
         max-width: 768px
-        grid-template: 185px 80px/100%
+        grid-template: 185px auto 30px/100%
     .rightSignal
         top: 55%
+        position: static
+        z-index: auto
     .contactBox
         grid-template: auto auto /100%
     .contectAdress
