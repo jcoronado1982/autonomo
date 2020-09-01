@@ -285,7 +285,9 @@ export class HomeComponent implements OnInit {
       el.scrollIntoView({ behavior: "smooth", inline: "nearest" });
     }
   }
-  
+  goToOurProjects(){
+    window.open('https://theruby.net', '_blank');
+  }
   sendContact() {
     if (this.orderForm.value.nameClient == '') {
       this.global.notif(this.language.content.contact.right.nameAdvice);
